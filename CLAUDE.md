@@ -30,10 +30,12 @@ The roll is done by `engine/roll.py` (a real RNG plus history), never by the mod
 - After every state change: `git add state && git commit && git push -u origin main`.
 
 ## Commands
+"Today" always means the calendar date in Asia/Ho_Chi_Minh (`TZ=Asia/Ho_Chi_Minh date +%F`). The day resets at 00:00 Vietnam time.
+
 ### /daily
 0. `git pull origin main`. If `state/current.json` has status=open, ask whether to keep doing it or skip it
    (a skip logs result=skipped). One challenge per day: if today already has an entry, show it again instead of making a new one.
-1. Run `python3 engine/roll.py <today>` → rolled level, tag, eligible domains (least recently used first).
+1. Run `python3 engine/roll.py` (no date argument: it uses today in Asia/Ho_Chi_Minh, UTC+7; never use the container's UTC date) → rolled level, tag, eligible domains (least recently used first).
 2. [Generator] 3 candidates from 3 different eligible domains, all matching the rolled level and tag.
 3. [Critic] each candidate goes through 5 gates; failing 1 gate eliminates it. Show the verdict compactly (✅/❌ + 1 reason per gate):
    C1 Solvability: are the premises self-sufficient, does it match the tag? · C2 Adversarial: is there a second reading, is the answer defensible?

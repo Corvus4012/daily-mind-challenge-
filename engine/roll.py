@@ -2,15 +2,17 @@
 """Daily Challenge Engine: read history, compute current level, roll today's tag/level, list eligible domains.
 
 Usage:
-  python3 engine/roll.py [YYYY-MM-DD]
+  python3 engine/roll.py [YYYY-MM-DD]     # default: today in Asia/Ho_Chi_Minh
   python3 engine/roll.py --log '<json>'   # append one history entry (validated)
 """
 import json
 import random
 import sys
-from datetime import date
+from datetime import datetime
+from zoneinfo import ZoneInfo
 from pathlib import Path
 
+TZ = ZoneInfo("Asia/Ho_Chi_Minh")  # the user's day resets at 00:00 Vietnam time, not UTC
 ROOT = Path(__file__).resolve().parent.parent
 HISTORY = ROOT / "state" / "history.jsonl"
 
@@ -122,6 +124,6 @@ if __name__ == "__main__":
     if len(sys.argv) > 2 and sys.argv[1] == "--log":
         log_entry(sys.argv[2])
     else:
-        today = sys.argv[1] if len(sys.argv) > 1 else date.today().isoformat()
+        today = sys.argv[1] if len(sys.argv) > 1 else datetime.now(TZ).date().isoformat()
         hist = load()
         print(json.dumps(roll(today, hist, random.Random()), ensure_ascii=False, indent=2))
