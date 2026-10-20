@@ -77,7 +77,7 @@ def roll(today, hist, rng):
         elif r < 0.90:
             lvl, mode = min(5, base + 1), "stretch"
         else:
-            lvl, mode = rng.randint(1, 5), "wildcard"
+            lvl, mode = min(5, base + 2), "wildcard"  # a 3-level jump (e.g. 2 -> 5) is too steep to learn from
     r = rng.random()
     acc = 0.0
     tag = TAGS[0][0]
@@ -103,6 +103,7 @@ def roll(today, hist, rng):
         "rolled_tag": tag,
         "blocked_domains": sorted(blocked),
         "eligible_domains_least_recent_first": [f"{d}. {DOMAINS[d]}" for d in eligible],
+        "eligible_domain_ids": eligible,
     }
 
 
