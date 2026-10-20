@@ -38,5 +38,5 @@ When the user types a command, read its spec in `commands/` and run exactly that
 | 5 | Expert | Solve a model with cases or an equilibrium, interpret it, and compare variants (e.g. a lemons market). ~15 min. |
 
 ## Commands
-Specs live in `commands/`. Review pipeline: `gen.md` → `solve.md` → `review.md`.
+Specs live in `commands/`. Review pipeline: `gen.md` → `solve.md` → `vet.md`.
 Serving the user: `daily.md`, `hint.md`, `submit.md`.
