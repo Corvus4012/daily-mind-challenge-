@@ -20,7 +20,7 @@ Mỗi candidate là một file JSON trong scratchpad (KHÔNG ghi vào repo khi c
   "challenge_md": "Toàn bộ đề + các câu hỏi con, đúng như người dùng sẽ thấy.",
   "hints": ["hướng suy nghĩ", "gợi ý cụ thể hơn", "gợi ý cụ thể nhất, vẫn không lộ đáp án"],
   "answer": "Đáp án từng câu hỏi con + cơ chế, viết để dùng khi chấm.",
-  "rubric": "Mỗi câu: đạt / một phần / chưa đạt; bẫy chính; quy tắc gộp thành correct/partial/incorrect.",
+  "rubric": "Mỗi câu: đạt / một phần / chưa đạt; bẫy chính; quy tắc gộp thành correct/partial/incorrect. Câu dạng bảng: liệt kê ô then chốt và các ô chấp nhận nhiều đáp án (chuẩn chấm bảng trong commands/submit.md).",
   "claims": [{"claim": "Akerlof nhận Nobel Kinh tế 2001", "source": "URL đã kiểm"}]
 }
 ```

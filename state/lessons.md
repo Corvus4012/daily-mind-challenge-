@@ -15,6 +15,7 @@ Thêm dòng mới khi người dùng chỉ ra lỗi của đề, hoặc khi mộ
 - (20/10) Đáp án dựa vào so sánh hai tình huống (trang khác, thiết bị khác) thì đề phải nói rõ những gì được giữ nguyên (người dùng, cỡ chữ, vị trí...).
 - (20/10) Kiểm tra chiều của quan sát có thật sự suy ra từ cơ chế không (vd: nhãn ghép lên ô phía trên thì lỗi phải là email vào ô Số điện thoại, không phải ngược lại). Đếm lại bố cục (4 nhãn, 4 ô).
 - (20/10) Câu hỏi có lượng từ phải viết tường minh: "không mâu thuẫn với BẤT KỲ quan sát nào", không viết "không mâu thuẫn với quan sát nào" (đọc được như câu hỏi liệt kê). Khi câu sau tổng hợp từ câu trước, nói rõ "dựa trên bảng ở câu 1".
+- (20/10) Câu hỏi nối tiếp nên gọi tên đối tượng tường minh mà không lộ đáp án: "giải thích bạn chọn ở câu 2" thay vì "giải thích còn lại" (người dùng đã hiểu thành "ô K còn lại trong bảng").
 
 ## Hồ sơ người học
 - Mạnh: thao tác đại số, lập phương trình; thiết kế phép đo trực tiếp; tự chuẩn hoá ký hiệu trước khi làm (20/10); phân biệt "sai sự thật" và "đúng nhưng chọn lọc".
@@ -23,4 +24,6 @@ Thêm dòng mới khi người dùng chỉ ra lỗi của đề, hoặc khi mộ
   - Có sẵn kết quả của chính mình mà không dùng để tự bác lựa chọn sai (self_check, 17/10).
   - Dịch kết quả tính toán thành ý nghĩa và hành vi (interpret_result, 19/10).
   - Câu hỏi xác nhận vẫn dựa vào chính ký hiệu đang gây mơ hồ, thay vì đi qua một kênh độc lập (20/10).
+  - Thiết kế phép thử: chọn biến cần thao tác theo giả thuyết đang muốn kiểm, không theo chỗ còn trống trong bảng (experiment_design, 20/10).
+  - Tiến bộ: tự xác định đúng giả thuyết duy nhất không bị phản bác (common_cause, 20/10).
 - Cách phản hồi hợp: thẳng, chỉ ra cơ chế; thích được giải nghĩa nền tảng khi gặp domain lạ (đã xin bổ túc kinh tế ngày 19/10).

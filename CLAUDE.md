@@ -10,6 +10,8 @@ When the user types a command, read its spec in `commands/` and run exactly that
 | `/daily` | `commands/daily.md` | Serve today's puzzle from the pool |
 | `/hint` | `commands/hint.md` | Reveal the next of 3 hints |
 | `/submit` | `commands/submit.md` | Grade the user's answer, give feedback, log the result |
+| `/ask` | `commands/ask.md` | Clarify how to read the open puzzle; may decline if it would leak the solution |
+| `/discuss` | `commands/discuss.md` | Discuss a suggestion about the system; may decline with reasons |
 | `/restock [n]` | `commands/restock.md` | Generate n puzzles, blind-solve and review each with a fresh subagent, add the good ones to the pool |
 
 ## Rules
