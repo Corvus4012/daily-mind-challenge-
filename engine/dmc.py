@@ -7,7 +7,8 @@ Usage (run from the repo root):
   python3 engine/dmc.py skills            # the skill vocabulary
   python3 engine/dmc.py add FILE          # vetted candidate -> pool/ (answer/rubric base64), log "accepted"
   python3 engine/dmc.py reject FILE       # log a rejected candidate (never enters the pool)
-  python3 engine/dmc.py pick              # roll today and move the best pool puzzle to state/current.json
+  python3 engine/dmc.py pick [--extra]    # roll today and move the best pool puzzle to state/current.json
+                                          # --extra: an additional puzzle after today's is done
   python3 engine/dmc.py hint              # reveal the next hint
   python3 engine/dmc.py reveal            # print answer + rubric (only after the user has answered)
   python3 engine/dmc.py close JSON        # log today's result to history and mark the challenge submitted
@@ -228,11 +229,11 @@ def cmd_reject(path):
     _out({"rejected": c.get("reason") or (c.get("review") or {}).get("reason")})
 
 
-def cmd_pick():
+def cmd_pick(extra=False):
     t = today()
     if CURRENT.exists():
         cur = _read(CURRENT)
-        if cur.get("date") == t:
+        if cur.get("date") == t and not (extra and cur.get("status") == "submitted"):
             _out({"status": "already", "current_status": cur.get("status"), "challenge_md": cur["challenge_md"]})
             return
         if cur.get("status") == "open":
@@ -240,11 +241,11 @@ def cmd_pick():
             sys.exit(3)
     hist = roll.load()
     # Seeded by date: re-running pick on the same day (e.g. after a just-in-time restock) gives the same roll.
-    r = roll.roll(t, hist, random.Random(t))
+    r = roll.roll(t, hist, random.Random(t + ("-extra" if extra else "")))
     due = {d["skill"] for d in due_skills(hist, t)}
     rank = {d: i for i, d in enumerate(r["eligible_domain_ids"])}
     candidates = [p for p in load_pool()
-                  if p["domain_id"] in rank and abs(p["level"] - r["rolled_level"]) <= 1]
+                  if p["domain_id"] in rank and (extra or abs(p["level"] - r["rolled_level"]) <= 1)]
     if not candidates:
         _out({"status": "empty", "roll": r})
         sys.exit(2)
@@ -261,7 +262,7 @@ def cmd_pick():
         "level_mode": r["level_mode"], "est_minutes": best["est_minutes"], "format": best["format"],
         "skills": best["skills"], "challenge_md": best["challenge_md"], "hints": best["hints"],
         "hints_revealed": 0, "answer_key_b64": best["answer_b64"], "rubric_b64": best["rubric_b64"],
-        "review": best.get("review"), "status": "open",
+        "review": best.get("review"), "status": "open", "extra": extra,
     })
     (POOL / f"{best['id']}.json").unlink()
     _out({"status": "picked", "pool_id": best["id"], "date": t, "domain": roll.DOMAINS[best["domain_id"]],
@@ -306,7 +307,7 @@ def cmd_close(raw):
         "date": cur["date"], "domain_id": cur["domain_id"], "tag": cur["tag"], "level": cur["level"],
         "base_level": cur["base_level"], "result": extra["result"], "hints_used": cur.get("hints_revealed", 0),
         "format": cur.get("format"), "skills": cur.get("skills", []), "skills_missed": missed,
-        "notes": extra.get("notes", ""), "pool_id": cur.get("pool_id"),
+        "notes": extra.get("notes", ""), "pool_id": cur.get("pool_id"), "extra": bool(cur.get("extra")),
     }
     roll.log_entry(json.dumps(entry, ensure_ascii=False))
     cur["status"] = "submitted"
@@ -320,7 +321,7 @@ def main(argv):
         "skills": lambda: _out(SKILLS),
         "add": lambda: cmd_add(argv[2]),
         "reject": lambda: cmd_reject(argv[2]),
-        "pick": lambda: cmd_pick(),
+        "pick": lambda: cmd_pick(extra="--extra" in argv),
         "hint": lambda: cmd_hint(),
         "reveal": lambda: cmd_reveal(),
         "close": lambda: cmd_close(argv[2]),

@@ -15,6 +15,11 @@ Phục vụ đề hôm nay từ `pool/` (đề đã được giải mù và ph�
 3. `git add state pool && git commit -m "Serve challenge {date}" && git push -u origin main`
 4. Nếu `pool_left` < 4: thêm một dòng cuối "Pool còn {n} đề, gõ /restock để bổ sung".
 
+## Làm thêm
+Người dùng muốn thêm một đề sau khi đã nộp đề hôm nay ("làm thêm", "/daily extra"):
+`python3 engine/dmc.py pick --extra`. Đề thêm được ghi vào lịch sử như một ngày bình thường (có `"extra": true`),
+nên vẫn tính vào level nền, kỹ năng và vòng xoay domain. Pool rỗng thì làm như trường hợp `empty` ở trên.
+
 ## OUTPUT SPEC
 ```
 ---

@@ -58,6 +58,7 @@ Mỗi candidate thêm khối `review`:
 - Đề nhận: `python3 engine/dmc.py add FILE`. Đề loại: thêm `"reason"` rồi `python3 engine/dmc.py reject FILE`.
 - Thêm vào `state/lessons.md` mọi bài học mới rút ra từ issue (ví dụ một kiểu mơ hồ lặp lại).
 - `git add pool logs state && git commit -m "Restock: +k puzzles" && git push -u origin main`
+  (push bị từ chối vì `/daily` vừa đẩy lên: `git pull --rebase origin main` rồi push lại.)
 - Báo người dùng: 1 dòng mỗi đề (domain · level · nhận/sửa/loại · lý do ngắn), KHÔNG lộ nội dung hay đáp án đề đã nhận. Rồi in `python3 engine/metrics.py`.
 
 ## BRIEF GIẢI MÙ

@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 engine/dmc.py:*)",
+      "Bash(python3 engine/roll.py:*)",
+      "Bash(python3 engine/metrics.py:*)",
+      "Bash(python3 test_smoke.py)",
+      "Bash(git pull:*)",
+      "Bash(git status:*)",
+      "Bash(git log:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Agent",
+      "SendMessage",
+      "WebSearch"
+    ]
+  }
+}

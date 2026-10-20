@@ -77,6 +77,10 @@ def main():
         print("history:", {k: last[k] for k in ("date", "result", "hints_used", "skills", "skills_missed")})
         assert last["hints_used"] == 3 and last["skills_missed"] == [skill]
         assert dmc(tmp, "hint", ok=False).returncode != 0, "submitted challenge must not reveal more hints"
+        assert json.loads(dmc(tmp, "pick").stdout)["status"] == "already"
+        extra = json.loads(dmc(tmp, "pick", "--extra").stdout)
+        assert extra["status"] == "picked" and json.loads((tmp / "state" / "current.json").read_text())["extra"]
+        print("pick --extra after submitting:", {k: extra[k] for k in ("status", "domain", "pool_left")})
 
         print(subprocess.run([sys.executable, "engine/metrics.py"], cwd=tmp, capture_output=True,
                              text=True, check=True).stdout.rstrip())
