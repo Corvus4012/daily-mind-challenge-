@@ -1,0 +1,60 @@
+{
+  "id": "20261020-d10-01aac0",
+  "created": "2026-10-20",
+  "domain_id": 10,
+  "level": 2,
+  "tag": "reason",
+  "format": "spot-flaw",
+  "skills": [
+    "common_cause",
+    "experiment_design"
+  ],
+  "est_minutes": 10,
+  "challenge_md": "Trang đăng ký của một website (bản máy tính) xếp 4 ô thành cột dọc, sát nhau: Họ tên, Số điện thoại, Email, Địa chỉ. Nhãn \"Họ tên\" nằm trên cùng; ba nhãn còn lại mỗi nhãn nằm giữa hai ô liền nhau, cách ô phía trên và ô phía dưới **bằng nhau**.\n\nSau một tháng, nhóm vận hành ghi nhận 4 điều (cùng một nhóm người dùng, cùng cỡ chữ nhãn ở mọi trang và mọi thiết bị):\n(1) Rất nhiều người điền địa chỉ email vào ô Số điện thoại.\n(2) Ở một trang khác của website, các ô cách nhau rộng và mỗi nhãn nằm sát ngay trên ô của nó: hầu như không ai điền nhầm.\n(3) Bản điện thoại của chính trang đăng ký này đặt nhãn sát ngay trên ô của nó: gần như không ai điền nhầm.\n(4) Người trên 60 tuổi và người dưới 30 tuổi điền nhầm với tỉ lệ như nhau, dù người trên 60 tuổi trung bình đọc chữ nhỏ khó hơn.\n\nBa giải thích được đưa ra:\n- A. Người dùng vội, không đọc kỹ.\n- B. Nhãn cách đều hai ô nên người dùng ghép nhãn với nhầm ô.\n- C. Chữ nhãn quá nhỏ.\n\n**Câu hỏi**\n1. Với mỗi giải thích A, B, C và mỗi quan sát (1)–(4), xếp vào một trong ba loại: *giải thích được* (nếu giải thích đó đúng, ta trông đợi thấy quan sát này), *mâu thuẫn* (ta trông đợi điều ngược lại), hoặc *không liên quan*.\n2. Giải thích nào không mâu thuẫn với quan sát nào? Quan sát nào loại A, quan sát nào loại C?\n3. Đề xuất một phép thử làm trong vài ngày để xác nhận giải thích còn lại: thay đổi gì, giữ nguyên gì, đo gì, và kết quả nào sẽ bác bỏ nó.",
+  "hints": [
+    "Đừng hỏi giải thích nào nghe hợp lý nhất. Hãy hỏi giải thích nào không bị quan sát nào phản bác. Kẻ bảng 3 hàng (A, B, C) × 4 cột (1)–(4).",
+    "(2) và (3) là cùng nhóm người dùng, cùng cỡ chữ; chỉ có vị trí nhãn so với ô thay đổi. Nếu A hoặc C đúng, lỗi có biến mất khi chỉ vị trí nhãn thay đổi không? Còn (4): nếu chữ khó đọc thì nhóm nào lẽ ra nhầm nhiều hơn?",
+    "Phép thử tốt chỉ đổi đúng thứ mà giải thích còn lại cho là nguyên nhân (khoảng cách nhãn tới ô), chạy song song với một nhóm giữ nguyên bố cục cũ, đo đúng loại lỗi ở (1), và nói trước kết quả nào sẽ bác bỏ nó."
+  ],
+  "claims": [],
+  "review": {
+    "solver_model": "sonnet subagent",
+    "first_solve_match": true,
+    "revised": true,
+    "level_estimate": 2,
+    "issues": [
+      {
+        "type": "missing_premise",
+        "severity": 2,
+        "detail": "cỡ chữ ở trang khác trong (2) không được nêu, nhưng đáp án dùng nó để loại C"
+      },
+      {
+        "type": "missing_premise",
+        "severity": 2,
+        "detail": "vị trí nhãn ở trang khác trong (2) không được nêu"
+      },
+      {
+        "type": "ambiguity",
+        "severity": 2,
+        "detail": "hướng nhầm 'SĐT vào ô Email' không suy ra được từ cơ chế B"
+      },
+      {
+        "type": "missing_premise",
+        "severity": 2,
+        "detail": "đáp án loại A dựa trên 'cùng người dùng, cùng mức vội' mà đề không nói"
+      },
+      {
+        "type": "ambiguity",
+        "severity": 1,
+        "detail": "4 nhãn, 4 ô: nhãn đầu không thể nằm giữa hai ô"
+      },
+      {
+        "type": "bias",
+        "severity": 1,
+        "detail": "câu giả định trao sẵn cơ chế của B"
+      }
+    ]
+  },
+  "answer_b64": "MS4gQSAoduG7mWkpOiAoMSkgZ2nhuqNpIHRow61jaCDEkcaw4bujYzsgKDIpIG3DonUgdGh14bqrbiB2w6AgKDMpIG3DonUgdGh14bqrbiAoY8O5bmcgbmfGsOG7nWkgZMO5bmcsIHbhu5lpIHRow6wgduG6q24gduG7mWksIHRhIHRyw7RuZyDEkeG7o2kgbOG7l2kgduG6q24gY8OybiBraGkgY2jhu4kgduG7iyB0csOtIG5ow6NuIMSR4buVaSk7ICg0KSBraMO0bmcgbGnDqm4gcXVhbi4KICAgQiAobmjDo24gY8OhY2ggxJHhu4F1KTogKDEpIGdp4bqjaSB0aMOtY2ggxJHGsOG7o2MgKG5ow6NuICJFbWFpbCIgY8OhY2ggxJHhu4F1IMO0IFPhu5EgxJFp4buHbiB0aG/huqFpIHBow61hIHRyw6puIHbDoCDDtCBFbWFpbCBwaMOtYSBkxrDhu5tpLCBuw6puIGLhu4sgZ2jDqXAgbMOqbiDDtCBwaMOtYSB0csOqbik7ICgyKSB2w6AgKDMpIGdp4bqjaSB0aMOtY2ggxJHGsOG7o2MgKG5ow6NuIHPDoXQgw7QgY+G7p2EgbsOzIHRow6wgaOG6v3QgbcahIGjhu5MsIGjhur90IGzhu5dpKTsgKDQpIGdp4bqjaSB0aMOtY2ggxJHGsOG7o2MgaG/hurdjIGtow7RuZyBsacOqbiBxdWFuIChjw6FjaCBt4bqvdCBnaMOpcCBuaMOzbSBraMO0bmcgcGjhu6UgdGh14buZYyB0aOG7iyBs4buxYywgbsOqbiBraMO0bmcgdHLDtG5nIMSR4bujaSBraMOhYyBiaeG7h3QgdGhlbyB0deG7lWkpLiBD4bqjIGhhaSBjw6FjaCB44bq/cCAoNCkgY2hvIEIgxJHhu4F1IGNo4bqlcCBuaOG6rW4uCiAgIEMgKGNo4buvIG5o4buPKTogKDEpIGdp4bqjaSB0aMOtY2ggxJHGsOG7o2M7ICgyKSB2w6AgKDMpIG3DonUgdGh14bqrbiAoY+G7oSBjaOG7ryBuaMawIG5oYXUgbcOgIGzhu5dpIGJp4bq/biBt4bqldCk7ICg0KSBtw6J1IHRodeG6q24gKGNo4buvIG5o4buPIHRow6wgbmfGsOG7nWkgdHLDqm4gNjAgbOG6vSByYSBuaOG6p20gbmhp4buBdSBoxqFuKS4KMi4gQ2jhu4kgQiBraMO0bmcgbcOidSB0aHXhuqtuIHbhu5tpIHF1YW4gc8OhdCBuw6BvLiAoMikgdsOgICgzKSBsb+G6oWkgQTsgKDIpLCAoMykgdsOgICg0KSBsb+G6oWkgQy4gQ8ahIGNo4bq/OiB0w6xtIGdp4bqjIHRodXnhur90IGdp4bqjaSB0aMOtY2ggxJHGsOG7o2MgbeG7jWkgcXVhbiBzw6F0IGPDuW5nIGzDumMsIGtow7RuZyBjaOG7jW4gZ2nhuqMgdGh1eeG6v3QgY2jhu4kga2jhu5twIHF1YW4gc8OhdCBu4buVaSBi4bqtdCBuaOG6pXQgKDEpLgozLiBWw60gZOG7pSDEkeG6oXQ6IHRyb25nIHbDoGkgbmfDoHksIGNoaWEgbmfhuqt1IG5oacOqbiBuZ8aw4budaSBkw7luZyBi4bqjbiBtw6F5IHTDrW5oIHRow6BuaCBoYWkgbmjDs20gY2jhuqF5IHNvbmcgc29uZzsgbmjDs20gbeG7m2kgZOG7nWkgbeG7l2kgbmjDo24gc8OhdCBuZ2F5IHRyw6puIMO0IGPhu6dhIG7DsywgZ2nhu68gbmd1ecOqbiBj4buhIGNo4buvLCBtw6B1LCB0aOG7qSB04buxIHbDoCBrw61jaCB0aMaw4bubYyDDtDsgxJFvIHThu4kgbOG7hyBsxrDhu6N0IMSRxINuZyBrw70gxJFp4buBbiBuaOG6p20gw7QgKHbDrSBk4bulIGVtYWlsIG7hurFtIHRyb25nIMO0IFPhu5EgxJFp4buHbiB0aG/huqFpKS4gQiDEkcO6bmcgdGjDrCBuaMOzbSBt4bubaSBnaeG6o20gcsO1IHNvIHbhu5tpIG5ow7NtIGPFqTsgbuG6v3UgaGFpIG5ow7NtIGfhuqduIG5oxrAgYuG6sW5nIG5oYXUgdGjDrCBCIGLhu4sgYsOhYyBi4buPLg==",
+  "rubric_b64": "Q8OidSAxIMSR4bqhdDogQiBraMO0bmcgY8OzIMO0ICJtw6J1IHRodeG6q24iIG7DoG87IEEgbcOidSB0aHXhuqtuICgyKSgzKTsgQyBtw6J1IHRodeG6q24gKDIpKDMpKDQpLiBDaOG6pXAgbmjhuq1uICJraMO0bmcgbGnDqm4gcXVhbiIgY2hvIEEtKDQpIHbDoCBjaG8gQi0oNCkuIE3hu5l0IHBo4bqnbjogc2FpIDHigJMyIMO0IG5nb8OgaSBjw6FjIMO0IHRyw6puLgpDw6J1IDIgxJHhuqF0OiBjaOG7jW4gQiwgY2jhu4kgcmEgKDIpIGhv4bq3YyAoMykgbG/huqFpIEEgdsOgIMOtdCBuaOG6pXQgKDQpIGxv4bqhaSBDLiBN4buZdCBwaOG6p246IGNo4buNbiBCIG3DoCBsw70gZG8gbG/huqFpIGNoxrBhIHRy4buPIMSRw7puZyBxdWFuIHPDoXQuCkPDonUgMyDEkeG6oXQ6IGNo4buJIMSR4buVaSB24buLIHRyw60va2hv4bqjbmcgY8OhY2ggbmjDo24sIGdp4buvIG5ndXnDqm4gdGjhu6kga2jDoWMgKMSR4bq3YyBiaeG7h3QgY+G7oSBjaOG7ryksIGPDsyBuaMOzbSDEkeG7kWkgY2jhu6luZyBzb25nIHNvbmcsIMSRbyB04buJIGzhu4cgxJFp4buBbiBuaOG6p20gw7QsIHbDoCBuw6p1IGvhur90IHF14bqjIGLDoWMgYuG7jy4gTeG7mXQgcGjhuqduOiBzbyB0csaw4bubY+KAk3NhdSB0aGF5IHbDrCBuaMOzbSBzb25nIHNvbmcsIGhv4bq3YyB0aGnhur91IHRpw6p1IGNow60gYsOhYyBi4buPLCBob+G6t2MgxJHhu5VpIG5oaeG7gXUgdGjhu6kgY8O5bmcgbMO6Yy4KQuG6q3kgY2jDrW5oOiBjaOG7jW4gQSAoIm5nxrDhu51pIGTDuW5nIOG6qXUiKSB2w6wgbsOzIGto4bubcCBxdWFuIHPDoXQgKDEpIG7hu5VpIGLhuq10IG5o4bqldC4KR+G7mXA6IGNvcnJlY3QgPSAzIGPDonUgxJHhuqF0IGhv4bq3YyAyIMSR4bqhdCArIDEgbeG7mXQgcGjhuqduOyBwYXJ0aWFsID0gMeKAkzIgY8OidSDEkeG6oXQ7IGluY29ycmVjdCA9IGtow7RuZyBjw6J1IG7DoG8gxJHhuqF0Lg=="
+}

@@ -30,7 +30,7 @@ Tiêu chuẩn của đề:
 - Số liệu, trích dẫn, tên người: hoặc ghi rõ "giả định của đề", hoặc là sự thật đã kiểm bằng WebSearch ngay bây giờ (ghi vào `claims` kèm nguồn). Không lẫn hai loại.
 - Không tra Google ra đáp án. Biết tên khái niệm thì không sao; tra ra chính đáp án thì loại.
 - Bối cảnh trung lập, ưu tiên đời sống Việt Nam hoặc quốc tế; không lấy Mỹ làm trung tâm, không dùng idiom khó dịch.
-- Độ dài: ≤ 200 từ ở level 1–3, ≤ 300 từ ở level 4–5. 1 câu hỏi hoặc 2–4 câu hỏi con.
+- Độ dài: ≤ 200 từ (khoảng 300 tiếng) ở level 1–3, ≤ 300 từ ở level 4–5. 1 câu hỏi hoặc 2–4 câu hỏi con.
 - Slot có `target_skill`: đề phải xoay quanh kỹ năng đó, trong domain của slot (luyện chuyển giao, không lặp lại đề cũ).
 - Các đề trong cùng một lần restock dùng format khác nhau khi có thể.
 
