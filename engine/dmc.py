@@ -239,7 +239,8 @@ def cmd_pick():
             _out({"status": "open_previous", "date": cur.get("date"), "domain_id": cur.get("domain_id")})
             sys.exit(3)
     hist = roll.load()
-    r = roll.roll(t, hist, random.Random())
+    # Seeded by date: re-running pick on the same day (e.g. after a just-in-time restock) gives the same roll.
+    r = roll.roll(t, hist, random.Random(t))
     due = {d["skill"] for d in due_skills(hist, t)}
     rank = {d: i for i, d in enumerate(r["eligible_domain_ids"])}
     candidates = [p for p in load_pool()
