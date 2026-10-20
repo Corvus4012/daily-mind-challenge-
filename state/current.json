@@ -1,20 +1,65 @@
 {
   "date": "2026-10-20",
-  "domain_id": 11,
+  "pool_id": "20261020-d10-01aac0",
+  "domain_id": 10,
   "tag": "reason",
   "level": 2,
   "base_level": 2,
+  "rolled_level": 2,
   "level_mode": "core",
-  "est_minutes": 8,
-  "format": "đọc theo 2 quy ước + đánh giá phép kiểm tra + viết câu hỏi",
-  "challenge_md": "Hai cách viết số (đều có thật):\n- Quy ước Việt Nam: dấu chấm (.) ngăn cách hàng nghìn, dấu phẩy (,) là dấu thập phân. Ví dụ: 1.500 = một nghìn năm trăm; 1,5 = một phẩy năm.\n- Quy ước tiếng Anh: ngược lại. Dấu phẩy ngăn cách hàng nghìn, dấu chấm là dấu thập phân. Ví dụ: 1,500 = một nghìn năm trăm; 1.5 = một phẩy năm.\n\nMột công ty Việt Nam nhận email (viết bằng tiếng Anh) từ đối tác nước ngoài:\n\"Unit price: 1,250 USD per tonne. Quantity: 2.500 tonnes.\"\n(Đơn giá: 1,250 USD mỗi tấn. Số lượng: 2.500 tấn.)\n\nGiả định: đối tác viết theo quy ước tiếng Anh; nhân viên kế toán bên Việt Nam theo thói quen đọc mọi con số theo quy ước Việt Nam. Ngoài ra không ai biết trước giá thị trường của mặt hàng này.\n\n1. Theo cách đối tác muốn nói: đơn giá, số lượng và tổng tiền là bao nhiêu?\n2. Theo cách kế toán đọc: đơn giá, số lượng và tổng tiền là bao nhiêu?\n3. Kế toán kiểm tra lại bằng cách so tổng tiền mình tính với giấy báo chuyển tiền của ngân hàng, ghi \"3125 USD\" (không có dấu ngăn cách). Phép kiểm tra này có phát hiện ra việc đọc nhầm không? Vì sao? Sau đó, viết 1 câu hỏi ngắn gửi đối tác để loại bỏ hoàn toàn sự mơ hồ.",
+  "est_minutes": 10,
+  "format": "spot-flaw",
+  "skills": [
+    "common_cause",
+    "experiment_design"
+  ],
+  "challenge_md": "Trang đăng ký của một website (bản máy tính) xếp 4 ô thành cột dọc, sát nhau: Họ tên, Số điện thoại, Email, Địa chỉ. Nhãn \"Họ tên\" nằm trên cùng; ba nhãn còn lại mỗi nhãn nằm giữa hai ô liền nhau, cách ô phía trên và ô phía dưới **bằng nhau**.\n\nSau một tháng, nhóm vận hành ghi nhận 4 điều (cùng một nhóm người dùng, cùng cỡ chữ nhãn ở mọi trang và mọi thiết bị):\n(1) Rất nhiều người điền địa chỉ email vào ô Số điện thoại.\n(2) Ở một trang khác của website, các ô cách nhau rộng và mỗi nhãn nằm sát ngay trên ô của nó: hầu như không ai điền nhầm.\n(3) Bản điện thoại của chính trang đăng ký này đặt nhãn sát ngay trên ô của nó: gần như không ai điền nhầm.\n(4) Người trên 60 tuổi và người dưới 30 tuổi điền nhầm với tỉ lệ như nhau, dù người trên 60 tuổi trung bình đọc chữ nhỏ khó hơn.\n\nBa giải thích được đưa ra:\n- A. Người dùng vội, không đọc kỹ.\n- B. Nhãn cách đều hai ô nên người dùng ghép nhãn với nhầm ô.\n- C. Chữ nhãn quá nhỏ.\n\n**Câu hỏi**\n1. Với mỗi giải thích A, B, C và mỗi quan sát (1)–(4), xếp vào một trong ba loại: *giải thích được* (nếu giải thích đó đúng, ta trông đợi thấy quan sát này), *mâu thuẫn* (ta trông đợi điều ngược lại), hoặc *không liên quan*.\n2. Giải thích nào không mâu thuẫn với quan sát nào? Quan sát nào loại A, quan sát nào loại C?\n3. Đề xuất một phép thử làm trong vài ngày để xác nhận giải thích còn lại: thay đổi gì, giữ nguyên gì, đo gì, và kết quả nào sẽ bác bỏ nó.",
   "hints": [
-    "Đừng nhân vội. Viết lại từng con số ra chữ theo cả hai quy ước, rồi mới tính tổng cho từng cách đọc.",
-    "Theo quy ước Việt Nam, '1,250' là một phẩy hai lăm, còn '2.500' là hai nghìn năm trăm. Theo quy ước tiếng Anh thì ngược lại. Một số bị đọc nhỏ đi bao nhiêu lần, số kia bị đọc to lên bao nhiêu lần?",
-    "Câu 3: khi hai sai lệch có độ lớn bằng nhau nhưng ngược chiều, phép nhân sẽ làm gì với chúng? Câu hỏi xác nhận tốt là câu không phụ thuộc vào dấu chấm hay dấu phẩy, ví dụ hỏi bằng đơn vị khác hoặc bằng thứ có hậu quả vật lý rõ ràng."
+    "Đừng hỏi giải thích nào nghe hợp lý nhất. Hãy hỏi giải thích nào không bị quan sát nào phản bác. Kẻ bảng 3 hàng (A, B, C) × 4 cột (1)–(4).",
+    "(2) và (3) là cùng nhóm người dùng, cùng cỡ chữ; chỉ có vị trí nhãn so với ô thay đổi. Nếu A hoặc C đúng, lỗi có biến mất khi chỉ vị trí nhãn thay đổi không? Còn (4): nếu chữ khó đọc thì nhóm nào lẽ ra nhầm nhiều hơn?",
+    "Phép thử tốt chỉ đổi đúng thứ mà giải thích còn lại cho là nguyên nhân (khoảng cách nhãn tới ô), chạy song song với một nhóm giữ nguyên bố cục cũ, đo đúng loại lỗi ở (1), và nói trước kết quả nào sẽ bác bỏ nó."
   ],
   "hints_revealed": 0,
-  "answer_key_b64": "MS4gxJDhu5FpIHTDoWMgbXXhu5FuIG7Ds2k6IMSRxqFuIGdpw6EgMS4yNTAgVVNEL3ThuqVuICht4buZdCBuZ2jDrG4gaGFpIHRyxINtIG7Eg20gbcawxqFpKSwgc+G7kSBsxrDhu6NuZyAyLDUgdOG6pW4gKGhhaSB04bqlbiByxrDhu6FpKS4gVOG7lW5nID0gMS4yNTAgw5cgMiw1ID0gMy4xMjUgVVNELgoyLiBL4bq/IHRvw6FuIMSR4buNYzogxJHGoW4gZ2nDoSAxLDI1IFVTRC904bqlbiAobeG7mXQgcGjhuql5IGhhaSBsxINtKSwgc+G7kSBsxrDhu6NuZyAyLjUwMCB04bqlbiAoaGFpIG5naMOsbiBuxINtIHRyxINtKS4gVOG7lW5nID0gMSwyNSDDlyAyLjUwMCA9IDMuMTI1IFVTRC4KMy4gS0jDlE5HIHBow6F0IGhp4buHbiDEkcaw4bujYy4gxJDGoW4gZ2nDoSBi4buLIMSR4buNYyBuaOG7jyDEkWkgMS4wMDAgbOG6p24sIHPhu5EgbMaw4bujbmcgYuG7iyDEkeG7jWMgdG8gbMOqbiAxLjAwMCBs4bqnbjsga2hpIG5ow6JuIGzhuqFpLCBoYWkgc2FpIGzhu4djaCB0cmnhu4d0IHRpw6p1IG5oYXUgbsOqbiB04buVbmcgdGnhu4FuIHbhuqtuIGto4bubcCBob8OgbiB0b8OgbiB24bubaSBuZ8OibiBow6BuZy4gQsOgaSBo4buNYzogbeG7mXQgcGjDqXAga2nhu4NtIHRyYSBjaOG7iSBjw7MgZ2nDoSB0cuG7iyBu4bq/dSBjw6FjaCDEkeG7jWMgc2FpIGNobyByYSBr4bq/dCBxdeG6oyBraMOhYyBjw6FjaCDEkeG7jWMgxJHDum5nLiDhu54gxJHDonkgdOG7lW5nIHRp4buBbiBsw6AgxJHhuqFpIGzGsOG7o25nIGR1eSBuaOG6pXQgS0jDlE5HIHBow6JuIGJp4buHdCDEkcaw4bujYyBoYWkgY8OhY2ggxJHhu41jLgogICBDw6J1IGjhu49pIHjDoWMgbmjhuq1uIHThu5F0IG5o4bqvbSB2w6BvIGNo4buXIGhhaSBjw6FjaCDEkeG7jWMga2jDoWMgbmhhdSBtw6Aga2jDtG5nIGTDuW5nIGThuqV1IG5nxINuIGPDoWNoLCB2w60gZOG7pTogJ1hpbiB4w6FjIG5o4bqtbiBz4buRIGzGsOG7o25nIGzDoCBoYWkgdOG6pW4gcsaw4buhaSAoMjUwMCBrZyksIGtow7RuZyBwaOG6o2kgaGFpIG5naMOsbiBuxINtIHRyxINtIHThuqVuPycgaG/hurdjIGjhu49pIHPhu5EgY2h1eeG6v24geGUvY29udGFpbmVyLiBI4bqtdSBxdeG6oyB0aOG7sWMgdOG6vzogMiw1IHThuqVuIGzDoCBt4buZdCBjaHV54bq/biB4ZSB04bqjaSBuaOG7jzsgMi41MDAgdOG6pW4gbMOgIGtobyBiw6NpIHbDoCBow6BuZyB0csSDbSBjaHV54bq/biwgc2FpIG3hu5l0IGLGsOG7m2MgbMOgIGNodeG6qW4gYuG7iyBuaOG6p20gY+G6oyBraMOidSB24bqtbiBjaHV54buDbi4=",
-  "rubric_b64": "UTEgxJHhuqF0IG7hur91IHJhIDEyNTAgVVNEL3ThuqVuLCAyLDUgdOG6pW4sIDMxMjUgVVNELgpRMiDEkeG6oXQgbuG6v3UgcmEgMSwyNSBVU0QvdOG6pW4sIDI1MDAgdOG6pW4sIDMxMjUgVVNELiDEkMO6bmcgMi8zIGNvbiBz4buRIHRow6wgdMOtbmggbeG7mXQgcGjhuqduLgpRMyDEkeG6oXQgbuG6v3UgbsOzaSBLSMOUTkcgcGjDoXQgaGnhu4duIMSRxrDhu6NjIFbDgCBuw6p1IGzDvSBkbyBoYWkgc2FpIGzhu4djaCDDlzEwMDAgdsOgIMO3MTAwMCB0cmnhu4d0IHRpw6p1IG5oYXUsIGvDqG0gbeG7mXQgY8OidSBo4buPaSB4w6FjIG5o4bqtbiBraMO0bmcgcGjhu6UgdGh14buZYyBk4bqldSBuZ8SDbiBjw6FjaCAodmnhur90IGLhurFuZyBjaOG7rywgxJHhu5VpIHNhbmcga2csIGjhu49pIHPhu5EgY2h1eeG6v24uLi4pLiBUaGnhur91IG3hu5l0IHRyb25nIGhhaSBwaOG6p24gdGjDrCB0w61uaCBt4buZdCBwaOG6p24uCkvhur90IHF14bqjIHThu5VuZzogY29ycmVjdCA9IGPhuqMgMyDEkeG6oXQsIGhv4bq3YyAyIMSR4bqhdCArIDEgbeG7mXQgcGjhuqduOyBwYXJ0aWFsID0gMeKAkzIgY8OidSDEkeG6oXQ7IGluY29ycmVjdCA9IGtow7RuZyBjw6J1IG7DoG8gxJHhuqF0Lg==",
-  "status": "submitted"
+  "answer_key_b64": "MS4gQSAoduG7mWkpOiAoMSkgZ2nhuqNpIHRow61jaCDEkcaw4bujYzsgKDIpIG3DonUgdGh14bqrbiB2w6AgKDMpIG3DonUgdGh14bqrbiAoY8O5bmcgbmfGsOG7nWkgZMO5bmcsIHbhu5lpIHRow6wgduG6q24gduG7mWksIHRhIHRyw7RuZyDEkeG7o2kgbOG7l2kgduG6q24gY8OybiBraGkgY2jhu4kgduG7iyB0csOtIG5ow6NuIMSR4buVaSk7ICg0KSBraMO0bmcgbGnDqm4gcXVhbi4KICAgQiAobmjDo24gY8OhY2ggxJHhu4F1KTogKDEpIGdp4bqjaSB0aMOtY2ggxJHGsOG7o2MgKG5ow6NuICJFbWFpbCIgY8OhY2ggxJHhu4F1IMO0IFPhu5EgxJFp4buHbiB0aG/huqFpIHBow61hIHRyw6puIHbDoCDDtCBFbWFpbCBwaMOtYSBkxrDhu5tpLCBuw6puIGLhu4sgZ2jDqXAgbMOqbiDDtCBwaMOtYSB0csOqbik7ICgyKSB2w6AgKDMpIGdp4bqjaSB0aMOtY2ggxJHGsOG7o2MgKG5ow6NuIHPDoXQgw7QgY+G7p2EgbsOzIHRow6wgaOG6v3QgbcahIGjhu5MsIGjhur90IGzhu5dpKTsgKDQpIGdp4bqjaSB0aMOtY2ggxJHGsOG7o2MgaG/hurdjIGtow7RuZyBsacOqbiBxdWFuIChjw6FjaCBt4bqvdCBnaMOpcCBuaMOzbSBraMO0bmcgcGjhu6UgdGh14buZYyB0aOG7iyBs4buxYywgbsOqbiBraMO0bmcgdHLDtG5nIMSR4bujaSBraMOhYyBiaeG7h3QgdGhlbyB0deG7lWkpLiBD4bqjIGhhaSBjw6FjaCB44bq/cCAoNCkgY2hvIEIgxJHhu4F1IGNo4bqlcCBuaOG6rW4uCiAgIEMgKGNo4buvIG5o4buPKTogKDEpIGdp4bqjaSB0aMOtY2ggxJHGsOG7o2M7ICgyKSB2w6AgKDMpIG3DonUgdGh14bqrbiAoY+G7oSBjaOG7ryBuaMawIG5oYXUgbcOgIGzhu5dpIGJp4bq/biBt4bqldCk7ICg0KSBtw6J1IHRodeG6q24gKGNo4buvIG5o4buPIHRow6wgbmfGsOG7nWkgdHLDqm4gNjAgbOG6vSByYSBuaOG6p20gbmhp4buBdSBoxqFuKS4KMi4gQ2jhu4kgQiBraMO0bmcgbcOidSB0aHXhuqtuIHbhu5tpIHF1YW4gc8OhdCBuw6BvLiAoMikgdsOgICgzKSBsb+G6oWkgQTsgKDIpLCAoMykgdsOgICg0KSBsb+G6oWkgQy4gQ8ahIGNo4bq/OiB0w6xtIGdp4bqjIHRodXnhur90IGdp4bqjaSB0aMOtY2ggxJHGsOG7o2MgbeG7jWkgcXVhbiBzw6F0IGPDuW5nIGzDumMsIGtow7RuZyBjaOG7jW4gZ2nhuqMgdGh1eeG6v3QgY2jhu4kga2jhu5twIHF1YW4gc8OhdCBu4buVaSBi4bqtdCBuaOG6pXQgKDEpLgozLiBWw60gZOG7pSDEkeG6oXQ6IHRyb25nIHbDoGkgbmfDoHksIGNoaWEgbmfhuqt1IG5oacOqbiBuZ8aw4budaSBkw7luZyBi4bqjbiBtw6F5IHTDrW5oIHRow6BuaCBoYWkgbmjDs20gY2jhuqF5IHNvbmcgc29uZzsgbmjDs20gbeG7m2kgZOG7nWkgbeG7l2kgbmjDo24gc8OhdCBuZ2F5IHRyw6puIMO0IGPhu6dhIG7DsywgZ2nhu68gbmd1ecOqbiBj4buhIGNo4buvLCBtw6B1LCB0aOG7qSB04buxIHbDoCBrw61jaCB0aMaw4bubYyDDtDsgxJFvIHThu4kgbOG7hyBsxrDhu6N0IMSRxINuZyBrw70gxJFp4buBbiBuaOG6p20gw7QgKHbDrSBk4bulIGVtYWlsIG7hurFtIHRyb25nIMO0IFPhu5EgxJFp4buHbiB0aG/huqFpKS4gQiDEkcO6bmcgdGjDrCBuaMOzbSBt4bubaSBnaeG6o20gcsO1IHNvIHbhu5tpIG5ow7NtIGPFqTsgbuG6v3UgaGFpIG5ow7NtIGfhuqduIG5oxrAgYuG6sW5nIG5oYXUgdGjDrCBCIGLhu4sgYsOhYyBi4buPLg==",
+  "rubric_b64": "Q8OidSAxIMSR4bqhdDogQiBraMO0bmcgY8OzIMO0ICJtw6J1IHRodeG6q24iIG7DoG87IEEgbcOidSB0aHXhuqtuICgyKSgzKTsgQyBtw6J1IHRodeG6q24gKDIpKDMpKDQpLiBDaOG6pXAgbmjhuq1uICJraMO0bmcgbGnDqm4gcXVhbiIgY2hvIEEtKDQpIHbDoCBjaG8gQi0oNCkuIE3hu5l0IHBo4bqnbjogc2FpIDHigJMyIMO0IG5nb8OgaSBjw6FjIMO0IHRyw6puLgpDw6J1IDIgxJHhuqF0OiBjaOG7jW4gQiwgY2jhu4kgcmEgKDIpIGhv4bq3YyAoMykgbG/huqFpIEEgdsOgIMOtdCBuaOG6pXQgKDQpIGxv4bqhaSBDLiBN4buZdCBwaOG6p246IGNo4buNbiBCIG3DoCBsw70gZG8gbG/huqFpIGNoxrBhIHRy4buPIMSRw7puZyBxdWFuIHPDoXQuCkPDonUgMyDEkeG6oXQ6IGNo4buJIMSR4buVaSB24buLIHRyw60va2hv4bqjbmcgY8OhY2ggbmjDo24sIGdp4buvIG5ndXnDqm4gdGjhu6kga2jDoWMgKMSR4bq3YyBiaeG7h3QgY+G7oSBjaOG7ryksIGPDsyBuaMOzbSDEkeG7kWkgY2jhu6luZyBzb25nIHNvbmcsIMSRbyB04buJIGzhu4cgxJFp4buBbiBuaOG6p20gw7QsIHbDoCBuw6p1IGvhur90IHF14bqjIGLDoWMgYuG7jy4gTeG7mXQgcGjhuqduOiBzbyB0csaw4bubY+KAk3NhdSB0aGF5IHbDrCBuaMOzbSBzb25nIHNvbmcsIGhv4bq3YyB0aGnhur91IHRpw6p1IGNow60gYsOhYyBi4buPLCBob+G6t2MgxJHhu5VpIG5oaeG7gXUgdGjhu6kgY8O5bmcgbMO6Yy4KQuG6q3kgY2jDrW5oOiBjaOG7jW4gQSAoIm5nxrDhu51pIGTDuW5nIOG6qXUiKSB2w6wgbsOzIGto4bubcCBxdWFuIHPDoXQgKDEpIG7hu5VpIGLhuq10IG5o4bqldC4KR+G7mXA6IGNvcnJlY3QgPSAzIGPDonUgxJHhuqF0IGhv4bq3YyAyIMSR4bqhdCArIDEgbeG7mXQgcGjhuqduOyBwYXJ0aWFsID0gMeKAkzIgY8OidSDEkeG6oXQ7IGluY29ycmVjdCA9IGtow7RuZyBjw6J1IG7DoG8gxJHhuqF0Lg==",
+  "review": {
+    "solver_model": "sonnet subagent",
+    "first_solve_match": true,
+    "revised": true,
+    "level_estimate": 2,
+    "issues": [
+      {
+        "type": "missing_premise",
+        "severity": 2,
+        "detail": "cỡ chữ ở trang khác trong (2) không được nêu, nhưng đáp án dùng nó để loại C"
+      },
+      {
+        "type": "missing_premise",
+        "severity": 2,
+        "detail": "vị trí nhãn ở trang khác trong (2) không được nêu"
+      },
+      {
+        "type": "ambiguity",
+        "severity": 2,
+        "detail": "hướng nhầm 'SĐT vào ô Email' không suy ra được từ cơ chế B"
+      },
+      {
+        "type": "missing_premise",
+        "severity": 2,
+        "detail": "đáp án loại A dựa trên 'cùng người dùng, cùng mức vội' mà đề không nói"
+      },
+      {
+        "type": "ambiguity",
+        "severity": 1,
+        "detail": "4 nhãn, 4 ô: nhãn đầu không thể nằm giữa hai ô"
+      },
+      {
+        "type": "bias",
+        "severity": 1,
+        "detail": "câu giả định trao sẵn cơ chế của B"
+      }
+    ]
+  },
+  "status": "open",
+  "extra": true
 }
