@@ -1,4 +1,4 @@
-"""Smoke test: run solve -> review -> metrics end to end on 1 domain, 1 candidate.
+"""Smoke test: run solve -> review (incl. REVISE + re-solve) -> metrics on 1 domain, 1 candidate.
 
 The API is stubbed (no key or network needed) and everything runs in a temporary
 copy of engine/, so the repo's drafts/, pool/, logs/ etc. stay untouched.
@@ -14,7 +14,7 @@ from pathlib import Path
 from types import SimpleNamespace
 
 REPO = Path(__file__).resolve().parent
-DRAFT_ID = "smoke-2026-01-01"
+DRAFT_ID = "2026-01-01_3"
 
 
 def _fake_create_message(model, system, user_content, agent, _state={"judge_calls": 0}):
@@ -49,16 +49,17 @@ def main():
     with tempfile.TemporaryDirectory() as tmp:
         tmp = Path(tmp)
         shutil.copytree(REPO / "engine", tmp / "engine", ignore=shutil.ignore_patterns("__pycache__"))
-        for d in ("drafts", "solves", "pool", "dead_letter", "logs", "prompts"):
+        for d in ("drafts", "solves", "pool", "dead_letter", "human_review", "logs", "prompts"):
             (tmp / d).mkdir()
         for name in ("red_team", "defender", "judge"):
             (tmp / "prompts" / f"{name}.md").write_text(f"Smoke-test {name} prompt.\n", encoding="utf-8")
         draft = {
-            "draft_id": DRAFT_ID, "date": "2026-01-01", "tag": "reason", "level": 2,
+            "draft_id": DRAFT_ID, "date": "2026-01-01", "domain_id": 3, "target_level": 2,
             "candidates": [{
-                "cid": "c1", "domain_id": 3,
+                "cid": "c1", "domain_id": 3, "level": 2, "tag_type": "reason", "format": "fill-in",
                 "content": "Stub puzzle: find the stable price p.",
                 "answer": "p = 12", "rubric": "stub", "hints": ["h1", "h2", "h3"],
+                "claims_to_verify": [], "reasoning_chain": "stub self-check C1-C5",
             }],
         }
         (tmp / "drafts" / f"{DRAFT_ID}.json").write_text(json.dumps(draft), encoding="utf-8")
@@ -73,14 +74,16 @@ def main():
         print("review_draft:", outcome)
 
         timeline = json.loads((tmp / "logs" / f"{DRAFT_ID}_c1.json").read_text(encoding="utf-8"))
-        print("timeline:", [e["step"] + (f"={e['verdict']}" if "verdict" in e else "") for e in timeline["events"]])
+        print("timeline:", [e["step"] + "=" + str(e.get("verdict") or e.get("decision") or "ok") for e in timeline["events"]])
+        print("solve files:", sorted(p.name for p in (tmp / "solves").glob("*.json")))
         pool_files = list((tmp / "pool").glob("*.json"))
         print("pool files:", len(pool_files), "| dead_letter files:", len(list((tmp / "dead_letter").glob("*.json"))))
         costs = [json.loads(line) for line in (tmp / "logs" / "cost.jsonl").read_text().splitlines()]
         print(f"cost log: {len(costs)} calls, ${sum(c['cost_usd'] for c in costs):.4f} (stubbed token counts)")
         metrics.compute_metrics()
 
-        assert outcome == {"c1": "pool"}, outcome
+        assert outcome["c1"]["label"] == "PASS" and outcome["c1"]["outcome"] == "pool", outcome
+        assert len(list((tmp / "solves").glob("*_rev1_solver*.json"))) == 2, "revision was not re-solved"
         assert len(pool_files) == 1
         assert json.loads(pool_files[0].read_text(encoding="utf-8"))["content"] == "Revised stub puzzle."
     print("SMOKE TEST PASSED")

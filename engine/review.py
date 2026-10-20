@@ -1,15 +1,12 @@
-"""Review a draft: solvability check, then a Red Team / Defender / Judge debate per candidate.
+"""Review a draft (commands/review.md): solvability gate, then a Red Team / Defender / Judge debate.
 
-Draft file drafts/{draft_id}.json:
-  {"draft_id": str, "date": str, "tag": str, "level": int,
-   "candidates": [{"cid": str, "domain_id": int, "content": str,
-                   "answer": str, "rubric": str, "hints": [str, ...]}, ...]}
-Solver files must already exist (engine/solve.py).
+Draft schema: see commands/gen.md. Solver files must exist first (engine/solve.py).
 
 Outcomes per candidate:
-  PASS                -> pool/{uuid}.json
-  anything else       -> dead_letter/{draft_id}_{cid}.json
-  full timeline       -> logs/{draft_id}_{cid}.json
+  PASS                     -> pool/{uuid}.json
+  answer_key_suspect       -> human_review/{draft_id}_{cid}.json
+  any other failure        -> dead_letter/{draft_id}_{cid}.json
+  full timeline            -> logs/{draft_id}_{cid}.json
 
 Usage: python3 -m engine.review <draft_id>
 """
@@ -20,28 +17,37 @@ import uuid
 from datetime import datetime, timezone
 from pathlib import Path
 
-from engine import _llm
+from engine import _llm, solve
 
 ROOT = Path(__file__).resolve().parent.parent
 DRAFTS = ROOT / "drafts"
 SOLVES = ROOT / "solves"
 POOL = ROOT / "pool"
 DEAD_LETTER = ROOT / "dead_letter"
+HUMAN_REVIEW = ROOT / "human_review"
 LOGS = ROOT / "logs"
 PROMPTS = ROOT / "prompts"
 
 MAX_ROUNDS = 2
-PROBLEM_FIELDS = ("content", "answer", "rubric", "hints")
+REVISABLE_FIELDS = ("content", "answer", "rubric", "hints")
+# Fields the debate agents see; reasoning_chain stays out so the generator's self-check doesn't anchor them.
+REVIEW_FIELDS = ("domain_id", "level", "tag_type", "format", "content", "answer", "rubric", "hints",
+                 "claims_to_verify")
 
-COMPARE_PROMPT = """You check whether two independent solvers reached the reference answer of a puzzle.
-Judge meaning, not wording: equivalent numbers, units, or phrasings count as a match.
+COMPARE_PROMPT = """You check two independent solvers' answers to a puzzle against its reference answer.
+Judge meaning, not wording: equivalent numbers, units or phrasings match. A solver matches only if every
+sub-answer matches. An answer starting with "unsolvable" never matches.
 Return JSON: {"solver1_matches": bool, "solver2_matches": bool, "solvers_agree": bool, "notes": str}
 solvers_agree compares the two solver answers with each other, regardless of the reference."""
 
 REVISE_PROMPT = """You revise a daily reasoning puzzle according to the judge's revision notes.
-Fix exactly what the notes ask for; keep the domain, tag, level and language (Vietnamese) unchanged.
-Make sure the answer, rubric and hints match the revised content.
-Return JSON: {"content": str, "answer": str, "rubric": str, "hints": [str, ...]}"""
+Make the smallest change that addresses the notes; keep domain, level, tag, format and language (Vietnamese).
+Keep the answer, rubric, hints and claims_to_verify consistent with the revised content.
+Return JSON: {"content": str, "answer": str, "rubric": str, "hints": [str, ...], "claims_to_verify": [...]}"""
+
+
+class MissingSolves(RuntimeError):
+    pass
 
 
 def _now():
@@ -66,62 +72,75 @@ def _load_prompt(name):
     return text
 
 
-def _problem(draft, cand):
-    return {
-        "domain_id": cand.get("domain_id"),
-        "tag": draft.get("tag"),
-        "level": draft.get("level"),
-        **{k: cand[k] for k in PROBLEM_FIELDS},
-    }
+def _solve_paths(draft_id, cid):
+    return [SOLVES / f"{draft_id}_{cid}_solver{n}.json" for n in solve.SOLVERS]
 
 
-def _dead_letter(draft_id, cand, reason, timeline, details=None):
-    timeline.update(outcome="dead_letter", reason=reason, finished_at=_now())
-    _write_json(DEAD_LETTER / f"{draft_id}_{cand['cid']}.json", {
-        "draft_id": draft_id,
-        "cid": cand["cid"],
-        "reason": reason,
-        "details": details,
-        "candidate": cand,
-        "timestamp": _now(),
-    })
-    return f"dead_letter:{reason}"
+def _problem(cand):
+    return {k: cand.get(k) for k in REVIEW_FIELDS}
 
 
-def _check_solvability(draft_id, draft, cand, timeline):
-    """Returns True when both solvers reached the reference answer."""
-    solves = []
-    for solver_id in (1, 2):
-        path = SOLVES / f"{draft_id}_{cand['cid']}_solver{solver_id}.json"
-        if not path.exists():
-            raise FileNotFoundError(f"{path} is missing; run engine/solve.py on this draft first.")
-        solves.append(_read_json(path))
-    result = _llm.call_haiku(COMPARE_PROMPT, {
+def _check_solvability(cand, solves, timeline):
+    """Compare both solvers with the answer key; returns "pass", "solvability_fail" or "answer_key_suspect"."""
+    cmp = _llm.call_haiku(COMPARE_PROMPT, {
         "problem": cand["content"],
         "reference_answer": cand["answer"],
-        "solver1_answer": solves[0].get("answer"),
-        "solver2_answer": solves[1].get("answer"),
+        "solver1_answer": solves[1].get("solver_answer"),
+        "solver2_answer": solves[2].get("solver_answer"),
     }, agent="solvability_check")
-    timeline["solvability"] = result
-    timeline["events"].append({"at": _now(), "step": "solvability", "result": result})
-    return bool(result.get("solver1_matches")) and bool(result.get("solver2_matches"))
+    m1, m2 = bool(cmp.get("solver1_matches")), bool(cmp.get("solver2_matches"))
+    if int(cand.get("level") or 2) <= 3:
+        decision = "pass" if m1 and m2 else "solvability_fail"
+    elif m1 or m2:
+        decision = "pass"
+    else:
+        decision = "answer_key_suspect" if cmp.get("solvers_agree") else "solvability_fail"
+    check = {"at": _now(), "comparison": cmp, "decision": decision,
+             "solver_answers": {n: s.get("solver_answer") for n, s in solves.items()}}
+    timeline["solvability_checks"].append(check)
+    timeline["solvability"] = timeline["solvability"] or cmp  # metrics use the first check
+    return decision, cmp
 
 
-def _review_candidate(draft_id, draft, cand, prompts):
+def _finish(draft_id, cand, timeline, outcome, reason, label, sentence, details=None):
+    timeline.update(outcome=outcome, reason=reason, finished_at=_now())
+    if outcome in ("dead_letter", "human_review"):
+        target = DEAD_LETTER if outcome == "dead_letter" else HUMAN_REVIEW
+        record = {"draft_id": draft_id, "cid": cand["cid"], "reason": reason, "details": details,
+                  "candidate": cand, "timestamp": _now()}
+        if outcome == "human_review":
+            record["flag"] = reason
+        _write_json(target / f"{draft_id}_{cand['cid']}.json", record)
+    return {"label": label, "reason": sentence, "outcome": outcome, "detail": reason}
+
+
+def _gate_result(draft_id, cand, timeline, decision, cmp):
+    if decision == "answer_key_suspect":
+        return _finish(draft_id, cand, timeline, "human_review", decision, "FAIL",
+                       "cả 2 solver cùng ra một đáp án khác key, nghi key sai; chuyển human_review/", cmp)
+    return _finish(draft_id, cand, timeline, "dead_letter", "solvability_fail", "FAIL",
+                   f"solver không tái tạo được đáp án ({cmp.get('notes', '')})".strip(), cmp)
+
+
+def _review_candidate(draft_id, cand, prompts):
     timeline = {"draft_id": draft_id, "cid": cand["cid"], "started_at": _now(),
-                "solvability": None, "rounds": [], "events": []}
+                "solvability": None, "solvability_checks": [], "rounds": [], "events": []}
     try:
-        if not _check_solvability(draft_id, draft, cand, timeline):
-            return _dead_letter(draft_id, cand, "solvability_fail", timeline, timeline["solvability"])
+        solves = {n: _read_json(p) for n, p in zip(solve.SOLVERS, _solve_paths(draft_id, cand["cid"]))}
+        decision, cmp = _check_solvability(cand, solves, timeline)
+        timeline["events"].append({"at": _now(), "step": "solvability", "decision": decision})
+        if decision != "pass":
+            return _gate_result(draft_id, cand, timeline, decision, cmp)
 
         for round_no in range(1, MAX_ROUNDS + 1):
-            problem = _problem(draft, cand)
+            problem = _problem(cand)
             attacks = _llm.call_opus(prompts["red_team"], {"problem": problem}, agent="red_team")
             defense = _llm.call_sonnet(prompts["defender"], {"problem": problem, "attacks": attacks},
                                        agent="defender")
             judgment = _llm.call_opus(prompts["judge"], {"problem": problem, "attacks": attacks,
                                                          "defense": defense}, agent="judge")
             verdict = str(judgment.get("verdict", "")).upper()
+            reason = str(judgment.get("reason") or judgment.get("rationale") or "").strip()
             timeline["rounds"].append({"round": round_no, "problem": problem, "attacks": attacks,
                                        "defense": defense, "judgment": judgment, "verdict": verdict})
             timeline["events"].append({"at": _now(), "step": f"round_{round_no}", "verdict": verdict})
@@ -129,27 +148,38 @@ def _review_candidate(draft_id, draft, cand, prompts):
             if verdict == "PASS":
                 pool_id = str(uuid.uuid4())
                 _write_json(POOL / f"{pool_id}.json", {
-                    "id": pool_id, "draft_id": draft_id, "cid": cand["cid"],
-                    "date": draft.get("date"), **problem,
-                    "review": {"rounds": round_no, "verdict": verdict}, "created_at": _now(),
+                    "id": pool_id, "draft_id": draft_id, "cid": cand["cid"], **problem,
+                    "review": {"rounds": round_no, "verdict": verdict, "reason": reason},
+                    "created_at": _now(),
                 })
-                timeline.update(outcome="pool", pool_id=pool_id, finished_at=_now())
-                return "pool"
+                timeline["pool_id"] = pool_id
+                return _finish(draft_id, cand, timeline, "pool", "pass", "PASS", reason or "judge cho qua")
             if verdict == "FAIL":
-                return _dead_letter(draft_id, cand, "judge_fail", timeline, judgment)
+                return _finish(draft_id, cand, timeline, "dead_letter", "judge_fail", "FAIL",
+                               reason or "judge đánh trượt", judgment)
             if verdict != "REVISE":
-                return _dead_letter(draft_id, cand, "invalid_verdict", timeline, judgment)
+                return _finish(draft_id, cand, timeline, "dead_letter", "invalid_verdict", "FAIL",
+                               f"judge trả verdict không hợp lệ: {verdict!r}", judgment)
             if round_no == MAX_ROUNDS:
-                return _dead_letter(draft_id, cand, "max_revision_exceeded", timeline, judgment)
+                return _finish(draft_id, cand, timeline, "dead_letter", "max_revision_exceeded", "REVISE",
+                               f"hết {MAX_ROUNDS} vòng mà judge vẫn yêu cầu sửa", judgment)
 
             revised = _llm.call_opus(REVISE_PROMPT, {"problem": problem,
                                                      "revision_notes": judgment.get("revision_notes")},
                                      agent="reviser")
-            missing = [k for k in PROBLEM_FIELDS if k not in revised]
+            missing = [k for k in REVISABLE_FIELDS if k not in revised]
             if missing:
-                return _dead_letter(draft_id, cand, "invalid_revision", timeline, {"missing": missing})
-            cand = {**cand, **{k: revised[k] for k in PROBLEM_FIELDS}}
+                return _finish(draft_id, cand, timeline, "dead_letter", "invalid_revision", "FAIL",
+                               f"reviser thiếu trường {missing}", revised)
+            cand = {**cand, **{k: revised[k] for k in (*REVISABLE_FIELDS, "claims_to_verify") if k in revised}}
             timeline["events"].append({"at": _now(), "step": f"revision_{round_no}", "revised": revised})
+
+            # A revision can change the answer, so both solvers must re-solve it blind.
+            resolves = solve.solve_candidate(draft_id, cand["cid"], cand["content"], tag=f"_rev{round_no}")
+            decision, cmp = _check_solvability(cand, resolves, timeline)
+            timeline["events"].append({"at": _now(), "step": f"resolve_{round_no}", "decision": decision})
+            if decision != "pass":
+                return _gate_result(draft_id, cand, timeline, decision, cmp)
         raise AssertionError("unreachable: every round returns")
     except Exception as exc:
         # API/parse failures abort the draft; metrics skip timelines marked "error".
@@ -161,12 +191,19 @@ def _review_candidate(draft_id, draft, cand, prompts):
 
 def review_draft(draft_id):
     draft = _read_json(DRAFTS / f"{draft_id}.json")
+    missing = [p.name for c in draft["candidates"] for p in _solve_paths(draft_id, c["cid"]) if not p.exists()]
+    if missing:
+        raise MissingSolves(f"Chạy /solve trước (thiếu: {', '.join(missing)})")
     prompts = {name: _load_prompt(name) for name in ("red_team", "defender", "judge")}
-    return {cand["cid"]: _review_candidate(draft_id, draft, cand, prompts)
-            for cand in draft["candidates"]}
+    return {cand["cid"]: _review_candidate(draft_id, cand, prompts) for cand in draft["candidates"]}
 
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         sys.exit("usage: python3 -m engine.review <draft_id>")
-    print(json.dumps(review_draft(sys.argv[1]), ensure_ascii=False, indent=2))
+    try:
+        results = review_draft(sys.argv[1])
+    except MissingSolves as exc:
+        sys.exit(str(exc))
+    for cid, r in results.items():
+        print(f"{cid}: {r['label']} — {r['reason']}")

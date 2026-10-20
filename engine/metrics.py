@@ -3,7 +3,7 @@
 - Red Team catch rate: share of debated candidates whose round-1 attacks include
   at least one attack with severity >= 2.
 - Solvability disagreement rate: share of solver pairs whose answers disagree with each other.
-- Dead letter rate: share of finished candidates that ended in dead_letter.
+- Dead letter rate: share of finished candidates (pool, dead_letter, human_review) that ended in dead_letter.
 Timelines marked "error" (API or parse failure) are skipped.
 
 Usage: python3 -m engine.metrics
@@ -32,7 +32,7 @@ def _load_timelines():
     timelines = []
     for path in sorted(LOGS.glob("*.json")):
         data = json.loads(path.read_text(encoding="utf-8"))
-        if data.get("outcome") in ("pool", "dead_letter"):
+        if data.get("outcome") in ("pool", "dead_letter", "human_review"):
             timelines.append(data)
     return timelines
 
@@ -68,6 +68,9 @@ def compute_metrics():
         if not low <= m["value"] <= high:
             line += "  WARNING: outside target"
         print(line)
+    held = sum(t["outcome"] == "human_review" for t in timelines)
+    if held:
+        print(f"human_review (answer_key_suspect): {held}")
     return metrics
 
 
