@@ -14,6 +14,7 @@ Thêm dòng mới khi người dùng chỉ ra lỗi của đề, hoặc khi mộ
 - (20/10) Không để câu trước gợi sẵn đơn vị hay khung cho câu sau. Hỏi quyết định trước, đưa công cụ sau.
 - (20/10) Đáp án dựa vào so sánh hai tình huống (trang khác, thiết bị khác) thì đề phải nói rõ những gì được giữ nguyên (người dùng, cỡ chữ, vị trí...).
 - (20/10) Kiểm tra chiều của quan sát có thật sự suy ra từ cơ chế không (vd: nhãn ghép lên ô phía trên thì lỗi phải là email vào ô Số điện thoại, không phải ngược lại). Đếm lại bố cục (4 nhãn, 4 ô).
+- (20/10) Câu hỏi có lượng từ phải viết tường minh: "không mâu thuẫn với BẤT KỲ quan sát nào", không viết "không mâu thuẫn với quan sát nào" (đọc được như câu hỏi liệt kê). Khi câu sau tổng hợp từ câu trước, nói rõ "dựa trên bảng ở câu 1".
 
 ## Hồ sơ người học
 - Mạnh: thao tác đại số, lập phương trình; thiết kế phép đo trực tiếp; tự chuẩn hoá ký hiệu trước khi làm (20/10); phân biệt "sai sự thật" và "đúng nhưng chọn lọc".
