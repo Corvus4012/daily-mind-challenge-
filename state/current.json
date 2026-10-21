@@ -1,27 +1,27 @@
 {
-  "date": "2026-10-20",
-  "pool_id": "20261020-d10-01aac0",
-  "domain_id": 10,
+  "date": "2026-10-21",
+  "pool_id": "20261020-d02-cf257c",
+  "domain_id": 2,
   "tag": "reason",
   "level": 2,
   "base_level": 2,
   "rolled_level": 2,
   "level_mode": "core",
-  "est_minutes": 10,
-  "format": "spot-flaw",
+  "est_minutes": 8,
+  "format": "mc",
   "skills": [
-    "common_cause",
-    "experiment_design"
+    "unit_choice",
+    "self_check"
   ],
-  "challenge_md": "Trang đăng ký của một website (bản máy tính) xếp 4 ô thành cột dọc, sát nhau: Họ tên, Số điện thoại, Email, Địa chỉ. Nhãn \"Họ tên\" nằm trên cùng; ba nhãn còn lại mỗi nhãn nằm giữa hai ô liền nhau, cách ô phía trên và ô phía dưới **bằng nhau**.\n\nSau một tháng, nhóm vận hành ghi nhận 4 điều (cùng một nhóm người dùng, cùng cỡ chữ nhãn ở mọi trang và mọi thiết bị):\n(1) Rất nhiều người điền địa chỉ email vào ô Số điện thoại.\n(2) Ở một trang khác của website, các ô cách nhau rộng và mỗi nhãn nằm sát ngay trên ô của nó: hầu như không ai điền nhầm.\n(3) Bản điện thoại của chính trang đăng ký này đặt nhãn sát ngay trên ô của nó: gần như không ai điền nhầm.\n(4) Người trên 60 tuổi và người dưới 30 tuổi điền nhầm với tỉ lệ như nhau, dù người trên 60 tuổi trung bình đọc chữ nhỏ khó hơn.\n\nBa giải thích được đưa ra:\n- A. Người dùng vội, không đọc kỹ.\n- B. Nhãn cách đều hai ô nên người dùng ghép nhãn với nhầm ô.\n- C. Chữ nhãn quá nhỏ.\n\n**Câu hỏi**\n1. Với mỗi giải thích A, B, C và mỗi quan sát (1)–(4), xếp vào một trong ba loại: *giải thích được* (nếu giải thích đó đúng, ta trông đợi thấy quan sát này), *mâu thuẫn* (ta trông đợi điều ngược lại), hoặc *không liên quan*.\n2. Giải thích nào không mâu thuẫn với quan sát nào? Quan sát nào loại A, quan sát nào loại C?\n3. Đề xuất một phép thử làm trong vài ngày để xác nhận giải thích còn lại: thay đổi gì, giữ nguyên gì, đo gì, và kết quả nào sẽ bác bỏ nó.",
+  "challenge_md": "Minh cân nhắc hai cách đi học mỗi sáng (quãng đường tính một chiều, từ nhà đến trường).\n- **Đi bộ:** đường tắt qua công viên, dài 1,5 km, tốc độ 5 km/giờ.\n- **Đi xe đạp:** phải đi vòng đường lớn đông xe, dài 4 km, tốc độ 10 km/giờ.\n\n*Giả định của đề:* rủi ro gặp sự cố tỉ lệ thuận với quãng đường, với mức không đổi: đi bộ 4 sự cố trên mỗi 1 triệu km, đi xe đạp 1,8 sự cố trên mỗi 1 triệu km. Mọi sự cố coi là nghiêm trọng như nhau. Mọi con số là giả định, không phải thống kê thật.\n\n**Câu hỏi**\n1. Chỉ xét an toàn, Minh nên đi bộ hay đi xe đạp? Trả lời trước khi tính, kèm 1 câu lý do.\n2. Tính ba con số cho mỗi cách đi: rủi ro trên 1 triệu km, rủi ro trên 1 triệu giờ di chuyển, và rủi ro trên 1 triệu chuyến đi học.\n3. Trong ba cách so sánh ở câu 2, cách nào khớp với quyết định Minh đang đưa ra, và vì sao hai cách còn lại dẫn sai? Nếu câu trả lời ở câu 1 của bạn khác với kết quả này, chỉ ra chỗ lập luận đã trượt.",
   "hints": [
-    "Đừng hỏi giải thích nào nghe hợp lý nhất. Hãy hỏi giải thích nào không bị quan sát nào phản bác. Kẻ bảng 3 hàng (A, B, C) × 4 cột (1)–(4).",
-    "(2) và (3) là cùng nhóm người dùng, cùng cỡ chữ; chỉ có vị trí nhãn so với ô thay đổi. Nếu A hoặc C đúng, lỗi có biến mất khi chỉ vị trí nhãn thay đổi không? Còn (4): nếu chữ khó đọc thì nhóm nào lẽ ra nhầm nhiều hơn?",
-    "Phép thử tốt chỉ đổi đúng thứ mà giải thích còn lại cho là nguyên nhân (khoảng cách nhãn tới ô), chạy song song với một nhóm giữ nguyên bố cục cũ, đo đúng loại lỗi ở (1), và nói trước kết quả nào sẽ bác bỏ nó."
+    "Một con số rủi ro luôn đi kèm câu hỏi 'trên mỗi cái gì'. Ba mẫu số ở câu 2 có thể cho ba kết luận khác nhau. Trước khi tin kết luận nào, hỏi: Minh thực sự đang chọn giữa hai cái gì?",
+    "Rủi ro trên giờ = tốc độ × rủi ro trên km. Rủi ro một chuyến = quãng đường của chuyến × rủi ro trên km. Hai cách đi có quãng đường và thời gian khác nhau.",
+    "Minh không chọn giữa 'đi 1 km bộ' và 'đi 1 km xe đạp', cũng không chọn giữa 'một giờ đi bộ' và 'một giờ đạp xe'. Minh chọn giữa hai cách để đến trường một lần."
   ],
   "hints_revealed": 0,
-  "answer_key_b64": "MS4gQSAoduG7mWkpOiAoMSkgZ2nhuqNpIHRow61jaCDEkcaw4bujYzsgKDIpIG3DonUgdGh14bqrbiB2w6AgKDMpIG3DonUgdGh14bqrbiAoY8O5bmcgbmfGsOG7nWkgZMO5bmcsIHbhu5lpIHRow6wgduG6q24gduG7mWksIHRhIHRyw7RuZyDEkeG7o2kgbOG7l2kgduG6q24gY8OybiBraGkgY2jhu4kgduG7iyB0csOtIG5ow6NuIMSR4buVaSk7ICg0KSBraMO0bmcgbGnDqm4gcXVhbi4KICAgQiAobmjDo24gY8OhY2ggxJHhu4F1KTogKDEpIGdp4bqjaSB0aMOtY2ggxJHGsOG7o2MgKG5ow6NuICJFbWFpbCIgY8OhY2ggxJHhu4F1IMO0IFPhu5EgxJFp4buHbiB0aG/huqFpIHBow61hIHRyw6puIHbDoCDDtCBFbWFpbCBwaMOtYSBkxrDhu5tpLCBuw6puIGLhu4sgZ2jDqXAgbMOqbiDDtCBwaMOtYSB0csOqbik7ICgyKSB2w6AgKDMpIGdp4bqjaSB0aMOtY2ggxJHGsOG7o2MgKG5ow6NuIHPDoXQgw7QgY+G7p2EgbsOzIHRow6wgaOG6v3QgbcahIGjhu5MsIGjhur90IGzhu5dpKTsgKDQpIGdp4bqjaSB0aMOtY2ggxJHGsOG7o2MgaG/hurdjIGtow7RuZyBsacOqbiBxdWFuIChjw6FjaCBt4bqvdCBnaMOpcCBuaMOzbSBraMO0bmcgcGjhu6UgdGh14buZYyB0aOG7iyBs4buxYywgbsOqbiBraMO0bmcgdHLDtG5nIMSR4bujaSBraMOhYyBiaeG7h3QgdGhlbyB0deG7lWkpLiBD4bqjIGhhaSBjw6FjaCB44bq/cCAoNCkgY2hvIEIgxJHhu4F1IGNo4bqlcCBuaOG6rW4uCiAgIEMgKGNo4buvIG5o4buPKTogKDEpIGdp4bqjaSB0aMOtY2ggxJHGsOG7o2M7ICgyKSB2w6AgKDMpIG3DonUgdGh14bqrbiAoY+G7oSBjaOG7ryBuaMawIG5oYXUgbcOgIGzhu5dpIGJp4bq/biBt4bqldCk7ICg0KSBtw6J1IHRodeG6q24gKGNo4buvIG5o4buPIHRow6wgbmfGsOG7nWkgdHLDqm4gNjAgbOG6vSByYSBuaOG6p20gbmhp4buBdSBoxqFuKS4KMi4gQ2jhu4kgQiBraMO0bmcgbcOidSB0aHXhuqtuIHbhu5tpIHF1YW4gc8OhdCBuw6BvLiAoMikgdsOgICgzKSBsb+G6oWkgQTsgKDIpLCAoMykgdsOgICg0KSBsb+G6oWkgQy4gQ8ahIGNo4bq/OiB0w6xtIGdp4bqjIHRodXnhur90IGdp4bqjaSB0aMOtY2ggxJHGsOG7o2MgbeG7jWkgcXVhbiBzw6F0IGPDuW5nIGzDumMsIGtow7RuZyBjaOG7jW4gZ2nhuqMgdGh1eeG6v3QgY2jhu4kga2jhu5twIHF1YW4gc8OhdCBu4buVaSBi4bqtdCBuaOG6pXQgKDEpLgozLiBWw60gZOG7pSDEkeG6oXQ6IHRyb25nIHbDoGkgbmfDoHksIGNoaWEgbmfhuqt1IG5oacOqbiBuZ8aw4budaSBkw7luZyBi4bqjbiBtw6F5IHTDrW5oIHRow6BuaCBoYWkgbmjDs20gY2jhuqF5IHNvbmcgc29uZzsgbmjDs20gbeG7m2kgZOG7nWkgbeG7l2kgbmjDo24gc8OhdCBuZ2F5IHRyw6puIMO0IGPhu6dhIG7DsywgZ2nhu68gbmd1ecOqbiBj4buhIGNo4buvLCBtw6B1LCB0aOG7qSB04buxIHbDoCBrw61jaCB0aMaw4bubYyDDtDsgxJFvIHThu4kgbOG7hyBsxrDhu6N0IMSRxINuZyBrw70gxJFp4buBbiBuaOG6p20gw7QgKHbDrSBk4bulIGVtYWlsIG7hurFtIHRyb25nIMO0IFPhu5EgxJFp4buHbiB0aG/huqFpKS4gQiDEkcO6bmcgdGjDrCBuaMOzbSBt4bubaSBnaeG6o20gcsO1IHNvIHbhu5tpIG5ow7NtIGPFqTsgbuG6v3UgaGFpIG5ow7NtIGfhuqduIG5oxrAgYuG6sW5nIG5oYXUgdGjDrCBCIGLhu4sgYsOhYyBi4buPLg==",
-  "rubric_b64": "Q8OidSAxIMSR4bqhdDogQiBraMO0bmcgY8OzIMO0ICJtw6J1IHRodeG6q24iIG7DoG87IEEgbcOidSB0aHXhuqtuICgyKSgzKTsgQyBtw6J1IHRodeG6q24gKDIpKDMpKDQpLiBDaOG6pXAgbmjhuq1uICJraMO0bmcgbGnDqm4gcXVhbiIgY2hvIEEtKDQpIHbDoCBjaG8gQi0oNCkuIE3hu5l0IHBo4bqnbjogc2FpIDHigJMyIMO0IG5nb8OgaSBjw6FjIMO0IHRyw6puLgpDw6J1IDIgxJHhuqF0OiBjaOG7jW4gQiwgY2jhu4kgcmEgKDIpIGhv4bq3YyAoMykgbG/huqFpIEEgdsOgIMOtdCBuaOG6pXQgKDQpIGxv4bqhaSBDLiBN4buZdCBwaOG6p246IGNo4buNbiBCIG3DoCBsw70gZG8gbG/huqFpIGNoxrBhIHRy4buPIMSRw7puZyBxdWFuIHPDoXQuCkPDonUgMyDEkeG6oXQ6IGNo4buJIMSR4buVaSB24buLIHRyw60va2hv4bqjbmcgY8OhY2ggbmjDo24sIGdp4buvIG5ndXnDqm4gdGjhu6kga2jDoWMgKMSR4bq3YyBiaeG7h3QgY+G7oSBjaOG7ryksIGPDsyBuaMOzbSDEkeG7kWkgY2jhu6luZyBzb25nIHNvbmcsIMSRbyB04buJIGzhu4cgxJFp4buBbiBuaOG6p20gw7QsIHbDoCBuw6p1IGvhur90IHF14bqjIGLDoWMgYuG7jy4gTeG7mXQgcGjhuqduOiBzbyB0csaw4bubY+KAk3NhdSB0aGF5IHbDrCBuaMOzbSBzb25nIHNvbmcsIGhv4bq3YyB0aGnhur91IHRpw6p1IGNow60gYsOhYyBi4buPLCBob+G6t2MgxJHhu5VpIG5oaeG7gXUgdGjhu6kgY8O5bmcgbMO6Yy4KQuG6q3kgY2jDrW5oOiBjaOG7jW4gQSAoIm5nxrDhu51pIGTDuW5nIOG6qXUiKSB2w6wgbsOzIGto4bubcCBxdWFuIHPDoXQgKDEpIG7hu5VpIGLhuq10IG5o4bqldC4KR+G7mXA6IGNvcnJlY3QgPSAzIGPDonUgxJHhuqF0IGhv4bq3YyAyIMSR4bqhdCArIDEgbeG7mXQgcGjhuqduOyBwYXJ0aWFsID0gMeKAkzIgY8OidSDEkeG6oXQ7IGluY29ycmVjdCA9IGtow7RuZyBjw6J1IG7DoG8gxJHhuqF0Lg==",
+  "answer_key_b64": "MS4gQ8OidSB0cuG6oyBs4budaSDEkcO6bmc6IMSRaSBi4buZIChy4bunaSBybyBjaG8gbeG7l2kgbOG6p24gxJHhur9uIHRyxrDhu51uZyB0aOG6pXAgaMahbikuIEPDonUgdHLhuqMgbOG7nWkgdHLhu7FjIGdpw6FjIGhheSBn4bq3cCBsw6AgeGUgxJHhuqFwLCB2w6wgbeG7qWMgcuG7p2kgcm8gdHLDqm4ga20gdGjhuqVwIGjGoW47IGPDonUgMyBraeG7g20gdHJhIG5nxrDhu51pIGdp4bqjaSBjw7MgdOG7sSBz4butYSDEkcaw4bujYyBraMO0bmcuCjIuIFRyw6puIDEgdHJp4buHdSBrbTogxJFpIGLhu5kgNCwgeGUgxJHhuqFwIDEsOCDihpIgeGUgxJHhuqFwIHRo4bqlcCBoxqFuLgogICBUcsOqbiAxIHRyaeG7h3UgZ2nhu506IMSRaSBi4buZIDUgw5cgNCA9IDIwLCB4ZSDEkeG6oXAgMTAgw5cgMSw4ID0gMTgg4oaSIHhlIMSR4bqhcCB0aOG6pXAgaMahbi4KICAgVHLDqm4gMSB0cmnhu4d1IGNodXnhur9uOiDEkWkgYuG7mSAxLDUgw5cgNCA9IDYsIHhlIMSR4bqhcCA0IMOXIDEsOCA9IDcsMiDihpIgxJFpIGLhu5kgdGjhuqVwIGjGoW4uCjMuIFLhu6dpIHJvIHRyw6puIG3hu5dpIGNodXnhur9uLCB2w6wgTWluaCBjaOG7jW4gY8OhY2ggaG/DoG4gdGjDoG5oIGPDuW5nIG3hu5l0IHZp4buHYyAobeG7mXQgbOG6p24gxJHhur9uIHRyxrDhu51uZyksIG3DoCBoYWkgY8OhY2ggY8OzIHF1w6NuZyDEkcaw4budbmcgdsOgIHRo4budaSBnaWFuIGtow6FjIG5oYXUuIFTDrW5oIHRyw6puIGttIGLhu48gcXVhIHZp4buHYyDEkcaw4budbmcgeGUgxJHhuqFwIGTDoGkgZ+G6pXAgZ+G6p24gMiw3IGzhuqduOyB0w61uaCB0csOqbiBnaeG7nSBi4buPIHF1YSB2aeG7h2MgY2h1eeG6v24geGUgxJHhuqFwIG3huqV0IDI0IHBow7p0IHNvIHbhu5tpIDE4IHBow7p0IMSRaSBi4buZLiBD4bqjIGhhaSDEkeG7gXUgY2jhu4kgc2FuZyB4ZSDEkeG6oXAsIG5oxrBuZyBxdXnhur90IMSR4buLbmggxJHDum5nIGzDoCDEkWkgYuG7mS4gQ8ahIGNo4bq/OiBt4bqrdSBz4buRIGPhu6dhIHBow6lwIHNvIHPDoW5oIHBo4bqjaSBraOG7m3AgduG7m2kgxJHGoW4gduG7iyBj4bunYSBxdXnhur90IMSR4buLbmguIE7hur91IGPDonUgMSBjaOG7jW4geGUgxJHhuqFwLCBjaOG7lyB0csaw4bujdCBsw6AgxJHDoyBkw7luZyBjb24gc+G7kSB0csOqbiBrbSAoY29uIHPhu5EgY8OzIHPhurVuIHRyb25nIMSR4buBKSBtw6Aga2jDtG5nIGjhu49pIG7DsyDEkW8gY8OhaSBnw6wu",
+  "rubric_b64": "Q8OidSAxOiBraMO0bmcgY2jhuqVtIMSRw7puZy9zYWkgcmnDqm5nOyBkw7luZyDEkeG7gyB4w6l0IGPDonUgMyAodOG7sSBraeG7g20pLgpDw6J1IDIgxJHhuqF0OiDEkeG7pyA2IGNvbiBz4buRIMSRw7puZyAoNDsgMSw4OyAyMDsgMTg7IDY7IDcsMikuIE3hu5l0IHBo4bqnbjogxJHDum5nIDTigJM1IGNvbiBz4buRLgpDw6J1IDMgxJHhuqF0OiBjaOG7jW4gJ23hu5dpIGNodXnhur9uJywgbsOqdSDEkcaw4bujYyAnY8O5bmcgbeG7mXQgdmnhu4djLCBxdcOjbmcgxJHGsOG7nW5nL3Ro4budaSBnaWFuIGtow6FjIG5oYXUnIGhv4bq3YyAnbeG6q3Ugc+G7kSBwaOG6o2kga2jhu5twIHF1eeG6v3QgxJHhu4tuaCcsIFbDgCBu4bq/dSBjw6J1IDEgY2jhu41uIHhlIMSR4bqhcCB0aMOsIGNo4buJIHJhIMSRxrDhu6NjIGNo4buXIHRyxrDhu6N0LiBN4buZdCBwaOG6p246IGNo4buNbiDEkcO6bmcgbeG6q3Ugc+G7kSBuaMawbmcga2jDtG5nIGdp4bqjaSB0aMOtY2ggdsOsIHNhbyBoYWkgY8OhY2gga2lhIGThuqtuIHNhaSwgaG/hurdjIGtow7RuZyB04buxIHPhu61hIGPDonUgMS4KQuG6q3kgY2jDrW5oOiB0aW4gY29uIHPhu5EgdHLDqm4ga20gKHbDoCBj4bqjIHRyw6puIGdp4budKSB2w6wgY+G6oyBoYWkgY8O5bmcgY2jhu4kgc2FuZyB4ZSDEkeG6oXAuCkfhu5lwOiBjb3JyZWN0ID0gY8OidSAyIHbDoCBjw6J1IDMgxJHhuqF0OyBwYXJ0aWFsID0gbeG7mXQgdHJvbmcgaGFpIMSR4bqhdCwgaG/hurdjIGPhuqMgaGFpIG3hu5l0IHBo4bqnbjsgaW5jb3JyZWN0ID0ga2jDtG5nIGPDonUgbsOgbyDEkeG6oXQu",
   "review": {
     "solver_model": "sonnet subagent",
     "first_solve_match": true,
@@ -29,37 +29,27 @@
     "level_estimate": 2,
     "issues": [
       {
-        "type": "missing_premise",
+        "type": "level_mismatch",
         "severity": 2,
-        "detail": "cỡ chữ ở trang khác trong (2) không được nêu, nhưng đáp án dùng nó để loại C"
-      },
-      {
-        "type": "missing_premise",
-        "severity": 2,
-        "detail": "vị trí nhãn ở trang khác trong (2) không được nêu"
-      },
-      {
-        "type": "ambiguity",
-        "severity": 2,
-        "detail": "hướng nhầm 'SĐT vào ô Email' không suy ra được từ cơ chế B"
-      },
-      {
-        "type": "missing_premise",
-        "severity": 2,
-        "detail": "đáp án loại A dựa trên 'cùng người dùng, cùng mức vội' mà đề không nói"
-      },
-      {
-        "type": "ambiguity",
-        "severity": 1,
-        "detail": "4 nhãn, 4 ô: nhãn đầu không thể nằm giữa hai ô"
+        "detail": "theo giờ và theo chuyến cùng chỉ sang đi bộ, câu chọn thước đo không phân biệt được"
       },
       {
         "type": "bias",
+        "severity": 2,
+        "detail": "câu 2 gợi sẵn đơn vị 'mỗi chuyến', bẫy không thể sập"
+      },
+      {
+        "type": "ambiguity",
         "severity": 1,
-        "detail": "câu giả định trao sẵn cơ chế của B"
+        "detail": "không nói quãng đường là một chiều"
+      },
+      {
+        "type": "missing_premise",
+        "severity": 1,
+        "detail": "không nói mọi sự cố nghiêm trọng như nhau"
       }
     ]
   },
-  "status": "submitted",
-  "extra": true
+  "status": "open",
+  "extra": false
 }
