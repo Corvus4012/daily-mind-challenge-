@@ -27,4 +27,6 @@ Thêm dòng mới khi người dùng chỉ ra lỗi của đề, hoặc khi mộ
   - Câu hỏi xác nhận vẫn dựa vào chính ký hiệu đang gây mơ hồ, thay vì đi qua một kênh độc lập (20/10).
   - Thiết kế phép thử: chọn biến cần thao tác theo giả thuyết đang muốn kiểm, không theo chỗ còn trống trong bảng (experiment_design, 20/10).
   - Tiến bộ: tự xác định đúng giả thuyết duy nhất không bị phản bác (common_cause, 20/10).
+  - Tiến bộ: tự quay lại sửa câu trả lời trực giác bằng chính kết quả tính được (self_check, 21/10).
+  - unit_choice lặp lỗi lần 2 (17/10, 21/10): chọn đúng thước đo nhưng chưa nói được vì sao; cần nguyên tắc "mẫu số = đơn vị của quyết định".
 - Cách phản hồi hợp: thẳng, chỉ ra cơ chế; thích được giải nghĩa nền tảng khi gặp domain lạ (đã xin bổ túc kinh tế ngày 19/10).
