@@ -35,3 +35,4 @@ Thêm dòng mới khi người dùng chỉ ra lỗi của đề, hoặc khi mộ
 
 ## Ghi chú hệ thống (chờ trao đổi qua /discuss)
 - (22/10) Tác vụ tự động đã chuyển sang chạy trong phiên chính vì phiên mới không push được (lần chạy 21/10 mất 8 đề). Cần theo dõi lần chạy 25/10.
+- (22/10) Restock 22/10: 8/8 lời giải mù khớp ngay lần đầu (mismatch 0%, dưới ngưỡng 5%), phản biện hạ đề L3 xuống L2. Pool toàn L2, nên ngày roll ra L3/L4 phải sinh đề tại chỗ. Cần bàn: đề L2 có đang quá dễ không, và có nên giữ sẵn vài đề L3–4 trong pool.
