@@ -16,6 +16,8 @@ Thêm dòng mới khi người dùng chỉ ra lỗi của đề, hoặc khi mộ
 - (20/10) Kiểm tra chiều của quan sát có thật sự suy ra từ cơ chế không (vd: nhãn ghép lên ô phía trên thì lỗi phải là email vào ô Số điện thoại, không phải ngược lại). Đếm lại bố cục (4 nhãn, 4 ô).
 - (20/10) Câu hỏi có lượng từ phải viết tường minh: "không mâu thuẫn với BẤT KỲ quan sát nào", không viết "không mâu thuẫn với quan sát nào" (đọc được như câu hỏi liệt kê). Khi câu sau tổng hợp từ câu trước, nói rõ "dựa trên bảng ở câu 1".
 - (20/10) Câu hỏi nối tiếp nên gọi tên đối tượng tường minh mà không lộ đáp án: "giải thích bạn chọn ở câu 2" thay vì "giải thích còn lại" (người dùng đã hiểu thành "ô K còn lại trong bảng").
+- (22/10) "Bằng bao nhiêu phần trăm so với X" đọc được hai cách (hơn 4,3% hay bằng 104,3%). Viết "cao hơn bao nhiêu phần trăm nếu lấy X làm mốc".
+- (22/10) Ghi chú chấm và ví dụ đáp án cũng phải kiểm số như đề ("ít hơn một nửa" khác "đúng một nửa").
 - (21/10) Khi nói về một lựa chọn chưa chốt, viết "quyết định X cần đưa ra", không viết "đang đưa ra" (người dùng hiểu thành quyết định đã có).
 
 ## Hồ sơ người học
