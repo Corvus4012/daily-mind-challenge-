@@ -1,0 +1,43 @@
+{
+  "id": "20261022-d12-849a3b",
+  "created": "2026-10-22",
+  "domain_id": 12,
+  "level": 2,
+  "tag": "reason",
+  "format": "fill-in",
+  "skills": [
+    "framing",
+    "absolute_vs_relative"
+  ],
+  "est_minutes": 8,
+  "challenge_md": "Một quảng cáo có biểu đồ cột so sánh \"tỉ lệ khách hàng hài lòng\" (số liệu giả định của đề; mỗi khách chỉ trả lời \"hài lòng\" hoặc \"không hài lòng\"): sản phẩm P đạt 92%, sản phẩm Q đạt 96%. Trục tung của biểu đồ **bắt đầu từ 90%** chứ không từ 0%, và chiều cao mỗi cột tỉ lệ với khoảng cách từ 90% đến giá trị của cột đó. Tiêu đề: *\"Q làm khách hài lòng vượt trội so với P!\"*\n\n**Câu hỏi**\n1. Trên biểu đồ này, cột Q cao gấp mấy lần cột P?\n2. Thực tế tỉ lệ hài lòng của Q cao hơn P bao nhiêu điểm phần trăm, và cao hơn bao nhiêu phần trăm nếu lấy giá trị của P làm mốc? (*Điểm phần trăm* là hiệu số trực tiếp giữa hai tỉ lệ.) Tỉ lệ khách **không** hài lòng của P gấp mấy lần của Q?\n3. Viết lại tiêu đề (một câu) sao cho trung thực với số liệu, và nêu một trường hợp mà việc cắt trục tung ở 90% là hợp lý.",
+  "hints": [
+    "Chiều cao cột = giá trị − 90%. Tính cho từng cột rồi chia.",
+    "Cùng một khác biệt có thể nói bằng hiệu số, bằng tỉ lệ so với P, hoặc qua phần ngược lại (không hài lòng). Mỗi cách cho một con số rất khác.",
+    "Cắt trục hợp lý khi người xem cần thấy những chênh lệch nhỏ mà vẫn biết đó là chênh lệch nhỏ, ví dụ khi trục được ghi rõ ràng và các con số được in trên cột."
+  ],
+  "review": {
+    "solver_model": "sonnet",
+    "first_solve_match": true,
+    "revised": true,
+    "issues": [
+      {
+        "type": "answer_error",
+        "severity": 2,
+        "detail": "ghi chú chấm 'ít hơn một nửa' sai (đúng bằng một nửa)"
+      },
+      {
+        "type": "ambiguity",
+        "severity": 2,
+        "detail": "'bằng bao nhiêu phần trăm so với P' đọc được 4,3% hoặc 104,3%"
+      },
+      {
+        "type": "missing_premise",
+        "severity": 1,
+        "detail": "không nêu chỉ có 2 lựa chọn trả lời"
+      }
+    ]
+  },
+  "answer_b64": "MS4gQ+G7mXQgUCBjYW8gOTIg4oiSIDkwID0gMiDEkcahbiB24buLLCBj4buZdCBRIGNhbyA5NiDiiJIgOTAgPSA2IMSRxqFuIHbhu4s6IFEgY2FvIGfhuqVwIDMgbOG6p24gUC4KMi4gSMahbiA0IMSRaeG7g20gcGjhuqduIHRyxINtOyBzbyB24bubaSBQOiA0IMO3IDkyIOKJiCA0LDMlLiBLaMO0bmcgaMOgaSBsw7JuZzogUCA4JSwgUSA0JSwgbsOqbiBQIGfhuqVwIDIgbOG6p24gUS4KMy4gVsOtIGThu6U6ICJRIMSRxrDhu6NjIDk2JSBraMOhY2ggaMOgaSBsw7JuZywgUCDEkcaw4bujYyA5MiUuIiAoaG/hurdjICJRIGNhbyBoxqFuIFAgNCDEkWnhu4NtIHBo4bqnbiB0csSDbSIpLiBD4bqvdCB0cuG7pWMgaOG7o3AgbMO9OiBraGkgdGhlbyBkw7VpIHRoYXkgxJHhu5VpIG5o4buPIGPDsyDDvSBuZ2jEqWEgdGjhu7FjIHThur8gKHbDrSBk4bulIGNo4buJIHPhu5EgZGFvIMSR4buZbmcgdHJvbmcga2hv4bqjbmcgaOG6uXApLCB0cuG7pWMgxJHGsOG7o2MgZ2hpIHLDtSBsw6Aga2jDtG5nIGLhuq90IMSR4bqndSB04burIDAgdsOgIGdpw6EgdHLhu4sgxJHGsOG7o2MgaW4gdHLDqm4gY+G7mXQuIENo4bqlcCBuaOG6rW4gY8OhYyB0csaw4budbmcgaOG7o3AgdMawxqFuZyDEkcawxqFuZy4KR2hpIGNow7ogY2jhuqVtOiB0acOqdSDEkeG7gSAidOG7iSBs4buHIGtow6FjaCBraMO0bmcgaMOgaSBsw7JuZyBj4bunYSBRIGNo4buJIGLhurFuZyBt4buZdCBu4butYSBQIiB24bqrbiB0w61uaCDEkcO6bmcgbuG6v3Uga8OobSBz4buRIGxp4buHdS4gQ8OidSAyIHRy4bqjIGzhu51pICJRIGLhurFuZyDiiYgxMDQsMyUgY+G7p2EgUCIgY8WpbmcgdMOtbmggxJHDum5nLg==",
+  "rubric_b64": "Q8OidSAxIMSR4bqhdDogZ+G6pXAgMy4KQ8OidSAyOiDDtCB0aGVuIGNo4buRdCBsw6AgNCDEkWnhu4NtIHBo4bqnbiB0csSDbSB2w6Ag4omINCwzJSAoY2jhuqVwIG5o4bqtbiAiYuG6sW5nIOKJiDEwNCwzJSBj4bunYSBQIik7IMO0IHRoxrDhu51uZyBsw6AgImfhuqVwIDIgbOG6p24iIHbhu4Ega2jDtG5nIGjDoGkgbMOybmcuIMSQ4bqhdDogxJHDum5nIGPhuqMgYmEuIE3hu5l0IHBo4bqnbjogxJHDum5nIGhhaSDDtCB0aGVuIGNo4buRdCBuaMawbmcgc2FpIMO0IHRoxrDhu51uZywgaG/hurdjIG5nxrDhu6NjIGzhuqFpLgpDw6J1IDMgxJHhuqF0OiB0acOqdSDEkeG7gSBjw7Mgc+G7kSBsaeG7h3UgaG/hurdjIG3DtCB04bqjIGNow6puaCBs4buHY2ggxJHDum5nIMSR4buZIGzhu5tuLCBraMO0bmcgZMO5bmcgdOG7qyBwaMOzbmcgxJHhuqFpIGtp4buDdSAidsaw4bujdCB0cuG7mWkiIG3DoCBraMO0bmcgY8OzIHPhu5EsIHbDoCBt4buZdCB0csaw4budbmcgaOG7o3AgY+G6r3QgdHLhu6VjIGjhu6NwIGzDvSBjw7MgxJFp4buBdSBraeG7h24gKGdoaSByw7UgdHLhu6VjIC8gaW4gZ2nDoSB0cuG7iykuIE3hu5l0IHBo4bqnbjogbeG7mXQgdHJvbmcgaGFpLgpC4bqreSBjaMOtbmg6IMSR4buNYyDEkeG7mSBjYW8gY+G7mXQgbmjGsCB04buJIGzhu4cgZ2nhu69hIGhhaSBnacOhIHRy4buLLgpH4buZcDogY29ycmVjdCA9IG3hu41pIGPDonUgxJHhuqF0LCBob+G6t2MgMiBjw6J1IMSR4bqhdCArIDEgY8OidSBt4buZdCBwaOG6p247IHBhcnRpYWwgPSAx4oCTMiBjw6J1IMSR4bqhdDsgaW5jb3JyZWN0ID0ga2jDtG5nIGPDonUgbsOgbyDEkeG6oXQu"
+}
