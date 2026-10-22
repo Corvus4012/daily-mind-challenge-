@@ -5,7 +5,8 @@ Vetting
 - First-pass acceptance: share of candidates accepted without revision. Very high means the
   reviewer is too lenient; very low means generation is weak.
 - Blind-solve mismatch: share of candidates whose first blind solver missed the answer key.
-  This is the main defect detector (ambiguity, missing premise or a wrong key).
+  This is the main defect detector (ambiguity, missing premise or a wrong key). Only a high rate is a
+  warning; a low rate says nothing about how hard the puzzle is for the user (their results do).
 - Issue types and rejects by domain show where generation needs work.
 Learning
 - Results by domain and the skills currently due for review.
@@ -23,7 +24,7 @@ import roll  # noqa: E402
 
 TARGETS = {
     "first_pass_acceptance": (0.40, 0.80),
-    "blind_solve_mismatch": (0.05, 0.30),
+    "blind_solve_mismatch": (0.0, 0.30),  # low is good: it measures clarity for a model solver, not difficulty for the user
 }
 MIN_SAMPLE = 10  # below this, rates are too noisy to warn about
 
@@ -32,7 +33,8 @@ def _rate_line(name, hits, n):
     if not n:
         return f"{name}: no data"
     low, high = TARGETS[name]
-    line = f"{name}: {hits / n:.0%} ({hits}/{n}, target {low:.0%}-{high:.0%})"
+    target = f"<= {high:.0%}" if low == 0 else f"{low:.0%}-{high:.0%}"
+    line = f"{name}: {hits / n:.0%} ({hits}/{n}, target {target})"
     if n < MIN_SAMPLE:
         line += f"  (n<{MIN_SAMPLE}: too early to judge)"
     elif not low <= hits / n <= high:

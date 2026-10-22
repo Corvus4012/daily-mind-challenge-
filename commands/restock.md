@@ -52,6 +52,9 @@ Không tiếp tục được agent cũ thì tạo agent mới, đưa `challenge_
   Nếu người phản biện chứng minh đáp án gốc sai và lời giải mù đúng: sửa đáp án, vẫn phải qua một lần giải mù mới.
 - **Loại:** trivia, đề sai bản chất, hoặc bản sửa vẫn trượt.
 - Phản biện chấm level khác level dự kiến: nhận theo level của phản biện, không loại.
+- **Giữ đề vươn lên trong pool:** sau khi quyết định, nếu pool (cả đề vừa nhận) không còn đề nào trên level nền,
+  sinh thêm 1 candidate ở level nền +1 hoặc +2 (domain khác) và cho qua đủ bước 2–4. Ngày roll ra level cao hơn
+  sẽ có đề đúng level thay vì lặng lẽ nhận đề level nền.
 Mỗi candidate thêm khối `review`:
 `{"solver_model": "...", "first_solve_match": true|false, "revised": true|false, "issues": [{"type", "severity", "detail"}], "reason": "nếu loại"}`
 
