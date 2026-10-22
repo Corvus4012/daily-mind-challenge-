@@ -20,6 +20,11 @@ Người dùng muốn thêm một đề sau khi đã nộp đề hôm nay ("làm
 `python3 engine/dmc.py pick --extra`. Đề thêm được ghi vào lịch sử như một ngày bình thường (có `"extra": true`),
 nên vẫn tính vào level nền, kỹ năng và vòng xoay domain. Pool rỗng thì làm như trường hợp `empty` ở trên.
 
+## Giữ đầu ra sạch
+Tin nhắn phục vụ đề chỉ gồm đề theo OUTPUT SPEC, cộng tối đa 1 dòng trạng thái pool. Kể cả khi phải restock tại chỗ:
+không kể quá trình, không nêu dữ kiện đã tra, nguồn, kết quả giải mù/phản biện, hay sự cố kỹ thuật.
+Phát hiện về hệ thống thì ghi vào mục "Ghi chú hệ thống" trong `state/lessons.md` và chỉ trao đổi khi người dùng gõ `/discuss`.
+
 ## OUTPUT SPEC
 ```
 ---

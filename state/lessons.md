@@ -30,3 +30,6 @@ Thêm dòng mới khi người dùng chỉ ra lỗi của đề, hoặc khi mộ
   - Tiến bộ: tự quay lại sửa câu trả lời trực giác bằng chính kết quả tính được (self_check, 21/10).
   - unit_choice lặp lỗi lần 2 (17/10, 21/10): chọn đúng thước đo nhưng chưa nói được vì sao; cần nguyên tắc "mẫu số = đơn vị của quyết định".
 - Cách phản hồi hợp: thẳng, chỉ ra cơ chế; thích được giải nghĩa nền tảng khi gặp domain lạ (đã xin bổ túc kinh tế ngày 19/10).
+
+## Ghi chú hệ thống (chờ trao đổi qua /discuss)
+- (22/10) Tác vụ tự động đã chuyển sang chạy trong phiên chính vì phiên mới không push được (lần chạy 21/10 mất 8 đề). Cần theo dõi lần chạy 25/10.

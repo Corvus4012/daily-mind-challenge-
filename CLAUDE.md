@@ -20,6 +20,7 @@ When the user types a command, read its spec in `commands/` and run exactly that
 - Feedback is specific and non-judgmental; no raw scores like "6/10".
 - Every number, quote and name in a puzzle is real and verified, or stated in the puzzle as an explicit assumption.
 - Talk to the user in Vietnamese.
+- When serving a puzzle, output only the puzzle (see `commands/daily.md`). Keep system findings for `/discuss`.
 - State changes go through `engine/dmc.py` / `engine/roll.py`, then `git commit` and `git push -u origin main`.
 
 ## Files
