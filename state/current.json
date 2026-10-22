@@ -1,27 +1,27 @@
 {
-  "date": "2026-10-21",
-  "pool_id": "20261020-d02-cf257c",
-  "domain_id": 2,
-  "tag": "reason",
+  "date": "2026-10-22",
+  "pool_id": "20261022-d07-952a89",
+  "domain_id": 7,
+  "tag": "lookup",
   "level": 2,
   "base_level": 2,
   "rolled_level": 2,
   "level_mode": "core",
-  "est_minutes": 8,
-  "format": "mc",
+  "est_minutes": 10,
+  "format": "spot-flaw",
   "skills": [
     "unit_choice",
-    "self_check"
+    "consistency_check"
   ],
-  "challenge_md": "Minh cân nhắc hai cách đi học mỗi sáng (quãng đường tính một chiều, từ nhà đến trường).\n- **Đi bộ:** đường tắt qua công viên, dài 1,5 km, tốc độ 5 km/giờ.\n- **Đi xe đạp:** phải đi vòng đường lớn đông xe, dài 4 km, tốc độ 10 km/giờ.\n\n*Giả định của đề:* rủi ro gặp sự cố tỉ lệ thuận với quãng đường, với mức không đổi: đi bộ 4 sự cố trên mỗi 1 triệu km, đi xe đạp 1,8 sự cố trên mỗi 1 triệu km. Mọi sự cố coi là nghiêm trọng như nhau. Mọi con số là giả định, không phải thống kê thật.\n\n**Câu hỏi**\n1. Chỉ xét an toàn, Minh nên đi bộ hay đi xe đạp? Trả lời trước khi tính, kèm 1 câu lý do.\n2. Tính ba con số cho mỗi cách đi: rủi ro trên 1 triệu km, rủi ro trên 1 triệu giờ di chuyển, và rủi ro trên 1 triệu chuyến đi học.\n3. Trong ba cách so sánh ở câu 2, cách nào khớp với quyết định Minh đang đưa ra, và vì sao hai cách còn lại dẫn sai? Nếu câu trả lời ở câu 1 của bạn khác với kết quả này, chỉ ra chỗ lập luận đã trượt.",
+  "challenge_md": "Công ty X (đặt tại một địa bàn thuộc vùng I) tự công bố một nguyên tắc riêng, chặt hơn luật: *\"Mỗi giờ làm việc thực tế của bất kỳ ai làm cho chúng tôi đều được trả không thấp hơn mức lương tối thiểu theo giờ của vùng I.\"*\n\nTháng 6/2025, ba người làm cho công ty X như sau (số liệu là giả định của đề; tổng tiền nhận là tiền công trước khấu trừ, không có phụ cấp nào khác; theo nguyên tắc của công ty, mọi giờ làm thực tế được tính như nhau, không xét hệ số làm thêm giờ):\n\n| Người | Hình thức | Tổng tiền nhận trong tháng | Số giờ làm thực tế trong tháng |\n|---|---|---|---|\n| An | Toàn thời gian | 5.200.000 đ | 26 ngày × 8 giờ |\n| Bình | Bán thời gian | 2.000.000 đ | 80 giờ |\n| Chi | Toàn thời gian | 6.000.000 đ | 26 ngày × 10 giờ |\n\n**Câu hỏi**\n1. *(Tra cứu)* Mức lương tối thiểu theo giờ của vùng I **áp dụng vào tháng 6/2025** ở Việt Nam là bao nhiêu? Ghi nguồn bạn dùng.\n2. Trong tháng 6/2025, ai trong ba người được trả thấp hơn nguyên tắc mà chính công ty X đã công bố? Trình bày phép tính cho từng người.\n3. Một quản lý nói: *\"Chi có tổng tiền nhận cao nhất công ty, nên chắc chắn công ty không vi phạm nguyên tắc với Chi.\"* Chỉ ra chỗ sai của lập luận này trong 1–2 câu.",
   "hints": [
-    "Một con số rủi ro luôn đi kèm câu hỏi 'trên mỗi cái gì'. Ba mẫu số ở câu 2 có thể cho ba kết luận khác nhau. Trước khi tin kết luận nào, hỏi: Minh thực sự đang chọn giữa hai cái gì?",
-    "Rủi ro trên giờ = tốc độ × rủi ro trên km. Rủi ro một chuyến = quãng đường của chuyến × rủi ro trên km. Hai cách đi có quãng đường và thời gian khác nhau.",
-    "Minh không chọn giữa 'đi 1 km bộ' và 'đi 1 km xe đạp', cũng không chọn giữa 'một giờ đi bộ' và 'một giờ đạp xe'. Minh chọn giữa hai cách để đến trường một lần."
+    "Nguyên tắc của công ty nói về \"mỗi giờ làm việc\". Con số trong bảng thì tính theo tháng. Trước khi so, hãy đưa hai bên về cùng một đơn vị.",
+    "Với từng người: tiền nhận theo giờ = tổng tiền trong tháng ÷ số giờ làm thực tế trong tháng. Chú ý số giờ của An và Chi khác nhau dù cùng là toàn thời gian.",
+    "Tổng tiền cao chưa chắc mỗi giờ được trả cao: nó còn phụ thuộc vào việc người đó làm bao nhiêu giờ để nhận số tiền ấy."
   ],
   "hints_revealed": 0,
-  "answer_key_b64": "MS4gQ8OidSB0cuG6oyBs4budaSDEkcO6bmc6IMSRaSBi4buZIChy4bunaSBybyBjaG8gbeG7l2kgbOG6p24gxJHhur9uIHRyxrDhu51uZyB0aOG6pXAgaMahbikuIEPDonUgdHLhuqMgbOG7nWkgdHLhu7FjIGdpw6FjIGhheSBn4bq3cCBsw6AgeGUgxJHhuqFwLCB2w6wgbeG7qWMgcuG7p2kgcm8gdHLDqm4ga20gdGjhuqVwIGjGoW47IGPDonUgMyBraeG7g20gdHJhIG5nxrDhu51pIGdp4bqjaSBjw7MgdOG7sSBz4butYSDEkcaw4bujYyBraMO0bmcuCjIuIFRyw6puIDEgdHJp4buHdSBrbTogxJFpIGLhu5kgNCwgeGUgxJHhuqFwIDEsOCDihpIgeGUgxJHhuqFwIHRo4bqlcCBoxqFuLgogICBUcsOqbiAxIHRyaeG7h3UgZ2nhu506IMSRaSBi4buZIDUgw5cgNCA9IDIwLCB4ZSDEkeG6oXAgMTAgw5cgMSw4ID0gMTgg4oaSIHhlIMSR4bqhcCB0aOG6pXAgaMahbi4KICAgVHLDqm4gMSB0cmnhu4d1IGNodXnhur9uOiDEkWkgYuG7mSAxLDUgw5cgNCA9IDYsIHhlIMSR4bqhcCA0IMOXIDEsOCA9IDcsMiDihpIgxJFpIGLhu5kgdGjhuqVwIGjGoW4uCjMuIFLhu6dpIHJvIHRyw6puIG3hu5dpIGNodXnhur9uLCB2w6wgTWluaCBjaOG7jW4gY8OhY2ggaG/DoG4gdGjDoG5oIGPDuW5nIG3hu5l0IHZp4buHYyAobeG7mXQgbOG6p24gxJHhur9uIHRyxrDhu51uZyksIG3DoCBoYWkgY8OhY2ggY8OzIHF1w6NuZyDEkcaw4budbmcgdsOgIHRo4budaSBnaWFuIGtow6FjIG5oYXUuIFTDrW5oIHRyw6puIGttIGLhu48gcXVhIHZp4buHYyDEkcaw4budbmcgeGUgxJHhuqFwIGTDoGkgZ+G6pXAgZ+G6p24gMiw3IGzhuqduOyB0w61uaCB0csOqbiBnaeG7nSBi4buPIHF1YSB2aeG7h2MgY2h1eeG6v24geGUgxJHhuqFwIG3huqV0IDI0IHBow7p0IHNvIHbhu5tpIDE4IHBow7p0IMSRaSBi4buZLiBD4bqjIGhhaSDEkeG7gXUgY2jhu4kgc2FuZyB4ZSDEkeG6oXAsIG5oxrBuZyBxdXnhur90IMSR4buLbmggxJHDum5nIGzDoCDEkWkgYuG7mS4gQ8ahIGNo4bq/OiBt4bqrdSBz4buRIGPhu6dhIHBow6lwIHNvIHPDoW5oIHBo4bqjaSBraOG7m3AgduG7m2kgxJHGoW4gduG7iyBj4bunYSBxdXnhur90IMSR4buLbmguIE7hur91IGPDonUgMSBjaOG7jW4geGUgxJHhuqFwLCBjaOG7lyB0csaw4bujdCBsw6AgxJHDoyBkw7luZyBjb24gc+G7kSB0csOqbiBrbSAoY29uIHPhu5EgY8OzIHPhurVuIHRyb25nIMSR4buBKSBtw6Aga2jDtG5nIGjhu49pIG7DsyDEkW8gY8OhaSBnw6wu",
-  "rubric_b64": "Q8OidSAxOiBraMO0bmcgY2jhuqVtIMSRw7puZy9zYWkgcmnDqm5nOyBkw7luZyDEkeG7gyB4w6l0IGPDonUgMyAodOG7sSBraeG7g20pLgpDw6J1IDIgxJHhuqF0OiDEkeG7pyA2IGNvbiBz4buRIMSRw7puZyAoNDsgMSw4OyAyMDsgMTg7IDY7IDcsMikuIE3hu5l0IHBo4bqnbjogxJHDum5nIDTigJM1IGNvbiBz4buRLgpDw6J1IDMgxJHhuqF0OiBjaOG7jW4gJ23hu5dpIGNodXnhur9uJywgbsOqdSDEkcaw4bujYyAnY8O5bmcgbeG7mXQgdmnhu4djLCBxdcOjbmcgxJHGsOG7nW5nL3Ro4budaSBnaWFuIGtow6FjIG5oYXUnIGhv4bq3YyAnbeG6q3Ugc+G7kSBwaOG6o2kga2jhu5twIHF1eeG6v3QgxJHhu4tuaCcsIFbDgCBu4bq/dSBjw6J1IDEgY2jhu41uIHhlIMSR4bqhcCB0aMOsIGNo4buJIHJhIMSRxrDhu6NjIGNo4buXIHRyxrDhu6N0LiBN4buZdCBwaOG6p246IGNo4buNbiDEkcO6bmcgbeG6q3Ugc+G7kSBuaMawbmcga2jDtG5nIGdp4bqjaSB0aMOtY2ggdsOsIHNhbyBoYWkgY8OhY2gga2lhIGThuqtuIHNhaSwgaG/hurdjIGtow7RuZyB04buxIHPhu61hIGPDonUgMS4KQuG6q3kgY2jDrW5oOiB0aW4gY29uIHPhu5EgdHLDqm4ga20gKHbDoCBj4bqjIHRyw6puIGdp4budKSB2w6wgY+G6oyBoYWkgY8O5bmcgY2jhu4kgc2FuZyB4ZSDEkeG6oXAuCkfhu5lwOiBjb3JyZWN0ID0gY8OidSAyIHbDoCBjw6J1IDMgxJHhuqF0OyBwYXJ0aWFsID0gbeG7mXQgdHJvbmcgaGFpIMSR4bqhdCwgaG/hurdjIGPhuqMgaGFpIG3hu5l0IHBo4bqnbjsgaW5jb3JyZWN0ID0ga2jDtG5nIGPDonUgbsOgbyDEkeG6oXQu",
+  "answer_key_b64": "MS4gMjMuODAwIMSR4buTbmcvZ2nhu50gKHbDuW5nIEksIHRoZW8gTmdo4buLIMSR4buLbmggNzQvMjAyNC9OxJAtQ1AsIMOhcCBk4bulbmcgdOG7qyAxLzcvMjAyNCDEkeG6v24gaOG6v3QgMzEvMTIvMjAyNTsgdOG7qyAxLzEvMjAyNiBOZ2jhu4sgxJHhu4tuaCAyOTMvMjAyNS9OxJAtQ1AgbsOibmcgbMOqbiAyNS41MDAgxJHhu5NuZy9naeG7nSwga2jDtG5nIMOhcCBk4bulbmcgY2hvIHRow6FuZyA2LzIwMjUpLgoyLiBBbjogNS4yMDAuMDAwIMO3ICgyNiDDlyA4ID0gMjA4IGdp4budKSA9IDI1LjAwMCDEkS9naeG7nSDiiaUgMjMuODAwIOKGkiBraMO0bmcgdmkgcGjhuqFtLgogICBCw6xuaDogMi4wMDAuMDAwIMO3IDgwID0gMjUuMDAwIMSRL2dp4budIOKJpSAyMy44MDAg4oaSIGtow7RuZyB2aSBwaOG6oW0uCiAgIENoaTogNi4wMDAuMDAwIMO3ICgyNiDDlyAxMCA9IDI2MCBnaeG7nSkg4omIIDIzLjA3NyDEkS9naeG7nSA8IDIzLjgwMCDihpIgVkkgUEjhuqBNIG5ndXnDqm4gdOG6r2MgY+G7p2EgY8O0bmcgdHkuCjMuIEzhuq1wIGx14bqtbiBzbyBzw6FuaCB04buVbmcgdGnhu4FuIHRoZW8gdGjDoW5nLCB0cm9uZyBraGkgbmd1ecOqbiB04bqvYyB0w61uaCB0aGVvIGdp4budLiBDaGkgbmjhuq1uIG5oaeG7gXUgbmjhuqV0IG5oxrBuZyBjxaluZyBsw6BtIG5oaeG7gXUgZ2nhu50gbmjhuqV0ICgyNjAgZ2nhu50pLCBuw6puIHRp4buBbiBt4buXaSBnaeG7nSBs4bqhaSB0aOG6pXAgbmjhuqV0LiBDxqEgY2jhur86IG3huqt1IHPhu5EgY+G7p2EgcGjDqXAgc28gc8OhbmggcGjhuqNpIGto4bubcCB24bubaSDEkcahbiB24buLIHRyb25nIGNhbSBr4bq/dCAobeG7l2kgZ2nhu50pLCBraMO0bmcgcGjhuqNpIMSRxqFuIHbhu4sgZOG7hSB0aOG6pXkgbmjhuqV0ICht4buXaSB0aMOhbmcpLg==",
+  "rubric_b64": "Q8OidSAxIMSR4bqhdDogMjMuODAwIMSRL2dp4budLCBjw7Mgbmd14buTbiAoTmdo4buLIMSR4buLbmggNzQvMjAyNCBob+G6t2MgdHJhbmcgdGluIHBow6FwIGx14bqtdCBk4bqrbiBuZ2jhu4sgxJHhu4tuaCBuw6B5KS4gTeG7mXQgcGjhuqduOiDEkcO6bmcgc+G7kSBtw6Aga2jDtG5nIGPDsyBuZ3Xhu5NuLiBHaGkgMjUuNTAwICht4bupYyBuxINtIDIwMjYpIGzDoCBs4bqleSBzYWkgdGjhu51pIMSRaeG7g20g4oaSIGNoxrBhIMSR4bqhdCwgbmjGsG5nIG7hur91IHTDrW5oIGPDonUgMiBuaOG6pXQgcXXDoW4gduG7m2kgc+G7kSDEkcOjIHRyYSB0aMOsIGPDonUgMiB24bqrbiBjaOG6pW0gdGhlbyBsb2dpYy4KQ8OidSAyOiDDtCB0aGVuIGNo4buRdCBsw6Aga+G6v3QgbHXhuq1uIGNobyBDaGkgKHZpIHBo4bqhbSkgdsOgIHBow6lwIGNoaWEgdGhlbyBnaeG7nTsgQW4gdsOgIELDrG5oIGzDoCDDtCB0aMaw4budbmcuIMSQ4bqhdDogY+G6oyAzIGvhur90IGx14bqtbiDEkcO6bmcga8OobSBwaMOpcCB0w61uaCB0aGVvIGdp4budLiBN4buZdCBwaOG6p246IGvhur90IGx14bqtbiDEkcO6bmcgY2hvIENoaSBuaMawbmcgdGhp4bq/dSBwaMOpcCB0w61uaCwgaG/hurdjIHNhaSAxIHRyb25nIEFuL0LDrG5oLgpDw6J1IDMgxJHhuqF0OiBuw6p1IMSRxrDhu6NjICJzbyB0aGVvIHRow6FuZyB0cm9uZyBraGkgY2FtIGvhur90IHRoZW8gZ2nhu50iIGhv4bq3YyAiQ2hpIGzDoG0gbmhp4buBdSBnaeG7nSBoxqFuIG7Dqm4gbeG7l2kgZ2nhu50gdGjhuqVwIGjGoW4iLiBN4buZdCBwaOG6p246IGNo4buJIG7Ds2kgImzGsMahbmcgY2FvIGNoxrBhIGNo4bqvYyDEkcO6bmciIG3DoCBraMO0bmcgbsOqdSBjxqEgY2jhur8gZ2nhu50uCkLhuqt5IGNow61uaDogdGjhuqV5IENoaSBsxrDGoW5nIHRow6FuZyBjYW8gbmjhuqV0ICh2w6AgY2FvIGjGoW4gbeG7qWMgdOG7kWkgdGhp4buDdSB0aMOhbmcpIG7Dqm4ga+G6v3QgbHXhuq1uIGtow7RuZyB2aSBwaOG6oW0uCkfhu5lwOiBjb3JyZWN0ID0gY8OidSAyIHbDoCBjw6J1IDMgxJHhuqF0LCBjw6J1IDEgw610IG5o4bqldCBt4buZdCBwaOG6p247IHBhcnRpYWwgPSAx4oCTMiBjw6J1IMSR4bqhdDsgaW5jb3JyZWN0ID0ga2jDtG5nIGPDonUgbsOgbyDEkeG6oXQu",
   "review": {
     "solver_model": "sonnet subagent",
     "first_solve_match": true,
@@ -29,27 +29,17 @@
     "level_estimate": 2,
     "issues": [
       {
-        "type": "level_mismatch",
-        "severity": 2,
-        "detail": "theo giờ và theo chuyến cùng chỉ sang đi bộ, câu chọn thước đo không phân biệt được"
-      },
-      {
-        "type": "bias",
-        "severity": 2,
-        "detail": "câu 2 gợi sẵn đơn vị 'mỗi chuyến', bẫy không thể sập"
-      },
-      {
         "type": "ambiguity",
-        "severity": 1,
-        "detail": "không nói quãng đường là một chiều"
+        "severity": 2,
+        "detail": "giờ thứ 9-10 của Chi có tính hệ số làm thêm hay không"
       },
       {
         "type": "missing_premise",
         "severity": 1,
-        "detail": "không nói mọi sự cố nghiêm trọng như nhau"
+        "detail": "tổng tiền nhận trước hay sau khấu trừ"
       }
     ]
   },
-  "status": "submitted",
+  "status": "open",
   "extra": false
 }

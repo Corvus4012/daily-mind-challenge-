@@ -38,6 +38,7 @@ Tiêu chuẩn của đề:
 Mỗi candidate một subagent mới (`subagent_type: general-purpose`; `model: sonnet` cho level 1–3, `opus` cho level 4–5).
 Tạo tất cả trong cùng một lượt để chúng chạy song song, rồi đợi kết quả của từng agent.
 Prompt = BRIEF GIẢI MÙ + `challenge_md`. Tuyệt đối không đưa answer, rubric, hints hay claims.
+Đề tag lookup: thay dòng "không tra web" trong brief bằng "được dùng WebSearch, chỉ để tra đúng dữ kiện đề yêu cầu".
 
 ## 3. Phản biện (cùng subagent)
 Gửi tiếp cho chính subagent đó bằng SendMessage (`to` = agentId trả về khi tạo agent; agent đã chạy xong vẫn tiếp tục được
