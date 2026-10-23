@@ -31,6 +31,7 @@ Thêm dòng mới khi người dùng chỉ ra lỗi của đề, hoặc khi mộ
   - Tiến bộ: tự xác định đúng giả thuyết duy nhất không bị phản bác (common_cause, 20/10).
   - Tiến bộ: tự quay lại sửa câu trả lời trực giác bằng chính kết quả tính được (self_check, 21/10).
   - unit_choice lặp lỗi lần 2 (17/10, 21/10): chọn đúng thước đo nhưng chưa nói được vì sao; cần nguyên tắc "mẫu số = đơn vị của quyết định".
+  - Bỏ qua bước tính trung gian mà đề yêu cầu ghi ra, chỉ đưa kết luận (lần 2: 22/10 tiền/giờ từng người, 23/10 số hộ 80/72). Giải thích "khác ở chỗ nào" nhưng chưa nói "vì sao" (interpret_result, 23/10).
 - Cách phản hồi hợp: thẳng, chỉ ra cơ chế; thích được giải nghĩa nền tảng khi gặp domain lạ (đã xin bổ túc kinh tế ngày 19/10).
 
 ## Ghi chú hệ thống (chờ trao đổi qua /discuss)
