@@ -32,6 +32,8 @@ Thêm dòng mới khi người dùng chỉ ra lỗi của đề, hoặc khi mộ
   - Tiến bộ: tự quay lại sửa câu trả lời trực giác bằng chính kết quả tính được (self_check, 21/10).
   - unit_choice lặp lỗi lần 2 (17/10, 21/10): chọn đúng thước đo nhưng chưa nói được vì sao; cần nguyên tắc "mẫu số = đơn vị của quyết định".
   - Bỏ qua bước tính trung gian mà đề yêu cầu ghi ra, chỉ đưa kết luận (lần 2: 22/10 tiền/giờ từng người, 23/10 số hộ 80/72). Giải thích "khác ở chỗ nào" nhưng chưa nói "vì sao" (interpret_result, 23/10).
+  - interpret_result lặp lần 3 (19/10, 23/10, 24/10): giải thích bằng nhãn chung ("biến khác nhau", "tỉ lệ vs tuyệt đối") thay vì nêu cơ chế cụ thể bằng số của đề. Cần mẫu: "X = A × B; A và B đi ngược chiều nên...".
+  - selection_bias (24/10): thấy có sàng lọc nhưng không hỏi ai bị lọc ra và việc đó đẩy trung bình theo hướng nào.
 - Cách phản hồi hợp: thẳng, chỉ ra cơ chế; thích được giải nghĩa nền tảng khi gặp domain lạ (đã xin bổ túc kinh tế ngày 19/10).
 
 ## Ghi chú hệ thống (chờ trao đổi qua /discuss)
