@@ -1,44 +1,44 @@
 {
-  "date": "2026-10-23",
-  "pool_id": "20261022-d06-eefcba",
-  "domain_id": 6,
+  "date": "2026-10-24",
+  "pool_id": "20261022-d04-ef0a0f",
+  "domain_id": 4,
   "tag": "reason",
   "level": 2,
   "base_level": 2,
   "rolled_level": 2,
   "level_mode": "core",
-  "est_minutes": 9,
-  "format": "tf-reason",
+  "est_minutes": 12,
+  "format": "fill-in",
   "skills": [
     "interpret_result",
-    "absolute_vs_relative"
+    "selection_bias"
   ],
-  "challenge_md": "Xã X có số liệu sau (giả định của đề). Năm 2023: 1.000 hộ, tỉ lệ hộ nghèo 8%. Năm 2025: 1.200 hộ (thêm hộ mới chuyển đến), tỉ lệ hộ nghèo 6%.\n\nTrong đề này, *\"điểm phần trăm\"* là hiệu số trực tiếp giữa hai tỉ lệ phần trăm (ví dụ từ 10% xuống 7% là giảm 3 điểm phần trăm).\n\nBa tờ báo đưa tin:\n- (a) \"Tỉ lệ hộ nghèo của xã X giảm 2%.\"\n- (b) \"Tỉ lệ hộ nghèo của xã X giảm 25%.\"\n- (c) \"Số hộ nghèo của xã X giảm 25%.\"\n\n**Câu hỏi**\n1. Câu (a) có thể hiểu theo hai cách. Nêu cả hai cách hiểu, và cho biết mỗi cách đúng hay sai với số liệu.\n2. Câu (b) đúng hay sai? Ghi phép tính.\n3. Câu (c) đúng hay sai? Tính số hộ nghèo năm 2023 và năm 2025, rồi giải thích trong 1 câu vì sao (b) và (c) nghe giống nhau nhưng kết quả khác nhau.",
+  "challenge_md": "Một quỹ từ thiện thử ba mẫu phiếu quyên góp, mỗi mẫu gửi cho 1.000 người được chọn ngẫu nhiên (số liệu là giả định của đề):\n\n| Mẫu | Gợi ý số tiền in trên phiếu | Tỉ lệ người góp | Số tiền trung bình của **mỗi người có góp** |\n|---|---|---|---|\n| A | Không gợi ý | 50% | 60.000 đ |\n| B | \"Nhiều người góp 200.000 đ\" | 35% | 120.000 đ |\n| C | \"Nhiều người góp 50.000 đ\" | 60% | 55.000 đ |\n\n**Câu hỏi**\n1. Với mỗi mẫu, tính số tiền trung bình quỹ thu được **trên mỗi người nhận phiếu** (tính cả người không góp).\n2. Xếp hạng ba mẫu theo ba tiêu chí: tiền trên mỗi người nhận phiếu, tiền trên mỗi người có góp, và số người góp. Vì sao các bảng xếp hạng không giống nhau?\n3. Một nhân viên kết luận: *\"Mẫu B làm mỗi người góp nhiều gấp đôi mẫu A, vậy con số 200.000 đ đã khiến mỗi người móc hầu bao rộng hơn.\"* Nêu một cách giải thích khác cho con số 120.000 đ mà không cần giả định ai đổi ý về số tiền.",
   "hints": [
-    "Một con số phần trăm thay đổi có thể là hiệu số giữa hai tỉ lệ, hoặc là mức thay đổi so với tỉ lệ ban đầu. Thử đọc (a) theo cả hai kiểu.",
-    "Giảm bao nhiêu phần trăm = (mức cũ − mức mới) ÷ mức cũ. Số hộ nghèo = tổng số hộ × tỉ lệ hộ nghèo.",
-    "Tỉ lệ là phân số: tử số là số hộ nghèo, mẫu số là tổng số hộ. Ở câu (c), mẫu số có đứng yên không?"
+    "Số tiền trên mỗi người nhận phiếu = tỉ lệ người góp × số tiền trung bình của người có góp.",
+    "Ba tiêu chí đo ba thứ khác nhau: quỹ thu được bao nhiêu, mỗi người góp bao nhiêu, bao nhiêu người tham gia. Một gợi ý số tiền có thể kéo hai thứ theo hai chiều ngược nhau.",
+    "Câu 3: so sánh 'trung bình của những người có góp' giữa hai mẫu chỉ công bằng khi nhóm 'người có góp' ở hai mẫu là cùng một kiểu người. Mẫu B có ít người góp hơn: ai là người bỏ đi?"
   ],
   "hints_revealed": 0,
-  "answer_key_b64": "MS4gQ8OhY2ggaGnhu4N1IDE6IGdp4bqjbSAyIMSRaeG7g20gcGjhuqduIHRyxINtICg4JSDihpIgNiUpOiDEkMOaTkcuIEPDoWNoIGhp4buDdSAyOiBnaeG6o20gMiUgc28gduG7m2kgbeG7qWMgY8WpICg4JSDDlyAwLDk4ID0gNyw4NCUpOiBTQUkuIEPDonUgKGEpIG3GoSBo4buTOyBjw6FjaCB2aeG6v3QgcsO1IGzDoCAiZ2nhuqNtIDIgxJFp4buDbSBwaOG6p24gdHLEg20iLgoyLiDEkMOaTkc6ICg4IOKIkiA2KSDDtyA4ID0gMjUlIChnaeG6o20gdMawxqFuZyDEkeG7kWkpLgozLiBTQUkuIE7Eg20gMjAyMzogMS4wMDAgw5cgOCUgPSA4MCBo4buZIG5naMOoby4gTsSDbSAyMDI1OiAxLjIwMCDDlyA2JSA9IDcyIGjhu5kgbmdow6hvLiBHaeG6o20gOCBo4buZLCB04bupYyAxMCUsIGtow7RuZyBwaOG6o2kgMjUlLiAoYikgbsOzaSB24buBIHThu4kgbOG7hyAoc+G7kSBo4buZIG5naMOobyBjaGlhIHThu5VuZyBz4buRIGjhu5kpLCAoYykgbsOzaSB24buBIHPhu5EgxJHhur9tOyB04buVbmcgc+G7kSBo4buZIHTEg25nIG7Dqm4gdOG7iSBs4buHIGdp4bqjbSBt4bqhbmggaMahbiBz4buRIGjhu5kgbmdow6hvLg==",
-  "rubric_b64": "Q8OidSAxIMSR4bqhdDogbsOqdSDEkeG7pyBoYWkgY8OhY2ggaGnhu4N1IHbDoCB4w6l0IMSRw7puZy9zYWkgY2hvIG3hu5dpIGPDoWNoLiBN4buZdCBwaOG6p246IGNo4buJIG7DqnUgbeG7mXQgY8OhY2ggaGnhu4N1LCBob+G6t2MgbsOqdSBoYWkgY8OhY2ggbcOgIHjDqXQgc2FpIG3hu5l0IGPDoWNoLgpDw6J1IDIgxJHhuqF0OiDEkcO6bmcsIGPDsyBwaMOpcCB0w61uaCAoOOKIkjYpLzguCkPDonUgMzogw7QgdGhlbiBjaOG7kXQgbMOgIGvhur90IGx14bqtbiBTQUkgdsOgIGhhaSBjb24gc+G7kSA4MCwgNzIuIMSQ4bqhdDogY+G6oyBiYSArIGzDvSBkbyBt4bqrdSBz4buRIHRoYXkgxJHhu5VpLiBN4buZdCBwaOG6p246IHTDrW5oIMSRw7puZyBtw6AgdGhp4bq/dSBsw70gZG8sIGhv4bq3YyBsw70gZG8gxJHDum5nIG3DoCB0w61uaCBzYWkgbeG7mXQgc+G7kS4KQuG6q3kgY2jDrW5oOiB0aOG6pXkgKGIpIMSRw7puZyBy4buTaSBjb2kgKGMpIGPFqW5nIMSRw7puZy4KR+G7mXA6IGNvcnJlY3QgPSBt4buNaSBjw6J1IMSR4bqhdCwgaG/hurdjIDIgY8OidSDEkeG6oXQgKyAxIGPDonUgbeG7mXQgcGjhuqduOyBwYXJ0aWFsID0gMeKAkzIgY8OidSDEkeG6oXQ7IGluY29ycmVjdCA9IGtow7RuZyBjw6J1IG7DoG8gxJHhuqF0Lg==",
+  "answer_key_b64": "MS4gQTogNTAlIMOXIDYwLjAwMCA9IDMwLjAwMCDEkS4gQjogMzUlIMOXIDEyMC4wMDAgPSA0Mi4wMDAgxJEuIEM6IDYwJSDDlyA1NS4wMDAgPSAzMy4wMDAgxJEuCjIuIFRyw6puIG3hu5dpIG5nxrDhu51pIG5o4bqtbiBwaGnhur91OiBCID4gQyA+IEEuIFRyw6puIG3hu5dpIG5nxrDhu51pIGPDsyBnw7NwOiBCID4gQSA+IEMuIFPhu5EgbmfGsOG7nWkgZ8OzcDogQyA+IEEgPiBCLiBLaMO0bmcgZ2nhu5FuZyBuaGF1IHbDrCB0aeG7gW4gdHLDqm4gbeG7l2kgbmfGsOG7nWkgbmjhuq1uID0gdOG7iSBs4buHIGfDs3Agw5cgdHJ1bmcgYsOsbmggY+G7p2EgbmfGsOG7nWkgZ8OzcCwgdsOgIGdp4buvYSBjw6FjIG3huqt1IGhhaSDEkeG6oWkgbMaw4bujbmcgbsOgeSDEkWkgbmfGsOG7o2MgY2hp4buBdSAoQjogw610IG5nxrDhu51pIGfDs3AsIG3hu5dpIG5nxrDhu51pIGfDs3Agbmhp4buBdTsgQzogbmfGsOG7o2MgbOG6oWkpLiBUw61jaCBj4bunYSBjaMO6bmcgbsOqbiBjw7MgdGjhu6kgaOG6oW5nIHJpw6puZy4gKELhuqNuZyBz4buRIGtow7RuZyB04buxIGNo4bupbmcgbWluaCBn4bujaSDDvSBz4buRIHRp4buBbiBsw6Agbmd1ecOqbiBuaMOibiBj4bunYSB04burbmcgY2hp4buBdSwgeGVtIGPDonUgMy4pCjMuIFbDrSBk4bulIMSR4bqhdDogdGhheSDEkeG7lWkgdGjDoG5oIHBo4bqnbiBuaMOzbSAobOG7sWEgY2jhu41uKTogZ+G7o2kgw70gMjAwLjAwMCDEkSBsw6BtIG5o4buvbmcgbmfGsOG7nWkgxJHhu4tuaCBnw7NwIMOtdCBi4buPIGjhurNuIGtow7RuZyBnw7NwICh04buJIGzhu4cgZ8OzcCBnaeG6o20gdOG7qyA1MCUgY8OybiAzNSUpLCBuw6puIG5ow7NtIGPDsm4gbOG6oWkgdG/DoG4gbmjhu69uZyBuZ8aw4budaSB24buRbiBow6BvIHBow7NuZzsgdHJ1bmcgYsOsbmggY+G7p2EgbmjDs20gxJHDsyBjYW8gZMO5IGtow7RuZyBhaSDEkeG7lWkgw70uIE114buRbiB0w6FjaCDEkcaw4bujYyBoYWkgdMOhYyDEkeG7mW5nIHRow6wgcGjhuqNpIGJp4bq/dCB04burbmcgbmfGsOG7nWkgbOG6vSByYSBnw7NwIGJhbyBuaGnDqnUsIGhv4bq3YyBzbyB0csOqbiBjw7luZyBt4buZdCBuaMOzbSBuZ8aw4budaS4=",
+  "rubric_b64": "Q8OidSAxIMSR4bqhdDogMzAuMDAwIC8gNDIuMDAwIC8gMzMuMDAwLiBN4buZdCBwaOG6p246IMSRw7puZyAyLzMuCkPDonUgMjogw7QgdGhlbiBjaOG7kXQgbMOgIGJhIHRo4bupIGjhuqFuZyAoQj5DPkE7IEI+QT5DOyBDPkE+QikgdsOgIGzDvSBkbyAiaGFpIMSR4bqhaSBsxrDhu6NuZyDEkWkgbmfGsOG7o2MgY2hp4buBdSAvIHThu5VuZyA9IHTDrWNoIi4gxJDhuqF0OiDEkcO6bmcgY+G6oyAzIHRo4bupIGjhuqFuZyArIGzDvSBkby4gTeG7mXQgcGjhuqduOiDEkcO6bmcgdGjhu6kgaOG6oW5nLCBsw70gZG8gbcahIGjhu5MuCkPDonUgMyDEkeG6oXQ6IG7DqnUgxJHGsOG7o2MgdGhheSDEkeG7lWkgdGjDoG5oIHBo4bqnbiBuaMOzbSBuZ8aw4budaSBnw7NwIChuZ8aw4budaSBnw7NwIMOtdCByw7p0IGx1aSkuIE3hu5l0IHBo4bqnbjogY2jhu4kgbsOzaSAiY8OzIHRo4buDIGRvIG5n4bqrdSBuaGnDqm4iIGhv4bq3YyBuw6p1IGzDvSBkbyBraMO0bmcgZMO5bmcgc+G7kSBsaeG7h3UgdHJvbmcgxJHhu4EuCkLhuqt5IGNow61uaDogY29pIHRydW5nIGLDrG5oIGPhu6dhIG5nxrDhu51pIGPDsyBnw7NwIOG7nyBCIGzDoCBi4bqxbmcgY2jhu6luZyBt4buXaSBuZ8aw4budaSB0xINuZyBt4bupYyBnw7NwLgpH4buZcDogY29ycmVjdCA9IG3hu41pIGPDonUgxJHhuqF0LCBob+G6t2MgMiBjw6J1IMSR4bqhdCArIDEgY8OidSBt4buZdCBwaOG6p247IHBhcnRpYWwgPSAx4oCTMiBjw6J1IMSR4bqhdDsgaW5jb3JyZWN0ID0ga2jDtG5nIGPDonUgbsOgbyDEkeG6oXQu",
   "review": {
     "solver_model": "sonnet",
     "first_solve_match": true,
     "revised": false,
     "issues": [
       {
-        "type": "ambiguity",
+        "type": "level_mismatch",
         "severity": 1,
-        "detail": "quy ước % tương đối chưa nêu"
+        "detail": "phản biện chấm level 2"
       },
       {
         "type": "missing_premise",
         "severity": 1,
-        "detail": "định nghĩa tỉ lệ hộ nghèo ngầm"
+        "detail": "đáp án câu 2 khẳng định nhân quả quá mức"
       }
     ]
   },
-  "status": "submitted",
+  "status": "open",
   "extra": false
 }
