@@ -20,6 +20,9 @@ Thêm dòng mới khi người dùng chỉ ra lỗi của đề, hoặc khi mộ
 - (22/10) Ghi chú chấm và ví dụ đáp án cũng phải kiểm số như đề ("ít hơn một nửa" khác "đúng một nửa").
 - (21/10) Khi nói về một lựa chọn chưa chốt, viết "quyết định X cần đưa ra", không viết "đang đưa ra" (người dùng hiểu thành quyết định đã có).
 
+- (25/10) Số viết theo quy ước khác phải là dạng hợp lệ ở cả hai quy ước ("3.50" không phải dạng ngăn nghìn chuẩn); ưu tiên số có đúng 3 chữ số sau dấu.
+- (25/10) Câu hỏi "viết thêm tiêu chí cho nhất quán" phải nói tiêu chí chen ở bước nào và phải tái tạo đúng toàn bộ kết quả.
+
 ## Hồ sơ người học
 - Mạnh: thao tác đại số, lập phương trình; thiết kế phép đo trực tiếp; tự chuẩn hoá ký hiệu trước khi làm (20/10); phân biệt "sai sự thật" và "đúng nhưng chọn lọc".
 - Cần luyện:
@@ -38,5 +41,5 @@ Thêm dòng mới khi người dùng chỉ ra lỗi của đề, hoặc khi mộ
 - Cách phản hồi hợp: thẳng, chỉ ra cơ chế; thích được giải nghĩa nền tảng khi gặp domain lạ (đã xin bổ túc kinh tế ngày 19/10).
 
 ## Ghi chú hệ thống (chờ trao đổi qua /discuss)
-- (22/10) Tác vụ tự động đã chuyển sang chạy trong phiên chính vì phiên mới không push được (lần chạy 21/10 mất 8 đề). Cần theo dõi lần chạy 25/10.
+- (25/10) Tác vụ tự động chạy trong phiên chính lần đầu: chạy được, push thành công (+4 đề).
 - (25/10) Reflect chấm lại bài 25/10 khác session chính: câu 3 một phần thay vì đạt, nên kết quả gộp là partial thay vì correct. Lịch sử chưa sửa.
