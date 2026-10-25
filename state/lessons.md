@@ -39,3 +39,4 @@ Thêm dòng mới khi người dùng chỉ ra lỗi của đề, hoặc khi mộ
 
 ## Ghi chú hệ thống (chờ trao đổi qua /discuss)
 - (22/10) Tác vụ tự động đã chuyển sang chạy trong phiên chính vì phiên mới không push được (lần chạy 21/10 mất 8 đề). Cần theo dõi lần chạy 25/10.
+- (25/10) Reflect chấm lại bài 25/10 khác session chính: câu 3 một phần thay vì đạt, nên kết quả gộp là partial thay vì correct. Lịch sử chưa sửa.
