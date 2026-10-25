@@ -1,44 +1,44 @@
 {
-  "date": "2026-10-24",
-  "pool_id": "20261022-d04-ef0a0f",
-  "domain_id": 4,
+  "date": "2026-10-25",
+  "pool_id": "20261022-d09-2700f7",
+  "domain_id": 9,
   "tag": "reason",
   "level": 2,
   "base_level": 2,
   "rolled_level": 2,
   "level_mode": "core",
-  "est_minutes": 12,
+  "est_minutes": 10,
   "format": "fill-in",
   "skills": [
-    "interpret_result",
-    "selection_bias"
+    "experiment_design",
+    "evidence_strength"
   ],
-  "challenge_md": "Một quỹ từ thiện thử ba mẫu phiếu quyên góp, mỗi mẫu gửi cho 1.000 người được chọn ngẫu nhiên (số liệu là giả định của đề):\n\n| Mẫu | Gợi ý số tiền in trên phiếu | Tỉ lệ người góp | Số tiền trung bình của **mỗi người có góp** |\n|---|---|---|---|\n| A | Không gợi ý | 50% | 60.000 đ |\n| B | \"Nhiều người góp 200.000 đ\" | 35% | 120.000 đ |\n| C | \"Nhiều người góp 50.000 đ\" | 60% | 55.000 đ |\n\n**Câu hỏi**\n1. Với mỗi mẫu, tính số tiền trung bình quỹ thu được **trên mỗi người nhận phiếu** (tính cả người không góp).\n2. Xếp hạng ba mẫu theo ba tiêu chí: tiền trên mỗi người nhận phiếu, tiền trên mỗi người có góp, và số người góp. Vì sao các bảng xếp hạng không giống nhau?\n3. Một nhân viên kết luận: *\"Mẫu B làm mỗi người góp nhiều gấp đôi mẫu A, vậy con số 200.000 đ đã khiến mỗi người móc hầu bao rộng hơn.\"* Nêu một cách giải thích khác cho con số 120.000 đ mà không cần giả định ai đổi ý về số tiền.",
+  "challenge_md": "Năm 1747, trên tàu HMS Salisbury của hải quân Anh, bác sĩ James Lind chọn 12 thuỷ thủ mắc bệnh scorbut (bệnh do thiếu chất có trong rau quả tươi, gây chảy máu chân răng và kiệt sức) với triệu chứng giống nhau, chia thành 6 cặp. Tất cả ăn cùng một khẩu phần cơ bản; mỗi cặp được thêm một thứ khác nhau, ví dụ rượu táo, giấm, nước biển, hỗn hợp tỏi–mù tạt–cải ngựa, và một cặp được thêm cam và chanh. Cặp ăn cam và chanh hồi phục rõ rệt và nhanh nhất. Dù vậy, phải đến năm 1795 hải quân Anh mới đưa nước chanh thành khẩu phần bắt buộc cho toàn hạm đội.\n\n**Câu hỏi**\n1. Nêu hai điều trong cách Lind làm giúp phép so sánh giữa các cặp công bằng hơn.\n2. Một người hoài nghi nói: *\"Chỉ có 2 người ăn cam chanh; họ khỏi bệnh có thể do may.\"* Giả sử bạn có 60 thuỷ thủ mắc bệnh giống nhau và chỉ cần trả lời câu hỏi \"cam chanh có giúp khỏi bệnh không\". Hãy thiết kế lại phép thử: chia nhóm thế nào, ai vào nhóm nào, so cái gì với cái gì, và kết quả nào thì bạn tin cam chanh có tác dụng.\n3. Chỉ dựa vào **bằng chứng** mà thí nghiệm năm 1747 tạo ra, nêu một lý do khiến người ra quyết định thời đó có thể chưa bị thuyết phục.",
   "hints": [
-    "Số tiền trên mỗi người nhận phiếu = tỉ lệ người góp × số tiền trung bình của người có góp.",
-    "Ba tiêu chí đo ba thứ khác nhau: quỹ thu được bao nhiêu, mỗi người góp bao nhiêu, bao nhiêu người tham gia. Một gợi ý số tiền có thể kéo hai thứ theo hai chiều ngược nhau.",
-    "Câu 3: so sánh 'trung bình của những người có góp' giữa hai mẫu chỉ công bằng khi nhóm 'người có góp' ở hai mẫu là cùng một kiểu người. Mẫu B có ít người góp hơn: ai là người bỏ đi?"
+    "Một phép so sánh công bằng khi các nhóm giống nhau ở mọi thứ, chỉ khác đúng thứ đang được thử.",
+    "Với 60 người, câu hỏi chỉ có hai phía: có cam chanh và không có cam chanh. Ai quyết định người nào vào nhóm nào thì có thể vô tình tạo khác biệt giữa hai nhóm.",
+    "Câu 3: một kết quả tốt trên 2 người, ở 1 con tàu, 1 lần, có đủ để thay đổi khẩu phần của cả một hạm đội không?"
   ],
-  "hints_revealed": 3,
-  "answer_key_b64": "MS4gQTogNTAlIMOXIDYwLjAwMCA9IDMwLjAwMCDEkS4gQjogMzUlIMOXIDEyMC4wMDAgPSA0Mi4wMDAgxJEuIEM6IDYwJSDDlyA1NS4wMDAgPSAzMy4wMDAgxJEuCjIuIFRyw6puIG3hu5dpIG5nxrDhu51pIG5o4bqtbiBwaGnhur91OiBCID4gQyA+IEEuIFRyw6puIG3hu5dpIG5nxrDhu51pIGPDsyBnw7NwOiBCID4gQSA+IEMuIFPhu5EgbmfGsOG7nWkgZ8OzcDogQyA+IEEgPiBCLiBLaMO0bmcgZ2nhu5FuZyBuaGF1IHbDrCB0aeG7gW4gdHLDqm4gbeG7l2kgbmfGsOG7nWkgbmjhuq1uID0gdOG7iSBs4buHIGfDs3Agw5cgdHJ1bmcgYsOsbmggY+G7p2EgbmfGsOG7nWkgZ8OzcCwgdsOgIGdp4buvYSBjw6FjIG3huqt1IGhhaSDEkeG6oWkgbMaw4bujbmcgbsOgeSDEkWkgbmfGsOG7o2MgY2hp4buBdSAoQjogw610IG5nxrDhu51pIGfDs3AsIG3hu5dpIG5nxrDhu51pIGfDs3Agbmhp4buBdTsgQzogbmfGsOG7o2MgbOG6oWkpLiBUw61jaCBj4bunYSBjaMO6bmcgbsOqbiBjw7MgdGjhu6kgaOG6oW5nIHJpw6puZy4gKELhuqNuZyBz4buRIGtow7RuZyB04buxIGNo4bupbmcgbWluaCBn4bujaSDDvSBz4buRIHRp4buBbiBsw6Agbmd1ecOqbiBuaMOibiBj4bunYSB04burbmcgY2hp4buBdSwgeGVtIGPDonUgMy4pCjMuIFbDrSBk4bulIMSR4bqhdDogdGhheSDEkeG7lWkgdGjDoG5oIHBo4bqnbiBuaMOzbSAobOG7sWEgY2jhu41uKTogZ+G7o2kgw70gMjAwLjAwMCDEkSBsw6BtIG5o4buvbmcgbmfGsOG7nWkgxJHhu4tuaCBnw7NwIMOtdCBi4buPIGjhurNuIGtow7RuZyBnw7NwICh04buJIGzhu4cgZ8OzcCBnaeG6o20gdOG7qyA1MCUgY8OybiAzNSUpLCBuw6puIG5ow7NtIGPDsm4gbOG6oWkgdG/DoG4gbmjhu69uZyBuZ8aw4budaSB24buRbiBow6BvIHBow7NuZzsgdHJ1bmcgYsOsbmggY+G7p2EgbmjDs20gxJHDsyBjYW8gZMO5IGtow7RuZyBhaSDEkeG7lWkgw70uIE114buRbiB0w6FjaCDEkcaw4bujYyBoYWkgdMOhYyDEkeG7mW5nIHRow6wgcGjhuqNpIGJp4bq/dCB04burbmcgbmfGsOG7nWkgbOG6vSByYSBnw7NwIGJhbyBuaGnDqnUsIGhv4bq3YyBzbyB0csOqbiBjw7luZyBt4buZdCBuaMOzbSBuZ8aw4budaS4=",
-  "rubric_b64": "Q8OidSAxIMSR4bqhdDogMzAuMDAwIC8gNDIuMDAwIC8gMzMuMDAwLiBN4buZdCBwaOG6p246IMSRw7puZyAyLzMuCkPDonUgMjogw7QgdGhlbiBjaOG7kXQgbMOgIGJhIHRo4bupIGjhuqFuZyAoQj5DPkE7IEI+QT5DOyBDPkE+QikgdsOgIGzDvSBkbyAiaGFpIMSR4bqhaSBsxrDhu6NuZyDEkWkgbmfGsOG7o2MgY2hp4buBdSAvIHThu5VuZyA9IHTDrWNoIi4gxJDhuqF0OiDEkcO6bmcgY+G6oyAzIHRo4bupIGjhuqFuZyArIGzDvSBkby4gTeG7mXQgcGjhuqduOiDEkcO6bmcgdGjhu6kgaOG6oW5nLCBsw70gZG8gbcahIGjhu5MuCkPDonUgMyDEkeG6oXQ6IG7DqnUgxJHGsOG7o2MgdGhheSDEkeG7lWkgdGjDoG5oIHBo4bqnbiBuaMOzbSBuZ8aw4budaSBnw7NwIChuZ8aw4budaSBnw7NwIMOtdCByw7p0IGx1aSkuIE3hu5l0IHBo4bqnbjogY2jhu4kgbsOzaSAiY8OzIHRo4buDIGRvIG5n4bqrdSBuaGnDqm4iIGhv4bq3YyBuw6p1IGzDvSBkbyBraMO0bmcgZMO5bmcgc+G7kSBsaeG7h3UgdHJvbmcgxJHhu4EuCkLhuqt5IGNow61uaDogY29pIHRydW5nIGLDrG5oIGPhu6dhIG5nxrDhu51pIGPDsyBnw7NwIOG7nyBCIGzDoCBi4bqxbmcgY2jhu6luZyBt4buXaSBuZ8aw4budaSB0xINuZyBt4bupYyBnw7NwLgpH4buZcDogY29ycmVjdCA9IG3hu41pIGPDonUgxJHhuqF0LCBob+G6t2MgMiBjw6J1IMSR4bqhdCArIDEgY8OidSBt4buZdCBwaOG6p247IHBhcnRpYWwgPSAx4oCTMiBjw6J1IMSR4bqhdDsgaW5jb3JyZWN0ID0ga2jDtG5nIGPDonUgbsOgbyDEkeG6oXQu",
+  "hints_revealed": 0,
+  "answer_key_b64": "MS4gVsOtIGThu6UgxJHhuqF0ICgyIHRyb25nIGPDoWMgw70pOiBjaOG7jW4gbmfGsOG7nWkgY8OzIHRyaeG7h3UgY2jhu6luZyBnaeG7kW5nIG5oYXU7IGPDuW5nIGto4bqpdSBwaOG6p24gY8ahIGLhuqNuLCBjaOG7iSBraMOhYyB0aOG7qSDEkcaw4bujYyB0aMOqbTsgY8O5bmcgdMOgdSwgY8O5bmcgdGjhu51pIGdpYW4sIGPDuW5nIMSRaeG7gXUga2nhu4duOyBzbyBuaGnhu4F1IHBoxrDGoW5nIMOhbiBjw7luZyBsw7pjIHRoYXkgdsOsIHNvIHRyxrDhu5tj4oCTc2F1LgoyLiBWw60gZOG7pSDEkeG6oXQ6IGNoaWEgNjAgbmfGsOG7nWkgdGjDoG5oIGhhaSBuaMOzbSAzMCBuZ8aw4budaSAoY2FtIGNoYW5oIC8ga2jDtG5nIGNhbSBjaGFuaCwgaG/hurdjIG3hu5l0IHRo4bupIGtow7RuZyBjw7MgdMOhYyBk4bulbmcgdGhheSB0aOG6vyksIHBow6JuIG5ow7NtIG5n4bqrdSBuaGnDqm4gKGLhu5FjIHRoxINtKSDEkeG7gyBraMO0bmcgYWkgY2jhu41uIG5nxrDhu51pIGtob+G6uyBoxqFuIHbDoG8gbeG7mXQgbmjDs207IGdp4buvIG3hu41pIHRo4bupIGtow6FjIG5oxrAgbmhhdTsgxJHhu4tuaCB0csaw4bubYyBjw6FjaCDEkW8gKHbDrSBk4bulIHThu4kgbOG7hyBuZ8aw4budaSBo4bq/dCBjaOG6o3kgbcOhdSBjaMOibiByxINuZyBzYXUgMiB0deG6p24pLiBUaW4gY2FtIGNoYW5oIGPDsyB0w6FjIGThu6VuZyBraGkgbmjDs20gY2FtIGNoYW5oIGto4buPaSBuaGnhu4F1IGjGoW4gcsO1IHLhu4d0LCBjaMOqbmggbOG7h2NoIGzhu5tuIGjGoW4gbeG7qWMgY8OzIHRo4buDIGRvIG1heSAodsOtIGThu6UgxJFhIHPhu5EgbmjDs20gY2FtIGNoYW5oIGto4buPaSwgbmjDs20ga2lhIHLhuqV0IMOtdCkuCjMuIFbDrSBk4bulIMSR4bqhdDogY2jhu4kgMiBuZ8aw4budaSwgbeG7mXQgbOG6p24sIHRyw6puIG3hu5l0IHTDoHUsIG7Dqm4ga+G6v3QgcXXhuqMgY8OzIHRo4buDIGRvIG1heSBob+G6t2MgZG8ga2jDoWMgYmnhu4d0IHJpw6puZyBj4bunYSAyIG5nxrDhu51pOyBjaMawYSBhaSBs4bq3cCBs4bqhaTsga2jDtG5nIGPDsyBuaMOzbSBjaOG7iSDEg24ga2jhuql1IHBo4bqnbiBjxqEgYuG6o24gxJHhu4Mgc287IGPDuW5nIGzDumMgY8OzIG5oaeG7gXUgY8OhY2ggY2jhu69hIGtow6FjIMSRxrDhu6NjIHRpbiBkw7luZy4gQ2jhuqVwIG5o4bqtbiBt4buNaSBsw70gZG8gZOG7sWEgdHLDqm4gxJHhu5kgbeG6oW5oIGPhu6dhIGLhurFuZyBjaOG7qW5nLg==",
+  "rubric_b64": "Q8OidSAxIMSR4bqhdDogMiDDvSDEkcO6bmcuIE3hu5l0IHBo4bqnbjogMSDDvS4KQ8OidSAyOiDDtCB0aGVuIGNo4buRdCBsw6AgKGkpIHBow6JuIG5ow7NtIG5n4bqrdSBuaGnDqm4sIChpaSkgY8OzIG5ow7NtIHNvIHPDoW5oIGtow7RuZyBjYW0gY2hhbmgsIChpaWkpIMSR4buLbmggdHLGsOG7m2MgdGjGsOG7m2MgxJFvIHbDoCB0acOqdSBjaMOtIHRpbi9raMO0bmcgdGluLiDEkOG6oXQ6IMSR4bunIDMuIE3hu5l0IHBo4bqnbjogMi8zLgpDw6J1IDMgxJHhuqF0OiBt4buZdCBsw70gZG8gduG7gSDEkeG7mSBt4bqhbmggY+G7p2EgYuG6sW5nIGNo4bupbmcgKGPhu6EgbeG6q3UsIGNoxrBhIGzhurdwIGzhuqFpLCB0aGnhur91IG5ow7NtIMSR4buRaSBjaOG7qW5nIHRodeG6p24uLi4pLiBN4buZdCBwaOG6p246IGzDvSBkbyBuZ2/DoGkgYuG6sW5nIGNo4bupbmcgKGNoaSBwaMOtLCBjaMOtbmggdHLhu4spIG3DoCBraMO0bmcgbuG7kWkgduG7gSBi4bqxbmcgY2jhu6luZy4KQuG6q3kgY2jDrW5oOiBjw6J1IDIgY2jhu4kgInTEg25nIHPhu5EgbmfGsOG7nWkiIG3DoCBraMO0bmcgY8OzIHBow6JuIG5ow7NtIG5n4bqrdSBuaGnDqm4gaGF5IHRpw6p1IGNow60ga+G6v3QgbHXhuq1uLgpH4buZcDogY29ycmVjdCA9IG3hu41pIGPDonUgxJHhuqF0LCBob+G6t2MgMiBjw6J1IMSR4bqhdCArIDEgY8OidSBt4buZdCBwaOG6p247IHBhcnRpYWwgPSAx4oCTMiBjw6J1IMSR4bqhdDsgaW5jb3JyZWN0ID0ga2jDtG5nIGPDonUgbsOgbyDEkeG6oXQuIENo4bqlcCBuaOG6rW4gbmjDs20gxJHhu5FpIGNo4bupbmcgJ2tow7RuZyB0aMOqbSBnw6wnIGhv4bq3YyAndGjDqm0gdGjhu6kgdsO0IHTDoWMgZOG7pW5nJzsgY2jhuqVwIG5o4bqtbiBt4buNaSBuZ8aw4buhbmcgdGluIGjhu6NwIGzDvSAoY2jDqm5oIGzhu4djaCBs4bubbiwgdsaw4bujdCB4YSBtYXkgcuG7p2kpLCBraMO0bmcgecOqdSBj4bqndSBwLXZhbHVlLg==",
   "review": {
     "solver_model": "sonnet",
     "first_solve_match": true,
     "revised": false,
     "issues": [
       {
-        "type": "level_mismatch",
+        "type": "ambiguity",
         "severity": 1,
-        "detail": "phản biện chấm level 2"
+        "detail": "nhóm đối chứng/ngưỡng tin chưa nêu; rubric chấp nhận mọi ngưỡng hợp lý"
       },
       {
-        "type": "missing_premise",
+        "type": "trivia",
         "severity": 1,
-        "detail": "đáp án câu 2 khẳng định nhân quả quá mức"
+        "detail": "thí nghiệm nổi tiếng nhưng câu hỏi là lập luận"
       }
     ]
   },
-  "status": "submitted",
+  "status": "open",
   "extra": false
 }
