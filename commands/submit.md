@@ -17,7 +17,8 @@ Chỉ chạy khi người dùng đã viết câu trả lời. Chưa có câu tr�
    - Người dùng chỉ ra đề mơ hồ hoặc sai: xét thật lòng. Họ đúng thì nhận lỗi, chấm nhẹ tay câu đó, và thêm bài học vào `state/lessons.md`.
    - Một dòng "Rút ra": nguyên tắc chuyển giao được. Nếu nó nối với một lỗi cũ trong hồ sơ người học, nói ra mối nối đó.
 4. Xác định `skills_missed`: kỹ năng nào trong `skills` của đề mà người dùng chưa thể hiện được.
-5. `python3 engine/dmc.py close '{"result": "...", "skills_missed": [...], "notes": "1 dòng: điểm mạnh và mẫu lỗi"}'`
+5. `python3 engine/dmc.py close '{"result": "...", "skills_missed": [...], "notes": "1 dòng: điểm mạnh và mẫu lỗi", "answer": "nguyên văn câu trả lời", "grading": "đạt/một phần/chưa đạt từng câu + lý do ngắn"}'`
+   `close` lưu đề + câu trả lời + cách chấm vào `state/archive/` để bước Reflect của `/restock` chấm lại độc lập.
 6. Mẫu học tập lặp lại (lỗi xuất hiện lần 2, hoặc thế mạnh mới): cập nhật mục "Hồ sơ người học" trong `state/lessons.md`.
 7. `git add state && git commit -m "Submit challenge {date}: {result}" && git push -u origin main`
 8. Một dòng cuối: level nền hiện tại (`python3 engine/dmc.py status`) và kỹ năng sẽ được ôn lại, nếu có.

@@ -9,6 +9,11 @@ Người dùng đã đồng ý cho lệnh này tạo subagent để giải mù v
 - `python3 engine/dmc.py plan n`: danh sách slot (domain, level, tag, target_skill).
 - Đọc `state/lessons.md` (bài học cho người ra đề), các mục Levels trong `CLAUDE.md`, và playbook ở cuối file này.
 - `python3 engine/dmc.py skills`: bảng kỹ năng. Mỗi đề gắn 1–3 kỹ năng từ bảng này.
+- **Reflect** (1 subagent mới, `model: sonnet`, mỗi lần restock một lần; bỏ qua khi `state/archive/` không có bài mới
+  kể từ lần reflect trước, ghi trong dòng đầu `state/brief.md`): prompt = BRIEF REFLECT + nội dung các file archive mới
+  (giải mã `answer_key_b64`, `rubric_b64`) + mục "Hồ sơ người học" trong `state/lessons.md`.
+  Ghi kết quả vào `state/brief.md` (ghi đè). Người ra đề đọc brief này cùng lessons trước khi sinh.
+  Chỗ reflect chấm khác session chính: KHÔNG tự sửa lịch sử; ghi vào "Ghi chú hệ thống" để trao đổi qua `/discuss`.
 
 ## 1. Sinh (session chính)
 Viết 1 candidate cho mỗi slot, cộng thêm ceil(n/4) slot dự phòng (domain khác, level nền) để bù đề bị loại.
@@ -76,6 +81,17 @@ Trả về JSON: {"answers": ["câu 1: ...", ...], "reasoning": "...", "ambiguit
 
 ĐỀ:
 <challenge_md>
+```
+
+## BRIEF REFLECT
+```
+Bạn là người rà soát độc lập cho một hệ thống luyện tư duy. Dưới đây là các đề đã giao, đáp án, rubric,
+câu trả lời nguyên văn của người học và cách session chính đã chấm. Không đọc file nào khác, không tra web.
+1. Chấm lại từng bài theo rubric, chỉ dựa trên câu trả lời. Ghi bài nào bạn chấm khác và vì sao.
+2. Tìm mẫu lặp lại: kỹ năng, dạng câu hỏi (tính toán / giải thích cơ chế / thiết kế phép thử...), mức gợi ý đã dùng.
+   Mỗi mẫu phải dẫn ít nhất 2 bài làm bằng chứng.
+3. Viết tối đa 6 kiến nghị cụ thể cho người ra đề (dạng đề nào, luyện bước nào, độ khó nên chỉnh ra sao).
+Trả về markdown: "## Chấm lại", "## Mẫu", "## Kiến nghị". Dòng đầu: "Reflect đến ngày YYYY-MM-DD".
 ```
 
 ## BRIEF PHẢN BIỆN

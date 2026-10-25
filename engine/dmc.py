@@ -11,7 +11,7 @@ Usage (run from the repo root):
                                           # --extra: an additional puzzle after today's is done
   python3 engine/dmc.py hint              # reveal the next hint
   python3 engine/dmc.py reveal            # print answer + rubric (only after the user has answered)
-  python3 engine/dmc.py close JSON        # log today's result to history and mark the challenge submitted
+  python3 engine/dmc.py close JSON        # log today's result to history, archive puzzle + answer, mark submitted
 
 "Today" is the calendar date in Asia/Ho_Chi_Minh.
 """
@@ -30,6 +30,7 @@ ROOT = Path(__file__).resolve().parent.parent
 POOL = ROOT / "pool"
 CURRENT = ROOT / "state" / "current.json"
 REVIEW_LOG = ROOT / "logs" / "review.jsonl"
+ARCHIVE = ROOT / "state" / "archive"  # served puzzle + user answer + grading, re-read by the restock reflect step
 
 SKILLS = {
     "false_dilemma": "Thấy phương án/nguyên nhân bị bỏ sót",
@@ -310,6 +311,11 @@ def cmd_close(raw):
         "notes": extra.get("notes", ""), "pool_id": cur.get("pool_id"), "extra": bool(cur.get("extra")),
     }
     roll.log_entry(json.dumps(entry, ensure_ascii=False))
+    ARCHIVE.mkdir(parents=True, exist_ok=True)
+    name = cur["date"] + ("-extra" if cur.get("extra") else "")
+    _write(ARCHIVE / f"{name}.json", {**cur, "status": "submitted", "user_answer": extra.get("answer", ""),
+                                      "grading": extra.get("grading", ""), "result": extra["result"],
+                                      "skills_missed": missed, "notes": entry["notes"]})
     cur["status"] = "submitted"
     _write(CURRENT, cur)
 

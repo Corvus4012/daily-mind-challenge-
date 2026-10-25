@@ -72,7 +72,10 @@ def main():
         assert revealed["answer"] == "đáp án mẫu" and revealed["hints_revealed"] == 3
         skill = json.loads((tmp / "state" / "current.json").read_text())["skills"][0]
         assert dmc(tmp, "close", json.dumps({"result": "partial", "skills_missed": ["nope"]}), ok=False).returncode
-        dmc(tmp, "close", json.dumps({"result": "partial", "skills_missed": [skill], "notes": "smoke"}))
+        dmc(tmp, "close", json.dumps({"result": "partial", "skills_missed": [skill], "notes": "smoke",
+                                      "answer": "câu trả lời mẫu", "grading": "câu 1 đạt"}))
+        archived = json.loads(next((tmp / "state" / "archive").glob("*.json")).read_text())
+        assert archived["user_answer"] == "câu trả lời mẫu" and "answer_key_b64" in archived, "close must archive"
         last = json.loads((tmp / "state" / "history.jsonl").read_text().splitlines()[-1])
         print("history:", {k: last[k] for k in ("date", "result", "hints_used", "skills", "skills_missed")})
         assert last["hints_used"] == 3 and last["skills_missed"] == [skill]
