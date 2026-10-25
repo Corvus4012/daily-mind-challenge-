@@ -1,0 +1,44 @@
+{
+  "id": "20261025-d10-fcd954",
+  "created": "2026-10-25",
+  "domain_id": 10,
+  "level": 2,
+  "tag": "reason",
+  "format": "fill-in",
+  "skills": [
+    "interpret_result",
+    "self_check"
+  ],
+  "est_minutes": 10,
+  "challenge_md": "Theo chuẩn WCAG 2.1 mức AA (chuẩn quốc tế về khả năng tiếp cận nội dung web), độ tương phản giữa chữ và nền là\n**(L sáng + 0,05) ÷ (L tối + 0,05)**, trong đó L là \"độ sáng tương đối\" của màu, từ 0 (đen) đến 1 (trắng). Yêu cầu tối thiểu: **4,5** với chữ thường, **3** với chữ lớn (từ 18pt, hoặc từ 14pt nếu in đậm).\n\nMàn hình chuyển tiền của một ứng dụng (giá trị L là giả định của đề):\n- Chữ nội dung, cỡ thường: chữ xám đậm L = 0,20 trên nền trắng L = 1,00.\n- Dòng phí giao dịch, cỡ nhỏ: chữ xám nhạt L = 0,40 trên nền trắng.\n- Nút \"Chuyển tiền\", chữ lớn in đậm: chữ trắng trên nền xanh L = 0,25.\n\n**Câu hỏi**\n1. Tính độ tương phản của ba thành phần (làm tròn 2 chữ số thập phân). Thành phần nào đạt, thành phần nào không?\n2. Trưởng nhóm thiết kế nói: *\"Chữ nội dung chỉ thiếu chút xíu, dòng phí thì phụ, không sao.\"* Dùng chính các con số ở câu 1 và vai trò của từng thành phần trên màn hình này, giải thích vì sao nhận định đó đánh giá sai mức nghiêm trọng.\n3. Để dòng phí đạt chuẩn trên nền trắng, chữ của nó cần L tối đa bao nhiêu? Kiểm tra lại bằng cách thay giá trị đó vào công thức.",
+  "hints": [
+    "Màu nào là 'sáng', màu nào là 'tối' trong từng cặp? Nút xanh có chữ trắng, nên nền mới là màu tối.",
+    "So mỗi con số với đúng ngưỡng của cỡ chữ đó. Khoảng cách tới ngưỡng không giống nhau, và thông tin bị ảnh hưởng cũng không giống nhau.",
+    "Câu 3: viết 1,05 ÷ (L + 0,05) ≥ 4,5 rồi giải L."
+  ],
+  "claims": [
+    {
+      "claim": "WCAG 2.x: tỉ lệ tương phản = (L1+0,05)/(L2+0,05); mức AA: 4,5:1 chữ thường, 3:1 chữ lớn (≥18pt hoặc ≥14pt đậm)",
+      "source": "https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html ; https://testparty.ai/blog/wcag-contrast-ratio-guide-2025"
+    }
+  ],
+  "review": {
+    "solver_model": "sonnet",
+    "first_solve_match": true,
+    "revised": false,
+    "issues": [
+      {
+        "type": "ambiguity",
+        "severity": 1,
+        "detail": "câu 2: vế \"chữ nội dung thiếu chút xíu\" gần đúng về số"
+      },
+      {
+        "type": "ambiguity",
+        "severity": 1,
+        "detail": "làm tròn L tối đa"
+      }
+    ]
+  },
+  "answer_b64": "MS4gTuG7mWkgZHVuZzogMSwwNSDDtyAwLDI1ID0gNCwyMCA8IDQsNSDihpIga2jDtG5nIMSR4bqhdC4gRMOybmcgcGjDrTogMSwwNSDDtyAwLDQ1IOKJiCAyLDMzIDwgNCw1IOKGkiBraMO0bmcgxJHhuqF0IChjaOG7ryBuaOG7jyBkw7luZyBuZ8aw4buhbmcgNCw1KS4gTsO6dDogMSwwNSDDtyAwLDMwID0gMyw1MCDiiaUgMyAoY2jhu68gbOG7m24pIOKGkiDEkeG6oXQuCjIuIENo4buvIG7hu5lpIGR1bmcgdGhp4bq/dSB0aOG6rXQgc+G7sSDDrXQgKDQsMjAgc28gduG7m2kgNCw1LCBraG/huqNuZyA3JSkuIETDsm5nIHBow60gdGjDrCBjaOG7iSDEkeG6oXQga2hv4bqjbmcgbeG7mXQgbuG7rWEgbmfGsOG7oW5nICgyLDMzIHNvIHbhu5tpIDQsNSksIGzhuqFpIGzDoCBjaOG7ryBuaOG7jywgdsOgIG7DsyBtYW5nIMSRw7puZyB0aMO0bmcgdGluIG5nxrDhu51pIGTDuW5nIGPhuqduIMSR4buDIHF1eeG6v3QgxJHhu4tuaCBjaHV54buDbiBoYXkga2jDtG5nICht4bqldCBiYW8gbmhpw6p1IHRp4buBbikuIFbhuq15IGNo4buXIG5naGnDqm0gdHLhu41uZyBuaOG6pXQgbMOgIGTDsm5nIHBow60sIGtow7RuZyBwaOG6o2kgY2jhu68gbuG7mWkgZHVuZzogbmfGsOG7nWkgbmjDrG4ga8OpbSBob+G6t2MgZMO5bmcgxJFp4buHbiB0aG/huqFpIG5nb8OgaSBu4bqvbmcgZOG7hSBi4buPIHF1YSBwaMOtIHLhu5NpIGLhuqV0IG5n4budIHbDrCBi4buLIHRy4burIHRp4buBbi4KMy4gMSwwNSDDtyAoTCArIDAsMDUpIOKJpSA0LDUg4oaSIEwgKyAwLDA1IOKJpCAwLDIzMzMg4oaSIEwg4omkIDAsMTgzIChraG/huqNuZyAwLDE4KS4gS2nhu4NtIHRyYTogMSwwNSDDtyAoMCwxOCArIDAsMDUpID0gMSwwNSDDtyAwLDIzIOKJiCA0LDU3IOKJpSA0LDUu",
+  "rubric_b64": "Q8OidSAxOiDDtCB0aGVuIGNo4buRdCBsw6Aga+G6v3QgbHXhuq1uIMSR4bqhdC9raMO0bmcgY2hvIHThu6tuZyB0aMOgbmggcGjhuqduLCDEkeG6t2MgYmnhu4d0IG7DunQgZMO5bmcgbmfGsOG7oW5nIDMgdsOgIGTDsm5nIHBow60gZMO5bmcgbmfGsOG7oW5nIDQsNTsgw7QgdGjGsOG7nW5nIGzDoCBiYSBjb24gc+G7kSAoY2jhuqVwIG5o4bqtbiBzYWkgc+G7kSBsw6BtIHRyw7JuIMKxMCwwMSkuIMOBcCBjaHXhuqluIGNo4bqlbSBi4bqjbmcuCkPDonUgMiDEkeG6oXQgKGNo4bqlcCBuaOG6rW4gY+G6oyBs4bqtcCBsdeG6rW4gJ2No4buvIG7hu5lpIGR1bmcgdGhp4bq/dSDDrXQgbmjGsG5nIHBo4bqhbSB2aSBy4buZbmcnLCBtaeG7hW4gY8OzIHNvIHPDoW5oIGLhurFuZyBz4buRKTogZMO5bmcgc+G7kSDEkeG7gyBzbyBraG/huqNuZyBjw6FjaCB04bubaSBuZ8aw4buhbmcgKOKJiDclIHNvIHbhu5tpIOKJiG3hu5l0IG7hu61hKSBWw4AgbsOqdSB2YWkgdHLDsiBj4bunYSBkw7JuZyBwaMOtIHbhu5tpIHF1eeG6v3QgxJHhu4tuaCBj4bunYSBuZ8aw4budaSBkw7luZy4gTeG7mXQgcGjhuqduOiBjaOG7iSBjw7MgbeG7mXQgdHJvbmcgaGFpLiBOaMOjbiBjaHVuZyAoInTGsMahbmcgcGjhuqNuIHRo4bqlcCB0aMOsIGtow7MgxJHhu41jIikga2jDtG5nIGPDsyBz4buRIHRow6wga2jDtG5nIMSR4bqhdC4KQ8OidSAzIMSR4bqhdDogTCDiiaQgfjAsMTggKGNo4bqlcCBuaOG6rW4gMCwxOOKAkzAsMTgzKSB2w6AgY8OzIGLGsOG7m2Mga2nhu4NtIHRyYSB0aGF5IGzhuqFpLiBN4buZdCBwaOG6p246IMSRw7puZyBz4buRLCBraMO0bmcga2nhu4NtIHRyYS4KQuG6q3kgY2jDrW5oOiB0w61uaCBuw7p0IHbhu5tpIGNo4buvIHRy4bqvbmcgbMOgICJ04buRaSI7IGTDuW5nIG5nxrDhu6FuZyAzIGNobyBjaOG7ryBuaOG7jy4KR+G7mXA6IGNvcnJlY3QgPSBt4buNaSBjw6J1IMSR4bqhdCwgaG/hurdjIDIgxJHhuqF0ICsgMSBt4buZdCBwaOG6p247IHBhcnRpYWwgPSAx4oCTMiBjw6J1IMSR4bqhdDsgaW5jb3JyZWN0ID0ga2jDtG5nIGPDonUgbsOgbyDEkeG6oXQu"
+}

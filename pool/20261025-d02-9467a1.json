@@ -1,0 +1,39 @@
+{
+  "id": "20261025-d02-9467a1",
+  "created": "2026-10-25",
+  "domain_id": 2,
+  "level": 2,
+  "tag": "reason",
+  "format": "short-answer",
+  "skills": [
+    "experiment_design",
+    "selection_bias"
+  ],
+  "est_minutes": 8,
+  "challenge_md": "Một phòng khám muốn biết cách nhắc lịch tái khám nào làm nhiều bệnh nhân quay lại hơn: **gọi điện** hay **tin nhắn SMS**. Tháng tới có 200 bệnh nhân cần tái khám; mỗi người chỉ nhận một cách nhắc.\n\nLễ tân đề xuất: *\"Bệnh nhân từ 60 tuổi trở lên thì gọi điện, vì họ ít đọc tin nhắn; còn lại nhắn SMS. Cuối tháng so tỉ lệ quay lại của hai nhóm.\"*\n\n**Câu hỏi**\n1. Giả sử cuối tháng nhóm được gọi điện có tỉ lệ quay lại cao hơn. Vì sao kết quả đó chưa cho biết gọi điện hiệu quả hơn? Nêu một cách giải thích khác, dựa vào một chi tiết trong đề.\n2. Viết lại cách chia: ai nhận cách nhắc nào, quyết định bằng cách nào cụ thể, và vì sao cách đó tránh được vấn đề ở câu 1. (Chỉ cần trả lời phần chia nhóm, không cần thiết kế cách đo.)\n3. Một bác sĩ đề xuất: *\"Cho mỗi bệnh nhân tự chọn cách nhận nhắc, vừa tiện cho họ, vừa công bằng.\"* Vì sao cách này cũng không trả lời được câu hỏi của phòng khám?",
+  "hints": [
+    "Hai nhóm của lễ tân khác nhau ở cách nhắc, và còn khác ở điều gì nữa?",
+    "Muốn hai nhóm giống nhau ở cả những điều mình không đo được, người quyết định ai vào nhóm nào không được là con người.",
+    "Câu 3: người tự chọn 'gọi điện' có thể là kiểu người như thế nào?"
+  ],
+  "claims": [],
+  "review": {
+    "solver_model": "sonnet",
+    "first_solve_match": true,
+    "revised": false,
+    "issues": [
+      {
+        "type": "ambiguity",
+        "severity": 1,
+        "detail": "chiều tác động của tuổi không xác định; rubric chấp nhận cả hai"
+      },
+      {
+        "type": "undefined_term",
+        "severity": 1,
+        "detail": "tỉ lệ quay lại"
+      }
+    ]
+  },
+  "answer_b64": "MS4gSGFpIG5ow7NtIGtow6FjIG5oYXUgY+G6oyB24buBIHR14buVaSwga2jDtG5nIGNo4buJIHbhu4EgY8OhY2ggbmjhuq9jLiBOZ8aw4budaSB04burIDYwIHR14buVaSB0cuG7nyBsw6puIGPDsyB0aOG7gyB24buRbiB0w6FpIGtow6FtIMSR4buBdSBoxqFuICh0aMaw4budbmcgY8OzIGLhu4duaCBt4bqhbiB0w61uaCwgY8OzIHRo4budaSBnaWFuKSwgbsOqbiB04buJIGzhu4cgcXVheSBs4bqhaSBjYW8gbMOgIGRvIHR14buVaSBjaOG7qSBraMO0bmcgZG8gY3Xhu5ljIGfhu41pLiAoQ8WpbmcgY2jhuqVwIG5o4bqtbiBjaGnhu4F1IG5nxrDhu6NjIGzhuqFpOiB0deG7lWkgbMOgbSBraMOzIMSRaSBs4bqhaS4pIFR14buVaSBn4bqvbiB24bubaSBj4bqjIGPDoWNoIG5o4bqvYyBs4bqrbiBraOG6oyBuxINuZyBxdWF5IGzhuqFpLCBuw6puIGtow7RuZyB0w6FjaCDEkcaw4bujYyBoYWkgdMOhYyDEkeG7mW5nLgoyLiBDaGlhIG5n4bqrdSBuaGnDqm46IGLhu5FjIHRoxINtLCB0dW5nIMSR4buTbmcgeHUsIGhv4bq3YyBkw7luZyBtw6F5IHTDrW5oIGNo4buNbiBuZ+G6q3Ugbmhpw6puIDEwMCBuZ8aw4budaSBn4buNaSDEkWnhu4duLCAxMDAgbmfGsOG7nWkgbmjhuq9uIFNNUy4gVOG7kXQgaMahbiBu4buvYTogY2hpYSBuZ+G6q3Ugbmhpw6puIHJpw6puZyB0cm9uZyBuaMOzbSB04burIDYwIHR14buVaSB2w6AgbmjDs20gZMaw4bubaSA2MCwgxJHhu4MgaGFpIGPDoWNoIG5o4bqvYyBjw7MgdOG7iSBs4buHIHR14buVaSBuaMawIG5oYXUuIFbDrCBraMO0bmcgYWkgY2jhu41uLCB0deG7lWkgdsOgIG3hu41pIMSR4bq3YyDEkWnhu4NtIGtow6FjIChr4buDIGPhuqMgbmjhu69uZyB0aOG7qSBraMO0bmcgxJFvIMSRxrDhu6NjIG5oxrAgbeG7qWMgY+G6qW4gdGjhuq1uKSBz4bq9IGNoaWEgxJHhu4F1IHbhu4EgdHJ1bmcgYsOsbmggZ2nhu69hIGhhaSBuaMOzbTsga2jDoWMgYmnhu4d0IGPDsm4gbOG6oWkgY2jhu6cgeeG6v3UgZG8gY8OhY2ggbmjhuq9jLgozLiBOZ8aw4budaSB04buxIGNo4buNbiBn4buNaSDEkWnhu4duIGPDsyB0aOG7gyBraMOhYyBuZ8aw4budaSBjaOG7jW4gU01TIG5nYXkgdOG7qyDEkeG6p3UgKGzhu5tuIHR14buVaSBoxqFuLCBsbyBjaG8gc+G7qWMga2hv4bq7IGjGoW4sIGhv4bq3YyDDrXQgZMO5bmcgxJFp4buHbiB0aG/huqFpIGjGoW4pLiBLaMOhYyBiaeG7h3QgduG7gSB04buJIGzhu4cgcXVheSBs4bqhaSBjw7MgdGjhu4MgZG8ga2nhu4N1IG5nxrDhu51pIHThu7EgY2jhu41uLCBraMO0bmcgZG8gY8OhY2ggbmjhuq9jOiBuaMOzbSB04buxIGNo4buNbiBraMO0bmcgY8OybiBzbyBzw6FuaCDEkcaw4bujYy4=",
+  "rubric_b64": "Q8OidSAxIMSR4bqhdCAobeG7jWkgY8ahIGNo4bq/IGfhuq9uIHR14buVaSB24bubaSBraOG6oyBuxINuZyBxdWF5IGzhuqFpLCB0aGVvIGNoaeG7gXUgbsOgbyBjxaluZyDEkcaw4bujYyk6IG7DqnUgdHXhu5VpIChob+G6t2MgxJHhurdjIMSRaeG7g20gZ+G6r24gduG7m2kgdHXhu5VpKSBraMOhYyBnaeG7r2EgaGFpIG5ow7NtIFbDgCBu4buRaSBuw7MgduG7m2kga2jhuqMgbsSDbmcgcXVheSBs4bqhaS4gTeG7mXQgcGjhuqduOiBjaOG7iSBuw7NpICJoYWkgbmjDs20ga2jDoWMgbmhhdSIgbcOgIGtow7RuZyBuw6p1IGPGoSBjaOG6vy4KQ8OidSAyOiDDtCB0aGVuIGNo4buRdCBsw6AgKGkpIGPGoSBjaOG6vyBuZ+G6q3Ugbmhpw6puIGPhu6UgdGjhu4MgKGLhu5FjIHRoxINtIC8gxJHhu5NuZyB4dSAvIG3DoXkgdMOtbmg7IGNo4bq1biBs4bq7IGPhu6dhIG3DoyBo4buTIHPGoSBjaOG6pXAgbmjhuq1uIG7hur91IG7Ds2kgbcOjIGtow7RuZyBsacOqbiBxdWFuIMSR4bq/biBi4buHbmggbmjDom4pIHbDoCAoaWkpIGzDvSBkbzoga2jDtG5nIGFpIGNo4buNbiBuw6puIGPDoWMgxJHhurdjIMSRaeG7g20gY2hpYSDEkeG7gXUuIMSQ4bqhdDogY+G6oyBoYWkuIE3hu5l0IHBo4bqnbjogbeG7mXQgdHJvbmcgaGFpLiAiQ2hpYSDEkeG7gXUgdGhlbyB0deG7lWkiIG3DoCBraMO0bmcgbmfhuqt1IG5oacOqbiB0aMOsIGtow7RuZyDEkeG6oXQgw7QgKGkpLiBQaMOibiB04bqnbmcgdGhlbyB0deG7lWkgbMOgIMSRaeG7g20gY+G7mW5nLgpDw6J1IDMgxJHhuqF0OiBuw6p1IHThu7EgY2jhu41uIGzDoG0gaGFpIG5ow7NtIGtow6FjIG5oYXUgdOG7qyDEkeG6p3UgKyB2w60gZOG7pSDEkeG6t2MgxJFp4buDbS4gTeG7mXQgcGjhuqduOiBjaOG7iSBuw7NpICJraMO0bmcga2jDoWNoIHF1YW4iLgpC4bqreSBjaMOtbmg6IGPDonUgMiDEkeG7gSB4deG6pXQgImPDom4gYuG6sW5nIHR14buVaSIgYuG6sW5nIHRheSBtw6Aga2jDtG5nIG5n4bqrdSBuaGnDqm4uCkfhu5lwOiBjb3JyZWN0ID0gbeG7jWkgY8OidSDEkeG6oXQsIGhv4bq3YyAyIMSR4bqhdCArIDEgbeG7mXQgcGjhuqduOyBwYXJ0aWFsID0gMeKAkzIgY8OidSDEkeG6oXQ7IGluY29ycmVjdCA9IGtow7RuZyBjw6J1IG7DoG8gxJHhuqF0Lg=="
+}

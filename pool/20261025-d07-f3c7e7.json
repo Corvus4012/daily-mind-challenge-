@@ -1,0 +1,44 @@
+{
+  "id": "20261025-d07-f3c7e7",
+  "created": "2026-10-25",
+  "domain_id": 7,
+  "level": 2,
+  "tag": "reason",
+  "format": "spot-flaw",
+  "skills": [
+    "consistency_check",
+    "hidden_premise"
+  ],
+  "est_minutes": 9,
+  "challenge_md": "Một quỹ học bổng công bố ba nguyên tắc, áp dụng theo đúng thứ tự:\n1. Chỉ xét học sinh có điểm trung bình từ 7,0 trở lên.\n2. Trong số người đủ điều kiện, ưu tiên người có thu nhập bình quân đầu người của gia đình thấp hơn.\n3. Mỗi xã nhận tối đa 1 suất.\n\nNăm nay có 2 suất. Hồ sơ (giả định của đề; thu nhập tính bằng triệu đồng/người/tháng):\n\n| Học sinh | Điểm TB | Thu nhập | Xã |\n|---|---|---|---|\n| An | 8,5 | 1,2 | M |\n| Bình | 6,8 | 0,9 | N |\n| Chi | 7,2 | 1,0 | M |\n| Dũng | 7,6 | 1,5 | N |\n| Em | 9,0 | 2,0 | P |\n\nHội đồng trao học bổng cho An và Dũng.\n\n**Câu hỏi**\n1. Áp dụng đúng ba nguyên tắc, ai nhận 2 suất? Ghi từng bước loại hoặc chọn.\n2. Quyết định của hội đồng mâu thuẫn với nguyên tắc nào, ở hồ sơ nào? Viết thêm một tiêu chí (một câu) và nói nó được chen vào bước nào, sao cho bộ nguyên tắc mới, áp dụng cho cả 5 hồ sơ, cho ra đúng An và Dũng.\n3. Một thành viên phản đối: *\"Nguyên tắc 2 ưu tiên người khó khăn nhất, Bình nghèo nhất nên phải được chọn.\"* Lập luận này sai ở đâu?",
+  "hints": [
+    "Lọc theo nguyên tắc 1 trước, rồi mới xếp theo thu nhập.",
+    "So An với người cùng xã với An.",
+    "Câu 3: nguyên tắc 2 áp dụng cho nhóm người nào?"
+  ],
+  "claims": [],
+  "review": {
+    "solver_model": "sonnet",
+    "first_solve_match": true,
+    "revised": true,
+    "issues": [
+      {
+        "type": "ambiguity",
+        "severity": 2,
+        "detail": "câu 2 không nói tiêu chí chen ở bước nào và phải tái tạo cả An+Dũng"
+      },
+      {
+        "type": "answer_error",
+        "severity": 1,
+        "detail": "rubric chưa nói chấp nhận mọi tiêu chí cho ra {An, Dũng}"
+      },
+      {
+        "type": "bias",
+        "severity": 1,
+        "detail": "'có lẽ đã ngầm dùng tiêu chí' gợi hướng"
+      }
+    ]
+  },
+  "answer_b64": "MS4gTmd1ecOqbiB04bqvYyAxIGxv4bqhaSBCw6xuaCAoNiw4KS4gQ8OybiBBbiwgQ2hpLCBExaluZywgRW0uIFjhur9wIHRoZW8gdGh1IG5o4bqtcCB0xINuZyBk4bqnbjogQ2hpIDEsMCAoTSksIEFuIDEsMiAoTSksIETFqW5nIDEsNSAoTiksIEVtIDIsMCAoUCkuIENo4buNbiBDaGk7IEFuIGLhu4sgbG/huqFpIHbDrCB4w6MgTSDEkcOjIGPDsyBzdeG6pXQgKG5ndXnDqm4gdOG6r2MgMyk7IGNo4buNbiBExaluZy4gS+G6v3QgcXXhuqM6IENoaSB2w6AgRMWpbmcuCjIuIE3DonUgdGh14bqrbiB24bubaSBuZ3V5w6puIHThuq9jIDIg4bufIGjhu5Mgc8ahIEFuIHbDoCBDaGk6IGPDuW5nIHjDoyBNLCBDaGkgdGh1IG5o4bqtcCB0aOG6pXAgaMahbiAoMSwwIDwgMSwyKSBuw6puIHBo4bqjaSDEkcaw4bujYyBjaOG7jW4gdHLGsOG7m2MgQW4uIFRpw6p1IGNow60gbmfhuqdtIGPDsyB0aOG7gyBsw6A6ICJHaeG7r2Egbmjhu69uZyBuZ8aw4budaSBjw7luZyB4w6MsIMawdSB0acOqbiDEkWnhu4NtIHRydW5nIGLDrG5oIGNhbyBoxqFuIiAoQW4gOCw1ID4gQ2hpIDcsMikuIENo4bqlcCBuaOG6rW4gbeG7jWkgdGnDqnUgY2jDrSBraGnhur9uIEFuIHRo4bqvbmcgQ2hpIG3DoCB24bqrbiBnaeG7ryBExaluZywgdsOtIGThu6UgIsawdSB0acOqbiDEkWnhu4NtIGNhbyBoxqFuIHRyxrDhu5tjLCBy4buTaSBt4bubaSB4w6l0IHRodSBuaOG6rXAiIOKAlCBuaMawbmcga2hpIMSRw7MgRW0gKDksMCkgc+G6vSBsw6puIHRyxrDhu5tjIETFqW5nLCBuw6puIHRpw6p1IGNow60ga2nhu4N1IG7DoHkgcGjhuqNpIGtp4buDbSBs4bqhaSB24bubaSBj4bqjIGRhbmggc8OhY2guCjMuIE5ndXnDqm4gdOG6r2MgMiBjaOG7iSB44bq/cCBo4bqhbmcgbmfGsOG7nWkgxJHDoyBxdWEgbmd1ecOqbiB04bqvYyAxOyBCw6xuaCBi4buLIGxv4bqhaSDhu58gYsaw4bubYyAxIG7Dqm4ga2jDtG5nIMSRxrDhu6NjIMSRxrBhIHbDoG8gc28gc8OhbmggdGh1IG5o4bqtcC4gTmfGsOG7nWkgcGjhuqNuIMSR4buRaSBi4buPIHF1YSB0aOG7qSB04buxIMOhcCBk4bulbmcu",
+  "rubric_b64": "Q8OidSAxIMSR4bqhdDogQ2hpIHbDoCBExaluZywgY8OzIGLGsOG7m2MgbG/huqFpIELDrG5oIChOVDEpIHbDoCBsb+G6oWkgQW4gZG8gTlQzLiBN4buZdCBwaOG6p246IMSRw7puZyBr4bq/dCBxdeG6oywgdGhp4bq/dSBixrDhu5tjLCBob+G6t2MgxJHDum5nIGLGsOG7m2MgbcOgIHNhaSBt4buZdCBuZ8aw4budaS4KQ8OidSAyOiBjaOG6pXAgbmjhuq1uIG3hu41pIHRpw6p1IGNow60gY2hvIHJhIMSRw7puZyB7QW4sIETFqW5nfSBraGkga2nhu4NtIHRyw6puIGPhuqMgNSBo4buTIHPGoSAoduG7iyB0csOtIGNoZW4gcGjhuqNpIG7Ds2kgcsO1KTsgdOG7qyBjaOG7kWkgdGnDqnUgY2jDrSDEkeG6qXkgRW0gbMOqbi4gw5QgdGhlbiBjaOG7kXQgbMOgIChpKSBjaOG7iSByYSBtw6J1IHRodeG6q24gTlQyIOG7nyBj4bq3cCBBbuKAk0NoaTsgKGlpKSBt4buZdCB0acOqdSBjaMOtIGzDoG0gcXV54bq/dCDEkeG7i25oIG5o4bqldCBxdcOhbiBWw4AgxJHDoyDEkcaw4bujYyBraeG7g20gduG7m2kgY+G6oyBkYW5oIHPDoWNoICh24bqrbiByYSBBbiArIETFqW5nKS4gxJDhuqF0OiBj4bqjIGhhaS4gTeG7mXQgcGjhuqduOiAoaSkgxJHDum5nLCB0acOqdSBjaMOtIMSR4buBIHh14bqldCBsw6BtIHRoYXkgxJHhu5VpIG5nxrDhu51pIHRo4bupIGhhaSAodsOtIGThu6UgIsawdSB0acOqbiDEkWnhu4NtIGNhbyIga2hp4bq/biBFbSB0aOG6r25nIETFqW5nKSBtw6Aga2jDtG5nIG5o4bqtbiByYS4KQ8OidSAzIMSR4bqhdDogbsOqdSBOVDIgY2jhu4kgw6FwIGThu6VuZyBzYXUgTlQxIC8gQsOsbmggxJHDoyBi4buLIGxv4bqhaS4KQuG6q3kgY2jDrW5oOiB0acOqdSBjaMOtIG5n4bqnbSAixrB1IHRpw6puIMSRaeG7g20gY2FvIiBuw7NpIGNodW5nLCBraMO0bmcga2nhu4NtIGzhuqFpIHbhu5tpIEVtLgpH4buZcDogY29ycmVjdCA9IG3hu41pIGPDonUgxJHhuqF0LCBob+G6t2MgMiDEkeG6oXQgKyAxIG3hu5l0IHBo4bqnbjsgcGFydGlhbCA9IDHigJMyIGPDonUgxJHhuqF0OyBpbmNvcnJlY3QgPSBraMO0bmcgY8OidSBuw6BvIMSR4bqhdC4="
+}
