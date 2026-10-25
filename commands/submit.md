@@ -11,6 +11,8 @@ Chỉ chạy khi người dùng đã viết câu trả lời. Chưa có câu tr�
    - Feedback in tóm tắt: "then chốt x/y, thường a/b", rồi chỉ ra từng ô sai và vì sao.
    Rubric cũ chưa đánh dấu ô then chốt: tự xác định ô then chốt từ đáp án (ô mà đổi nhãn thì đổi kết luận) và nói rõ đã chọn những ô nào.
    Rubric đòi một lý do cụ thể nhưng người dùng đưa lý do khác cũng đúng về logic → tính đạt.
+   Lý do đúng nhưng để ngầm (viện dẫn câu khác, nói chung chung mà vẫn suy ra được) → vẫn tính đạt, nhưng feedback
+   phải viết lại câu đó dưới dạng tường minh ("đủ ý thì viết thế này: …"), để người dùng luyện trình bày có hệ thống.
 3. Viết feedback (tiếng Việt):
    - Dòng đầu: kết quả bằng lời ("đúng cả 3 câu", "đúng một phần") + số hint đã dùng. Không cho điểm số kiểu 6/10.
    - Từng câu: đúng ở đâu → gãy ở đâu → cơ chế phía sau. Cụ thể, không phán xét. Ghi nhận cách làm hay hơn đáp án mẫu nếu có.

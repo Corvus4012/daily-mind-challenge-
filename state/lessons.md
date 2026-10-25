@@ -23,6 +23,8 @@ Thêm dòng mới khi người dùng chỉ ra lỗi của đề, hoặc khi mộ
 - (25/10) Số viết theo quy ước khác phải là dạng hợp lệ ở cả hai quy ước ("3.50" không phải dạng ngăn nghìn chuẩn); ưu tiên số có đúng 3 chữ số sau dấu.
 - (25/10) Câu hỏi "viết thêm tiêu chí cho nhất quán" phải nói tiêu chí chen ở bước nào và phải tái tạo đúng toàn bộ kết quả.
 
+- (25/10) Rubric nói rõ có chấp nhận lý do viện dẫn ngầm sang câu khác hay không.
+
 ## Hồ sơ người học
 - Mạnh: thao tác đại số, lập phương trình; thiết kế phép đo trực tiếp; tự chuẩn hoá ký hiệu trước khi làm (20/10); phân biệt "sai sự thật" và "đúng nhưng chọn lọc".
 - Cần luyện:
@@ -38,8 +40,8 @@ Thêm dòng mới khi người dùng chỉ ra lỗi của đề, hoặc khi mộ
   - interpret_result lặp lần 3 (19/10, 23/10, 24/10): giải thích bằng nhãn chung ("biến khác nhau", "tỉ lệ vs tuyệt đối") thay vì nêu cơ chế cụ thể bằng số của đề. Cần mẫu: "X = A × B; A và B đi ngược chiều nên...".
   - selection_bias (24/10): thấy có sàng lọc nhưng không hỏi ai bị lọc ra và việc đó đẩy trung bình theo hướng nào.
   - experiment_design lặp lần 2 (20/10, 25/10): có nhóm đối chứng và tiêu chí, nhưng không nói ai vào nhóm nào được quyết định ngẫu nhiên ("chia bừa" ≠ bốc thăm); tiêu chí tin đặt quá khắt ("mọi cặp"). Đề dạng thiết kế phép thử khó hơn hẳn đề tính toán cùng level (mở 3 hint, 25/10).
+  - Lý do đúng nhưng để ngầm (viện dẫn câu khác, "rộng hơn" thay vì "chỉ 2 người"): 25/10. Người học muốn được luyện trình bày tường minh, có hệ thống.
 - Cách phản hồi hợp: thẳng, chỉ ra cơ chế; thích được giải nghĩa nền tảng khi gặp domain lạ (đã xin bổ túc kinh tế ngày 19/10).
 
 ## Ghi chú hệ thống (chờ trao đổi qua /discuss)
 - (25/10) Tác vụ tự động chạy trong phiên chính lần đầu: chạy được, push thành công (+4 đề).
-- (25/10) Reflect chấm lại bài 25/10 khác session chính: câu 3 một phần thay vì đạt, nên kết quả gộp là partial thay vì correct. Lịch sử chưa sửa.

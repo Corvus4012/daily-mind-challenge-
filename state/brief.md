@@ -1,7 +1,7 @@
 Reflect đến ngày 2026-10-25
 
 ## Chấm lại
-- 25/10: reflect chấm câu 3 "một phần" (lý do "cần thí nghiệm rộng hơn" chưa nêu rõ cỡ mẫu), nên kết quả gộp ra partial. Session chính chấm câu 3 đạt, ra correct. Chưa sửa lịch sử; chờ /discuss.
+- 25/10: reflect chấm câu 3 "một phần" (lý do "cần thí nghiệm rộng hơn" chưa nêu rõ cỡ mẫu), nên kết quả gộp ra partial. Session chính chấm câu 3 đạt, ra correct. Đã bàn (/discuss 25/10): giữ đạt; feedback từ nay chỉ ra cách viết tường minh khi lý do để ngầm.
 - Các ngày trước 25/10 chưa lưu câu trả lời nguyên văn nên chưa chấm lại được.
 
 ## Mẫu (dựa phần lớn vào ghi chú tóm tắt, chỉ 1 bài có nguyên văn)
