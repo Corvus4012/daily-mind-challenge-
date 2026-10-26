@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-26",
+  "pool_id": "20261022-d05-3ee5e5",
+  "domain_id": 5,
+  "tag": "reason",
+  "level": 2,
+  "base_level": 2,
+  "rolled_level": 2,
+  "level_mode": "core",
+  "est_minutes": 9,
+  "format": "spot-flaw",
+  "skills": [
+    "selection_bias",
+    "confounding"
+  ],
+  "challenge_md": "Một lớp có 40 học sinh. Cô giáo giới thiệu một ứng dụng học từ vựng; 15 bạn **tự nguyện** dùng trong 4 tuần, 25 bạn còn lại không dùng. Điểm kiểm tra từ vựng trung bình (thang 10, số liệu giả định):\n\n| Nhóm | Trước 4 tuần | Sau 4 tuần |\n|---|---|---|\n| Dùng ứng dụng (15 bạn) | 6,0 | 7,5 |\n| Không dùng (25 bạn) | 5,0 | 5,5 |\n\nCô kết luận: *\"Ứng dụng giúp điểm tăng thêm 1 điểm so với không dùng.\"*\n\n**Câu hỏi**\n1. Mỗi nhóm tăng bao nhiêu điểm? Con số \"thêm 1 điểm\" của cô được tính thế nào?\n2. Nêu hai lý do khác, ngoài tác dụng của ứng dụng, có thể tạo ra chênh lệch đó. Mỗi lý do dựa vào một chi tiết trong đề.\n3. Thiết kế lại cho đợt sau để biết riêng tác dụng của ứng dụng: thay đổi cách chọn ai dùng ứng dụng thế nào, và nhóm không dùng nên làm gì trong 4 tuần đó?",
+  "hints": [
+    "Hai nhóm có giống nhau trước khi bắt đầu không? Nhìn cả cột 'Trước' lẫn chữ 'tự nguyện'.",
+    "Người tự chọn dùng ứng dụng có thể khác người không chọn ở những điểm khác ngoài chuyện dùng ứng dụng. Thêm nữa: dùng ứng dụng 4 tuần cũng là thêm thời gian ôn từ vựng.",
+    "Để chỉ còn đúng một khác biệt giữa hai nhóm, cần một cách phân nhóm mà không ai tự chọn được, và cho nhóm kia một việc tốn thời gian tương đương."
+  ],
+  "hints_revealed": 2,
+  "answer_key_b64": "MS4gTmjDs20gZMO5bmc6IDcsNSDiiJIgNiwwID0gKzEsNS4gTmjDs20ga2jDtG5nIGTDuW5nOiA1LDUg4oiSIDUsMCA9ICswLDUuICJUaMOqbSAxIMSRaeG7g20iID0gMSw1IOKIkiAwLDUuCjIuIFbDrSBk4bulIMSR4bqhdCAoMiB0cm9uZyBjw6FjIMO9KTogKGEpIHThu7Egbmd1eeG7h24sIG7Dqm4gbmjDs20gZMO5bmcgY8OzIHRo4buDIGzDoCBuaOG7r25nIGLhuqFuIGNoxINtIGhv4bq3YyBjw7MgxJHhu5luZyBs4buxYyBoxqFuLCB24buRbiDEkcOjIHRp4bq/biBi4buZIG5oYW5oIGjGoW4gZMO5IGtow7RuZyBjw7Mg4bupbmcgZOG7pW5nOyAoYikgbmjDs20gZMO5bmcgxJHDoyBnaeG7j2kgaMahbiB04burIMSR4bqndSAoNiwwIHNvIHbhu5tpIDUsMCksIG5nxrDhu51pIGtow6EgaMahbiBjw7MgdGjhu4MgdGnhur9uIG5oYW5oIGjGoW47IChjKSB0aOG7nWkgZ2lhbiDDtG46IG5ow7NtIGTDuW5nIHRow6ptIHRo4budaSBnaWFuIGjhu41jIHThu6sgduG7sW5nIG3hu5dpIG5nw6B5LCBjw6FpIGdpw7pwIGPDsyB0aOG7gyBsw6AgdGjhu51pIGdpYW4gw7RuIGNo4bupIGtow7RuZyBwaOG6o2kg4bupbmcgZOG7pW5nOyAoZCkgbmjDs20gMTUgYuG6oW4gbmjhu48gbsOqbiBjaMOqbmggbOG7h2NoIGPDsyB0aOG7gyBkbyBtYXkuCjMuIFbDrSBk4bulIMSR4bqhdDogYuG7kWMgdGjEg20gbmfhuqt1IG5oacOqbiBhaSBkw7luZyDhu6luZyBk4bulbmcgKGtow7RuZyBjaG8gdOG7sSBjaOG7jW4pOyBuaMOzbSBraMO0bmcgZMO5bmcgw7RuIHThu6sgduG7sW5nIGLhurFuZyBjw6FjaCBraMOhYyAoc+G7lSB0YXksIGZsYXNoY2FyZCBnaeG6pXkpIHbhu5tpIGzGsOG7o25nIHRo4budaSBnaWFuIHTGsMahbmcgxJHGsMahbmc7IGPDuW5nIG3hu5l0IGLDoGkga2nhu4NtIHRyYSB0csaw4bubYyB2w6Agc2F1OyBzbyBt4bupYyB0xINuZyBoYWkgbmjDs20u",
+  "rubric_b64": "Q8OidSAxIMSR4bqhdDogKzEsNSB2w6AgKzAsNSwgZ2nhuqNpIHRow61jaCAxID0gMSw1IOKIkiAwLDUuCkPDonUgMiDEkeG6oXQ6IDIgbMO9IGRvIGtow6FjIG5oYXUsIG3hu5dpIGzDvSBkbyBn4bqvbiB24bubaSBjaGkgdGnhur90IHRyb25nIMSR4buBICh04buxIG5ndXnhu4duLCDEkWnhu4NtIMSR4bqndSB2w6BvLCB0aOG7nWkgZ2lhbiDDtG4pLiBN4buZdCBwaOG6p246IDEgbMO9IGRvLCBob+G6t2MgMiBsw70gZG8ga2jDtG5nIGLDoW0gY2hpIHRp4bq/dCDEkeG7gS4KQ8OidSAzOiDDtCB0aGVuIGNo4buRdCBsw6AgcGjDom4gbmjDs20gbmfhuqt1IG5oacOqbiB2w6AgbmjDs20gxJHhu5FpIGNo4bupbmcgY8OzIHRo4budaSBnaWFuIMO0biB0xrDGoW5nIMSRxrDGoW5nLiDEkOG6oXQ6IMSR4bunIGPhuqMgaGFpLiBN4buZdCBwaOG6p246IG3hu5l0IHRyb25nIGhhaS4KQuG6q3kgY2jDrW5oOiBjaOG6pXAgbmjhuq1uICJ0aMOqbSAxIMSRaeG7g20iIGzDoCB0w6FjIGThu6VuZyBj4bunYSDhu6luZyBk4bulbmcuCkfhu5lwOiBjb3JyZWN0ID0gbeG7jWkgY8OidSDEkeG6oXQsIGhv4bq3YyAyIGPDonUgxJHhuqF0ICsgMSBjw6J1IG3hu5l0IHBo4bqnbjsgcGFydGlhbCA9IDHigJMyIGPDonUgxJHhuqF0OyBpbmNvcnJlY3QgPSBraMO0bmcgY8OidSBuw6BvIMSR4bqhdC4=",
+  "review": {
+    "solver_model": "sonnet",
+    "first_solve_match": true,
+    "revised": false,
+    "issues": [
+      {
+        "type": "ambiguity",
+        "severity": 1,
+        "detail": "hai lý do ở câu 2 có thể cùng cơ chế chọn lọc"
+      }
+    ]
+  },
+  "status": "submitted",
+  "extra": false,
+  "user_answer": "1. Nhóm dùng ứng dụng tăng 1.5 điểm TB, nhóm không dùng tăng 0.5 điểm TB. Con số \"thêm 1 điểm\" của cô là lấy 1.5 - 0.5, tức lượng tăng giữa nhóm dùng so với không dùng.\n2. Lý do một, điểm nền của nhóm dùng ứng dụng cao hơn nhóm không dùng 1 điểm. Trình độ của nhóm dùng ứng dụng chênh lệch hơn từ đầu. Lý do hai, nhóm dùng ứng dụng đều là tự nguyện dùng, tức có thể có trạng thái sẵn sàng học từ vựng trong 4 tuần đó.\n3. Cần đầu tiên là chia đều về mặt số lượng giữa hai nhóm, tiếp đến là đảm bảo phân phối trình độ (dựa trên điểm) giữa hai nhóm là như nhau. Cả hai đều cùng được ôn tập từ vựng cho quá trình kiểm tra, với nhóm không dùng có thể học từ vựng ở nguồn và phương pháp riêng, không thông qua ứng dụng.",
+  "grading": "Câu 1 đạt. Câu 2 đạt (điểm nền 6 vs 5; tự nguyện → động lực), lý do 1 chưa nói vì sao nền cao làm tăng nhiều hơn. Câu 3 một phần: có nhóm đối chứng cùng ôn tập (chưa nói thời gian tương đương), thiếu phân nhóm ngẫu nhiên (cân bằng điểm bằng tay).",
+  "result": "correct",
+  "skills_missed": [
+    "confounding"
+  ],
+  "notes": "Nhận ra đủ hai yếu tố nhiễu; thiết kế cân bằng theo điểm bằng tay, không ngẫu nhiên nên không xử lý được động lực mà chính câu 2 đã nêu (lần 3 thiếu gán ngẫu nhiên)"
+}

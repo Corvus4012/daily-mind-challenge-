@@ -41,6 +41,7 @@ Thêm dòng mới khi người dùng chỉ ra lỗi của đề, hoặc khi mộ
   - selection_bias (24/10): thấy có sàng lọc nhưng không hỏi ai bị lọc ra và việc đó đẩy trung bình theo hướng nào.
   - experiment_design lặp lần 2 (20/10, 25/10): có nhóm đối chứng và tiêu chí, nhưng không nói ai vào nhóm nào được quyết định ngẫu nhiên ("chia bừa" ≠ bốc thăm); tiêu chí tin đặt quá khắt ("mọi cặp"). Đề dạng thiết kế phép thử khó hơn hẳn đề tính toán cùng level (mở 3 hint, 25/10).
   - Lý do đúng nhưng để ngầm (viện dẫn câu khác, "rộng hơn" thay vì "chỉ 2 người"): 25/10. Người học muốn được luyện trình bày tường minh, có hệ thống.
+  - Gán ngẫu nhiên thiếu lần 3 (25/10, 26/10 sau 18/10, 20/10): thay bằng cân bằng thủ công theo biến đo được (điểm), nên biến không đo được mà chính mình vừa nêu (động lực) vẫn lệch. Cần nối: "yếu tố nhiễu nào không đo được → chỉ ngẫu nhiên mới chia đều".
 - Cách phản hồi hợp: thẳng, chỉ ra cơ chế; thích được giải nghĩa nền tảng khi gặp domain lạ (đã xin bổ túc kinh tế ngày 19/10).
 
 ## Ghi chú hệ thống (chờ trao đổi qua /discuss)
