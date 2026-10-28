@@ -1,44 +1,49 @@
 {
-  "date": "2026-10-27",
-  "pool_id": "20261022-d08-77b3f4",
-  "domain_id": 8,
-  "tag": "lookup",
-  "level": 2,
-  "base_level": 2,
-  "rolled_level": 2,
+  "date": "2026-10-28",
+  "pool_id": "20261025-d11-b29e75",
+  "domain_id": 11,
+  "tag": "reason",
+  "level": 3,
+  "base_level": 3,
+  "rolled_level": 3,
   "level_mode": "core",
-  "est_minutes": 9,
-  "format": "estimate",
+  "est_minutes": 12,
+  "format": "table",
   "skills": [
-    "estimation",
-    "hidden_premise"
+    "convention_mismatch",
+    "consistency_check"
   ],
-  "challenge_md": "Một bài đăng mạng xã hội viết: *\"Nếu mỗi người Việt Nam bớt 1 ly trà sữa 30.000 đ mỗi tuần, cả nước sẽ tiết kiệm hơn 150 nghìn tỉ đồng mỗi năm!\"*\n\n**Câu hỏi**\n1. *(Tra cứu)* Theo kết quả Điều tra dân số và nhà ở giữa kỳ năm 2024 của Tổng cục Thống kê, dân số Việt Nam tại thời điểm 1/4/2024 là bao nhiêu? Ghi nguồn. (Làm tròn đến 0,1 triệu người là đủ.)\n2. Dùng đúng giả định của bài đăng (mọi người dân, mỗi tuần 1 ly 30.000 đ, một năm 52 tuần), tính số tiền tiết kiệm mỗi năm. Phép tính của bài đăng có đúng không?\n3. Giả định của đề: thực tế chỉ khoảng 1/4 dân số uống trà sữa, và trung bình mỗi người trong nhóm đó uống đúng 1 ly mỗi tuần. Khi đó số tiền tiết kiệm được mỗi năm là bao nhiêu? Câu \"mỗi người Việt Nam bớt 1 ly\" ngầm giả định điều gì sai?",
+  "challenge_md": "Một công ty ở Việt Nam nhận email đặt hàng từ nhà cung cấp ở Mỹ. Quy ước viết (giả định của đề):\n- **Mỹ:** ngày viết tháng/ngày/năm; dấu phẩy ngăn hàng nghìn, dấu chấm là dấu thập phân.\n- **Việt Nam:** ngày viết ngày/tháng/năm; dấu chấm ngăn hàng nghìn, dấu phẩy là dấu thập phân.\n\nCả email do một người viết, theo một quy ước nhất quán. Bốn dòng trong email (giữ nguyên cách viết số):\n- (a) Hạn thanh toán: 01/12/2027\n- (b) Ngày giao hàng: 11/25/2026\n- (c) Khối lượng: 1,200 kg\n- (d) Đơn giá: 3.500 USD/kg\n\nHoá đơn kèm theo ghi tổng tiền bằng chữ: *bốn nghìn hai trăm đô la Mỹ*.\n\nNhân viên Hà đọc mọi thứ theo quy ước Việt Nam (mọi dấu chấm là ngăn hàng nghìn, mọi dấu phẩy là thập phân). Dòng nào không đọc ra giá trị hợp lệ thì Hà ghi \"không đọc được\".\n\n**Câu hỏi**\n1. Lập bảng: với mỗi dòng (a)–(d), Hà hiểu ra giá trị gì, và người viết muốn nói giá trị gì? (Viết đáp án theo cách viết Việt Nam.)\n2. Dòng nào trong email đủ để biết chắc người viết dùng quy ước Mỹ? Giải thích vì sao dòng đó quyết định cách đọc dòng (a).\n3. Hà tính khối lượng × đơn giá theo cách đọc của mình, thấy khớp với tổng trên hoá đơn, nên kết luận mình đã đọc đúng cả (c) và (d). Kiểm tra lại bằng phép tính, giải thích vì sao \"tổng khớp\" không chứng minh được điều đó, và nêu một việc cụ thể sẽ hỏng nếu Hà giữ cách đọc của mình.\n4. Hà định hỏi lại: \"Hạn thanh toán là 01/12/2027 phải không?\" Vì sao câu hỏi này không giải quyết được gì? Viết lại một câu xác nhận không thể bị hiểu nhầm.",
   "hints": [
-    "Tìm trên trang của Tổng cục Thống kê (nso.gov.vn) thông cáo về điều tra dân số giữa kỳ 2024.",
-    "Tiền một năm = số người × số ly mỗi người mỗi tuần × giá một ly × số tuần.",
-    "Câu 3: người vốn không uống trà sữa thì 'bớt một ly' sẽ tiết kiệm được bao nhiêu?"
+    "Bắt đầu từ dòng nào chỉ đọc được theo đúng một cách.",
+    "Một tháng không thể là số 25. Người viết đã dùng cùng một quy ước cho mọi dòng.",
+    "Tổng của một tích có thể đúng dù cả hai thừa số sai. Câu xác nhận tốt không dùng lại chính kiểu ký hiệu đang gây nhầm."
   ],
   "hints_revealed": 0,
-  "answer_key_b64": "MS4gS2hv4bqjbmcgMTAxLDEgdHJp4buHdSBuZ8aw4budaSAoMTAxLjExMi42NTYgbmfGsOG7nWkgdOG6oWkgMS80LzIwMjQsIMSQaeG7gXUgdHJhIGTDom4gc+G7kSB2w6AgbmjDoCDhu58gZ2nhu69hIGvhu7MgMjAyNCwgVOG7lW5nIGPhu6VjIFRo4buRbmcga8OqKS4KMi4gMTAxLDEgdHJp4buHdSDDlyAzMC4wMDAgxJEgw5cgNTIg4omIIDE1Ny43MDAgdOG7iSDEkeG7k25nICjiiYggMTU3LDcgbmdow6xuIHThu4kpLiBQaMOpcCBuaMOibiBj4bunYSBiw6BpIMSRxINuZyDEkcO6bmc6ICJoxqFuIDE1MCBuZ2jDrG4gdOG7iSIuCjMuIDEvNCDDlyAxMDEsMSB0cmnhu4d1IOKJiCAyNSwzIHRyaeG7h3UgbmfGsOG7nWkgw5cgMzAuMDAwIMOXIDUyIOKJiCAzOS40MDAgdOG7iSDEkeG7k25nICjiiYggMzksNCBuZ2jDrG4gdOG7iSksIGtob+G6o25nIDEvNCBjb24gc+G7kSBj4bunYSBiw6BpIMSRxINuZy4gQ8OidSAibeG7l2kgbmfGsOG7nWkgYuG7m3QgMSBseSIgbmfhuqdtIGdp4bqjIMSR4buLbmggbeG7jWkgbmfGsOG7nWkgZMOibiAoa+G7gyBj4bqjIHRy4bq7IHPGoSBzaW5oLCBuZ8aw4budaSBraMO0bmcgdeG7kW5nKSDEkWFuZyB14buRbmcgw610IG5o4bqldCAxIGx5IG3hu5dpIHR14bqnbjsgbmfGsOG7nWkga2jDtG5nIHXhu5FuZyB0aMOsIGLhu5t0IGPFqW5nIGtow7RuZyB0aeG6v3Qga2nhu4dtIMSRxrDhu6NjIGfDrC4gUGjDqXAgdMOtbmggxJHDum5nLCBnaeG6oyDEkeG7i25oIHNhaS4=",
-  "rubric_b64": "Q8OidSAxIMSR4bqhdDog4omIMTAxLDEgdHJp4buHdSAoY2jhuqVwIG5o4bqtbiAxMDHigJMxMDEsMyB0cmnhu4d1IG7hur91IGdoaSByw7Ugbmd14buTbiBraMOhYykgY8OzIG5ndeG7k24uIE3hu5l0IHBo4bqnbjogxJHDum5nIHPhu5Ega2jDtG5nIG5ndeG7k24uCkPDonUgMiDEkeG6oXQ6IOKJiDE1N+KAkzE1OCBuZ2jDrG4gdOG7iSB2w6Aga+G6v3QgbHXhuq1uIHBow6lwIHTDrW5oIMSRw7puZy4gTeG7mXQgcGjhuqduOiB0w61uaCDEkcO6bmcgbcOgIGtow7RuZyBr4bq/dCBsdeG6rW4sIGhv4bq3YyBs4buHY2ggZG8gbMOgbSB0csOybiBs4bubbi4KQ8OidSAzOiDDtCB0aGVuIGNo4buRdCBsw6AgY29uIHPhu5Eg4omIMznigJM0MCBuZ2jDrG4gdOG7iSB2w6AgY2jhu4kgcmEgZ2nhuqMgxJHhu4tuaCAibeG7jWkgbmfGsOG7nWkgxJHhu4F1IMSRYW5nIHXhu5FuZyIuIMSQ4bqhdDogY+G6oyBoYWkuIE3hu5l0IHBo4bqnbjogbeG7mXQgdHJvbmcgaGFpLgpC4bqreSBjaMOtbmg6IGtp4buDbSB0cmEgcGjDqXAgbmjDom4gdGjhuqV5IMSRw7puZyBy4buTaSB0aW4gbHXDtG4gY29uIHPhu5EuCkfhu5lwOiBjb3JyZWN0ID0gbeG7jWkgY8OidSDEkeG6oXQsIGhv4bq3YyAyIGPDonUgxJHhuqF0ICsgMSBjw6J1IG3hu5l0IHBo4bqnbjsgcGFydGlhbCA9IDHigJMyIGPDonUgxJHhuqF0OyBpbmNvcnJlY3QgPSBraMO0bmcgY8OidSBuw6BvIMSR4bqhdC4gw50gJ3Rp4buBbiBraMO0bmcgY2hpIHRyw6Agc+G7r2EgY2jGsGEgY2jhuq9jIMSRxrDhu6NjIHRp4bq/dCBraeG7h20gKGNoaSBzYW5nIHRo4bupIGtow6FjKScgbMOgIMSRaeG7g20gY+G7mW5nLCBraMO0bmcgdGhheSBjaG8gw70gbeG6q3Ugc+G7kS4=",
+  "answer_key_b64": "MS4gKGEpIEjDoDogMSB0aMOhbmcgMTIgbsSDbSAyMDI3IHwgbmfGsOG7nWkgdmnhur90OiAxMiB0aMOhbmcgMSBuxINtIDIwMjcuIChiKSBIw6A6IGtow7RuZyDEkeG7jWMgxJHGsOG7o2MgKGtow7RuZyBjw7MgdGjDoW5nIDI1KSwgaG/hurdjIMSR4buNYyBsw6AgbmfDoHkga2jDtG5nIHThu5NuIHThuqFpIHwgbmfGsOG7nWkgdmnhur90OiAyNS8xMS8yMDI2LiAoYykgSMOgOiAxLDIga2cgfCBuZ8aw4budaSB2aeG6v3Q6IDEuMjAwIGtnLiAoZCkgSMOgOiAzLjUwMCBVU0Qva2cgKGJhIG5naMOsbiByxrDhu6FpKSB8IG5nxrDhu51pIHZp4bq/dDogMyw1IFVTRC9rZy4KMi4gRMOybmcgKGIpOiAyNSBjaOG7iSBjw7MgdGjhu4MgbMOgIG5nw6B5LCBuw6puIHbhu4sgdHLDrSDEkeG6p3UgbMOgIHRow6FuZywgdOG7qWMgbmfGsOG7nWkgdmnhur90IGTDuW5nIHRow6FuZy9uZ8OgeS9uxINtLiBWw6wgY+G6oyBlbWFpbCBkw7luZyBt4buZdCBxdXkgxrDhu5tjLCAoYSkgcGjhuqNpIMSR4buNYyBsw6AgdGjDoW5nIDEgbmfDoHkgMTIuIEtp4buDbSB0cmEgY2jDqW86IHRoYW5oIHRvw6FuIDEyLzEvMjAyNywgc2F1IGdpYW8gaMOgbmcgMjUvMTEvMjAyNiBraG/huqNuZyA3IHR14bqnbiwgaOG7o3AgbMO9OyBjw6FjaCDEkeG7jWMgY+G7p2EgSMOgIGNobyBo4bqhbiB0aGFuaCB0b8OhbiBzYXUgZ2lhbyBow6BuZyBoxqFuIG3hu5l0IG7Eg20uCjMuIEjDoDogMSwyIMOXIDMuNTAwID0gNC4yMDAgVVNELiDEkMO6bmc6IDEuMjAwIMOXIDMsNSA9IDQuMjAwIFVTRC4gVOG7lW5nIGto4bubcCBob8OgbiB0b8OgbiBkw7kgY+G6oyBoYWkgZMOybmcgxJHhu4F1IMSR4buNYyBzYWk6IGto4buRaSBsxrDhu6NuZyBi4buLIMSR4buNYyBuaOG7jyDEkWkgMS4wMDAgbOG6p24sIMSRxqFuIGdpw6EgYuG7iyDEkeG7jWMgbOG7m24gbMOqbiDEkcO6bmcgMS4wMDAgbOG6p24sIGhhaSBs4buXaSB0cmnhu4d0IHRpw6p1IG5oYXUgdHJvbmcgdMOtY2guIE3hu5l0IHThu5VuZyBraOG7m3AgY2jhu4kga2nhu4NtIMSRxrDhu6NjIHTDrWNoLCBraMO0bmcga2nhu4NtIMSRxrDhu6NjIHThu6tuZyB0aOG7q2Egc+G7kS4gSOG6rXUgcXXhuqM6IEjDoCBjaHXhuqluIGLhu4sgbmjhuq1uIDEsMiBrZyB0cm9uZyBraGkgMS4yMDAga2cgaMOgbmcgduG7gSAoa2hvLCB4ZSwgbmjDom4gY8O0bmcga2jDtG5nIMSR4bunKSwgaG/hurdjIHNvIMSRxqFuIGdpw6EgMy41MDAgVVNEL2tnIHbhu5tpIG5ow6AgY3VuZyBj4bqlcCBraMOhYyB2w6Aga+G6v3QgbHXhuq1uIHNhaSBsw6AgcXXDoSDEkeG6r3QuCjQuIEPDonUgaOG7j2kgZMO5bmcgbOG6oWkgxJHDum5nIGvDvSBoaeG7h3UgMDEvMTIgxJFhbmcgbcahIGjhu5MsIG7Dqm4gbmfGsOG7nWkgTeG7uSBz4bq9IHRy4bqjIGzhu51pICLEkcO6bmciIHRoZW8gY8OhY2ggaGnhu4N1IGPhu6dhIGjhu40gdsOgIEjDoCB24bqrbiBoaeG7g3UgdGhlbyBjw6FjaCBj4bunYSBtw6xuaC4gQ8OidSB4w6FjIG5o4bqtbiB04buRdDogIkjhuqFuIHRoYW5oIHRvw6FuIGzDoCBuZ8OgeSAxMiB0aMOhbmcgR2nDqm5nIChKYW51YXJ5IDEyKSwgMjAyNyBwaOG6o2kga2jDtG5nPyIgaG/hurdjIGTDuW5nIMSR4buLbmggZOG6oW5nIDIwMjctMDEtMTIgdsOgIGvDqG0gdOG7lW5nIHRp4buBbiB2aeG6v3QgYuG6sW5nIGNo4buvICgiYuG7kW4gbmdow6xuIGhhaSB0csSDbSDEkcO0IGxhIiku",
+  "rubric_b64": "Q8OidSAxIChi4bqjbmcgOCDDtCk6IMO0IHRoZW4gY2jhu5F0IGzDoCAyIMO0ICJuZ8aw4budaSB2aeG6v3QgbXXhu5FuIG7Ds2kiIGPhu6dhIChhKSB2w6AgKGQpIGPDuW5nIMO0IChjKSBuZ8aw4budaSB2aeG6v3Q7IMO0IHRoxrDhu51uZyBsw6AgY8OhYyDDtCBjw7JuIGzhuqFpLiBDaOG6pXAgbmjhuq1uIMO0IChiKSBj4bunYSBIw6AgZ2hpICJraMO0bmcgxJHhu41jIMSRxrDhu6NjIC8gbmfDoHkga2jDtG5nIHThu5NuIHThuqFpIi4gw4FwIGNodeG6qW4gY2jhuqVtIGLhuqNuZy4KQ8OidSAyIMSR4bqhdDogY2jhu41uIChiKSArIGzDvSBkbyAia2jDtG5nIGPDsyB0aMOhbmcgMjUiICsgbuG7kWkgc2FuZyAoYSkgYuG6sW5nIHF1eSDGsOG7m2MgbmjhuqV0IHF1w6FuLiBN4buZdCBwaOG6p246IGNo4buNbiAoYikgbmjGsG5nIGtow7RuZyBu4buRaSBzYW5nIChhKS4KQ8OidSAzOiDDtCB0aGVuIGNo4buRdCBsw6AgKGkpIGPhuqMgaGFpIGPDoWNoIMSR4buNYyDEkeG7gXUgcmEgNC4yMDAgVVNELCAoaWkpIGdp4bqjaSB0aMOtY2ggaGFpIGzhu5dpIG5nxrDhu6NjIGNoaeG7gXUgY8O5bmcgxJHhu5kgbOG7m24gKMO3MS4wMDAgdsOgIMOXMS4wMDApIG7Dqm4gdMOtY2gga2jDtG5nIGzhu5kgbOG7l2ksIChpaWkpIG3hu5l0IGjhuq11IHF14bqjIGPhu6UgdGjhu4Mg4bufIHThu6tuZyB0aOG7q2Egc+G7kSAoa2jhu5FpIGzGsOG7o25nIG5o4bqtbiBow6BuZywgc28gZ2nDoSkuIMSQ4bqhdDogY+G6oyBiYS4gTeG7mXQgcGjhuqduOiAyLzMuCkPDonUgNCDEkeG6oXQ6IGNo4buJIHJhIGPDonUgaOG7j2kgZMO5bmcgbOG6oWkga8O9IGhp4buHdSBtxqEgaOG7kyArIGPDonUgeMOhYyBuaOG6rW4gcXVhIGvDqm5oIMSR4buZYyBs4bqtcCAodMOqbiB0aMOhbmcgYuG6sW5nIGNo4buvLCDEkeG7i25oIGThuqFuZyBuxINtLXRow6FuZy1uZ8OgeSwgdOG7lW5nIHRp4buBbiBi4bqxbmcgY2jhu68sIGfhu41pIMSRaeG7h24gxJHhu41jIHTDqm4gdGjDoW5nKS4gTeG7mXQgcGjhuqduOiBjw6J1IHjDoWMgbmjhuq1uIHThu5F0IG5oxrBuZyBraMO0bmcgZ2nhuqNpIHRow61jaCB2w6wgc2FvIGPDonUgY8WpIHbDtCDDrWNoLgpC4bqreSBjaMOtbmg6IMSR4buNYyAoYSkgxJHhu5ljIGzhuq1wIHbhu5tpIChiKTsgY29pIHThu5VuZyBraOG7m3AgbMOgIGLhurFuZyBjaOG7qW5nIMSRw6MgxJHhu41jIMSRw7puZy4KR+G7mXA6IGNvcnJlY3QgPSBt4buNaSBjw6J1IMSR4bqhdCwgaG/hurdjIDMgxJHhuqF0ICsgMSBt4buZdCBwaOG6p247IHBhcnRpYWwgPSAx4oCTMyBjw6J1IMSR4bqhdDsgaW5jb3JyZWN0ID0ga2jDtG5nIGPDonUgbsOgbyDEkeG6oXQu",
   "review": {
     "solver_model": "sonnet",
     "first_solve_match": true,
-    "revised": false,
+    "revised": true,
     "issues": [
       {
         "type": "ambiguity",
-        "severity": 1,
-        "detail": "số dân là suy rộng từ điều tra mẫu"
+        "severity": 2,
+        "detail": "'3.50' không phải dạng ngăn nghìn chuẩn"
       },
       {
-        "type": "ambiguity",
+        "type": "missing_premise",
         "severity": 1,
-        "detail": "câu 3 có thể nêu ý \"tiết kiệm\" vs chi thay thế"
+        "detail": "không nói Hà làm gì với ngày không hợp lệ"
+      },
+      {
+        "type": "level_mismatch",
+        "severity": 1,
+        "detail": "phản biện chấm L2; bản sửa thêm bẫy tổng khớp để nâng lên L3"
       }
     ]
   },
-  "status": "submitted",
+  "status": "open",
   "extra": false
 }
