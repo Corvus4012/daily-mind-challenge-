@@ -88,6 +88,7 @@ Trả về JSON: {"answers": ["câu 1: ...", ...], "reasoning": "...", "ambiguit
 Bạn là người rà soát độc lập cho một hệ thống luyện tư duy. Dưới đây là các đề đã giao, đáp án, rubric,
 câu trả lời nguyên văn của người học và cách session chính đã chấm. Không đọc file nào khác, không tra web.
 1. Chấm lại từng bài theo rubric, chỉ dựa trên câu trả lời. Ghi bài nào bạn chấm khác và vì sao.
+   Bài có trường "appeal" (người học phản đối cách chấm): xét lời phản đối độc lập, nói rõ đồng ý hay không và vì sao.
 2. Tìm mẫu lặp lại: kỹ năng, dạng câu hỏi (tính toán / giải thích cơ chế / thiết kế phép thử...), mức gợi ý đã dùng.
    Mỗi mẫu phải dẫn ít nhất 2 bài làm bằng chứng.
 3. Viết tối đa 6 kiến nghị cụ thể cho người ra đề (dạng đề nào, luyện bước nào, độ khó nên chỉnh ra sao).

@@ -53,5 +53,6 @@
     "consistency_check",
     "convention_mismatch"
   ],
-  "notes": "Tự khai báo quy ước ký hiệu trước khi làm, bảng đúng cả 8 ô; câu 2 không nối (b) sang (a); câu 4 đề xuất viết kiểu Việt cho người Mỹ (lặp lỗi 20/10: xác nhận bằng ký hiệu vẫn mơ hồ)"
+  "notes": "Tự khai báo quy ước ký hiệu trước khi làm, bảng đúng cả 8 ô; câu 2 không nối (b) sang (a); câu 4 đề xuất viết kiểu Việt cho người Mỹ (lặp lỗi 20/10: xác nhận bằng ký hiệu vẫn mơ hồ)",
+  "appeal": "(/discuss 28/10) Người học phản đối câu 4: ý là hỏi bằng dòng (b), ví dụ 'Ngày giao hàng là 25/11/2026 đúng không?', vì (b) chỉ đọc được một cách. Session chính giữ 'một phần': (b) vốn đã không mơ hồ nên xác nhận nó không thêm thông tin nào về (a); và viết (a) theo kiểu Việt (12/01/2027) sẽ bị người Mỹ đọc thành 1 tháng 12."
 }
