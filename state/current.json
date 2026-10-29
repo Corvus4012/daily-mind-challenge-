@@ -1,49 +1,49 @@
 {
-  "date": "2026-10-28",
-  "pool_id": "20261025-d11-b29e75",
-  "domain_id": 11,
+  "date": "2026-10-29",
+  "pool_id": "20261022-d03-83e93a",
+  "domain_id": 3,
   "tag": "reason",
-  "level": 3,
+  "level": 2,
   "base_level": 3,
   "rolled_level": 3,
   "level_mode": "core",
-  "est_minutes": 12,
-  "format": "table",
+  "est_minutes": 9,
+  "format": "fill-in",
   "skills": [
-    "convention_mismatch",
-    "consistency_check"
+    "marginal_thinking",
+    "interpret_result"
   ],
-  "challenge_md": "Một công ty ở Việt Nam nhận email đặt hàng từ nhà cung cấp ở Mỹ. Quy ước viết (giả định của đề):\n- **Mỹ:** ngày viết tháng/ngày/năm; dấu phẩy ngăn hàng nghìn, dấu chấm là dấu thập phân.\n- **Việt Nam:** ngày viết ngày/tháng/năm; dấu chấm ngăn hàng nghìn, dấu phẩy là dấu thập phân.\n\nCả email do một người viết, theo một quy ước nhất quán. Bốn dòng trong email (giữ nguyên cách viết số):\n- (a) Hạn thanh toán: 01/12/2027\n- (b) Ngày giao hàng: 11/25/2026\n- (c) Khối lượng: 1,200 kg\n- (d) Đơn giá: 3.500 USD/kg\n\nHoá đơn kèm theo ghi tổng tiền bằng chữ: *bốn nghìn hai trăm đô la Mỹ*.\n\nNhân viên Hà đọc mọi thứ theo quy ước Việt Nam (mọi dấu chấm là ngăn hàng nghìn, mọi dấu phẩy là thập phân). Dòng nào không đọc ra giá trị hợp lệ thì Hà ghi \"không đọc được\".\n\n**Câu hỏi**\n1. Lập bảng: với mỗi dòng (a)–(d), Hà hiểu ra giá trị gì, và người viết muốn nói giá trị gì? (Viết đáp án theo cách viết Việt Nam.)\n2. Dòng nào trong email đủ để biết chắc người viết dùng quy ước Mỹ? Giải thích vì sao dòng đó quyết định cách đọc dòng (a).\n3. Hà tính khối lượng × đơn giá theo cách đọc của mình, thấy khớp với tổng trên hoá đơn, nên kết luận mình đã đọc đúng cả (c) và (d). Kiểm tra lại bằng phép tính, giải thích vì sao \"tổng khớp\" không chứng minh được điều đó, và nêu một việc cụ thể sẽ hỏng nếu Hà giữ cách đọc của mình.\n4. Hà định hỏi lại: \"Hạn thanh toán là 01/12/2027 phải không?\" Vì sao câu hỏi này không giải quyết được gì? Viết lại một câu xác nhận không thể bị hiểu nhầm.",
+  "challenge_md": "Một tiệm bánh đang mở cửa 10 giờ mỗi ngày, 30 ngày mỗi tháng, tiền thuê mặt bằng cố định 30.000.000 đ/tháng (trả như nhau dù mở bao nhiêu giờ). Chủ tiệm cân nhắc mở thêm 1 giờ mỗi tối. Ước tính cho mỗi giờ mở thêm (số liệu giả định của đề):\n- Doanh thu thêm: 300.000 đ\n- Nguyên liệu thêm: 120.000 đ; lương nhân viên thêm: 80.000 đ; điện nước thêm: 20.000 đ\n\nChủ tiệm tính: *\"Mỗi giờ mở cửa phải gánh tiền thuê 30.000.000 ÷ (30 × 10) = 100.000 đ. Giờ mở thêm lời 300.000 − 120.000 − 80.000 − 20.000 − 100.000 = −20.000 đ, tức lỗ. Không mở.\"*\n\n**Câu hỏi**\n1. Nếu mở thêm 1 giờ mỗi tối, tổng lợi nhuận **của cả tháng** thay đổi bao nhiêu (tăng hay giảm)? Trình bày phép tính.\n2. Chỉ ra chỗ sai trong cách tính của chủ tiệm trong 1–2 câu.\n3. Nêu một tình huống mà tiền thuê mặt bằng **có** liên quan đến quyết định mở thêm giờ.",
   "hints": [
-    "Bắt đầu từ dòng nào chỉ đọc được theo đúng một cách.",
-    "Một tháng không thể là số 25. Người viết đã dùng cùng một quy ước cho mọi dòng.",
-    "Tổng của một tích có thể đúng dù cả hai thừa số sai. Câu xác nhận tốt không dùng lại chính kiểu ký hiệu đang gây nhầm."
+    "Hỏi: nếu mở thêm giờ, khoản nào thay đổi và khoản nào vẫn y như cũ?",
+    "Tiền thuê trả như nhau dù mở 10 hay 11 giờ. Chia nó cho số giờ không làm nó thành chi phí của giờ mở thêm.",
+    "Câu 3: khi nào mở thêm giờ làm tiền thuê thay đổi, hoặc khi nào quyết định là có nên tiếp tục thuê mặt bằng nữa không?"
   ],
   "hints_revealed": 0,
-  "answer_key_b64": "MS4gKGEpIEjDoDogMSB0aMOhbmcgMTIgbsSDbSAyMDI3IHwgbmfGsOG7nWkgdmnhur90OiAxMiB0aMOhbmcgMSBuxINtIDIwMjcuIChiKSBIw6A6IGtow7RuZyDEkeG7jWMgxJHGsOG7o2MgKGtow7RuZyBjw7MgdGjDoW5nIDI1KSwgaG/hurdjIMSR4buNYyBsw6AgbmfDoHkga2jDtG5nIHThu5NuIHThuqFpIHwgbmfGsOG7nWkgdmnhur90OiAyNS8xMS8yMDI2LiAoYykgSMOgOiAxLDIga2cgfCBuZ8aw4budaSB2aeG6v3Q6IDEuMjAwIGtnLiAoZCkgSMOgOiAzLjUwMCBVU0Qva2cgKGJhIG5naMOsbiByxrDhu6FpKSB8IG5nxrDhu51pIHZp4bq/dDogMyw1IFVTRC9rZy4KMi4gRMOybmcgKGIpOiAyNSBjaOG7iSBjw7MgdGjhu4MgbMOgIG5nw6B5LCBuw6puIHbhu4sgdHLDrSDEkeG6p3UgbMOgIHRow6FuZywgdOG7qWMgbmfGsOG7nWkgdmnhur90IGTDuW5nIHRow6FuZy9uZ8OgeS9uxINtLiBWw6wgY+G6oyBlbWFpbCBkw7luZyBt4buZdCBxdXkgxrDhu5tjLCAoYSkgcGjhuqNpIMSR4buNYyBsw6AgdGjDoW5nIDEgbmfDoHkgMTIuIEtp4buDbSB0cmEgY2jDqW86IHRoYW5oIHRvw6FuIDEyLzEvMjAyNywgc2F1IGdpYW8gaMOgbmcgMjUvMTEvMjAyNiBraG/huqNuZyA3IHR14bqnbiwgaOG7o3AgbMO9OyBjw6FjaCDEkeG7jWMgY+G7p2EgSMOgIGNobyBo4bqhbiB0aGFuaCB0b8OhbiBzYXUgZ2lhbyBow6BuZyBoxqFuIG3hu5l0IG7Eg20uCjMuIEjDoDogMSwyIMOXIDMuNTAwID0gNC4yMDAgVVNELiDEkMO6bmc6IDEuMjAwIMOXIDMsNSA9IDQuMjAwIFVTRC4gVOG7lW5nIGto4bubcCBob8OgbiB0b8OgbiBkw7kgY+G6oyBoYWkgZMOybmcgxJHhu4F1IMSR4buNYyBzYWk6IGto4buRaSBsxrDhu6NuZyBi4buLIMSR4buNYyBuaOG7jyDEkWkgMS4wMDAgbOG6p24sIMSRxqFuIGdpw6EgYuG7iyDEkeG7jWMgbOG7m24gbMOqbiDEkcO6bmcgMS4wMDAgbOG6p24sIGhhaSBs4buXaSB0cmnhu4d0IHRpw6p1IG5oYXUgdHJvbmcgdMOtY2guIE3hu5l0IHThu5VuZyBraOG7m3AgY2jhu4kga2nhu4NtIMSRxrDhu6NjIHTDrWNoLCBraMO0bmcga2nhu4NtIMSRxrDhu6NjIHThu6tuZyB0aOG7q2Egc+G7kS4gSOG6rXUgcXXhuqM6IEjDoCBjaHXhuqluIGLhu4sgbmjhuq1uIDEsMiBrZyB0cm9uZyBraGkgMS4yMDAga2cgaMOgbmcgduG7gSAoa2hvLCB4ZSwgbmjDom4gY8O0bmcga2jDtG5nIMSR4bunKSwgaG/hurdjIHNvIMSRxqFuIGdpw6EgMy41MDAgVVNEL2tnIHbhu5tpIG5ow6AgY3VuZyBj4bqlcCBraMOhYyB2w6Aga+G6v3QgbHXhuq1uIHNhaSBsw6AgcXXDoSDEkeG6r3QuCjQuIEPDonUgaOG7j2kgZMO5bmcgbOG6oWkgxJHDum5nIGvDvSBoaeG7h3UgMDEvMTIgxJFhbmcgbcahIGjhu5MsIG7Dqm4gbmfGsOG7nWkgTeG7uSBz4bq9IHRy4bqjIGzhu51pICLEkcO6bmciIHRoZW8gY8OhY2ggaGnhu4N1IGPhu6dhIGjhu40gdsOgIEjDoCB24bqrbiBoaeG7g3UgdGhlbyBjw6FjaCBj4bunYSBtw6xuaC4gQ8OidSB4w6FjIG5o4bqtbiB04buRdDogIkjhuqFuIHRoYW5oIHRvw6FuIGzDoCBuZ8OgeSAxMiB0aMOhbmcgR2nDqm5nIChKYW51YXJ5IDEyKSwgMjAyNyBwaOG6o2kga2jDtG5nPyIgaG/hurdjIGTDuW5nIMSR4buLbmggZOG6oW5nIDIwMjctMDEtMTIgdsOgIGvDqG0gdOG7lW5nIHRp4buBbiB2aeG6v3QgYuG6sW5nIGNo4buvICgiYuG7kW4gbmdow6xuIGhhaSB0csSDbSDEkcO0IGxhIiku",
-  "rubric_b64": "Q8OidSAxIChi4bqjbmcgOCDDtCk6IMO0IHRoZW4gY2jhu5F0IGzDoCAyIMO0ICJuZ8aw4budaSB2aeG6v3QgbXXhu5FuIG7Ds2kiIGPhu6dhIChhKSB2w6AgKGQpIGPDuW5nIMO0IChjKSBuZ8aw4budaSB2aeG6v3Q7IMO0IHRoxrDhu51uZyBsw6AgY8OhYyDDtCBjw7JuIGzhuqFpLiBDaOG6pXAgbmjhuq1uIMO0IChiKSBj4bunYSBIw6AgZ2hpICJraMO0bmcgxJHhu41jIMSRxrDhu6NjIC8gbmfDoHkga2jDtG5nIHThu5NuIHThuqFpIi4gw4FwIGNodeG6qW4gY2jhuqVtIGLhuqNuZy4KQ8OidSAyIMSR4bqhdDogY2jhu41uIChiKSArIGzDvSBkbyAia2jDtG5nIGPDsyB0aMOhbmcgMjUiICsgbuG7kWkgc2FuZyAoYSkgYuG6sW5nIHF1eSDGsOG7m2MgbmjhuqV0IHF1w6FuLiBN4buZdCBwaOG6p246IGNo4buNbiAoYikgbmjGsG5nIGtow7RuZyBu4buRaSBzYW5nIChhKS4KQ8OidSAzOiDDtCB0aGVuIGNo4buRdCBsw6AgKGkpIGPhuqMgaGFpIGPDoWNoIMSR4buNYyDEkeG7gXUgcmEgNC4yMDAgVVNELCAoaWkpIGdp4bqjaSB0aMOtY2ggaGFpIGzhu5dpIG5nxrDhu6NjIGNoaeG7gXUgY8O5bmcgxJHhu5kgbOG7m24gKMO3MS4wMDAgdsOgIMOXMS4wMDApIG7Dqm4gdMOtY2gga2jDtG5nIGzhu5kgbOG7l2ksIChpaWkpIG3hu5l0IGjhuq11IHF14bqjIGPhu6UgdGjhu4Mg4bufIHThu6tuZyB0aOG7q2Egc+G7kSAoa2jhu5FpIGzGsOG7o25nIG5o4bqtbiBow6BuZywgc28gZ2nDoSkuIMSQ4bqhdDogY+G6oyBiYS4gTeG7mXQgcGjhuqduOiAyLzMuCkPDonUgNCDEkeG6oXQ6IGNo4buJIHJhIGPDonUgaOG7j2kgZMO5bmcgbOG6oWkga8O9IGhp4buHdSBtxqEgaOG7kyArIGPDonUgeMOhYyBuaOG6rW4gcXVhIGvDqm5oIMSR4buZYyBs4bqtcCAodMOqbiB0aMOhbmcgYuG6sW5nIGNo4buvLCDEkeG7i25oIGThuqFuZyBuxINtLXRow6FuZy1uZ8OgeSwgdOG7lW5nIHRp4buBbiBi4bqxbmcgY2jhu68sIGfhu41pIMSRaeG7h24gxJHhu41jIHTDqm4gdGjDoW5nKS4gTeG7mXQgcGjhuqduOiBjw6J1IHjDoWMgbmjhuq1uIHThu5F0IG5oxrBuZyBraMO0bmcgZ2nhuqNpIHRow61jaCB2w6wgc2FvIGPDonUgY8WpIHbDtCDDrWNoLgpC4bqreSBjaMOtbmg6IMSR4buNYyAoYSkgxJHhu5ljIGzhuq1wIHbhu5tpIChiKTsgY29pIHThu5VuZyBraOG7m3AgbMOgIGLhurFuZyBjaOG7qW5nIMSRw6MgxJHhu41jIMSRw7puZy4KR+G7mXA6IGNvcnJlY3QgPSBt4buNaSBjw6J1IMSR4bqhdCwgaG/hurdjIDMgxJHhuqF0ICsgMSBt4buZdCBwaOG6p247IHBhcnRpYWwgPSAx4oCTMyBjw6J1IMSR4bqhdDsgaW5jb3JyZWN0ID0ga2jDtG5nIGPDonUgbsOgbyDEkeG6oXQu",
+  "answer_key_b64": "MS4gTeG7l2kgZ2nhu50gbeG7nyB0aMOqbTogMzAwLjAwMCDiiJIgKDEyMC4wMDAgKyA4MC4wMDAgKyAyMC4wMDApID0gKzgwLjAwMCDEkS4gQ+G6oyB0aMOhbmc6IDMwIMOXIDgwLjAwMCA9ICsyLjQwMC4wMDAgxJEgKGzhu6NpIG5odeG6rW4gdMSDbmcpLiBUaeG7gW4gdGh1w6oga2jDtG5nIMSR4buVaS4KMi4gQ2jhu6cgdGnhu4dtIGNoaWEgdGnhu4FuIHRodcOqIGPhu5EgxJHhu4tuaCBjaG8gdOG7q25nIGdp4budIHLhu5NpIHTDrW5oIHbDoG8gZ2nhu50gbeG7nyB0aMOqbSwgbmjGsG5nIHRp4buBbiB0aHXDqiBraMO0bmcgdMSDbmcga2hpIG3hu58gdGjDqm0gZ2nhu50uIENoaSBwaMOtIGPhuqduIHNvIHbhu5tpIGRvYW5oIHRodSB0aMOqbSBjaOG7iSBsw6AgY2hpIHBow60gcGjDoXQgc2luaCB0aMOqbSAoYmnDqm4pLiBQaMOpcCBjaGlhIDEwMC4wMDAgxJEvZ2nhu50gY8OybiBk4buxYSB0csOqbiAxMCBnaeG7nTsgbeG7nyAxMSBnaeG7nSB0aMOsIGNvbiBz4buRIMSRw7MgY8WpbmcgxJHhu5VpLgozLiBWw60gZOG7pSDEkeG6oXQ6IGjhu6NwIMSR4buTbmcgdGh1w6ogdMOtbmggdGhlbyBnaeG7nSBz4butIGThu6VuZyBob+G6t2MgY2jhu6cgbmjDoCB0aHUgdGjDqm0gdGnhu4FuIGtoaSBt4bufIG114buZbjsgaG/hurdjIGtoaSBxdXnhur90IMSR4buLbmggbMOgIGPDsyB0aeG6v3AgdOG7pWMgdGh1w6ogbeG6t3QgYuG6sW5nICjEkcOzbmcgaOG6s24gaGF5IG3hu58pIHRow6wgdGnhu4FuIHRodcOqIGzDoCBjaGkgcGjDrSBjw7MgdGjhu4MgdHLDoW5oIMSRxrDhu6NjIHbDoCBwaOG6o2kgdMOtbmgu",
+  "rubric_b64": "Q8OidSAxIMSR4bqhdDogKzIuNDAwLjAwMCDEkS90aMOhbmcgKGhv4bq3YyArODAuMDAwIMSRL2dp4budIMOXIDMwKS4gTeG7mXQgcGjhuqduOiBjaOG7iSB0w61uaCArODAuMDAwIMSRL2dp4budLCBraMO0bmcgcmEgdGjDoW5nLgpDw6J1IDIgxJHhuqF0OiBuw6p1IHRp4buBbiB0aHXDqiBraMO0bmcgxJHhu5VpIHRoZW8gcXV54bq/dCDEkeG7i25oIG7Dqm4ga2jDtG5nIMSRxrDhu6NjIHTDrW5oIHbDoG8gZ2nhu50gdGjDqm0gKGNo4buJIGNoaSBwaMOtIHBow6F0IHNpbmggdGjDqm0pLiBN4buZdCBwaOG6p246IG7Ds2kgImtow7RuZyBuw6puIHTDrW5oIHRp4buBbiB0aHXDqiIgbcOgIGtow7RuZyBuw6p1IHbDrCBzYW8uCkPDonUgMyDEkeG6oXQ6IG3hu5l0IHTDrG5oIGh14buRbmcgbcOgIHRp4buBbiB0aHXDqiB0aGF5IMSR4buVaSB0aGVvIHF1eeG6v3QgxJHhu4tuaCBob+G6t2MgdHLhu58gdGjDoG5oIGPDsyB0aOG7gyB0csOhbmggxJHGsOG7o2MuCkLhuqt5IGNow61uaDogY2jhuqVwIG5o4bqtbiBjw6FjaCBwaMOibiBi4buVIDEwMC4wMDAgxJEvZ2nhu50gdsOsIG7DsyAiY8O0bmcgYuG6sW5nIi4KR+G7mXA6IGNvcnJlY3QgPSBt4buNaSBjw6J1IMSR4bqhdCwgaG/hurdjIDIgY8OidSDEkeG6oXQgKyAxIGPDonUgbeG7mXQgcGjhuqduOyBwYXJ0aWFsID0gMeKAkzIgY8OidSDEkeG6oXQ7IGluY29ycmVjdCA9IGtow7RuZyBjw6J1IG7DoG8gxJHhuqF0Lg==",
   "review": {
     "solver_model": "sonnet",
     "first_solve_match": true,
-    "revised": true,
+    "revised": false,
     "issues": [
       {
         "type": "ambiguity",
-        "severity": 2,
-        "detail": "'3.50' không phải dạng ngăn nghìn chuẩn"
+        "severity": 1,
+        "detail": "'mở thêm 1 giờ mỗi tối' chưa nói rõ cả 30 ngày"
       },
       {
-        "type": "missing_premise",
+        "type": "ambiguity",
         "severity": 1,
-        "detail": "không nói Hà làm gì với ngày không hợp lệ"
+        "detail": "câu 3 mở; rubric nên liệt kê dạng tình huống chấp nhận"
       },
       {
         "type": "level_mismatch",
         "severity": 1,
-        "detail": "phản biện chấm L2; bản sửa thêm bẫy tổng khớp để nâng lên L3"
+        "detail": "khoảng level 1–2, bẫy lộ trong lời chủ tiệm"
       }
     ]
   },
-  "status": "submitted",
+  "status": "open",
   "extra": false
 }
