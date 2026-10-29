@@ -1,27 +1,27 @@
 {
-  "date": "2026-10-29",
-  "pool_id": "20261022-d03-83e93a",
-  "domain_id": 3,
+  "date": "2026-10-30",
+  "pool_id": "20261022-d01-e46142",
+  "domain_id": 1,
   "tag": "reason",
   "level": 2,
   "base_level": 3,
   "rolled_level": 3,
   "level_mode": "core",
-  "est_minutes": 9,
-  "format": "fill-in",
+  "est_minutes": 8,
+  "format": "spot-flaw",
   "skills": [
-    "marginal_thinking",
-    "interpret_result"
+    "hidden_premise",
+    "consistency_check"
   ],
-  "challenge_md": "Một tiệm bánh đang mở cửa 10 giờ mỗi ngày, 30 ngày mỗi tháng, tiền thuê mặt bằng cố định 30.000.000 đ/tháng (trả như nhau dù mở bao nhiêu giờ). Chủ tiệm cân nhắc mở thêm 1 giờ mỗi tối. Ước tính cho mỗi giờ mở thêm (số liệu giả định của đề):\n- Doanh thu thêm: 300.000 đ\n- Nguyên liệu thêm: 120.000 đ; lương nhân viên thêm: 80.000 đ; điện nước thêm: 20.000 đ\n\nChủ tiệm tính: *\"Mỗi giờ mở cửa phải gánh tiền thuê 30.000.000 ÷ (30 × 10) = 100.000 đ. Giờ mở thêm lời 300.000 − 120.000 − 80.000 − 20.000 − 100.000 = −20.000 đ, tức lỗ. Không mở.\"*\n\n**Câu hỏi**\n1. Nếu mở thêm 1 giờ mỗi tối, tổng lợi nhuận **của cả tháng** thay đổi bao nhiêu (tăng hay giảm)? Trình bày phép tính.\n2. Chỉ ra chỗ sai trong cách tính của chủ tiệm trong 1–2 câu.\n3. Nêu một tình huống mà tiền thuê mặt bằng **có** liên quan đến quyết định mở thêm giờ.",
+  "challenge_md": "Trong buổi họp lớp, một bạn lập luận:\n\n(1) \"Quy chế của trường ghi: mọi học sinh đạt giải cấp tỉnh môn nào thì được miễn thi cuối kỳ môn đó.\"\n(2) \"Lan được miễn thi cuối kỳ môn Toán.\"\n(3) \"Vậy Lan đã đạt giải Toán cấp tỉnh.\"\n(4) \"Mà ai đạt giải Toán cấp tỉnh thì học Toán giỏi, nên Lan học Toán giỏi hơn mọi bạn trong lớp không được miễn thi.\"\n\nGiả định của đề: câu (1) và (2) là sự thật. Quy chế chỉ có đúng câu (1), không nói gì về các trường hợp miễn thi khác.\n\n**Câu hỏi**\n1. Bước nào là chỗ lập luận gãy đầu tiên? Nêu một tình huống cụ thể mà (1) và (2) vẫn đúng nhưng kết luận của bước đó sai.\n2. Viết thêm **một câu** vào quy chế để bước bạn chỉ ra ở câu 1 trở thành hợp lệ.\n3. Kể cả khi đã thêm câu ở câu 2, bước (4) vẫn gãy. Chỉ ra chỗ gãy trong 1–2 câu.",
   "hints": [
-    "Hỏi: nếu mở thêm giờ, khoản nào thay đổi và khoản nào vẫn y như cũ?",
-    "Tiền thuê trả như nhau dù mở 10 hay 11 giờ. Chia nó cho số giờ không làm nó thành chi phí của giờ mở thêm.",
-    "Câu 3: khi nào mở thêm giờ làm tiền thuê thay đổi, hoặc khi nào quyết định là có nên tiếp tục thuê mặt bằng nữa không?"
+    "Câu (1) cho biết: đạt giải thì được miễn thi. Nó có nói: được miễn thi thì chắc chắn đã đạt giải không?",
+    "Hãy nghĩ một lý do khác khiến một học sinh được miễn thi mà câu (1) không cấm. Câu 2: cần một câu nói 'chỉ', 'duy nhất'.",
+    "Câu 3: 'học giỏi' và 'giỏi hơn MỌI bạn không được miễn' là hai khẳng định có độ mạnh khác nhau."
   ],
-  "hints_revealed": 3,
-  "answer_key_b64": "MS4gTeG7l2kgZ2nhu50gbeG7nyB0aMOqbTogMzAwLjAwMCDiiJIgKDEyMC4wMDAgKyA4MC4wMDAgKyAyMC4wMDApID0gKzgwLjAwMCDEkS4gQ+G6oyB0aMOhbmc6IDMwIMOXIDgwLjAwMCA9ICsyLjQwMC4wMDAgxJEgKGzhu6NpIG5odeG6rW4gdMSDbmcpLiBUaeG7gW4gdGh1w6oga2jDtG5nIMSR4buVaS4KMi4gQ2jhu6cgdGnhu4dtIGNoaWEgdGnhu4FuIHRodcOqIGPhu5EgxJHhu4tuaCBjaG8gdOG7q25nIGdp4budIHLhu5NpIHTDrW5oIHbDoG8gZ2nhu50gbeG7nyB0aMOqbSwgbmjGsG5nIHRp4buBbiB0aHXDqiBraMO0bmcgdMSDbmcga2hpIG3hu58gdGjDqm0gZ2nhu50uIENoaSBwaMOtIGPhuqduIHNvIHbhu5tpIGRvYW5oIHRodSB0aMOqbSBjaOG7iSBsw6AgY2hpIHBow60gcGjDoXQgc2luaCB0aMOqbSAoYmnDqm4pLiBQaMOpcCBjaGlhIDEwMC4wMDAgxJEvZ2nhu50gY8OybiBk4buxYSB0csOqbiAxMCBnaeG7nTsgbeG7nyAxMSBnaeG7nSB0aMOsIGNvbiBz4buRIMSRw7MgY8WpbmcgxJHhu5VpLgozLiBWw60gZOG7pSDEkeG6oXQ6IGjhu6NwIMSR4buTbmcgdGh1w6ogdMOtbmggdGhlbyBnaeG7nSBz4butIGThu6VuZyBob+G6t2MgY2jhu6cgbmjDoCB0aHUgdGjDqm0gdGnhu4FuIGtoaSBt4bufIG114buZbjsgaG/hurdjIGtoaSBxdXnhur90IMSR4buLbmggbMOgIGPDsyB0aeG6v3AgdOG7pWMgdGh1w6ogbeG6t3QgYuG6sW5nICjEkcOzbmcgaOG6s24gaGF5IG3hu58pIHRow6wgdGnhu4FuIHRodcOqIGzDoCBjaGkgcGjDrSBjw7MgdGjhu4MgdHLDoW5oIMSRxrDhu6NjIHbDoCBwaOG6o2kgdMOtbmgu",
-  "rubric_b64": "Q8OidSAxIMSR4bqhdDogKzIuNDAwLjAwMCDEkS90aMOhbmcgKGhv4bq3YyArODAuMDAwIMSRL2dp4budIMOXIDMwKS4gTeG7mXQgcGjhuqduOiBjaOG7iSB0w61uaCArODAuMDAwIMSRL2dp4budLCBraMO0bmcgcmEgdGjDoW5nLgpDw6J1IDIgxJHhuqF0OiBuw6p1IHRp4buBbiB0aHXDqiBraMO0bmcgxJHhu5VpIHRoZW8gcXV54bq/dCDEkeG7i25oIG7Dqm4ga2jDtG5nIMSRxrDhu6NjIHTDrW5oIHbDoG8gZ2nhu50gdGjDqm0gKGNo4buJIGNoaSBwaMOtIHBow6F0IHNpbmggdGjDqm0pLiBN4buZdCBwaOG6p246IG7Ds2kgImtow7RuZyBuw6puIHTDrW5oIHRp4buBbiB0aHXDqiIgbcOgIGtow7RuZyBuw6p1IHbDrCBzYW8uCkPDonUgMyDEkeG6oXQ6IG3hu5l0IHTDrG5oIGh14buRbmcgbcOgIHRp4buBbiB0aHXDqiB0aGF5IMSR4buVaSB0aGVvIHF1eeG6v3QgxJHhu4tuaCBob+G6t2MgdHLhu58gdGjDoG5oIGPDsyB0aOG7gyB0csOhbmggxJHGsOG7o2MuCkLhuqt5IGNow61uaDogY2jhuqVwIG5o4bqtbiBjw6FjaCBwaMOibiBi4buVIDEwMC4wMDAgxJEvZ2nhu50gdsOsIG7DsyAiY8O0bmcgYuG6sW5nIi4KR+G7mXA6IGNvcnJlY3QgPSBt4buNaSBjw6J1IMSR4bqhdCwgaG/hurdjIDIgY8OidSDEkeG6oXQgKyAxIGPDonUgbeG7mXQgcGjhuqduOyBwYXJ0aWFsID0gMeKAkzIgY8OidSDEkeG6oXQ7IGluY29ycmVjdCA9IGtow7RuZyBjw6J1IG7DoG8gxJHhuqF0Lg==",
+  "hints_revealed": 0,
+  "answer_key_b64": "MS4gQsaw4bubYyAoMykuICgxKSBjaOG7iSBuw7NpIMSR4bqhdCBnaeG6o2kg4oaSIMSRxrDhu6NjIG1p4buFbiwga2jDtG5nIG7Ds2kgxJHGsOG7o2MgbWnhu4VuIOKGkiDEkcOjIMSR4bqhdCBnaeG6o2kuIFTDrG5oIGh14buRbmc6IExhbiDEkcaw4bujYyBtaeG7hW4gdsOsIGzDvSBkbyBraMOhYyBtw6AgcXV5IGNo4bq/IGtow7RuZyBsb+G6oWkgdHLhu6ssIHbDrSBk4bulIMSRxrDhu6NjIG1p4buFbiBkbyBjw7MgY2jhu6luZyBjaOG7iSBxdeG7kWMgdOG6vyBob+G6t2MgZG8g4buRbSBjw7MgZ2nhuqV5IHjDoWMgbmjhuq1uOyAoMSksICgyKSB24bqrbiDEkcO6bmcgbmjGsG5nIExhbiBraMO0bmcgxJHhuqF0IGdp4bqjaS4KMi4gVsOtIGThu6U6ICJDaOG7iSBo4buNYyBzaW5oIMSR4bqhdCBnaeG6o2kgY+G6pXAgdOG7iW5oIG3DtG4gbsOgbyBt4bubaSDEkcaw4bujYyBtaeG7hW4gdGhpIGN14buRaSBr4buzIG3DtG4gxJHDsy4iIChob+G6t2M6ICJOZ2/DoGkgdHLGsOG7nW5nIGjhu6NwIMSR4bqhdCBnaeG6o2kgY+G6pXAgdOG7iW5oLCBraMO0bmcgYWkgxJHGsOG7o2MgbWnhu4VuIHRoaS4iKQozLiBU4burICJMYW4gaOG7jWMgZ2nhu49pIiBraMO0bmcgc3V5IHJhICJMYW4gZ2nhu49pIGjGoW4gbeG7jWkgYuG6oW4ga2jDtG5nIMSRxrDhu6NjIG1p4buFbiI6IGPDsyB0aOG7gyBjw7MgYuG6oW4gZ2nhu49pIGtow7RuZyBrw6ltIG5oxrBuZyBraMO0bmcgdGhpIGdp4bqjaSB04buJbmggaG/hurdjIHRoaSBtw6Aga2jDtG5nIMSR4bqhdC4gQsaw4bubYyAoNCkga2jDoWkgcXXDoXQgcXXDoSBt4bupYywgYmnhur9uIG3hu5l0IHTDrW5oIGNo4bqldCBj4bunYSBMYW4gdGjDoG5oIG3hu5l0IHNvIHPDoW5oIHbhu5tpIHThuqV0IGPhuqMgbmfGsOG7nWkga2jDoWMu",
+  "rubric_b64": "Q8OidSAxOiDDtCB0aGVuIGNo4buRdCBsw6AgY2jhu41uIGLGsOG7m2MgKDMpLiDEkOG6oXQ6ICgzKSArIG3hu5l0IHTDrG5oIGh14buRbmcgcGjhuqNuIHbDrSBk4bulIGjhu6NwIGzDvS4gTeG7mXQgcGjhuqduOiAoMykgbcOgIGtow7RuZyBjw7MgdMOsbmggaHXhu5FuZy4KQ8OidSAyIMSR4bqhdDogbeG7mXQgY8OidSBjaGnhu4F1IG5nxrDhu6NjIGzhuqFpIC8gImNo4buJLi4uIG3hu5tpIi4gTeG7mXQgcGjhuqduOiBjw6J1IGzDoG0gKDMpIGjhu6NwIGzhu4cgbmjGsG5nIHRow6ptIMO9IHRo4burYSBob+G6t2MgbcahIGjhu5MuCkPDonUgMyDEkeG6oXQ6IGNo4buJIHJhIHThu6sgImdp4buPaSIga2jDtG5nIHN1eSByYSAiZ2nhu49pIGjGoW4gbeG7jWkgYuG6oW4iIChraMOhaSBxdcOhdCBxdcOhIG3hu6ljIC8gdGhp4bq/dSBzbyBzw6FuaCkuCkLhuqt5IGNow61uaDogY2jhu41uICg0KSBsw6AgY2jhu5cgZ8OjeSDEkeG6p3UgdGnDqm4gdsOsIG7DsyBuZ2hlIHBoaSBsw70gbmjhuqV0LgpH4buZcDogY29ycmVjdCA9IG3hu41pIGPDonUgxJHhuqF0LCBob+G6t2MgMiBjw6J1IMSR4bqhdCArIDEgY8OidSBt4buZdCBwaOG6p247IHBhcnRpYWwgPSAx4oCTMiBjw6J1IMSR4bqhdDsgaW5jb3JyZWN0ID0ga2jDtG5nIGPDonUgbsOgbyDEkeG6oXQu",
   "review": {
     "solver_model": "sonnet",
     "first_solve_match": true,
@@ -30,20 +30,15 @@
       {
         "type": "ambiguity",
         "severity": 1,
-        "detail": "'mở thêm 1 giờ mỗi tối' chưa nói rõ cả 30 ngày"
+        "detail": "có thể đọc giả định thế giới đóng"
       },
       {
-        "type": "ambiguity",
+        "type": "missing_premise",
         "severity": 1,
-        "detail": "câu 3 mở; rubric nên liệt kê dạng tình huống chấp nhận"
-      },
-      {
-        "type": "level_mismatch",
-        "severity": 1,
-        "detail": "khoảng level 1–2, bẫy lộ trong lời chủ tiệm"
+        "detail": "tiền đề \"đạt giải thì giỏi\" do người nói nêu"
       }
     ]
   },
-  "status": "submitted",
+  "status": "open",
   "extra": false
 }
