@@ -25,6 +25,8 @@ Thêm dòng mới khi người dùng chỉ ra lỗi của đề, hoặc khi mộ
 
 - (25/10) Rubric nói rõ có chấp nhận lý do viện dẫn ngầm sang câu khác hay không.
 
+- (29/10) Câu "nêu một tình huống mà X có liên quan" quá trừu tượng: người học không hiểu cả sau gợi ý. Nói rõ khung ("X liên quan khi nó thay đổi tuỳ theo lựa chọn") hoặc cho sẵn 2–3 tình huống để chọn và giải thích. Gợi ý cho câu tìm phản ví dụ phải có một ví dụ khung cụ thể.
+
 ## Hồ sơ người học
 - Mạnh: thao tác đại số, lập phương trình; thiết kế phép đo trực tiếp; tự chuẩn hoá ký hiệu trước khi làm (20/10); phân biệt "sai sự thật" và "đúng nhưng chọn lọc".
 - Cần luyện:
