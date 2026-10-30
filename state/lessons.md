@@ -46,6 +46,7 @@ Thêm dòng mới khi người dùng chỉ ra lỗi của đề, hoặc khi mộ
   - Gán ngẫu nhiên thiếu lần 3 (25/10, 26/10 sau 18/10, 20/10): thay bằng cân bằng thủ công theo biến đo được (điểm), nên biến không đo được mà chính mình vừa nêu (động lực) vẫn lệch. Cần nối: "yếu tố nhiễu nào không đo được → chỉ ngẫu nhiên mới chia đều".
   - Xác nhận qua kênh độc lập lặp lỗi lần 2 (20/10, 28/10): đổi sang ký hiệu của mình thay vì bỏ hẳn ký hiệu số (tên tháng bằng chữ, năm-tháng-ngày).
   - Mạnh mới (28/10): tự khai báo quy ước ký hiệu trước khi trả lời.
+  - Tự nghĩ ra tình huống giả định / phản ví dụ còn yếu (29/10 tiền thuê, 30/10 lý do miễn thi khác phải tra Google): hiểu cấu trúc lỗi nhưng tìm phản ví dụ trong thực tế thay vì dựng một trường hợp "có thể xảy ra".
 - Cách phản hồi hợp: thẳng, chỉ ra cơ chế; thích được giải nghĩa nền tảng khi gặp domain lạ (đã xin bổ túc kinh tế ngày 19/10).
 
 ## Ghi chú hệ thống (chờ trao đổi qua /discuss)

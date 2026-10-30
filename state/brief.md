@@ -15,3 +15,4 @@ Reflect đến ngày 2026-10-25
 2. Câu "vì sao" phải đòi cơ chế bằng số của đề ("dùng chính số liệu trong đề để giải thích"); rubric ghi rõ nhãn chung thì không đạt.
 3. Đề có tính toán: nói rõ "ghi phép tính cho từng ... trước khi kết luận" và chấm bước đó như một ô.
 4. Khi hỏi ngưỡng kết luận, rubric chấp nhận ngưỡng hợp lý; feedback chỉ ra ngưỡng "tuyệt đối" là quá khắt.
+5. (30/10) Luyện dựng phản ví dụ giả định: đề yêu cầu "bịa một trường hợp có thể xảy ra" làm (1)(2) đúng mà kết luận sai; gợi ý bậc 2 phải cho một khung cụ thể ("ví dụ một lý do sức khoẻ").
