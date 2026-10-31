@@ -1,44 +1,60 @@
 {
-  "date": "2026-10-30",
-  "pool_id": "20261022-d01-e46142",
-  "domain_id": 1,
+  "date": "2026-10-31",
+  "pool_id": "20261031-d12-f95d83",
+  "domain_id": 12,
   "tag": "reason",
-  "level": 2,
+  "level": 4,
   "base_level": 3,
-  "rolled_level": 3,
-  "level_mode": "core",
-  "est_minutes": 8,
-  "format": "spot-flaw",
+  "rolled_level": 5,
+  "level_mode": "wildcard",
+  "est_minutes": 15,
+  "format": "model",
   "skills": [
-    "hidden_premise",
-    "consistency_check"
+    "weighted_average",
+    "confounding",
+    "incentives"
   ],
-  "challenge_md": "Trong buổi họp lớp, một bạn lập luận:\n\n(1) \"Quy chế của trường ghi: mọi học sinh đạt giải cấp tỉnh môn nào thì được miễn thi cuối kỳ môn đó.\"\n(2) \"Lan được miễn thi cuối kỳ môn Toán.\"\n(3) \"Vậy Lan đã đạt giải Toán cấp tỉnh.\"\n(4) \"Mà ai đạt giải Toán cấp tỉnh thì học Toán giỏi, nên Lan học Toán giỏi hơn mọi bạn trong lớp không được miễn thi.\"\n\nGiả định của đề: câu (1) và (2) là sự thật. Quy chế chỉ có đúng câu (1), không nói gì về các trường hợp miễn thi khác.\n\n**Câu hỏi**\n1. Bước nào là chỗ lập luận gãy đầu tiên? Nêu một tình huống cụ thể mà (1) và (2) vẫn đúng nhưng kết luận của bước đó sai.\n2. Viết thêm **một câu** vào quy chế để bước bạn chỉ ra ở câu 1 trở thành hợp lệ.\n3. Kể cả khi đã thêm câu ở câu 2, bước (4) vẫn gãy. Chỉ ra chỗ gãy trong 1–2 câu.",
+  "challenge_md": "Một tờ báo đăng: *\"Trường X đứng sau trường Y: tỉ lệ đỗ tốt nghiệp chỉ 80%, trong khi Y đạt hơn 90%.\"*\n\nSố liệu (giả định của đề). Học sinh được xếp nhóm **Khá** hoặc **Yếu** theo điểm kỳ thi tuyển sinh lớp 10 chung của tỉnh. \"Số HS\" là số học sinh nhập học lớp 10 của khoá; tỉ lệ đỗ = số đỗ ÷ số HS.\n\n| Trường | Khá: số HS | Khá: số đỗ | Yếu: số HS | Yếu: số đỗ |\n|---|---|---|---|---|\n| X | 200 | 196 | 300 | 204 |\n| Y | 400 | 396 | 100 | 56 |\n\n**Câu hỏi**\n1. Tính tỉ lệ đỗ của từng nhóm ở mỗi trường và tỉ lệ đỗ chung của mỗi trường (ghi phép tính). Trong từng nhóm, trường nào tốt hơn?\n2. Dùng chính các con số trong bảng, giải thích vì sao ở tỉ lệ chung Y hơn X nhiều, trong khi trong từng nhóm Y chỉ hơn rất ít hoặc còn thua.\n3. Giả sử hai trường có cùng cơ cấu đầu vào: tỉ trọng nhóm Khá là w (từ 0 đến 1), tỉ lệ đỗ từng nhóm giữ như câu 1.\n   (a) Tính tỉ lệ đỗ chung của mỗi trường khi w = 0,5.\n   (b) Tìm giá trị w tại đó hai trường bằng nhau, và nói với w nào thì X hơn Y.\n   (c) Một phụ huynh có con thuộc nhóm Khá nên chọn trường nào? Con thuộc nhóm Yếu thì sao? Vì sao câu trả lời không cần đến w?\n4. Sở giáo dục định thưởng cho trường theo **tỉ lệ đỗ chung**. Dự đoán một hành vi mà quy định này khuyến khích các trường làm, ai chịu thiệt, và đề xuất một chỉ số thay thế không bị lỗi do khác cơ cấu đầu vào.",
   "hints": [
-    "Câu (1) cho biết: đạt giải thì được miễn thi. Nó có nói: được miễn thi thì chắc chắn đã đạt giải không?",
-    "Hãy nghĩ một lý do khác khiến một học sinh được miễn thi mà câu (1) không cấm. Câu 2: cần một câu nói 'chỉ', 'duy nhất'.",
-    "Câu 3: 'học giỏi' và 'giỏi hơn MỌI bạn không được miễn' là hai khẳng định có độ mạnh khác nhau."
+    "Mỗi nhóm: số đỗ ÷ số học sinh của nhóm. Tỉ lệ chung: tổng số đỗ ÷ tổng số học sinh.",
+    "Tỉ lệ chung là trung bình của hai tỉ lệ nhóm, có trọng số là tỉ trọng mỗi nhóm trong trường. Hai trường có trọng số rất khác nhau.",
+    "Câu 3: viết hiệu (tỉ lệ X − tỉ lệ Y) theo w rồi cho bằng 0. Câu 3c: phụ huynh đã biết con thuộc nhóm nào. Câu 4: cách nhanh nhất để tăng tỉ lệ đỗ chung mà không cần dạy tốt hơn là gì?"
   ],
-  "hints_revealed": 2,
-  "answer_key_b64": "MS4gQsaw4bubYyAoMykuICgxKSBjaOG7iSBuw7NpIMSR4bqhdCBnaeG6o2kg4oaSIMSRxrDhu6NjIG1p4buFbiwga2jDtG5nIG7Ds2kgxJHGsOG7o2MgbWnhu4VuIOKGkiDEkcOjIMSR4bqhdCBnaeG6o2kuIFTDrG5oIGh14buRbmc6IExhbiDEkcaw4bujYyBtaeG7hW4gdsOsIGzDvSBkbyBraMOhYyBtw6AgcXV5IGNo4bq/IGtow7RuZyBsb+G6oWkgdHLhu6ssIHbDrSBk4bulIMSRxrDhu6NjIG1p4buFbiBkbyBjw7MgY2jhu6luZyBjaOG7iSBxdeG7kWMgdOG6vyBob+G6t2MgZG8g4buRbSBjw7MgZ2nhuqV5IHjDoWMgbmjhuq1uOyAoMSksICgyKSB24bqrbiDEkcO6bmcgbmjGsG5nIExhbiBraMO0bmcgxJHhuqF0IGdp4bqjaS4KMi4gVsOtIGThu6U6ICJDaOG7iSBo4buNYyBzaW5oIMSR4bqhdCBnaeG6o2kgY+G6pXAgdOG7iW5oIG3DtG4gbsOgbyBt4bubaSDEkcaw4bujYyBtaeG7hW4gdGhpIGN14buRaSBr4buzIG3DtG4gxJHDsy4iIChob+G6t2M6ICJOZ2/DoGkgdHLGsOG7nW5nIGjhu6NwIMSR4bqhdCBnaeG6o2kgY+G6pXAgdOG7iW5oLCBraMO0bmcgYWkgxJHGsOG7o2MgbWnhu4VuIHRoaS4iKQozLiBU4burICJMYW4gaOG7jWMgZ2nhu49pIiBraMO0bmcgc3V5IHJhICJMYW4gZ2nhu49pIGjGoW4gbeG7jWkgYuG6oW4ga2jDtG5nIMSRxrDhu6NjIG1p4buFbiI6IGPDsyB0aOG7gyBjw7MgYuG6oW4gZ2nhu49pIGtow7RuZyBrw6ltIG5oxrBuZyBraMO0bmcgdGhpIGdp4bqjaSB04buJbmggaG/hurdjIHRoaSBtw6Aga2jDtG5nIMSR4bqhdC4gQsaw4bubYyAoNCkga2jDoWkgcXXDoXQgcXXDoSBt4bupYywgYmnhur9uIG3hu5l0IHTDrW5oIGNo4bqldCBj4bunYSBMYW4gdGjDoG5oIG3hu5l0IHNvIHPDoW5oIHbhu5tpIHThuqV0IGPhuqMgbmfGsOG7nWkga2jDoWMu",
-  "rubric_b64": "Q8OidSAxOiDDtCB0aGVuIGNo4buRdCBsw6AgY2jhu41uIGLGsOG7m2MgKDMpLiDEkOG6oXQ6ICgzKSArIG3hu5l0IHTDrG5oIGh14buRbmcgcGjhuqNuIHbDrSBk4bulIGjhu6NwIGzDvS4gTeG7mXQgcGjhuqduOiAoMykgbcOgIGtow7RuZyBjw7MgdMOsbmggaHXhu5FuZy4KQ8OidSAyIMSR4bqhdDogbeG7mXQgY8OidSBjaGnhu4F1IG5nxrDhu6NjIGzhuqFpIC8gImNo4buJLi4uIG3hu5tpIi4gTeG7mXQgcGjhuqduOiBjw6J1IGzDoG0gKDMpIGjhu6NwIGzhu4cgbmjGsG5nIHRow6ptIMO9IHRo4burYSBob+G6t2MgbcahIGjhu5MuCkPDonUgMyDEkeG6oXQ6IGNo4buJIHJhIHThu6sgImdp4buPaSIga2jDtG5nIHN1eSByYSAiZ2nhu49pIGjGoW4gbeG7jWkgYuG6oW4iIChraMOhaSBxdcOhdCBxdcOhIG3hu6ljIC8gdGhp4bq/dSBzbyBzw6FuaCkuCkLhuqt5IGNow61uaDogY2jhu41uICg0KSBsw6AgY2jhu5cgZ8OjeSDEkeG6p3UgdGnDqm4gdsOsIG7DsyBuZ2hlIHBoaSBsw70gbmjhuqV0LgpH4buZcDogY29ycmVjdCA9IG3hu41pIGPDonUgxJHhuqF0LCBob+G6t2MgMiBjw6J1IMSR4bqhdCArIDEgY8OidSBt4buZdCBwaOG6p247IHBhcnRpYWwgPSAx4oCTMiBjw6J1IMSR4bqhdDsgaW5jb3JyZWN0ID0ga2jDtG5nIGPDonUgbsOgbyDEkeG6oXQu",
+  "hints_revealed": 0,
+  "answer_key_b64": "MS4gWDogS2jDoSAxOTYvMjAwID0gOTglOyBZ4bq/dSAyMDQvMzAwID0gNjglOyBjaHVuZyA0MDAvNTAwID0gODAlLiBZOiBLaMOhIDM5Ni80MDAgPSA5OSU7IFnhur91IDU2LzEwMCA9IDU2JTsgY2h1bmcgNDUyLzUwMCA9IDkwLDQlLiBOaMOzbSBLaMOhOiBZIGjGoW4gKDk5ID4gOTgpLiBOaMOzbSBZ4bq/dTogWCBoxqFuICg2OCA+IDU2KS4KMi4gVOG7iSBs4buHIGNodW5nID0gdOG7iSB0cuG7jW5nIEtow6Egw5cgdOG7iSBs4buHIEtow6EgKyB04buJIHRy4buNbmcgWeG6v3Ugw5cgdOG7iSBs4buHIFnhur91LiBOaMOzbSBZ4bq/dSBjaGnhur9tIDYwJSBo4buNYyBzaW5oIGPhu6dhIFggKDMwMC81MDApIG5oxrBuZyBjaOG7iSAyMCUgY+G7p2EgWSAoMTAwLzUwMCkuIFg6IDAsNCDDlyA5OCArIDAsNiDDlyA2OCA9IDgwOyBZOiAwLDggw5cgOTkgKyAwLDIgw5cgNTYgPSA5MCw0LiBLaG/huqNuZyBjw6FjaCBjaHVuZyAxMCw0IMSRaeG7g20gbmdoacOqbmcgduG7gSBZLCB0cm9uZyBraGkgWSBjaOG7iSBoxqFuIDEgxJFp4buDbSDhu58gbmjDs20gS2jDoSB2w6AgY8OybiB0aHVhIDEyIMSRaeG7g20g4bufIG5ow7NtIFnhur91LiBH4bqnbiBuaMawIHRvw6BuIGLhu5kga2hv4bqjbmcgY8OhY2ggxJHhur9uIHThu6sgdmnhu4djIFggbmjhuq1uIG5oaeG7gXUgaOG7jWMgc2luaCDEkeG6p3UgdsOgbyB54bq/dSwga2jDtG5nIHBo4bqjaSB04burIGNo4bqldCBsxrDhu6NuZyBk4bqheS4KMy4gKGEpIHcgPSAwLDU6IFggPSAwLDUgw5cgOTggKyAwLDUgw5cgNjggPSA4MyU7IFkgPSAwLDUgw5cgOTkgKyAwLDUgw5cgNTYgPSA3Nyw1JTsgWCBoxqFuIDUsNSDEkWnhu4NtLgooYikgWCDiiJIgWSA9IHcoOTgg4oiSIDk5KSArICgxIOKIkiB3KSg2OCDiiJIgNTYpID0gMTIg4oiSIDEzdy4gQuG6sW5nIDAga2hpIHcgPSAxMi8xMyDiiYggMCw5MjMgKDkyLDMlKS4gWCBoxqFuIFkga2hpIHcgPCAxMi8xMzsgWSBoxqFuIGtoaSB3ID4gMTIvMTMuIFThu6ljIGzDoCBjaOG7iSBraGkgZ+G6p24gbmjGsCB0b8OgbiBi4buZIGjhu41jIHNpbmggbMOgIEtow6EgdGjDrCBZIG3hu5tpIGjGoW4uCihjKSBDb24gbmjDs20gS2jDoTogY2jhu41uIFkgKDk5JSBzbyB24bubaSA5OCUsIGNow6puaCBy4bqldCBuaOG7jykuIENvbiBuaMOzbSBZ4bq/dTogY2jhu41uIFggKDY4JSBzbyB24bubaSA1NiUpLiBLaMO0bmcgY+G6p24gdyB2w6wgcGjhu6UgaHV5bmggxJHDoyBiaeG6v3QgY29uIHRodeG7mWMgbmjDs20gbsOgbzsgY2jhu4kgdOG7iSBs4buHIGPhu6dhIMSRw7puZyBuaMOzbSDEkcOzIGxpw6puIHF1YW4uIHcgY2jhu4kgY+G6p24ga2hpIHBo4bqjaSBn4buZcCB0aMOgbmggbeG7mXQgY29uIHPhu5EgY2hvIGPhuqMgdHLGsOG7nW5nLgo0LiBIw6BuaCB2aTogaOG6oW4gY2jhur8gbmjhuq1uLCBraHV5w6puIGNodXnhu4NuIHRyxrDhu51uZyBob+G6t2MgZ8OieSDDoXAgbOG7sWMgY2hvIGjhu41jIHNpbmggxJHhuqd1IHbDoG8geeG6v3UgcuG7nWkgdHLGsOG7nW5nIHRyxrDhu5tjIGvhu7MgdGhpOyBuZ8aw4budaSBjaOG7i3UgdGhp4buHdCBsw6AgaOG7jWMgc2luaCB54bq/dSAodsOgIHRyxrDhu51uZyBuaOG6rW4gaOG7jSwgbmjGsCBYLCBi4buLIMSRw6FuaCBnacOhIHRo4bqlcCBkw7kgZOG6oXkgbmjDs20gWeG6v3UgdOG7kXQgaMahbikuIENo4buJIHPhu5EgdGhheSB0aOG6vzogdOG7iSBs4buHIMSR4buXIHRoZW8gdOG7q25nIG5ow7NtIMSR4bqndSB2w6BvLCBob+G6t2MgdOG7iSBs4buHIGNodeG6qW4gaG/DoSB0aGVvIGPGoSBj4bqldSBjaHVuZyBj4bunYSB04buJbmggKG5oxrAgY8OidSAzKSwgaG/hurdjIG3hu6ljIHRp4bq/biBi4buZIHNvIHbhu5tpIGvhur90IHF14bqjIGvhu7MgduG7jW5nIHRoZW8gxJHhuqd1IHbDoG8uIEdp4buvIG3huqt1IHPhu5EgbMOgIHPhu5Egbmjhuq1wIGjhu41jIMSR4buDIHZp4buHYyDEkeG6qXkgaOG7jWMgc2luaCDEkWkga2jDtG5nIGzDoG0gxJHhurlwIHPhu5EgbGnhu4d1Lg==",
+  "rubric_b64": "Q8OidSAxICg2IHThu4kgbOG7hyArIDIga+G6v3QgbHXhuq1uIG5ow7NtKTogw7QgdGhlbiBjaOG7kXQgbMOgIDY4JSwgNTYlLCA5OSUsIDk4JSB2w6AgaGFpIGvhur90IGx14bqtbiAiS2jDoTogWSBoxqFuOyBZ4bq/dTogWCBoxqFuIjsgw7QgdGjGsOG7nW5nIGzDoCA4MCUgdsOgIDkwLDQlLiDDgXAgY2h14bqpbiBjaOG6pW0gYuG6o25nLiBUaGnhur91IHBow6lwIHTDrW5oIOKGkiBt4buZdCBwaOG6p24uCkPDonUgMiDEkeG6oXQ6IG7DqnUgdOG7iSB0cuG7jW5nIG5ow7NtIFnhur91ICg2MCUgdnMgMjAlKSB2w6AgZMO5bmcgbsOzIHTDrW5oIHThu4kgbOG7hyBjaHVuZyBuaMawIHRydW5nIGLDrG5oIGPDsyB0cuG7jW5nIHPhu5EsIGPDsyBz4buROyBjaOG7iSByYSBraG/huqNuZyBjw6FjaCBjaHVuZyAoMTAsNCkgbOG7m24gaMahbiBraG/huqNuZyBjw6FjaCBuaMOzbSB2w6AgbmdoacOqbmcgduG7gSBZIGTDuSBZIHRodWEg4bufIG5ow7NtIFnhur91LiBOaMOjbiBjaHVuZyBraMO0bmcgY8OzIHPhu5Eg4oaSIG3hu5l0IHBo4bqnbi4KQ8OidSAzOiDDtCB0aGVuIGNo4buRdCBsw6AgKGEpIDgzJSB2w6AgNzcsNSU7IChiKSB3KiA9IDEyLzEzIOKJiCA5MiwzJSB2w6AgY2hp4buBdSDEkcO6bmcgKFggaMahbiBraGkgdyBuaOG7jyBoxqFuKTsgKGMpIEtow6Eg4oaSIFksIFnhur91IOKGkiBYLCBrw6htIGzDvSBkbyAixJHDoyBiaeG6v3QgbmjDs20gbsOqbiBjaOG7iSBkw7luZyB04buJIGzhu4cgbmjDs20iLiDEkOG6oXQ6IGPhuqMgYmEuIE3hu5l0IHBo4bqnbjogaGFpIHRyw6puIGJhLgpDw6J1IDQgxJHhuqF0OiBt4buZdCBow6BuaCB2aSBj4bulIHRo4buDICsgbmfGsOG7nWkgY2jhu4t1IHRoaeG7h3QgKyBjaOG7iSBz4buRIHRoYXkgdGjhur8gc28gc8OhbmggdHLDqm4gY8O5bmcgbmjDs20gaG/hurdjIGPDuW5nIGPGoSBj4bqldS4gxJBp4buDbSBj4buZbmc6IGdp4buvIG3huqt1IHPhu5EgbMOgIHPhu5Egbmjhuq1wIGjhu41jLiBN4buZdCBwaOG6p246IHRoaeG6v3UgbeG7mXQgdHJvbmcgYmEuCkLhuqt5IGNow61uaDogdGluIHRpw6p1IMSR4buBOyDhu58gY8OidSAzYyBkw7luZyB04buJIGzhu4cgY2h1bmcgaG/hurdjIHcgxJHhu4Mga2h1ecOqbiBwaOG7pSBodXluaC4KR+G7mXA6IGNvcnJlY3QgPSBt4buNaSBjw6J1IMSR4bqhdCwgaG/hurdjIDMgxJHhuqF0ICsgMSBt4buZdCBwaOG6p247IHBhcnRpYWwgPSAx4oCTMyBjw6J1IMSR4bqhdDsgaW5jb3JyZWN0ID0ga2jDtG5nIGPDonUgbsOgbyDEkeG6oXQu",
   "review": {
-    "solver_model": "sonnet",
+    "solver_model": "opus",
     "first_solve_match": true,
-    "revised": false,
+    "revised": true,
     "issues": [
+      {
+        "type": "level_mismatch",
+        "severity": 2,
+        "detail": "bản đầu chơi như L3 (X hơn cả hai nhóm, câu 3 hiển nhiên); bản sửa cho hai nhóm ngược chiều, có ngưỡng w*"
+      },
+      {
+        "type": "trivia",
+        "severity": 1,
+        "detail": "mẫu Simpson quen thuộc; bản sửa thêm ngưỡng và câu phụ huynh"
+      },
       {
         "type": "ambiguity",
         "severity": 1,
-        "detail": "có thể đọc giả định thế giới đóng"
+        "detail": "mẫu số và người xếp nhóm chưa nêu — đã thêm"
       },
       {
-        "type": "missing_premise",
+        "type": "ambiguity",
+        "severity": 2,
+        "detail": "câu 2 bản sửa viết 'lớn hơn khoảng cách ở bất kỳ nhóm nào' sai về độ lớn tuyệt đối (12 > 10,4); chỉnh câu chữ theo đúng cách người giải mù đã hiểu, không đổi đáp án"
+      },
+      {
+        "type": "level_mismatch",
         "severity": 1,
-        "detail": "tiền đề \"đạt giải thì giỏi\" do người nói nêu"
+        "detail": "bản sửa có ngưỡng w* và câu phụ huynh; gán L4 vì chưa có phản biện xác nhận L5"
       }
     ]
   },
-  "status": "submitted",
+  "status": "open",
   "extra": false
 }
