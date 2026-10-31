@@ -27,6 +27,9 @@ Thêm dòng mới khi người dùng chỉ ra lỗi của đề, hoặc khi mộ
 
 - (29/10) Câu "nêu một tình huống mà X có liên quan" quá trừu tượng: người học không hiểu cả sau gợi ý. Nói rõ khung ("X liên quan khi nó thay đổi tuỳ theo lựa chọn") hoặc cho sẵn 2–3 tình huống để chọn và giải thích. Gợi ý cho câu tìm phản ví dụ phải có một ví dụ khung cụ thể.
 
+- (31/10) Câu "giải thích vì sao" làm cầu nối sang công cụ ở câu sau (tỉ trọng) phải gợi khung ("so tỉ trọng mỗi nhóm trong từng trường") hoặc rubric nhận lời giải thích đúng cơ chế không kèm số. Đừng bắt người học đoán công cụ của câu sau.
+- (31/10) Câu hỏi về động cơ / hành vi lách luật phải nêu trong đề các đòn bẩy mà bên được thưởng có (vd "trường được tự xét tuyển và được khuyên học sinh chuyển trường"). Không có tiền đề đó thì đừng kỳ vọng hành vi đó. Câu trả lời /ask cũng không được nói ngược với đáp án.
+
 ## Hồ sơ người học
 - Mạnh: thao tác đại số, lập phương trình; thiết kế phép đo trực tiếp; tự chuẩn hoá ký hiệu trước khi làm (20/10); phân biệt "sai sự thật" và "đúng nhưng chọn lọc".
 - Cần luyện:

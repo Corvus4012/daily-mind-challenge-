@@ -59,9 +59,8 @@
   "extra": false,
   "user_answer": "1. X: Khá 196/200=98%, Yếu 204/300=68%, Chung 400/500=80%. Y: Khá 396/400=99%, Yếu 56/100=56%, Chung 452/500=90.4%. Khá: Y > X (hoặc Y~X); Yếu: X > Y; Chung: Y > X.\n2. Tỷ lệ chung xét trung bình của toàn trường, không xét độc lập từng nhóm. Hai trường có cùng số lượng học sinh, số lượng phân bổ ra hai nhóm Khá/Yếu khác nhau, nhưng quan trọng là tổng số lượng tốt nghiệp trường Y (452) > X (400) đáng kể.\n3. (a) X: 0.98*0.5+0.68*0.5=83%; Y: 0.99*0.5+0.56*0.5=77.5%. (b) 98%w+68%(1-w)=99%w+56%(1-w) → w≈0.923; X>Y khi w<0.923. (c) Chọn Y nếu nhóm Khá, X nếu nhóm Yếu; tỷ lệ theo câu 1 đã so riêng từng nhóm nên không liên quan w.\n4. Khuyến khích gia tăng tổng số lượng học sinh đỗ nói chung thay vì chất lượng đào tạo. Trường có tỷ trọng Khá cao như Y được lợi, trường đào tạo tốt nhóm Yếu như X bị thiệt. Chỉ số thay thế: trung bình cộng tỷ lệ của từng nhóm học lực, loại bỏ yếu tố tỷ trọng.",
   "grading": "Câu 1 đạt. Câu 2 một phần: nêu phân bổ khác nhau nhưng không dùng tỉ trọng có số; 452>400 là nhắc lại kết quả. Câu 3 đạt (83/77,5; w≈0,923; Khá→Y, Yếu→X). Câu 4 một phần: chỉ số thay thế đúng (trung bình đều = chuẩn hoá w=0,5), người thiệt là trường X; thiếu hành vi cụ thể và học sinh yếu.",
-  "result": "partial",
-  "skills_missed": [
-    "incentives"
-  ],
-  "notes": "Tính và mô hình hoá theo w chắc, chỉ số thay thế hợp lệ; câu 2 giải thích bằng kết quả (452>400) thay vì trọng số 60%/20%; câu 4 chưa nêu hành vi cụ thể (chọn lọc đầu vào) và học sinh yếu chịu thiệt"
+  "result": "correct",
+  "skills_missed": [],
+  "notes": "Tính và mô hình hoá theo w chắc, chỉ số thay thế hợp lệ; câu 2 giải thích bằng kết quả (452>400) thay vì trọng số 60%/20%; câu 4 chưa nêu hành vi cụ thể (chọn lọc đầu vào) và học sinh yếu chịu thiệt",
+  "appeal": "(/discuss 31/10) Người học phản đối: câu 2 không gợi ý cần giải thích bằng tỉ trọng; câu 4 kỳ vọng 'trường hạn chế nhận HS yếu' trong khi đề (và câu trả lời /ask) không nói trường được chọn đầu vào. Session chính nhận cả hai: câu 2 → đạt (cơ cấu phân bổ là đúng cơ chế, để ngầm), câu 4 → đạt (đề thiếu tiền đề). Kết quả đổi partial → correct."
 }
