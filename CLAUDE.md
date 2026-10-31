@@ -27,6 +27,7 @@ When the user types a command, read its spec in `commands/` and run exactly that
 - `state/current.json`: today's puzzle (answer and rubric base64-encoded). `state/history.jsonl`: one line per day.
 - `state/archive/`: each served puzzle with the user's answer and grading. `state/brief.md`: latest reflect brief for the puzzle writer.
 - `state/lessons.md`: lessons for the puzzle writer and the learner profile. Read before `/restock` and `/submit`.
+- Notion "Daily Mind Challenge — Sổ bài học": the learner's own record of lessons, written at each `/submit`.
 - `pool/`: vetted puzzles waiting to be served. `logs/review.jsonl`: every vetting outcome.
 - `engine/roll.py`: base level and the daily roll. `engine/dmc.py`: pool and challenge state. `engine/metrics.py`: health.
 

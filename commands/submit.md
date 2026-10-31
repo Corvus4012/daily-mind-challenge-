@@ -23,4 +23,9 @@ Chỉ chạy khi người dùng đã viết câu trả lời. Chưa có câu tr�
    `close` lưu đề + câu trả lời + cách chấm vào `state/archive/` để bước Reflect của `/restock` chấm lại độc lập.
 6. Mẫu học tập lặp lại (lỗi xuất hiện lần 2, hoặc thế mạnh mới): cập nhật mục "Hồ sơ người học" trong `state/lessons.md`.
 7. `git add state && git commit -m "Submit challenge {date}: {result}" && git push -u origin main`
-8. Một dòng cuối: level nền hiện tại (`python3 engine/dmc.py status`) và kỹ năng sẽ được ôn lại, nếu có.
+8. Ghi một dòng vào Notion "Daily Mind Challenge — Sổ bài học" (data source `collection://b8f7bd64-4903-4170-aecf-cae2991330dc`)
+   bằng `notion-create-pages`: Nguyên tắc (= dòng "Rút ra"), Ngày, Loại = "Bài hằng ngày", Domain, Level, Kết quả,
+   Kỹ năng (nhãn tiếng Việt có sẵn), Lỗi của tôi (1 câu), Kiến thức cần nhớ (kiến thức chuyên môn / con số đáng nhớ của đề).
+   Mẫu lỗi lặp lại lần 2 trở lên: thêm hoặc cập nhật một dòng Loại = "Nguyên tắc xuyên suốt". Chấm lại sau /discuss: sửa dòng của ngày đó.
+   Notion không kết nối được thì bỏ qua bước này và ghi vào "Ghi chú hệ thống".
+9. Một dòng cuối: level nền hiện tại (`python3 engine/dmc.py status`) và kỹ năng sẽ được ôn lại, nếu có.
