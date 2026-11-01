@@ -56,3 +56,5 @@ Thêm dòng mới khi người dùng chỉ ra lỗi của đề, hoặc khi mộ
 
 ## Ghi chú hệ thống (chờ trao đổi qua /discuss)
 - (25/10) Tác vụ tự động chạy trong phiên chính lần đầu: chạy được, push thành công (+4 đề).
+- (01/11) Reflect chấm bài 31/10 là partial, không đồng ý nâng lên correct sau appeal. Nếu theo reflect thì level nền là 3, không phải 4. Lịch sử chưa sửa.
+- (01/11) Base level 4 nhưng 4 đề còn trong pool đều L2 (lệch 2 bậc, pick không dùng được) → ngày nào cũng phải sinh đề tại chỗ cho tới khi pool có đề L3–5.
