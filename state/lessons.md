@@ -50,6 +50,8 @@ Thêm dòng mới khi người dùng chỉ ra lỗi của đề, hoặc khi mộ
   - Xác nhận qua kênh độc lập lặp lỗi lần 2 (20/10, 28/10): đổi sang ký hiệu của mình thay vì bỏ hẳn ký hiệu số (tên tháng bằng chữ, năm-tháng-ngày).
   - Mạnh mới (28/10): tự khai báo quy ước ký hiệu trước khi trả lời.
   - Tự nghĩ ra tình huống giả định / phản ví dụ còn yếu (29/10 tiền thuê, 30/10 lý do miễn thi khác phải tra Google): hiểu cấu trúc lỗi nhưng tìm phản ví dụ trong thực tế thay vì dựng một trường hợp "có thể xảy ra".
+  - Thay mô hình của đề bằng mô hình "thực tế hơn" của mình (01/11: A tính n = 8 dù đề ghi một tầng 16 mục). Mẫu mới; cần thói quen đọc lại định nghĩa biến trước khi tính.
+  - Tiến bộ (01/11): thiết kế phép thử đã tự đưa chia ngẫu nhiên; còn thiếu điều kiện giữ giống nhau và ngưỡng định trước.
 - Cách phản hồi hợp: thẳng, chỉ ra cơ chế; thích được giải nghĩa nền tảng khi gặp domain lạ (đã xin bổ túc kinh tế ngày 19/10).
 
 ## Ghi chú hệ thống (chờ trao đổi qua /discuss)

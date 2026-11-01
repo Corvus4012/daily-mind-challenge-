@@ -1,0 +1,57 @@
+{
+  "date": "2026-11-01",
+  "pool_id": "20261101-d10-e6b7b5",
+  "domain_id": 10,
+  "tag": "reason",
+  "level": 4,
+  "base_level": 4,
+  "rolled_level": 4,
+  "level_mode": "core",
+  "est_minutes": 15,
+  "format": "model",
+  "skills": [
+    "nonlinearity",
+    "experiment_design",
+    "interpret_result"
+  ],
+  "challenge_md": "Một ứng dụng ngân hàng có 16 chức năng. Nhóm thiết kế cân nhắc hai cách bố trí menu:\n- **A:** một danh sách 16 mục. Màn hình chỉ hiện được 8 mục đầu; mỗi lần chọn một mục trong 9–16 phải cuộn, cộng thêm đúng **0,5 giây**.\n- **B:** hai tầng: 4 nhóm, mỗi nhóm 4 mục. Người dùng chọn nhóm, rồi chọn mục trong nhóm; cả hai tầng đều vừa một màn hình.\n\nMô hình của đề (dựa trên định luật Hick): thời gian để chọn 1 trong n mục của một tầng menu là\n**T(n) = 0,2 + 0,15 × log₂(n + 1)** giây (hệ số là giả định của đề), với log₂ là logarit cơ số 2 (log₂ 5 ≈ 2,32; log₂ 17 ≈ 4,09). Mỗi tầng menu tính một lần T riêng: A là một tầng 16 mục, B là hai tầng 4 mục; chuyển tầng không tốn thêm thời gian. Trừ câu 3b, giả sử 16 chức năng được dùng nhiều như nhau.\n\n**Câu hỏi**\n1. Tính thời gian chọn trung bình của A và của B (làm tròn 2 chữ số thập phân, ghi phép tính). Phương án nào nhanh hơn?\n2. B có ít mục mỗi màn hình hơn A tới 4 lần mà vẫn không nhanh hơn. Dùng chính công thức, so phần thời gian tăng thêm khi số mục tăng với phần cộng thêm khi có thêm một tầng, để giải thích vì sao.\n3. (a) Chi phí cuộn phải lớn hơn bao nhiêu giây thì A trở nên chậm hơn B?\n   (b) Nếu xếp 8 chức năng dùng nhiều nhất lên màn hình đầu và chúng chiếm 90% số lần dùng, thời gian trung bình của A là bao nhiêu? (B giữ nguyên.)\n4. Mô hình chỉ là dự đoán. Thiết kế một phép thử với người dùng thật để so A và B: ai dùng phương án nào và quyết định bằng cách nào, đo gì, một yếu tố phải giữ giống nhau giữa hai nhóm, và kết quả nào thì bạn chọn A.",
+  "hints": [
+    "Với A: thời gian chọn trong 16 mục, cộng thời gian cuộn nhân với tỉ lệ số lần cần cuộn. Với B: hai lần chọn trong 4 mục.",
+    "Tăng từ 4 lên 16 mục chỉ cộng thêm 0,15 × (log₂17 − log₂5). Thêm một tầng thì phải trả lại cả phần cố định 0,2 giây và thêm một lần chọn.",
+    "Câu 3a: đặt thời gian của A bằng của B rồi giải ra chi phí cuộn. Câu 4: muốn hai nhóm người dùng giống nhau ở cả những điều không đo được thì người quyết định ai dùng phương án nào không được là con người."
+  ],
+  "hints_revealed": 0,
+  "answer_key_b64": "MS4gVCgxNikgPSAwLDIgKyAwLDE1IMOXIDQsMDkg4omIIDAsODEgcy4gQTogbeG7mXQgbuG7rWEgc+G7kSBs4bqnbiBj4bqnbiBjdeG7mW4sIG7Dqm4gQSA9IDAsODEgKyAwLDUgw5cgMCw1IOKJiCAxLDA2IHMuIFQoNCkgPSAwLDIgKyAwLDE1IMOXIDIsMzIg4omIIDAsNTUgczsgQiA9IDIgw5cgMCw1NSDiiYggMSwxMCBzLiBBIG5oYW5oIGjGoW4gbeG7mXQgY2jDunQgKOKJiCAwLDAz4oCTMCwwNCBzKS4KMi4gVOG7qyA0IGzDqm4gMTYgbeG7pWMgKGfhuqVwIDQpLCB0aOG7nWkgZ2lhbiBjaOG7jW4gY2jhu4kgdMSDbmcgMCwxNSDDlyAoNCwwOSDiiJIgMiwzMikg4omIIDAsMjcgcywgdsOsIGxvZ2FyaXQgdMSDbmcgcuG6pXQgY2jhuq1tLiBUaMOqbSBt4buZdCB04bqnbmcgdGjDrCBwaOG6o2kgdHLhuqMgbOG6oWkgdG/DoG4gYuG7mSBUKDQpIOKJiCAwLDU1IHMsIGfhu5NtIHBo4bqnbiBj4buRIMSR4buLbmggMCwyIHMuIFBo4bqnbiBj4buZbmcgdGjDqm0gY+G7p2EgbeG7mXQgdOG6p25nICgwLDU1KSBs4bubbiBn4bqlcCDEkcO0aSBwaOG6p24gdMSDbmcgZG8gbmhp4buBdSBt4bulYyAoMCwyNyksIG7Dqm4gY2hpYSBuaOG7jyB0aMOgbmggbmhp4buBdSB04bqnbmcga2jDtG5nIGPDsyBs4bujaSwgZMO5IG3hu5dpIG3DoG4gaMOsbmggZ+G7jW4gaMahbi4gS+G7gyBj4bqjIGPhu5luZyAwLDI1IHMgY3Xhu5luIHRydW5nIGLDrG5oLCBBIHbhuqtuIHThu5FuIHRow6ptIMOtdCBoxqFuICjiiYgwLDUyIHNvIHbhu5tpIDAsNTUgcykuCjMuIChhKSBBID0gMCw4MSArIDAsNSDDlyBzOyBjaG8gYuG6sW5nIDEsMTA6IHMg4omIICgxLDA5NjYg4oiSIDAsODEzMSkgLyAwLDUg4omIIDAsNTcgcy4gQ2hpIHBow60gY3Xhu5luIGzhu5tuIGjGoW4ga2hv4bqjbmcgMCw1NyBzIHRow6wgQiBuaGFuaCBoxqFuLgooYikgQSA9IDAsODEgKyAwLDEwIMOXIDAsNSDiiYggMCw4NiBzLCBuaGFuaCBoxqFuIEIga2hv4bqjbmcgMCwyMyBzLiBY4bq/cCB0aGVvIHThuqduIHN14bqldCBsw6BtIGzhu6NpIHRo4bq/IGPhu6dhIEEgdMSDbmcgcsO1Lgo0LiBWw60gZOG7pSDEkeG6oXQ6IGzhuqV5IG3hu5l0IG5ow7NtIG5nxrDhu51pIGTDuW5nICh2w60gZOG7pSAyMDAgbmfGsOG7nWkpLCBnw6FuIG5n4bqrdSBuaGnDqm4gKG3DoXkgdMOtbmggYuG7kWMgdGjEg20pIDEwMCBuZ8aw4budaSBkw7luZyBBLCAxMDAgbmfGsOG7nWkgZMO5bmcgQjsgY8O5bmcgZGFuaCBzw6FjaCBuaGnhu4dtIHbhu6UgKHbDrSBk4bulIDEwIHRoYW8gdMOhYyBnaeG7kW5nIG5oYXUpLCBjw7luZyB0aGnhur90IGLhu4sgdsOgIGPDuW5nIG5ow7NtIHR14buVaS9raW5oIG5naGnhu4dtIHBow6JuIGLhu5EgxJHhu4F1IG5o4budIG5n4bqrdSBuaGnDqm47IMSRbyB0aOG7nWkgZ2lhbiBob8OgbiB0aMOgbmggbeG7l2kgbmhp4buHbSB24bulIHbDoCB04buJIGzhu4cgY2jhu41uIG5o4bqnbS4gQ2jhu41uIEEga2hpIHRo4budaSBnaWFuIHRydW5nIGLDrG5oIGPhu6dhIEEgdGjhuqVwIGjGoW4gcsO1IHLhu4d0IG3DoCB04buJIGzhu4cgY2jhu41uIG5o4bqnbSBraMO0bmcgY2FvIGjGoW4gKMSR4buLbmggdHLGsOG7m2MgbmfGsOG7oW5nLCB2w60gZOG7pSBuaGFuaCBoxqFuIMOtdCBuaOG6pXQgMCwxIHMpLiBDxaluZyBjaOG6pXAgbmjhuq1uIHRoaeG6v3Qga+G6vyDEkeG7gyBt4buXaSBuZ8aw4budaSBkw7luZyBj4bqjIGhhaSwgduG7m2kgdGjhu6kgdOG7sSBBL0IgxJHGsOG7o2MgYuG7kWMgdGjEg20u",
+  "rubric_b64": "Q8OidSAxOiDDtCB0aGVuIGNo4buRdCBsw6AgQSDiiYggMSwwNiBzIChjw7MgdMOtbmggNTAlIGzhuqduIGN14buZbikgdsOgIEIg4omIIDEsMTAgcywga+G6v3QgbHXhuq1uIEEgbmhhbmggaMahbi4gQ2jhuqVwIG5o4bqtbiBzYWkgc+G7kSBsw6BtIHRyw7JuIMKxMCwwMi4gUXXDqm4gcGjhuqduIGN14buZbiBob+G6t2MgdMOtbmggY3Xhu5luIGNobyBt4buNaSBs4bqnbiDihpIgbeG7mXQgcGjhuqduLgpDw6J1IDIgxJHhuqF0IChjaOG6pXAgbmjhuq1uIHNvIGPDsyBob+G6t2Mga2jDtG5nIGPhu5luZyBwaOG6p24gY3Xhu5luKTogc28gxJHGsOG7o2MgYuG6sW5nIHPhu5EgcGjhuqduIHTEg25nIGRvIHPhu5EgbeG7pWMgKOKJiDAsMjcgcykgduG7m2kgcGjhuqduIGPhu5luZyB0aMOqbSBj4bunYSBt4buZdCB04bqnbmcgKOKJiDAsNTUgcywgZ+G7k20gMCwyIHMgY+G7kSDEkeG7i25oKS4gTsOzaSAibG9nYXJpdCB0xINuZyBjaOG6rW0iIG3DoCBraMO0bmcgY8OzIHPhu5Eg4oaSIG3hu5l0IHBo4bqnbi4KQ8OidSAzOiDDtCB0aGVuIGNo4buRdCAoYSkg4omIIDAsNTcgcyAoY2jhuqVwIG5o4bqtbiAwLDU14oCTMCw2KSB2w6AgKGIpIOKJiCAwLDg2IHMuIMSQ4bqhdDogY+G6oyBoYWkuIE3hu5l0IHBo4bqnbjogbeG7mXQgdHJvbmcgaGFpLgpDw6J1IDQ6IMO0IHRoZW4gY2jhu5F0IGzDoCAoaSkgZ8OhbiBuZ+G6q3Ugbmhpw6puIChob+G6t2MgbeG7l2kgbmfGsOG7nWkgZMO5bmcgY+G6oyBoYWkgduG7m2kgdGjhu6kgdOG7sSBuZ+G6q3Ugbmhpw6puKSwgKGlpKSB0aMaw4bubYyDEkW8gxJHhu4tuaCB0csaw4bubYyAodGjhu51pIGdpYW4sIHThu4kgbOG7hyBuaOG6p20pLCAoaWlpKSBt4buZdCB54bq/dSB04buRIGdp4buvIGdp4buRbmcgbmhhdSAobmhp4buHbSB24bulLCB0aGnhur90IGLhu4spLCAoaXYpIHRpw6p1IGNow60gY2jhu41uIEEgxJHhuqF0IMSRxrDhu6NjLiDEkOG6oXQ6IOKJpSAzLzQgZ+G7k20gKGkpLiBN4buZdCBwaOG6p246IHRoaeG6v3UgKGkpIGhv4bq3YyBjaOG7iSAyLzQuCkLhuqt5IGNow61uaDogbmdoxKkgw610IG3hu6VjIG3hu5dpIG3DoG4gaMOsbmggdGjDrCBsdcO0biBuaGFuaCBoxqFuOyBjw6J1IDQgY2hvIG5nxrDhu51pIGTDuW5nIHThu7EgY2jhu41uIHBoxrDGoW5nIMOhbi4KR+G7mXA6IGNvcnJlY3QgPSBt4buNaSBjw6J1IMSR4bqhdCwgaG/hurdjIDMgxJHhuqF0ICsgMSBt4buZdCBwaOG6p247IHBhcnRpYWwgPSAx4oCTMyBjw6J1IMSR4bqhdDsgaW5jb3JyZWN0ID0ga2jDtG5nIGPDonUgbsOgbyDEkeG6oXQu",
+  "review": {
+    "solver_model": "opus",
+    "first_solve_match": true,
+    "revised": true,
+    "issues": [
+      {
+        "type": "ambiguity",
+        "severity": 2,
+        "detail": "'n mục hiện trên màn hình' đọc được thành T(8) cho A"
+      },
+      {
+        "type": "ambiguity",
+        "severity": 1,
+        "detail": "chi phí cuộn tính mỗi lần chọn hay mỗi thao tác"
+      },
+      {
+        "type": "answer_error",
+        "severity": 1,
+        "detail": "câu 2 bỏ qua phần cuộn khi so"
+      }
+    ]
+  },
+  "status": "submitted",
+  "extra": false,
+  "user_answer": "1. A chia 2 phần: 8 mục không cuộn (n=8) T=0.68s; 8 mục phải cuộn T'=0.68+0.5=1.18s; TB=(1.18+0.68)/2=0.93s. B: T1=0.55, T2=0.55, tổng 1.1s. So sánh: A > B.\n2. (Bỏ qua cuộn.) Giả dụ n=4: tăng lên 8 mục thì T(8)-T(4)=0.13s; chia 2 tầng (2 nhóm, 4 mục) thì [T(2)+T(4)]-T(4)=0.44s. Thời gian mỗi tầng độc lập, cộng lại tăng nhiều hơn.\n3. (a) (2*0.68+x)/2 > 1.1 → x > 0.84s. (b) 0.1*T' + 0.9*T = 0.73s.\n4. Chia ngẫu nhiên 50/50. Đo tốc độ chọn của nhóm tính năng dùng nhiều nhất. Giữ giống nhau: nhóm tính năng dùng nhiều nhất nằm ở vị trí tối ưu của mỗi phương án. Chọn A khi kết quả đo của A tốt hơn B.",
+  "grading": "Câu 1 một phần: B đúng 1,10; A dùng T(8) trái tiền đề 'A là một tầng 16 mục' (đúng 1,06), kết luận A nhanh hơn vẫn đúng. Câu 2 đạt: ví dụ riêng nhưng đúng cơ chế, có số. Câu 3 đạt theo lỗi dây chuyền: phương pháp đúng trên số của câu 1 (đáp án đúng 0,57 và 0,86). Câu 4 một phần: có ngẫu nhiên và thước đo; điều kiện giữ giống nhau là tối ưu từng phương án chứ không phải cùng nhiệm vụ/thiết bị; tiêu chí chọn A chưa định trước.",
+  "result": "partial",
+  "skills_missed": [
+    "experiment_design"
+  ],
+  "notes": "Thay mô hình đề (A một tầng 16 mục) bằng mô hình riêng n=8, kéo lệch câu 1 và 3; phương pháp câu 2–3 đúng và nhất quán; câu 4 đã có chia ngẫu nhiên (tiến bộ) nhưng thiếu điều kiện giống nhau và ngưỡng định trước"
+}
