@@ -1,0 +1,45 @@
+{
+  "id": "20261101-d08-a23a6e",
+  "created": "2026-11-01",
+  "domain_id": 8,
+  "level": 2,
+  "tag": "reason",
+  "format": "model",
+  "skills": [
+    "unit_choice",
+    "hidden_premise",
+    "estimation"
+  ],
+  "est_minutes": 13,
+  "challenge_md": "Một công ty tài chính quảng cáo khoản vay tiêu dùng: *\"Vay 12 triệu, lãi chỉ 1%/tháng!\"* Hợp đồng ghi (giả định của đề): lãi tính **trên số tiền vay ban đầu** (lãi phẳng), trả góp đều 12 tháng; mỗi tháng trả 1 triệu tiền gốc và 120.000 đ tiền lãi, tổng 1.120.000 đ.\n\nTrong đề này, **lãi trên dư nợ** nghĩa là lãi mỗi tháng tính trên số tiền gốc bạn **còn đang nợ** ở đầu tháng đó.\n\n**Câu hỏi**\n1. Ghi rõ: tổng tiền lãi phải trả cả năm là bao nhiêu? Đầu tháng 1 bạn nợ bao nhiêu gốc, đầu tháng 12 nợ bao nhiêu gốc? Trung bình 12 tháng, bạn đang nợ bao nhiêu gốc?\n2. Dùng số dư nợ trung bình ở câu 1, ước lượng lãi suất **trên dư nợ** mỗi tháng của khoản vay này. So với con số 1% trong quảng cáo.\n3. Vì sao cùng một số tiền lãi mỗi tháng (120.000 đ) mà \"1%\" lại gây hiểu nhầm? Nói rõ mẫu số của con số 1% là gì và mẫu số đúng nên là gì.\n4. Một ngân hàng khác cho vay 12 triệu, lãi 1,5%/tháng **trên dư nợ**, trả gốc đều 1 triệu mỗi tháng. Tính tổng tiền lãi của khoản này và cho biết nên chọn khoản nào nếu chỉ xét chi phí.",
+  "hints": [
+    "Gốc giảm 1 triệu mỗi tháng: 12, 11, ..., 1 triệu. Trung bình của dãy đó là bao nhiêu?",
+    "Lãi suất trên dư nợ ≈ lãi mỗi tháng ÷ số gốc đang nợ trung bình.",
+    "Câu 4: lãi tháng k = 1,5% × gốc còn nợ đầu tháng k. Cộng 12 tháng lại, dùng trung bình của dãy gốc."
+  ],
+  "claims": [],
+  "review": {
+    "solver_model": "opus",
+    "first_solve_match": true,
+    "revised": false,
+    "issues": [
+      {
+        "type": "ambiguity",
+        "severity": 2,
+        "detail": "'trung bình 12 tháng' đọc được 6,5 hoặc 6 triệu; rubric đã nhận cả hai"
+      },
+      {
+        "type": "answer_error",
+        "severity": 1,
+        "detail": "nới khoảng chấp nhận để tính IRR 1,79%"
+      },
+      {
+        "type": "level_mismatch",
+        "severity": 1,
+        "detail": "phản biện chấm L2"
+      }
+    ]
+  },
+  "answer_b64": "MS4gVOG7lW5nIGzDo2k6IDEyIMOXIDEyMC4wMDAgPSAxLjQ0MC4wMDAgxJEuIMSQ4bqndSB0aMOhbmcgMSBu4bujIDEyIHRyaeG7h3UsIMSR4bqndSB0aMOhbmcgMTIgbuG7oyAxIHRyaeG7h3UuIETGsCBu4bujIHRydW5nIGLDrG5oID0gKDEyICsgMTEgKyAuLi4gKyAxKS8xMiA9IDc4LzEyID0gNiw1IHRyaeG7h3UuCjIuIDEyMC4wMDAgLyA2LjUwMC4wMDAg4omIIDEsODUlL3Row6FuZyAoY2jhuqVwIG5o4bqtbiAxLDjigJMxLDklOyB0w61uaCBjaMOtbmggeMOhYyB0aGVvIGTDsm5nIHRp4buBbiDiiYggMSw3OSUpLiBH4bqnbiBn4bqlcCDEkcO0aSBjb24gc+G7kSAxJSB0cm9uZyBxdeG6o25nIGPDoW8uCjMuIENvbiBz4buRIDElIGzhuqV5IG3huqt1IHPhu5EgbMOgIDEyIHRyaeG7h3UgYmFuIMSR4bqndSwgbmjGsG5nIGLhuqFuIGNo4buJIG7hu6MgxJHhu6cgMTIgdHJp4buHdSB0cm9uZyB0aMOhbmcgxJHhuqd1OyBjw6FjIHRow6FuZyBzYXUgYuG6oW4gxJHDoyB0cuG6oyBi4bubdCBn4buRYyBtw6AgduG6q24gdHLhuqMgbMOjaSBuaMawIHRyw6puIDEyIHRyaeG7h3UuIE3huqt1IHPhu5EgxJHDum5nIGPhu6dhIGNoaSBwaMOtIHZheSBsw6Agc+G7kSB0aeG7gW4gYuG6oW4gdGjhu7FjIHPhu7EgxJFhbmcgZ2nhu68gY+G7p2EgbmfGsOG7nWkgY2hvIHZheSwgdOG7qWMgZMawIG7hu6MgKHRydW5nIGLDrG5oIDYsNSB0cmnhu4d1KSwgbsOqbiBjaGkgcGjDrSB0aOG6rXQg4omIIDEsODUlLgo0LiBMw6NpID0gMSw1JSDDlyAoMTIgKyAxMSArIC4uLiArIDEpIHRyaeG7h3UgPSAxLDUlIMOXIDc4IHRyaeG7h3UgPSAxLjE3MC4wMDAgxJEuIFRo4bqlcCBoxqFuIDEuNDQwLjAwMCDEkSwgbsOqbiBraG/huqNuICIxLDUlIHRyw6puIGTGsCBu4bujIiBy4bq7IGjGoW4ga2hv4bqjbiAiMSUgbMOjaSBwaOG6s25nIiBraG/huqNuZyAyNzAuMDAwIMSRLCBkw7kgY29uIHPhu5EgcXXhuqNuZyBjw6FvIGNhbyBoxqFuLg==",
+  "rubric_b64": "Q8OidSAxOiDDtCB0aGVuIGNo4buRdCBsw6AgMS40NDAuMDAwIMSRIHbDoCBkxrAgbuG7oyB0cnVuZyBiw6xuaCA2LDUgdHJp4buHdSAoY2jhuqVwIG5o4bqtbiA2IHRyaeG7h3UgbuG6v3UgbsOzaSByw7UgbMOgIHRydW5nIGLDrG5oIMSR4bqndeKAk2N14buRaSBr4buzKTsgw7QgdGjGsOG7nW5nIGzDoCAxMiB0cmnhu4d1IHbDoCAxIHRyaeG7h3UuIMOBcCBjaHXhuqluIGNo4bqlbSBi4bqjbmcuCkPDonUgMiDEkeG6oXQ6IOKJiCAxLDc14oCTMSw5JS90aMOhbmcgKGhv4bq3YyDiiYggMiUgbuG6v3UgY8OidSAxIGTDuW5nIHRydW5nIGLDrG5oIMSR4bqndeKAk2N14buRaSBr4buzIDYgdHJp4buHdSB2w6AgbsOzaSByw7UgY8OhY2ggdMOtbmgpICsgc28gduG7m2kgMSUgKGfhuqduIGfhuqVwIMSRw7RpKS4gTeG7mXQgcGjhuqduOiDEkcO6bmcgY8OhY2ggbcOgIHNhaSBz4buRLCBob+G6t2MgdGhp4bq/dSBzbyBzw6FuaC4gTOG7l2kgZMOieSBjaHV54buBbiB04burIGPDonUgMTogY2jhuqVtIHRoZW8gcGjGsMahbmcgcGjDoXAuCkPDonUgMyDEkeG6oXQ6IG7Ds2kgcsO1IG3huqt1IHPhu5EgY+G7p2EgMSUgbMOgIDEyIHRyaeG7h3UgYmFuIMSR4bqndSB2w6AgbeG6q3Ugc+G7kSDEkcO6bmcgbMOgIGTGsCBu4bujLCBjw7Mgc+G7kS4gTmjDo24gY2h1bmcg4oaSIG3hu5l0IHBo4bqnbi4KQ8OidSA0IMSR4bqhdDogMS4xNzAuMDAwIMSRICsgY2jhu41uIGtob+G6o24gMSw1JSB0csOqbiBkxrAgbuG7oy4gTeG7mXQgcGjhuqduOiDEkcO6bmcgbeG7mXQgdHJvbmcgaGFpLgpC4bqreSBjaMOtbmg6IHNvIDElIHbhu5tpIDEsNSUgdHLhu7FjIHRp4bq/cCBtw6Aga2jDtG5nIHF1eSB24buBIGPDuW5nIG3hu5l0IG3huqt1IHPhu5EuCkfhu5lwOiBjb3JyZWN0ID0gbeG7jWkgY8OidSDEkeG6oXQsIGhv4bq3YyAzIMSR4bqhdCArIDEgbeG7mXQgcGjhuqduOyBwYXJ0aWFsID0gMeKAkzMgY8OidSDEkeG6oXQ7IGluY29ycmVjdCA9IGtow7RuZyBjw6J1IG7DoG8gxJHhuqF0Lg=="
+}
