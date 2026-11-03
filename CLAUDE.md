@@ -1,7 +1,11 @@
 # Daily Mind Challenge
 
 A daily thinking challenge for one user: 1 puzzle a day, 5–15 minutes, no pressure.
-Puzzles are generated and independently vetted ahead of time (`/restock`), then served instantly (`/daily`).
+Puzzles are generated and independently vetted ahead of time (`/restock`), then served instantly.
+**Daily use happens in the web app** (`docs/`, GitHub Pages): it serves puzzles and hints with code, Gemini grades answers,
+and every change is committed to this repo through the GitHub API. Claude runs once a week (`commands/weekly.md`):
+reflect and re-grade Gemini's work, answer the inbox, sync Notion, restock.
+The chat commands below still work in a Claude session as a fallback.
 When the user types a command, read its spec in `commands/` and run exactly that command, nothing extra.
 
 ## Commands
@@ -12,6 +16,7 @@ When the user types a command, read its spec in `commands/` and run exactly that
 | `/submit` | `commands/submit.md` | Grade the user's answer, give feedback, log the result |
 | `/ask` | `commands/ask.md` | Clarify how to read the open puzzle; may decline if it would leak the solution |
 | `/discuss` | `commands/discuss.md` | Discuss a suggestion about the system; may decline with reasons |
+| `/weekly` | `commands/weekly.md` | The weekly Claude run: reflect, inbox, Notion, restock |
 | `/restock [n]` | `commands/restock.md` | Generate n puzzles, blind-solve and review each with a fresh subagent, add the good ones to the pool |
 
 ## Rules
@@ -28,6 +33,7 @@ When the user types a command, read its spec in `commands/` and run exactly that
 - `state/archive/`: each served puzzle with the user's answer and grading. `state/brief.md`: latest reflect brief for the puzzle writer.
 - `state/lessons.md`: lessons for the puzzle writer and the learner profile. Read before `/restock` and `/submit`.
 - Notion "Daily Mind Challenge — Sổ bài học": the learner's own record of lessons, written at each `/submit`.
+- `docs/`: the web app (`app.js` mirrors `engine/` pick/hint/close; keep formats in sync). `state/inbox.md`: /discuss notes from the web, answered weekly.
 - `pool/`: vetted puzzles waiting to be served. `logs/review.jsonl`: every vetting outcome.
 - `engine/roll.py`: base level and the daily roll. `engine/dmc.py`: pool and challenge state. `engine/metrics.py`: health.
 

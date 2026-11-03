@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Mind Challenge</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js"></script>
+</head>
+<body>
+<header>
+  <h1>Daily Mind Challenge</h1>
+  <div id="status" class="muted">Đang tải…</div>
+  <nav>
+    <button data-tab="today" class="tab active">Hôm nay</button>
+    <button data-tab="talk" class="tab">Trao đổi</button>
+    <button data-tab="settings" class="tab">Cài đặt</button>
+  </nav>
+</header>
+
+<main>
+  <section id="tab-today">
+    <div id="today"></div>
+  </section>
+
+  <section id="tab-talk" hidden>
+    <h2>Hỏi về đề đang mở</h2>
+    <p class="muted">Hỏi cách hiểu câu chữ hoặc hình thức trả lời. Câu hỏi làm lộ hướng giải sẽ bị từ chối. Không tính là gợi ý.</p>
+    <textarea id="ask-text" rows="3" placeholder="Ví dụ: câu 2 hỏi theo điểm phần trăm hay tỉ lệ?"></textarea>
+    <button id="ask-btn">Hỏi</button>
+    <div id="ask-out" class="card" hidden></div>
+
+    <h2>Góp ý hệ thống (/discuss)</h2>
+    <p class="muted">Góp ý về cách chấm, dạng đề, độ khó. Lần chạy hằng tuần sẽ đọc và trả lời ngay dưới đây.</p>
+    <textarea id="discuss-text" rows="4"></textarea>
+    <button id="discuss-btn">Gửi góp ý</button>
+    <div id="inbox" class="card"></div>
+  </section>
+
+  <section id="tab-settings" hidden>
+    <h2>Cài đặt</h2>
+    <p class="muted">Lưu trên trình duyệt của thiết bị này. Mỗi thiết bị nhập một lần.</p>
+    <label>GitHub token (fine-grained, quyền Contents: Read and write trên repo này)
+      <input id="cfg-gh" type="password" autocomplete="off"></label>
+    <label>Gemini API key
+      <input id="cfg-gemini" type="password" autocomplete="off"></label>
+    <label>Gemini model
+      <input id="cfg-model" type="text" placeholder="gemini-flash-latest"></label>
+    <button id="cfg-save">Lưu</button>
+    <span id="cfg-msg" class="muted"></span>
+  </section>
+</main>
+
+<div id="toast" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>

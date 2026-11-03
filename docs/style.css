@@ -1,0 +1,39 @@
+:root {
+  --bg: #faf8f4; --fg: #1f1d1a; --muted: #6b665e; --card: #ffffff; --line: #e4dfd6;
+  --accent: #2f5d8a; --accent-fg: #ffffff; --ok: #2e7d4f; --warn: #a66a00; --bad: #b3261e;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #171614; --fg: #ece8e1; --muted: #a39d93; --card: #22201d; --line: #3a3732;
+    --accent: #7fb0e0; --accent-fg: #10161c; --ok: #6cc28f; --warn: #e0b04f; --bad: #f08a80;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+header, main { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+header { padding-top: 16px; }
+h1 { font-size: 1.3rem; margin: 0 0 4px; }
+h2 { font-size: 1.1rem; margin: 24px 0 8px; }
+nav { display: flex; gap: 8px; margin: 12px 0; flex-wrap: wrap; }
+.tab { background: transparent; color: var(--fg); border: 1px solid var(--line); }
+.tab.active { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
+button { background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 8px;
+  padding: 10px 16px; font: inherit; cursor: pointer; min-height: 44px; }
+button.secondary { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+button:disabled { opacity: .5; cursor: wait; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; margin: 12px 0; overflow-wrap: anywhere; }
+.card table { border-collapse: collapse; display: block; overflow-x: auto; }
+.card th, .card td { border: 1px solid var(--line); padding: 4px 8px; }
+.meta { color: var(--muted); font-size: .9rem; }
+.muted { color: var(--muted); font-size: .9rem; }
+.hint { border-left: 3px solid var(--warn); padding-left: 12px; margin: 8px 0; }
+textarea, input { width: 100%; font: inherit; color: var(--fg); background: var(--card);
+  border: 1px solid var(--line); border-radius: 8px; padding: 10px; margin: 6px 0; }
+label { display: block; margin: 12px 0; }
+.verdict { font-weight: 600; }
+.v-dat { color: var(--ok); } .v-mot { color: var(--warn); } .v-chua { color: var(--bad); }
+blockquote { margin: 8px 0; padding: 4px 12px; border-left: 3px solid var(--accent); color: var(--fg); }
+#toast { position: fixed; left: 16px; right: 16px; bottom: 16px; max-width: 728px; margin: 0 auto;
+  background: var(--fg); color: var(--bg); padding: 12px 16px; border-radius: 8px; }
