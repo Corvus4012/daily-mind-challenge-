@@ -40,6 +40,7 @@ def main():
         for d in ("engine", "state"):
             shutil.copytree(REPO / d, tmp / d, ignore=shutil.ignore_patterns("__pycache__"))
         (tmp / "state" / "current.json").unlink(missing_ok=True)
+        shutil.rmtree(tmp / "state" / "archive", ignore_errors=True)
 
         plan = json.loads(dmc(tmp, "plan", "3").stdout)
         print("plan:", [(s["domain_id"], s["level"], s["tag"], s["target_skill"]) for s in plan["slots"]])
