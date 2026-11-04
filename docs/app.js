@@ -17,7 +17,8 @@ const WARMUP_DAYS = 3, WINDOW = 5, REVIEW_DUE_AFTER_DAYS = 2;
 const cfg = {
   get gh() { return localStorage.getItem("dmc.gh") || ""; },
   get gemini() { return localStorage.getItem("dmc.gemini") || ""; },
-  get model() { return localStorage.getItem("dmc.model") || "gemini-flash-latest"; },
+  // Comma-separated: tried in order; an overloaded or rate-limited model falls through to the next one.
+  get models() { return (localStorage.getItem("dmc.model") || "gemini-flash-latest, gemini-flash-lite-latest").split(",").map((m) => m.trim()).filter(Boolean); },
 };
 
 // ---------- small helpers ----------
@@ -237,20 +238,29 @@ async function closeChallenge(cur, g, archiveExtra) {
 }
 
 // ---------- Gemini ----------
+// Returns {data, model}. Tries each configured model in order; moves on when one is overloaded (429/5xx).
 async function gemini(system, user, schema) {
   if (!cfg.gemini) throw new Error("Chưa nhập Gemini API key (tab Cài đặt).");
-  const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(cfg.model)}:generateContent`, {
-    method: "POST", headers: {"Content-Type": "application/json", "x-goog-api-key": cfg.gemini},
-    body: JSON.stringify({
-      systemInstruction: {parts: [{text: system}]},
-      contents: [{role: "user", parts: [{text: user}]}],
-      generationConfig: {temperature: 0.2, responseMimeType: "application/json", responseSchema: schema},
-    }),
-  });
-  if (!r.ok) throw new Error(`Gemini ${r.status}: ${(await r.text()).slice(0, 300)}`);
-  const d = await r.json();
-  const text = d.candidates?.[0]?.content?.parts?.map((p) => p.text || "").join("") || "";
-  return JSON.parse(text);
+  let lastErr;
+  for (const model of cfg.models) {
+    const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`, {
+      method: "POST", headers: {"Content-Type": "application/json", "x-goog-api-key": cfg.gemini},
+      body: JSON.stringify({
+        systemInstruction: {parts: [{text: system}]},
+        contents: [{role: "user", parts: [{text: user}]}],
+        generationConfig: {temperature: 0.2, responseMimeType: "application/json", responseSchema: schema},
+      }),
+    });
+    if (!r.ok) {
+      lastErr = new Error(`Gemini ${model} ${r.status}: ${(await r.text()).slice(0, 200)}`);
+      if (r.status === 429 || r.status >= 500) { toast(`${model} đang quá tải, thử model tiếp theo…`); continue; }
+      throw lastErr;
+    }
+    const d = await r.json();
+    const text = d.candidates?.[0]?.content?.parts?.map((p) => p.text || "").join("") || "";
+    return {data: JSON.parse(text), model};
+  }
+  throw lastErr || new Error("Chưa cấu hình Gemini model.");
 }
 
 const GRADER_RULES = `Bạn là người chấm bài cho "Daily Mind Challenge", một bài tư duy mỗi ngày. Viết tiếng Việt, thẳng, cụ thể, không phán xét.
@@ -284,17 +294,17 @@ async function submit() {
   const lessons = (await readText("state/lessons.md")) || "";
   const profile = (lessons.split("## Hồ sơ người học")[1] || "").split("## Ghi chú hệ thống")[0].trim();
   toast("Đang chấm…", 20000);
-  const g = await gemini(GRADER_RULES, [
+  const {data: g, model} = await gemini(GRADER_RULES, [
     `ĐỀ (domain ${DOMAINS[cur.domain_id]}, level ${cur.level}, đã mở ${cur.hints_revealed} gợi ý):\n${cur.challenge_md}`,
     `ĐÁP ÁN:\n${b64dec(cur.answer_key_b64)}`, `RUBRIC:\n${b64dec(cur.rubric_b64)}`,
     `KỸ NĂNG CỦA ĐỀ: ${(cur.skills || []).join(", ")}`, `HỒ SƠ NGƯỜI HỌC:\n${profile}`,
     `CÂU TRẢ LỜI CỦA NGƯỜI HỌC:\n${answer}`].join("\n\n"), GRADE_SCHEMA);
   g.skills_missed = (g.skills_missed || []).filter((s) => (cur.skills || []).includes(s));
   const grading = g.questions.map((q) => `${q.label}: ${q.verdict} — ${q.comment}`).join("\n");
-  await closeChallenge(cur, g, {user_answer: answer, grading, feedback: g, grader: `gemini:${cfg.model}`});
+  await closeChallenge(cur, g, {user_answer: answer, grading, feedback: {...g, model}, grader: `gemini:${model}`});
   localStorage.removeItem(`dmc.draft.${cur.pool_id}`);
   await refresh();
-  S.cur._feedback_html = feedbackHtml(g, cur);
+  S.cur._feedback_html = feedbackHtml({...g, model}, cur);
   renderToday();
 }
 
@@ -304,7 +314,7 @@ function feedbackHtml(g, cur) {
     ${md(q.comment)}${q.explicit_version ? `<blockquote>${md("**Đủ ý thì viết thế này:** " + q.explicit_version)}</blockquote>` : ""}`).join("");
   return `<div class="card"><p><b>${esc(RESULT_LABEL[g.result] || g.result)}</b> · ${cur.hints_revealed || 0} gợi ý. ${esc(g.headline)}</p>
     ${qs}<p><b>Rút ra:</b> ${esc(g.takeaway)}</p>
-    <p class="muted">Chấm bởi ${esc(cfg.model)}. Lần chạy hằng tuần sẽ chấm lại độc lập; chỗ nào khác sẽ được đưa ra bàn.</p></div>`;
+    <p class="muted">Chấm bởi ${esc(g.model || "Gemini")}. Lần chạy hằng tuần sẽ chấm lại độc lập; chỗ nào khác sẽ được đưa ra bàn.</p></div>`;
 }
 async function loadFeedback(c) {
   const a = await readJSON(`state/archive/${c.date}${c.extra ? "-extra" : ""}.json`).catch(() => null);
@@ -336,7 +346,7 @@ async function ask() {
   if (!q) return;
   const cur = await readJSON("state/current.json");
   if (!cur || cur.status !== "open") throw new Error("Không có đề đang mở.");
-  const r = await gemini(ASK_RULES, `ĐỀ:\n${cur.challenge_md}\n\nCÂU HỎI:\n${q}`, {type: "object",
+  const {data: r} = await gemini(ASK_RULES, `ĐỀ:\n${cur.challenge_md}\n\nCÂU HỎI:\n${q}`, {type: "object",
     properties: {answer: {type: "string"}, declined: {type: "boolean"}, wording_issue: {type: "boolean"}}, required: ["answer", "declined", "wording_issue"]});
   $("#ask-out").hidden = false; $("#ask-out").innerHTML = md(r.answer);
   if (r.wording_issue) await appendInbox(`**[Câu chữ mơ hồ — đề ${cur.date}]** ${q}\n\n> ${r.answer.replace(/\n/g, "\n> ")}`);
