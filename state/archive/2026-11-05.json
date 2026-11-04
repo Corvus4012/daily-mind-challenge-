@@ -1,0 +1,95 @@
+{
+  "date": "2026-11-05",
+  "pool_id": "20261101-d06-daaf5f",
+  "domain_id": 6,
+  "tag": "reason",
+  "level": 4,
+  "base_level": 4,
+  "rolled_level": 4,
+  "level_mode": "core",
+  "est_minutes": 15,
+  "format": "model",
+  "skills": [
+    "conditional_prob",
+    "incentives",
+    "equilibrium"
+  ],
+  "challenge_md": "Một công ty đọc thư giới thiệu của sinh viên. Thư chỉ dùng một trong ba từ: **\"xuất sắc\"**, **\"tốt\"**, **\"được\"**. Số liệu và mô hình là giả định của đề:\n- Sinh viên có ba loại: Giỏi 30%, Khá 50%, Trung bình 20%.\n- Người viết thư **thật thà** dùng: Giỏi → \"xuất sắc\", Khá → \"tốt\", Trung bình → \"được\".\n- Người viết **thổi phồng** nâng một bậc: Khá → \"xuất sắc\", Trung bình → \"tốt\"; Giỏi vẫn là \"xuất sắc\".\n- Tỉ lệ người viết thổi phồng là q (từ 0 đến 1), không phụ thuộc loại sinh viên.\n- Công ty luôn nhận thư \"xuất sắc\", không nhận thư \"được\", và nhận thư \"tốt\" chỉ khi trong số các thư \"tốt\", ít nhất 80% là sinh viên Khá.\n\n**Câu hỏi**\n1. Với q = 0 và q = 0,5, tính: trong số thư \"xuất sắc\", bao nhiêu phần là sinh viên Giỏi; trong số thư \"tốt\", bao nhiêu phần là sinh viên Khá (ghi phép tính).\n2. Tìm giá trị q lớn nhất để thư \"tốt\" vẫn được nhận.\n3. Khi q vượt ngưỡng ở câu 2, nhóm sinh viên nào (theo loại sinh viên và kiểu người viết) bị thiệt đầu tiên? Người viết thư thật thà khi đó có lý do gì để chuyển sang thổi phồng? Nếu cuối cùng mọi người đều thổi phồng (q = 1), từ \"xuất sắc\" và \"tốt\" thực chất mang nghĩa gì (dùng tỉ lệ để trả lời)?\n4. Đề xuất một thay đổi trong **cách viết thư** (không dựa vào lòng tốt của người viết) để từ ngữ giữ được nghĩa, và nói nó chặn cơ chế ở câu 3 như thế nào.",
+  "hints": [
+    "Mỗi từ được dùng bởi những nhóm nào? Viết tỉ trọng của từng nhóm trong số thư mang từ đó, theo q.",
+    "Thư \"tốt\" gồm Khá được viết thật thà, 0,5(1 − q), và Trung bình được thổi phồng, 0,2q. Đặt tỉ lệ Khá ≥ 0,8 rồi giải q.",
+    "Câu 3: ai có thư \"tốt\" mà là Khá thật? Câu 4: một từ giữ nghĩa khi người viết không thể dùng nó cho tất cả mọi người."
+  ],
+  "hints_revealed": 3,
+  "answer_key_b64": "MS4gIlh14bqldCBz4bqvYyIgZ+G7k20gR2nhu49pICgwLDMpICsgS2jDoSDEkcaw4bujYyB0aOG7lWkgcGjhu5NuZyAoMCw1cSkuIHEgPSAwOiBHaeG7j2kgPSAwLDMvMCwzID0gMTAwJS4gcSA9IDAsNTogMCwzLygwLDMgKyAwLDI1KSA9IDAsMy8wLDU1IOKJiCA1NCw1JS4gIlThu5F0IiBn4buTbSBLaMOhIHRo4bqtdCB0aMOgIDAsNSgxIOKIkiBxKSArIFRydW5nIGLDrG5oIMSRxrDhu6NjIHRo4buVaSBwaOG7k25nIDAsMnEuIHEgPSAwOiAxMDAlIEtow6EuIHEgPSAwLDU6IDAsMjUvKDAsMjUgKyAwLDEpID0gMCwyNS8wLDM1IOKJiCA3MSw0JS4KMi4gMCw1KDEg4oiSIHEpLygwLDUoMSDiiJIgcSkgKyAwLDJxKSDiiaUgMCw4IOKHlCAwLDUg4oiSIDAsNXEg4omlIDAsNCDiiJIgMCwyNHEg4oeUIDAsMSDiiaUgMCwyNnEg4oeUIHEg4omkIDAsMS8wLDI2ID0gNS8xMyDiiYggMCwzODUuIFbhuq15IHEgbOG7m24gbmjhuqV0ID0gNS8xMyDiiYggMzgsNSUgKHThuqFpIMSRw7puZyA1LzEzIHThu4kgbOG7hyBi4bqxbmcgODAlLCB24bqrbiDEkcaw4bujYyBuaOG6rW4pLgozLiBOZ8aw4budaSB0aGnhu4d0IMSR4bqndSB0acOqbjogc2luaCB2acOqbiBLaMOhIGPDsyBuZ8aw4budaSB2aeG6v3QgdGjhuq10IHRow6AuIEjhu40gbmjhuq1uIHRoxrAgInThu5F0IiwgbcOgIHRoxrAgInThu5F0IiBraMO0bmcgY8OybiDEkcaw4bujYyBuaOG6rW4sIHRyb25nIGtoaSBzaW5oIHZpw6puIEtow6EgY8OzIG5nxrDhu51pIHZp4bq/dCB0aOG7lWkgcGjhu5NuZyBs4bqhaSDEkcaw4bujYyAieHXhuqV0IHPhuq9jIi4gTmfGsOG7nWkgdmnhur90IHRo4bqtdCB0aMOgIHRo4bqleSBjaMOtbmggc+G7sSB0aOG6rXQgdGjDoCBsw6BtIGjhuqFpIHNpbmggdmnDqm4gY+G7p2EgbcOsbmgsIG7Dqm4gY8OzIGzDvSBkbyBjaHV54buDbiBzYW5nIHRo4buVaSBwaOG7k25nOyBt4buXaSBuZ8aw4budaSBjaHV54buDbiBs4bqhaSBsw6BtIHEgdMSDbmcsIMSR4bqpeSBo4buHIHRo4buRbmcgdOG7m2kgcSA9IDEuIEtoaSBxID0gMTogInh14bqldCBz4bqvYyIgPSBHaeG7j2kgaG/hurdjIEtow6EsIGNo4buJIDAsMy8wLDggPSAzNyw1JSBsw6AgR2nhu49pOyAidOG7kXQiID0gMTAwJSBUcnVuZyBiw6xuaDsgIsSRxrDhu6NjIiBraMO0bmcgYWkgZMO5bmcuIFThu6sgbmfhu68gdHLGsOG7o3QgbmdoxKlhIHh14buRbmcgbeG7mXQgYuG6rWM6ICJ04buRdCIgdGjhu7FjIGNo4bqldCBuZ2jEqWEgbMOgICJ0cnVuZyBiw6xuaCIuCjQuIFbDrSBk4bulIMSR4bqhdDogYnXhu5ljIHjhur9wIGjhuqFuZyB0xrDGoW5nIMSR4buRaSBjw7MgZ2nhu5tpIGjhuqFuICgidGh14buZYyB0b3AgMTAlIHRyb25nIHPhu5Egc2luaCB2acOqbiB0w7RpIHThu6tuZyBk4bqheSIsIG3hu5dpIG5nxrDhu51pIHZp4bq/dCBjaOG7iSDEkcaw4bujYyBkw7luZyAieHXhuqV0IHPhuq9jIiBjaG8gdOG7kWkgxJFhIDEwJSB0aMawKTsgaG/hurdjIGPDtG5nIHR5IHRoZW8gZMO1aSBs4buLY2ggc+G7rSBj4bunYSB04burbmcgbmfGsOG7nWkgdmnhur90ICh04buJIGzhu4cgdGjGsCAieHXhuqV0IHPhuq9jIiBj4bunYSBo4buNIHNvIHbhu5tpIGvhur90IHF14bqjIHRo4buxYyB04bq/KSB2w6AgxJHhu41jIGzhuqFpIHRoZW8gxJHDszsgaG/hurdjIGTDuW5nIHRoYW5nIMSRaeG7g20gY8OzIG3DtCB04bqjIGjDoG5oIHZpIGPhu6UgdGjhu4Mga2nhu4NtIGNo4bupbmcgxJHGsOG7o2MuIEPGoSBjaOG6vzoga2hpIGtow7RuZyB0aOG7gyBkw7luZyAieHXhuqV0IHPhuq9jIiBjaG8gbeG7jWkgbmfGsOG7nWksIHRo4buVaSBwaOG7k25nIG3hu5l0IG5nxrDhu51pIGJ14buZYyBwaOG6o2kgaOG6oSBuZ8aw4budaSBraMOhYywgbsOqbiB2aeG7h2MgdGjhu5VpIHBo4buTbmcga2jDtG5nIGPDsm4gbWnhu4VuIHBow60sIHbDoCB04burIG5n4buvIGdp4buvIMSRxrDhu6NjIHThu4kgbOG7hy4=",
+  "rubric_b64": "Q8OidSAxICg0IHThu4kgbOG7hyk6IMO0IHRoZW4gY2jhu5F0IGzDoCA1NCw1JSB2w6AgNzEsNCUgKHEgPSAwLDUpOyDDtCB0aMaw4budbmcgbMOgIGhhaSBnacOhIHRy4buLIDEwMCUgKHEgPSAwKS4gw4FwIGNodeG6qW4gY2jhuqVtIGLhuqNuZy4gVGhp4bq/dSBwaMOpcCB0w61uaCDihpIgbeG7mXQgcGjhuqduLgpDw6J1IDIgxJHhuqF0OiBs4bqtcCDEkcO6bmcgYuG6pXQgcGjGsMahbmcgdHLDrG5oIHbDoCByYSBxIOKJiCAwLDM4NSAoY2jhuqVwIG5o4bqtbiAwLDM44oCTMCwzOSkuIE3hu5l0IHBo4bqnbjogbOG6rXAgxJHDum5nIG3DoCBnaeG6o2kgc2FpLgpDw6J1IDM6IMO0IHRoZW4gY2jhu5F0IGzDoCAoaSkgS2jDoSBjw7MgbmfGsOG7nWkgdmnhur90IHRo4bqtdCB0aMOgIGLhu4sgdGhp4buHdCwgKGlpKSDEkeG7mW5nIGPGoTogbmfGsOG7nWkgdmnhur90IGNobyBzaW5oIHZpw6puIEtow6EgY8OzIGzDvSBkbyBjaHV54buDbiBzYW5nIHRo4buVaSBwaOG7k25nLCBsw6BtIHEgdMSDbmcgKGtow7RuZyBi4bqvdCBjaOG7qW5nIG1pbmggcSBo4buZaSB04bulIHbhu4EgMTsgcSA9IDEgbMOgIGvhu4tjaCBi4bqjbiDEkeG7gSBjaG8pLCAoaWlpKSBxID0gMTogInThu5F0IiA9IFRydW5nIGLDrG5oLCAieHXhuqV0IHPhuq9jIiBjaOG7iSAzNyw1JSBHaeG7j2kuIMSQ4bqhdDogY+G6oyBiYSwgKGlpaSkgY8OzIHPhu5EuIE3hu5l0IHBo4bqnbjogMi8zLgpDw6J1IDQgxJHhuqF0OiBt4buZdCB0aGF5IMSR4buVaSBj4bulIHRo4buDIGzDoG0gdGjhu5VpIHBo4buTbmcgY8OzIGdpw6EgKGdp4bubaSBo4bqhbiB04buJIGzhu4csIHRoZW8gZMO1aSBs4buLY2ggc+G7rSBuZ8aw4budaSB2aeG6v3QsIHRoYW5nIGPDsyBtw7QgdOG6oyBraeG7g20gY2jhu6luZyDEkcaw4bujYykgKyBuw7NpIHLDtSB2w6wgc2FvIG7DsyBjaOG6t24gdsOybmcgbGFuIOG7nyBjw6J1IDMuIE3hu5l0IHBo4bqnbjogdGhheSDEkeG7lWkgaOG7o3AgbMO9IG5oxrBuZyBraMO0bmcgbuG7kWkgduG7gSBjxqEgY2jhur8uCkLhuqt5IGNow61uaDogY29pIG5naMSpYSBj4bunYSB04burIGzDoCBj4buRIMSR4buLbmgsIGtow7RuZyBwaOG7pSB0aHXhu5ljIGPDoWNoIG3hu41pIG5nxrDhu51pIGTDuW5nIG7Dsy4KR+G7mXA6IGNvcnJlY3QgPSBt4buNaSBjw6J1IMSR4bqhdCwgaG/hurdjIDMgxJHhuqF0ICsgMSBt4buZdCBwaOG6p247IHBhcnRpYWwgPSAx4oCTMyBjw6J1IMSR4bqhdDsgaW5jb3JyZWN0ID0ga2jDtG5nIGPDonUgbsOgbyDEkeG6oXQuIEzhu5dpIGTDonkgY2h1eeG7gW4gdOG7qyBjw6J1IDEgc2FuZyBjw6J1IDLigJMzOiBjaOG6pW0gY8OidSBzYXUgdGhlbyBwaMawxqFuZyBwaMOhcC4=",
+  "review": {
+    "solver_model": "opus",
+    "first_solve_match": true,
+    "revised": true,
+    "issues": [
+      {
+        "type": "missing_premise",
+        "severity": 2,
+        "detail": "chưa nói công ty xử lý thư 'xuất sắc' và 'được' thế nào"
+      },
+      {
+        "type": "ambiguity",
+        "severity": 1,
+        "detail": "câu 3 gợi sẵn đáp án ('dù người viết thật thà')"
+      },
+      {
+        "type": "level_mismatch",
+        "severity": 1,
+        "detail": "phản biện chấm L4"
+      }
+    ]
+  },
+  "status": "submitted",
+  "extra": false,
+  "user_answer": "1.\nq = 0\nToàn bộ người viết thật thà, thư \"xuất sắc\" cho 100% Giỏi; thư \"tốt\" cho 100% Khá\nq = 0.5\nTrong ba loại sinh viên, thư \"xuất sắc\" gồm 30% Giỏi và 25% Khá (0.5*50%), tỷ lệ 30/(30+25) = 54.55% Giỏi; thư \"tốt\" gồm 25% Khá còn lại và 10% Trung bình (0.5*20%), tỷ lệ 25/(25+10) = 71.43% Khá\n2. Từ câu 1, lập tương quan thư \"tốt\" như sau: \nTỷ lệ Khá thật thà = (1-q)*50%\nTỷ lệ Trung bình thổi phồng = q*20%\nTỷ lệ Khá thực trong thư \"tốt\" = [(1-q)*50%]/[(1-q)*50%+q*20%] >= 80% cho ra q <= 5/13 hay khoảng 0.385\n3. Cũng dựa trên kết quả câu 1 và điều kiện đề, nhóm Khá-thật thà chịu thiệt đầu tiên khi q vượt ngưỡng. Khi người viết thư thật thà chuyển toàn bộ sang thổi phồng (q=1), thấy rằng toàn bộ Giỏi và Khá được thư \"xuất sắc\" và nhận, Trung bình bị loại dù \"tốt\" vì 0% Khá, hệt như khi toàn bộ người viết thư thật thà (q=0), Giỏi được nhận vì xuất sắc, Khá được nhận vì \"tốt\" và >80%, Trung bình bị loại vì \"được\". Khi đó, \"xuất sắc\" và \"tốt\" chỉ còn trả lời rằng \"có nhận toàn bộ Khá và Giỏi hay không?\".\n4. Câu này tôi thua, không nghĩ ra được. Nếu nó thực sự là một hình thức thay đổi từ đánh giá xếp bậc sang phân loại thì vẫn có thể bị thổi phồng do lòng tốt người viết.",
+  "grading": "1: đạt — Tính đúng các tỉ lệ yêu cầu cho cả hai trường hợp q = 0 và q = 0,5, ghi rõ phép tính và mẫu số dựa trên cấu phần thực tế của từng loại thư.\n2: đạt — Lập đúng bất phương trình tỉ lệ sinh viên Khá trong thư tốt dựa trên q, giải ra đúng ngưỡng q ≈ 0,385 (5/13).\n3: một phần — Xác định đúng nhóm sinh viên Khá có người viết thật thà bị thiệt đầu tiên và động cơ thúc đẩy q tăng, nhưng đoạn mô tả khi q = 1 nhầm lẫn cấu trúc nghĩa của từ. Khi q = 1, thư \"xuất sắc\" chứa cả Giỏi và Khá (nên giá trị bị pha loãng, chỉ còn 37,5% Giỏi chứ không phải \"nhận toàn bộ Giỏi và Khá\") và thư \"tốt\" chỉ còn Trung bình, khiến ý nghĩa từ ngữ bị trượt hoàn toàn.\n4: chưa đạt — Bỏ trống câu này, lý do lo sợ lòng tốt người viết vẫn làm hỏng hệ thống. Bạn chưa kết nối được cơ chế loại bỏ sự thổi phồng miễn phí bằng cách đặt ra ràng buộc chi phí (giới hạn tỉ lệ hoặc gắn lịch sử người viết).",
+  "feedback": {
+    "questions": [
+      {
+        "label": "1",
+        "verdict": "đạt",
+        "comment": "Tính đúng các tỉ lệ yêu cầu cho cả hai trường hợp q = 0 và q = 0,5, ghi rõ phép tính và mẫu số dựa trên cấu phần thực tế của từng loại thư.",
+        "explicit_version": "q = 0: thư xuất sắc gồm 0,3/0,3 = 100% Giỏi, thư tốt gồm 0,5/0,5 = 100% Khá. q = 0,5: thư xuất sắc gồm 0,3 Giỏi và 0,5 × 50% = 0,25 Khá, tỉ lệ Giỏi là 0,3 / 0,55 ≈ 54,55%; thư tốt gồm 0,5 × (1 - 0,5) = 0,25 Khá và 0,2 × 0,5 = 0,1 Trung bình, tỉ lệ Khá là 0,25 / 0,35 ≈ 71,43%."
+      },
+      {
+        "label": "2",
+        "verdict": "đạt",
+        "comment": "Lập đúng bất phương trình tỉ lệ sinh viên Khá trong thư tốt dựa trên q, giải ra đúng ngưỡng q ≈ 0,385 (5/13).",
+        "explicit_version": "0,5(1 - q) / [0,5(1 - q) + 0,2q] ≥ 0,8 tương đương 0,5 - 0,5q ≥ 0,4 - 0,16q + 0,04q (hoặc 0,2q tương ứng), giải ra q ≤ 5/13 ≈ 0,385."
+      },
+      {
+        "label": "3",
+        "verdict": "một phần",
+        "comment": "Xác định đúng nhóm sinh viên Khá có người viết thật thà bị thiệt đầu tiên và động cơ thúc đẩy q tăng, nhưng đoạn mô tả khi q = 1 nhầm lẫn cấu trúc nghĩa của từ. Khi q = 1, thư \"xuất sắc\" chứa cả Giỏi và Khá (nên giá trị bị pha loãng, chỉ còn 37,5% Giỏi chứ không phải \"nhận toàn bộ Giỏi và Khá\") và thư \"tốt\" chỉ còn Trung bình, khiến ý nghĩa từ ngữ bị trượt hoàn toàn.",
+        "explicit_version": "Nhóm thiệt đầu tiên là sinh viên Khá có người viết thật thà vì thư của họ bị công ty loại bỏ. Người viết thấy vậy sẽ chuyển sang thổi phồng, làm q tăng đến 1. Khi q = 1, từ \"xuất sắc\" bao gồm 30% Giỏi và 50% Khá (nên tỉ lệ Giỏi thực chất chỉ còn 30/80 = 37,5%), còn từ \"tốt\" chứa 100% Trung bình, khiến nghĩa từ ngữ bị rớt xuống một bậc."
+      },
+      {
+        "label": "4",
+        "verdict": "chưa đạt",
+        "comment": "Bỏ trống câu này, lý do lo sợ lòng tốt người viết vẫn làm hỏng hệ thống. Bạn chưa kết nối được cơ chế loại bỏ sự thổi phồng miễn phí bằng cách đặt ra ràng buộc chi phí (giới hạn tỉ lệ hoặc gắn lịch sử người viết).",
+        "explicit_version": "Giải pháp nằm ở việc buộc phân bổ có giới hạn (ví dụ mỗi người viết chỉ được dùng từ \"xuất sắc\" cho tối đa 10% thư). Cơ chế này chặn đứng sự thổi phồng vì khi muốn nâng cấp cho một sinh viên này, người viết bắt buộc phải hạ sinh viên khác xuống, khiến việc thổi phồng không còn là lựa chọn miễn phí."
+      }
+    ],
+    "result": "partial",
+    "headline": "Hiểu rõ cơ chế toán học của sự pha loãng tín hiệu, nhưng chưa đi đến tận cùng hệ quả lạm phát ngôn từ và thiết kế ràng buộc cấu trúc",
+    "takeaway": "Khi một tín hiệu (như từ ngữ đánh giá) bị mất chi phí duy trì, mọi chủ thể sẽ có xu hướng thổi phồng để bảo vệ lợi ích cá nhân, dẫn đến hệ thống tự động trượt về trạng thái thông tin vô giá trị trừ khi có hạn ngạch hoặc hình phạt gắn liền với phân phối.",
+    "skills_missed": [
+      "incentives",
+      "equilibrium"
+    ],
+    "notes": "Điểm mạnh: Lập phương trình và giải quyết phần toán xác suất rất sạch sẽ. Mẫu lỗi: Bỏ dở khi gặp câu thiết kế cơ chế cấu trúc (câu 4) và suy luận nhầm lẫn phần phân phối cấu phần khi q=1 ở câu 3."
+  },
+  "grader": "gemini:gemini-3.5-flash-lite",
+  "result": "partial",
+  "skills_missed": [
+    "incentives",
+    "equilibrium"
+  ],
+  "notes": "Điểm mạnh: Lập phương trình và giải quyết phần toán xác suất rất sạch sẽ. Mẫu lỗi: Bỏ dở khi gặp câu thiết kế cơ chế cấu trúc (câu 4) và suy luận nhầm lẫn phần phân phối cấu phần khi q=1 ở câu 3."
+}
