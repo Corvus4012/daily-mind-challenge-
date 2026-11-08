@@ -1,0 +1,44 @@
+{
+  "id": "20261108-d11-7de1a1",
+  "created": "2026-11-08",
+  "domain_id": 11,
+  "level": 2,
+  "tag": "reason",
+  "format": "table",
+  "skills": [
+    "convention_mismatch",
+    "consistency_check"
+  ],
+  "est_minutes": 11,
+  "challenge_md": "Ba người hẹn họp trong một toà nhà ở TP.HCM. Quy ước gọi tầng của mỗi người (giả định của đề):\n- **Lan (Hà Nội):** \"tầng 1\" là tầng sát mặt đất; tầng lửng bị bỏ qua khi đánh số.\n- **Minh (Sài Gòn):** \"trệt\" là tầng sát mặt đất; \"lầu 1\" là tầng ngay trên trệt; tầng lửng bị bỏ qua khi đánh số.\n- **Tom (Anh):** \"ground floor\" là tầng sát mặt đất; \"first floor\" là tầng ngay trên ground; mezzanine (tầng lửng) bị bỏ qua khi đánh số.\n\nToà nhà có một thang máy duy nhất; bảng nút ghi, từ dưới lên: **G, M, 1, 2, 3** (M là tầng lửng, ngay trên G). Các nhãn in trên nút chỉ là ký hiệu của toà nhà, không phải cách gọi tầng của ai.\n\nLan nhắn nhóm: *\"Họp ở tầng 3 nhé.\"* Phòng họp nằm đúng ở tầng mà Lan định nói. Mỗi người đọc con số trong tin nhắn theo quy ước của chính mình (Minh hiểu \"tầng 3\" như \"lầu 3\", Tom như \"third floor\").\n\n**Câu hỏi**\n1. Lập bảng: khi mỗi người nói \"tầng/lầu/floor số 2\" (Lan: tầng 2, Minh: lầu 2, Tom: second floor), họ chỉ nút nào trên thang máy?\n2. Đọc tin nhắn của Lan theo quy ước của mình, Minh và Tom sẽ bấm nút nào? Ai đến đúng phòng họp?\n3. Viết lại tin nhắn của Lan sao cho cả ba chắc chắn đến cùng một tầng, **không dùng cách gọi tầng theo quy ước của bất kỳ ai**. Giải thích vì sao cách đó không thể hiểu sai.\n4. Một người đề xuất viết \"tầng thứ 3 tính từ mặt đất\". Vì sao trong toà nhà này câu đó vẫn có thể bị hiểu theo hai cách?",
+  "hints": [
+    "Đổi mọi cách gọi về cùng một thứ: đếm số tầng phía trên mặt đất, rồi xem tầng lửng có được đếm không.",
+    "Lan \"tầng 3\" là tầng thứ hai phía trên mặt đất (không kể lửng). Thang máy đánh số kiểu nào?",
+    "Câu 3: có thứ gì cả ba người cùng nhìn thấy và chỉ đọc được một cách?"
+  ],
+  "claims": [],
+  "review": {
+    "solver_model": "sonnet",
+    "first_solve_match": true,
+    "revised": true,
+    "issues": [
+      {
+        "type": "missing_premise",
+        "severity": 2,
+        "detail": "chưa nói phòng họp ở tầng Lan định nói"
+      },
+      {
+        "type": "ambiguity",
+        "severity": 2,
+        "detail": "nhãn nút có tính là số thứ tự theo quy ước không"
+      },
+      {
+        "type": "level_mismatch",
+        "severity": 1,
+        "detail": "phản biện chấm L2"
+      }
+    ]
+  },
+  "answer_b64": "MS4gTGFuICJ04bqnbmcgMiIgPSB04bqnbmcgxJHhuqd1IHRpw6puIHBow61hIHRyw6puIG3hurd0IMSR4bqldCAoa2jDtG5nIGvhu4MgbOG7rW5nKSA9IG7DunQgMS4gTWluaCAibOG6p3UgMiIgPSB04bqnbmcgdGjhu6kgaGFpIHBow61hIHRyw6puIHRy4buHdCAoa2jDtG5nIGvhu4MgbOG7rW5nKSA9IG7DunQgMi4gVG9tICJzZWNvbmQgZmxvb3IiID0gbsO6dCAyLgoyLiBMYW4gbXXhu5FuOiAidOG6p25nIDMiID0gdOG6p25nIHRo4bupIGhhaSBwaMOtYSB0csOqbiBt4bq3dCDEkeG6pXQgKGtow7RuZyBr4buDIGzhu61uZykgPSBuw7p0IDIuIE1pbmggxJHhu41jIHRow6BuaCAibOG6p3UgMyIg4oaSIG7DunQgMy4gVG9tIMSR4buNYyAidGhpcmQgZmxvb3IiIOKGkiBuw7p0IDMuIENo4buJIExhbiDEkeG6v24gxJHDum5nOyBNaW5oIHbDoCBUb20gbMOqbiBjYW8gaMahbiBt4buZdCB04bqnbmcuCjMuIFbDrSBk4bulIMSR4bqhdDogIkjhu41wIOG7nyB04bqnbmcgY+G7p2EgbsO6dCBjw7MgY2jhu68gMiBpbiB0csOqbiBi4bqjbmcgdGhhbmcgbcOheSAobmdheSBkxrDhu5tpIG7DunQgMykiIChuaMOjbiB24bqtdCBsw70gY+G6oyBiYSBjw7luZyB0aOG6pXksIGNo4buJIGPDsyBt4buZdCBuw7p0IG5oxrAgduG6rXkpOyBob+G6t2MgbeG7mXQgbeG7kWMgZHV5IG5o4bqldCBuaMawIHPhu5EgcGjDsm5nICgicGjDsm5nIDJ4eCIpIGhheSAidOG6p25nIG5nYXkgdHLDqm4gdOG6p25nIGPDsyBxdeG6p3kgbOG7hSB0w6JuIiBu4bq/dSBt4buRYyDEkcOzIGR1eSBuaOG6pXQuIEtow7RuZyB0aOG7gyBoaeG7g3Ugc2FpIHbDrCBraMO0bmcgY8OybiBixrDhu5tjIHF1eSDEkeG7lWkgdGhlbyBxdXkgxrDhu5tjIHJpw6puZzogbeG7jWkgbmfGsOG7nWkgY8O5bmcgbmjDrG4gbeG7mXQga8O9IGhp4buHdSBjaOG7iSDEkeG7jWMgxJHGsOG7o2MgbeG7mXQgY8OhY2guCjQuIEPDonUgxJHDsyBjaMawYSBuw7NpIGhhaSDEkWnhu4F1OiB04bqnbmcgbeG6t3QgxJHhuqV0IGPDsyDEkcaw4bujYyDEkeG6v20gbMOgICJ0aOG7qSAxIiBraMO0bmcsIHbDoCB04bqnbmcgbOG7rW5nIGPDsyDEkcaw4bujYyDEkeG6v20ga2jDtG5nLiDEkOG6v20gY+G6oyBHIHbDoCBNOiBHLCBNLCAxIOKGkiBuw7p0IDEuIMSQ4bq/bSBHLCBi4buPIE06IEcsIDEsIDIg4oaSIG7DunQgMi4gQ2jhu4kgxJHhur9tIHBow61hIHRyw6puIG3hurd0IMSR4bqldCwgY8OzIE06IE0sIDEsIDIg4oaSIG7DunQgMi4gUGjDrWEgdHLDqm4gbeG6t3QgxJHhuqV0LCBi4buPIE06IDEsIDIsIDMg4oaSIG7DunQgMy4gw410IG5o4bqldCBoYWkgY8OhY2ggxJHhu41jIGNobyByYSBoYWkgbsO6dCBraMOhYyBuaGF1LCBuw6puIGPDonUgduG6q24gY+G6p24gbeG7mXQgcXV5IMaw4bubYyDEkeG6v20u",
+  "rubric_b64": "Q8OidSAxICgzIMO0LCDEkeG7gXUgdGhlbiBjaOG7kXQpOiBMYW4g4oaSIG7DunQgMTsgTWluaCDihpIgbsO6dCAyOyBUb20g4oaSIG7DunQgMi4gw4FwIGNodeG6qW4gY2jhuqVtIGLhuqNuZy4KQ8OidSAyIMSR4bqhdDogTGFuIG114buRbiBuw7p0IDI7IE1pbmggdsOgIFRvbSBi4bqlbSBuw7p0IDM7IGNo4buJIExhbiDEkeG6v24gxJHDum5nLgpDw6J1IDMgxJHhuqF0OiBt4buZdCBjw6FjaCB4w6FjIG5o4bqtbiBraMO0bmcgZMO5bmcgc+G7kSB04bqnbmcgdGhlbyBxdXkgxrDhu5tjIHJpw6puZyAobmjDo24gbsO6dCB0aGFuZyBtw6F5LCBz4buRIHBow7JuZywgbeG7kWMgZHV5IG5o4bqldCkgKyBnaeG6o2kgdGjDrWNoIHbDrCBzYW8ga2jDtG5nIGPDsm4gcXV5IMSR4buVaS4gTeG7mXQgcGjhuqduOiDEkcO6bmcgY8OhY2ggbmjGsG5nIGtow7RuZyBnaeG6o2kgdGjDrWNoLiBEw7luZyAidOG6p25nIDMga2nhu4N1IEjDoCBO4buZaSIgduG6q24gZOG7sWEgdsOgbyBxdXkgxrDhu5tjIOKGkiBraMO0bmcgxJHhuqF0LgpDw6J1IDQgxJHhuqF0OiBjaOG7iSByYSB04bqnbmcgbOG7rW5nIChjw7MgxJHhur9tIGhheSBraMO0bmcpIHbDoC9ob+G6t2MgdOG6p25nIG3hurd0IMSR4bqldCBjw7MgdMOtbmggbMOgICJ0aOG7qSBuaOG6pXQiIGtow7RuZywga8OobSDDrXQgbmjhuqV0IGhhaSBjw6FjaCDEkeG7jWMgcmEgaGFpIG7DunQga2jDoWMgbmhhdS4gTeG7mXQgcGjhuqduOiBuw7NpICJ24bqrbiBtxqEgaOG7kyIgbcOgIGtow7RuZyBjaOG7iSByYSBjaOG7lyBuw6BvLgpC4bqreSBjaMOtbmg6IGPDonUgMyDEkeG7lWkgc2FuZyBxdXkgxrDhu5tjIGPhu6dhIG3hu5l0IG5nxrDhu51pIGtow6FjOyBjw6J1IDQgdMaw4bufbmcgInTDrW5oIHThu6sgbeG6t3QgxJHhuqV0IiBsw6AgxJHhu6cgcsO1LgpH4buZcDogY29ycmVjdCA9IG3hu41pIGPDonUgxJHhuqF0LCBob+G6t2MgMyDEkeG6oXQgKyAxIG3hu5l0IHBo4bqnbjsgcGFydGlhbCA9IDHigJMzIGPDonUgxJHhuqF0OyBpbmNvcnJlY3QgPSBraMO0bmcgY8OidSBuw6BvIMSR4bqhdC4="
+}
