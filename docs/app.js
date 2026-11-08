@@ -275,7 +275,12 @@ Quy tắc chấm (bắt buộc):
 - Nhận xét từng câu: đúng ở đâu → gãy ở đâu → cơ chế phía sau. Dùng số của đề.
 - "takeaway": một nguyên tắc chuyển giao được; nếu nối với một lỗi cũ trong hồ sơ người học thì nói ra mối nối.
 - "skills_missed": chỉ chọn trong danh sách kỹ năng của đề, kỹ năng người học chưa thể hiện được.
-- "notes": 1 dòng cho người ra đề: điểm mạnh và mẫu lỗi.`;
+- "notes": 1 dòng cho người ra đề: điểm mạnh và mẫu lỗi.
+Kỷ luật chấm (bắt buộc, kiểm trước khi trả kết quả):
+1. Dẫn chứng nguyên văn: mỗi khi nói người học "nhầm", "vi phạm", "bỏ trống", phải trích đúng câu của họ trong "comment" và đối chiếu với đề/rubric. Không trích được thì không được nêu. Trước khi nói vi phạm ràng buộc của đề, đọc lại ràng buộc đó. Người học viết được ý đúng nào thì ghi nhận ý đó.
+2. Chấm từng câu độc lập, đi qua từng ô then chốt của rubric (ví dụ (a)–(d), (i)–(iii)) và nói ô nào có, ô nào thiếu. Không được hạ một câu vì "câu trước sai".
+3. Câu nào không phải "đạt" trọn vẹn, hoặc đạt nhờ lý do để ngầm, BẮT BUỘC có "explicit_version".
+4. Mọi phép tính trong "explicit_version" phải khai triển từng bước và tự kiểm khớp kết quả cuối; không viết "hoặc ... tương ứng". Không khẳng định mạnh hơn điều mô hình của đề cho phép.`;
 
 const GRADE_SCHEMA = {type: "object", properties: {
   questions: {type: "array", items: {type: "object", properties: {

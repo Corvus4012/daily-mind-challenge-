@@ -1,0 +1,40 @@
+{
+  "id": "20261108-d03-8bd181",
+  "created": "2026-11-08",
+  "domain_id": 3,
+  "level": 5,
+  "tag": "reason",
+  "format": "model",
+  "skills": [
+    "equilibrium",
+    "incentives",
+    "marginal_thinking"
+  ],
+  "est_minutes": 15,
+  "challenge_md": "Mỗi sáng có **3.000 xe** đi từ khu dân cư vào trung tâm, chọn một trong hai đường (mô hình và số liệu là giả định của đề):\n- **Đường A** (cầu lớn): luôn mất **20 phút**, dù bao nhiêu xe đi.\n- **Đường B** (đường nhỏ): mất **10 + x/100 phút**, với x là số xe đi B (đông thì chậm).\n\nMỗi tài xế tự chọn đường nhanh hơn cho mình; thành phố có thể đặt phí qua đường B (quy đổi thành \"phút\", ví dụ phí bằng giá trị 3 phút).\n\n**Câu hỏi**\n1. Trước khi tính, ghi lại: x là gì, thời gian mỗi đường phụ thuộc vào gì. Khi mọi tài xế tự chọn, bao nhiêu xe đi B, mỗi người mất bao lâu, và tổng thời gian của cả 3.000 xe là bao nhiêu phút?\n2. Nếu thành phố được tự phân xe để **tổng** thời gian nhỏ nhất, nên cho bao nhiêu xe đi B? Tổng thời gian khi đó? Dùng số để giải thích vì sao tài xế tự chọn không tự đạt mức này (gợi ý: một xe thêm vào B làm chậm những ai?).\n3. Phí qua B (tính bằng phút) phải là bao nhiêu để khi tài xế tự chọn, số xe đi B đúng bằng mức ở câu 2?\n4. Biến thể: không thu phí, thành phố mở rộng B để thời gian còn **10 + x/200 phút**. Khi tài xế tự chọn, bao nhiêu xe đi B và mỗi người mất bao lâu? So với câu 1, mở rộng đường có giúp ai đi nhanh hơn không? Giải thích bằng cơ chế.",
+  "hints": [
+    "Cân bằng: nếu B nhanh hơn A thì sẽ có người chuyển sang B, cho tới khi hai đường mất thời gian như nhau.",
+    "Tổng thời gian = 20 × (số xe đi A) + x × (10 + x/100). Một xe thêm vào B làm x xe đang đi B mỗi xe chậm thêm 1/100 phút.",
+    "Câu 3: tài xế so (thời gian B + phí) với 20 phút. Câu 4: chừng nào còn người đi A, thời gian của mọi người do đường nào quyết định?"
+  ],
+  "claims": [],
+  "review": {
+    "solver_model": "opus",
+    "first_solve_match": true,
+    "revised": false,
+    "issues": [
+      {
+        "type": "answer_error",
+        "severity": 2,
+        "detail": "rubric câu 2 (iii) chỉ nhận x = 500 — đã nới"
+      },
+      {
+        "type": "ambiguity",
+        "severity": 1,
+        "detail": "phí có tính vào tổng thời gian không"
+      }
+    ]
+  },
+  "answer_b64": "MS4geCA9IHPhu5EgeGUgxJFpIEI7IEEgY+G7kSDEkeG7i25oIDIwIHBow7p0OyBCIHTEg25nIHRoZW8geC4gQ8OibiBi4bqxbmc6IDEwICsgeC8xMDAgPSAyMCDih5IgeCA9IDEuMDAwIHhlIMSRaSBCLCAyLjAwMCDEkWkgQSwgbeG7jWkgbmfGsOG7nWkgbeG6pXQgMjAgcGjDunQuIFThu5VuZyA9IDMuMDAwIMOXIDIwID0gNjAuMDAwIHBow7p0LgoyLiBU4buVbmcgVCh4KSA9IDIwKDMuMDAwIOKIkiB4KSArIHgoMTAgKyB4LzEwMCkuIFQnKHgpID0g4oiSMjAgKyAxMCArIDJ4LzEwMCA9IDAg4oeSIHggPSA1MDAuIEIgbeG6pXQgMTAgKyA1ID0gMTUgcGjDunQuIFThu5VuZyA9IDIuNTAwIMOXIDIwICsgNTAwIMOXIDE1ID0gNTAuMDAwICsgNy41MDAgPSA1Ny41MDAgcGjDunQgKMOtdCBoxqFuIDIuNTAwIHBow7p0KS4gTMO9IGRvOiB4ZSB0aOG7qSB4IHbDoG8gQiB04buxIGNo4buLdSAxMCArIHgvMTAwIHBow7p0IG5oxrBuZyBsw6BtIHggeGUgxJFhbmcgxJFpIEIgbeG7l2kgeGUgY2jhuq1tIHRow6ptIDEvMTAwIHBow7p0LCB04bupYyB0aMOqbSB4LzEwMCBwaMO6dCBjaG8gbmfGsOG7nWkga2jDoWMuIOG7niB4ID0gNTAwLCBuZ8aw4budaSDEkcOzIHRo4bqleSBCIGNo4buJIG3huqV0IDE1IHBow7p0IChy4bq7IGjGoW4gQSA1IHBow7p0KSBuw6puIHbhuqtuIHbDoG8sIG5oxrBuZyBi4bqvdCBuZ8aw4budaSBraMOhYyBjaOG7i3UgdGjDqm0gNSBwaMO6dDsgdOG7lW5nIGNoaSBwaMOtIHjDoyBo4buZaSA9IDIwLCBi4bqxbmcgQS4gVMOgaSB44bq/IGtow7RuZyB0w61uaCBwaOG6p24gY2hpIHBow60gxJHhu5UgbMOqbiBuZ8aw4budaSBraMOhYy4KMy4gQ+G6p24gMTAgKyA1MDAvMTAwICsgcGjDrSA9IDIwIOKHkiBwaMOtID0gNSBwaMO6dCAoxJHDum5nIGLhurFuZyBwaOG6p24gY2hpIHBow60gxJHhu5UgbMOqbiBuZ8aw4budaSBraMOhYyDhu58geCA9IDUwMCkuCjQuIDEwICsgeC8yMDAgPSAyMCDih5IgeCA9IDIuMDAwIHhlIMSRaSBCLCAxLjAwMCDEkWkgQTsgbeG7jWkgbmfGsOG7nWkgduG6q24gbeG6pXQgMjAgcGjDunQ7IHThu5VuZyB24bqrbiA2MC4wMDAgcGjDunQuIE3hu58gcuG7mW5nIGtow7RuZyBnacO6cCBhaSBuaGFuaCBoxqFuOiBjaOG7q25nIG7DoG8gY8OybiBuZ8aw4budaSDEkWkgQSwgdGjhu51pIGdpYW4gY+G7p2EgbeG7jWkgbmfGsOG7nWkgYuG7iyAibmVvIiDhu58gMjAgcGjDunQgY+G7p2EgQTsgcGjhuqduIG7Eg25nIGzhu7FjIHRow6ptIGPhu6dhIEIgYuG7iyBs4bqlcCBi4bufaSBuZ8aw4budaSBjaHV54buDbiB04burIEEgc2FuZy4gKE7hur91IHBow6JuIHThu5FpIMawdSBzYXUga2hpIG3hu58gcuG7mW5nOiB4ID0gMS4wMDAsIEIgbeG6pXQgMTUgcGjDunQsIHThu5VuZyA1NS4wMDA7IGzhu6NpIMOtY2ggY2jhu4kgxJHhur9uIGtoaSBjw7MgcGjDrSBob+G6t2MgxJFp4buBdSBwaOG7kWkuKQ==",
+  "rubric_b64": "Q8OidSAxOiDDtCB0aGVuIGNo4buRdCBsw6AgeCA9IDEuMDAwLCAyMCBwaMO6dCBjaG8gbeG7jWkgbmfGsOG7nWksIHThu5VuZyA2MC4wMDAuIMSQ4bqhdDogY+G6oyBiYSAocGjhuqduIGdoaSBiaeG6v24gbMOgIMSRaeG7g20gY+G7mW5nLCBraMO0bmcgYuG6r3QgYnXhu5ljKS4KQ8OidSAyOiDDtCB0aGVuIGNo4buRdCBsw6AgKGkpIHggPSA1MDAsIChpaSkgdOG7lW5nIDU3LjUwMCwgKGlpaSkgZ2nhuqNpIHRow61jaCBjw7Mgc+G7kSB24buBIG5nb+G6oWkgdMOhYzogeGUgdGjDqm0gdsOgbyBCIGzDoG0geCB4ZSDEkWFuZyDEkWkgQiBt4buXaSB4ZSBjaOG6rW0gdGjDqm0gMS8xMDAgcGjDunQgKHThu5VuZyB4LzEwMCBwaMO6dCkgbcOgIG5nxrDhu51pIMSRw7Mga2jDtG5nIGNo4buLdTsgdMOtbmgg4bufIGLhuqV0IGvhu7MgeCBuw6BvIMSR4buBdSDEkeG6oXQgKHbDrSBk4bulIHggPSA1MDAgbMOgIDUgcGjDunQsIHggPSAxLjAwMCBsw6AgMTAgcGjDunQpLiDEkOG6oXQ6IGPhuqMgYmEuIE3hu5l0IHBo4bqnbjogaGFpLiBOaMOjbiBjaHVuZyAoInbDrCDDrWNoIGvhu7ciKSBraMO0bmcgY8OzIHPhu5Eg4oaSIGtow7RuZyDEkeG6oXQgKGlpaSkuCkPDonUgMyDEkeG6oXQgKHBow60gbMOgIGtob+G6o24gY2h1eeG7g24gY2hvIHRow6BuaCBwaOG7kSwga2jDtG5nIHTDrW5oIHbDoG8gdOG7lW5nIHRo4budaSBnaWFuKTogcGjDrSA9IDUgcGjDunQgKyBsw70gZG8gKGPDom4gYuG6sW5nIG3hu5tpIHThuqFpIHggPSA1MDApLiBM4buXaSBkw6J5IGNodXnhu4FuIHThu6sgY8OidSAyOiBjaOG6pW0gdGhlbyBwaMawxqFuZyBwaMOhcC4KQ8OidSA0OiDDtCB0aGVuIGNo4buRdCBsw6AgeCA9IDIuMDAwLCB24bqrbiAyMCBwaMO6dCwgdsOgIGPGoSBjaOG6vyAidGjhu51pIGdpYW4gYuG7iyBuZW8g4bufIMSRxrDhu51uZyBBLCBuZ8aw4budaSBt4bubaSBs4bqlcCBjaOG7lyIuIMSQ4bqhdDogY+G6oyBiYS4gTeG7mXQgcGjhuqduOiDEkcO6bmcgc+G7kSBuaMawbmcgdGhp4bq/dSBjxqEgY2jhur8uCkLhuqt5IGNow61uaDogbmdoxKkgbeG7nyBy4buZbmcgxJHGsOG7nW5nIGzDoG0gbeG7jWkgbmfGsOG7nWkgxJFpIG5oYW5oIGjGoW47IG5naMSpIGPDom4gYuG6sW5nIHThu7EgZG8gbMOgIHThu5FpIMawdS4KR+G7mXA6IGNvcnJlY3QgPSBt4buNaSBjw6J1IMSR4bqhdCwgaG/hurdjIDMgxJHhuqF0ICsgMSBt4buZdCBwaOG6p247IHBhcnRpYWwgPSAx4oCTMyBjw6J1IMSR4bqhdDsgaW5jb3JyZWN0ID0ga2jDtG5nIGPDonUgbsOgbyDEkeG6oXQu"
+}

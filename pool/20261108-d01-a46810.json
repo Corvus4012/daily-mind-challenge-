@@ -1,0 +1,44 @@
+{
+  "id": "20261108-d01-a46810",
+  "created": "2026-11-08",
+  "domain_id": 1,
+  "level": 3,
+  "tag": "reason",
+  "format": "spot-flaw",
+  "skills": [
+    "consistency_check",
+    "hidden_premise"
+  ],
+  "est_minutes": 14,
+  "challenge_md": "Một công ty có 4 quy định về làm thêm giờ (giả định của đề; mọi người đều tuân thủ):\n- **R1:** Ai làm thêm quá 20 giờ/tháng thì phải được trưởng phòng duyệt.\n- **R2:** Chỉ người được trưởng phòng duyệt mới được nhận phụ cấp đêm.\n- **R3:** Ai làm ca đêm thì làm thêm quá 20 giờ/tháng.\n- **R4:** Người đang thử việc không được trưởng phòng duyệt làm thêm.\n\nDữ kiện tháng này: **Hà** làm ca đêm. **Nam** nhận phụ cấp đêm. **Vy** đang thử việc.\n\nNăm kết luận:\n- (a) Hà được trưởng phòng duyệt.\n- (b) Hà nhận phụ cấp đêm.\n- (c) Nam được trưởng phòng duyệt.\n- (d) Nam làm ca đêm.\n- (e) Vy không làm ca đêm.\n\n**Câu hỏi**\n1. Với mỗi kết luận, cho biết nó **chắc chắn đúng** hay **chưa chắc**. Với kết luận chắc chắn đúng, ghi chuỗi quy định dẫn tới nó.\n2. Với mỗi kết luận chưa chắc, dựng một tình huống **có thể xảy ra** (không cần có thật), trong đó cả 4 quy định và 3 dữ kiện vẫn đúng mà kết luận đó sai. Cách dựng: giữ nguyên mọi thứ đề đã khoá, chỉ chọn một điều đề chưa nói.\n3. Công ty muốn (b) trở thành chắc chắn đúng. Viết thêm **đúng một** quy định (một câu) để làm được điều đó, và kiểm lại rằng quy định mới không làm (e) sai.\n4. Giả sử thực tế tháng sau Vy bị xếp ca đêm. Khi đó ít nhất một quy định đã không được tuân thủ. Liệt kê **mọi** quy định có thể là quy định bị vi phạm, mỗi cái kèm một câu giải thích.",
+  "hints": [
+    "\"Chỉ người được duyệt mới nhận phụ cấp\" nghĩa là: nhận phụ cấp ⇒ đã được duyệt. Chiều ngược lại không có.",
+    "Câu 2: ví dụ với (b), đề có nói gì về việc người được duyệt có chắc nhận phụ cấp không? Chọn câu trả lời \"không\" cho điều đề chưa nói đó.",
+    "Câu 4: nếu Vy làm ca đêm, đi theo R3 rồi R1, và đặt cạnh R4. Mỗi quy định trong chuỗi đó đều có thể là mắt xích bị gãy."
+  ],
+  "claims": [],
+  "review": {
+    "solver_model": "opus",
+    "first_solve_match": true,
+    "revised": false,
+    "issues": [
+      {
+        "type": "ambiguity",
+        "severity": 1,
+        "detail": "R4 đọc như mô tả hoặc lệnh cấm"
+      },
+      {
+        "type": "missing_premise",
+        "severity": 1,
+        "detail": "câu 4 chưa nói Vy còn thử việc"
+      },
+      {
+        "type": "level_mismatch",
+        "severity": 1,
+        "detail": "phản biện chấm L3"
+      }
+    ]
+  },
+  "answer_b64": "MS4gKGEpIENo4bqvYyBjaOG6r246IEjDoCBjYSDEkcOqbSDihpIgKFIzKSBsw6BtIHRow6ptID4gMjAgZ2nhu50g4oaSIChSMSkgxJHGsOG7o2MgZHV54buHdC4gKGIpIENoxrBhIGNo4bqvYy4gKGMpIENo4bqvYyBjaOG6r246IE5hbSBuaOG6rW4gcGjhu6UgY+G6pXAg4oaSIChSMikgxJHGsOG7o2MgZHV54buHdC4gKGQpIENoxrBhIGNo4bqvYy4gKGUpIENo4bqvYyBjaOG6r246IG7hur91IFZ5IGzDoG0gY2EgxJHDqm0g4oaSIChSMykgPiAyMCBnaeG7nSDihpIgKFIxKSBwaOG6o2kgxJHGsOG7o2MgZHV54buHdCwgbmjGsG5nIChSNCkgVnkgdGjhu60gdmnhu4djIG7Dqm4ga2jDtG5nIMSRxrDhu6NjIGR1eeG7h3Q7IG3DonUgdGh14bqrbiwgbsOqbiBWeSBraMO0bmcgbMOgbSBjYSDEkcOqbS4KMi4gKGIpOiBIw6AgxJHGsOG7o2MgZHV54buHdCBuaMawbmcgdGjDoW5nIG7DoHkgY8O0bmcgdHkga2jDtG5nIHRy4bqjIHBo4bulIGPhuqVwIMSRw6ptIGNobyBIw6AgKFIyIGNo4buJIG7Ds2kgcGjhu6UgY+G6pXAgY+G6p24gZHV54buHdCwga2jDtG5nIG7Ds2kgZHV54buHdCB0aMOsIGPDsyBwaOG7pSBj4bqlcCkg4oCUIGtow7RuZyBxdXkgxJHhu4tuaCBuw6BvIGLhu4sgdmkgcGjhuqFtLiAoZCk6IE5hbSBjaOG7iSBsw6BtIGNhIG5nw6B5LCBsw6BtIHRow6ptIDI1IGdp4budLCDEkcaw4bujYyBkdXnhu4d0IHbDoCDEkcaw4bujYyB0cuG6oyBwaOG7pSBj4bqlcCDEkcOqbSwgbsOqbiBraMO0bmcgbMOgbSBjYSDEkcOqbSAoUjIga2jDtG5nIG7Ds2kgcGjhu6UgY+G6pXAgxJHDqm0gY2jhu4kgZMOgbmggY2hvIGNhIMSRw6ptOyBob+G6t2MgTmFtIGzDoG0gdGjDqm0gdGhlbyBk4buxIMOhbiDEkcaw4bujYyB0cuG6oyBwaOG7pSBj4bqlcCDEkcOqbSkuIENo4bqlcCBuaOG6rW4gbeG7jWkgdMOsbmggaHXhu5FuZyBnaeG7ryDEkcO6bmcgUjHigJNSNCB2w6AgMyBk4buvIGtp4buHbi4KMy4gVsOtIGThu6U6ICJBaSBsw6BtIGNhIMSRw6ptIHRow6wgxJHGsOG7o2Mgbmjhuq1uIHBo4bulIGPhuqVwIMSRw6ptLiIgS2nhu4NtIChlKTogVnkga2jDtG5nIGzDoG0gY2EgxJHDqm0gbsOqbiBxdXkgxJHhu4tuaCBt4bubaSBraMO0bmcgw6FwIHbDoG8gVnk7IGNodeG7l2kgc3V5IHJhIChlKSBraMO0bmcgxJHhu5VpLiAoQ8WpbmcgY2jhuqVwIG5o4bqtbiAiQWkgxJHGsOG7o2MgZHV54buHdCBsw6BtIHRow6ptIHF1w6EgMjAgZ2nhu50gdGjDrCBuaOG6rW4gcGjhu6UgY+G6pXAgxJHDqm0iOyBraeG7g20gKGUpIHTGsMahbmcgdOG7sS4pCjQuIFIxIChWeSBsw6BtIHRow6ptID4gMjAgZ2nhu50gbcOgIGtow7RuZyDEkcaw4bujYyBkdXnhu4d0KSwgUjQgKHRyxrDhu59uZyBwaMOybmcgduG6q24gZHV54buHdCBjaG8gVnkgZMO5IMSRYW5nIHRo4butIHZp4buHYyksIFIzIChWeSBsw6BtIGNhIMSRw6ptIG5oxrBuZyB04buVbmcgbMOgbSB0aMOqbSBraMO0bmcgcXXDoSAyMCBnaeG7nSwgbsOqbiAiY2EgxJHDqm0gdGjDrCA+IDIwIGdp4budIiBraMO0bmcgY8OybiDEkcO6bmcpLiBSMiBraMO0bmcgbGnDqm4gcXVhbiAoa2jDtG5nIGPDsyBk4buvIGtp4buHbiB24buBIHBo4bulIGPhuqVwIGPhu6dhIFZ5KS4=",
+  "rubric_b64": "Q8OidSAxICg1IMO0KTogw7QgdGhlbiBjaOG7kXQgbMOgIChiKSBjaMawYSBjaOG6r2MsIChkKSBjaMawYSBjaOG6r2MsIChlKSBjaOG6r2MgY2jhuq9uIGvDqG0gY2h14buXaSBSM+KGklIxIG3DonUgdGh14bqrbiBSNDsgw7QgdGjGsOG7nW5nIGzDoCAoYSksIChjKSBrw6htIGNodeG7l2kuIMOBcCBjaHXhuqluIGNo4bqlbSBi4bqjbmcuCkPDonUgMjogaGFpIMO0IChiKSB2w6AgKGQpLCBt4buXaSDDtCDEkeG6oXQga2hpIHTDrG5oIGh14buRbmcgZ2nhu68gxJHDum5nIG3hu41pIHF1eSDEkeG7i25oIHbDoCBk4buvIGtp4buHbiB2w6AgbMOgbSBr4bq/dCBsdeG6rW4gc2FpLiDEkOG6oXQ6IGPhuqMgaGFpLiBN4buZdCBwaOG6p246IG3hu5l0LiBUw6xuaCBodeG7kW5nIGzDoG0gdmkgcGjhuqFtIG3hu5l0IHF1eSDEkeG7i25oIOKGkiBraMO0bmcgxJHhuqF0IMO0IMSRw7MuIEtow7RuZyBi4bqvdCB0w6xuaCBodeG7kW5nIGPDsyB0aOG6rXQuCkPDonUgMyDEkeG6oXQ6IG3hu5l0IGPDonUgbMOgbSAoYikgY2jhuq9jIGNo4bqvbiArIGPDsyBraeG7g20gbOG6oWkgKGUpLiBN4buZdCBwaOG6p246IGPDonUgxJHDum5nIG5oxrBuZyBraMO0bmcga2nhu4NtIChlKS4KQ8OidSA0IMSR4bqhdDogbGnhu4d0IGvDqiBSMSwgUjMsIFI0ICjEkeG7pyBiYSkgbeG7l2kgY8OhaSBjw7MgZ2nhuqNpIHRow61jaDsgbsOqdSBSMiBraMO0bmcgbGnDqm4gcXVhbiBsw6AgxJFp4buDbSBj4buZbmcuIE3hu5l0IHBo4bqnbjogaGFpIHRyb25nIGJhLgpC4bqreSBjaMOtbmg6IGNvaSAiY2jhu4kgbmfGsOG7nWkgxJHGsOG7o2MgZHV54buHdCBt4bubaSBuaOG6rW4gcGjhu6UgY+G6pXAiIGzDoCAixJHGsOG7o2MgZHV54buHdCB0aMOsIG5o4bqtbiBwaOG7pSBj4bqlcCI7IOG7nyBjw6J1IDQgcXXDqm4gUjMgY8WpbmcgY8OzIHRo4buDIGfDo3kuCkfhu5lwOiBjb3JyZWN0ID0gbeG7jWkgY8OidSDEkeG6oXQsIGhv4bq3YyAzIMSR4bqhdCArIDEgbeG7mXQgcGjhuqduOyBwYXJ0aWFsID0gMeKAkzMgY8OidSDEkeG6oXQ7IGluY29ycmVjdCA9IGtow7RuZyBjw6J1IG7DoG8gxJHhuqF0Lg=="
+}

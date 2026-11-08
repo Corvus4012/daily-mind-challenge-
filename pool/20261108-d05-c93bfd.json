@@ -1,0 +1,44 @@
+{
+  "id": "20261108-d05-c93bfd",
+  "created": "2026-11-08",
+  "domain_id": 5,
+  "level": 3,
+  "tag": "reason",
+  "format": "design",
+  "skills": [
+    "experiment_design",
+    "confounding"
+  ],
+  "est_minutes": 14,
+  "challenge_md": "Một hợp tác xã có **40 thửa ruộng** lúa, muốn thử một loại phân vi sinh mới. Số liệu (giả định của đề):\n- 20 thửa **gần kênh** có năng suất trung bình **6,5 tấn/ha**; 20 thửa **xa kênh**: **5,5 tấn/ha** (khi không bón phân mới).\n- Giả sử tác dụng thật của phân mới là **+0,3 tấn/ha** trên mọi thửa.\n- Ngoài khoảng cách tới kênh, các thửa còn khác nhau ở những điều hợp tác xã không đo được (chất đất từng chỗ, sâu bệnh cục bộ).\n\nChủ nhiệm đề xuất: \"Bón cho 20 thửa gần nhà kho cho tiện.\" Cả 20 thửa đó đều gần kênh.\n\n**Câu hỏi**\n1. Theo đề xuất này, chênh lệch năng suất trung bình giữa nhóm bón và nhóm không bón là bao nhiêu? Ước lượng đó lớn gấp mấy lần tác dụng thật?\n2. Nếu bốc thăm ngẫu nhiên 20 trên 40 thửa (không chia nhóm trước), có thể xảy ra trường hợp nhóm bón có 14 thửa gần kênh và 6 thửa xa kênh. Khi đó chênh lệch quan sát được là bao nhiêu?\n3. Thiết kế lại theo đủ 4 mục: (a) chia thửa nào được bón và chia bằng cách nào để tránh cả lỗi ở câu 1 lẫn ở câu 2; (b) một điều kiện giữ giống nhau giữa hai nhóm (loại: giống lúa, lịch tưới, lượng phân khác…); (c) đo gì; (d) kết quả nào (ngưỡng đặt trước) thì hợp tác xã dùng phân mới.\n4. Cách chia ở câu 3a xử lý được khác biệt về khoảng cách tới kênh. Nó xử lý những khác biệt **không đo được** (chất đất, sâu bệnh cục bộ) bằng cách nào?",
+  "hints": [
+    "Câu 1: nhóm bón toàn thửa gần kênh, nhóm không bón toàn thửa xa kênh. Chênh lệch gồm hai phần cộng lại.",
+    "Câu 2: tính năng suất nền trung bình của mỗi nhóm theo số thửa gần/xa, rồi cộng tác dụng thật vào nhóm bón.",
+    "Câu 3a: nếu biết trước một yếu tố ảnh hưởng lớn, có thể chia thửa thành nhóm theo yếu tố đó rồi mới bốc thăm trong từng nhóm."
+  ],
+  "claims": [],
+  "review": {
+    "solver_model": "opus",
+    "first_solve_match": true,
+    "revised": false,
+    "issues": [
+      {
+        "type": "ambiguity",
+        "severity": 1,
+        "detail": "'gấp mấy lần' có thể so phần thiên lệch"
+      },
+      {
+        "type": "ambiguity",
+        "severity": 1,
+        "detail": "ngưỡng 3d không có dữ kiện chi phí"
+      },
+      {
+        "type": "level_mismatch",
+        "severity": 1,
+        "detail": "phản biện chấm L3"
+      }
+    ]
+  },
+  "answer_b64": "MS4gTmjDs20gYsOzbjogNiw1ICsgMCwzID0gNiw4OyBuaMOzbSBraMO0bmcgYsOzbjogNSw1LiBDaMOqbmggMSwzIHThuqVuL2hhLCBn4bqlcCBraG/huqNuZyA0LDMgbOG6p24gdMOhYyBk4bulbmcgdGjhuq10ICgxLDMvMCwzKS4gUGjhuqduIDEsMCBsw6AgZG8gduG7iyB0csOtIGfhuqduIGvDqm5oLCBraMO0bmcgZG8gcGjDom4uCjIuIE7hu4FuIG5ow7NtIGLDs246ICgxNCDDlyA2LDUgKyA2IMOXIDUsNSkvMjAgPSAoOTEgKyAzMykvMjAgPSA2LDI7IG7hu4FuIG5ow7NtIGtow7RuZyBiw7NuOiAoNiDDlyA2LDUgKyAxNCDDlyA1LDUpLzIwID0gKDM5ICsgNzcpLzIwID0gNSw4LiBDaMOqbmggcXVhbiBzw6F0ID0gNiwyICsgMCwzIOKIkiA1LDggPSAwLDcgdOG6pW4vaGEgKGfhuqVwIGjGoW4gMiBs4bqnbiB0w6FjIGThu6VuZyB0aOG6rXQpLiBC4buRYyB0aMSDbSBraMO0bmcgY2hpYSBuaMOzbSB24bqrbiBjw7MgdGjhu4MgbOG7h2NoIGtoaSBz4buRIHRo4butYSDDrXQuCjMuIFbDrSBk4bulIMSR4bqhdDogKGEpIGNoaWEgNDAgdGjhu61hIHRow6BuaCBoYWkga2jhu5FpIGfhuqduIGvDqm5oIC8geGEga8OqbmgsIHRyb25nIG3hu5dpIGto4buRaSBi4buRYyB0aMSDbSAxMCB0aOG7rWEgYsOzbiwgMTAgdGjhu61hIGtow7RuZyBiw7NuIChi4buRYyB0aMSDbSB0aGVvIGto4buRaSkuIChiKSBDw7luZyBnaeG7kW5nIGzDumEsIGPDuW5nIGzhu4tjaCB0xrDhu5tpLCBjw7luZyBsxrDhu6NuZyBjw6FjIGxv4bqhaSBwaMOibiBraMOhYywgY8O5bmcgbmfDoHkgY+G6pXkuIChjKSBOxINuZyBzdeG6pXQgdOG7q25nIHRo4butYSAodOG6pW4vaGEpIGzDumMgdGh1IGhv4bqhY2g7IHNvIGNow6puaCBs4buHY2ggdHJvbmcgdOG7q25nIGto4buRaSBy4buTaSBs4bqleSB0cnVuZyBiw6xuaC4gKGQpIETDuW5nIHBow6JuIG3hu5tpIG7hur91IGNow6puaCBs4buHY2gg4omlIGtob+G6o25nIDAsMiB04bqlbi9oYSDhu58gY+G6oyBoYWkga2jhu5FpICh2w6AgxJHhu6cgYsO5IGNoaSBwaMOtIHBow6JuKSwgbmfGsOG7oW5nIMSR4bq3dCB0csaw4bubYyBraGkgdGh1IGhv4bqhY2guCjQuIFRyb25nIG3hu5dpIGto4buRaSwgYWkgxJHGsOG7o2MgYsOzbiBsw6AgZG8gYuG7kWMgdGjEg20sIGtow7RuZyBhaSBjaOG7jW47IG7Dqm4gY8OhYyBraMOhYyBiaeG7h3Qga2jDtG5nIMSRbyDEkcaw4bujYyAoY2jhuqV0IMSR4bqldCwgc8OidSBi4buHbmgpIGNoaWEgxJHhu4F1IHbhu4EgdHJ1bmcgYsOsbmggZ2nhu69hIG5ow7NtIGLDs24gdsOgIGtow7RuZyBiw7NuLiBDaMO6bmcga2jDtG5nIGfhuq9uIGPDsyBo4buHIHRo4buRbmcgduG7m2kgdmnhu4djIGLDs24gcGjDom4sIG7Dqm4ga2jDtG5nIMSR4bqpeSBr4bq/dCBxdeG6oyB0aGVvIG3hu5l0IGNoaeG7gXUu",
+  "rubric_b64": "Q8OidSAxOiDDtCB0aGVuIGNo4buRdCBsw6AgY2jDqm5oIDEsMyB04bqlbi9oYSB2w6Ag4omIIDQsMyBs4bqnbiAoY2jhuqVwIG5o4bqtbiAiaMahbiA0IGzhuqduIiwgaG/hurdjIHTDoWNoIMSRw7puZyAxLDAgdGhpw6puIGzhu4djaCArIDAsMyB0aOG6rXQpLiDEkOG6oXQ6IGPhuqMgaGFpLgpDw6J1IDIgxJHhuqF0OiAwLDcgdOG6pW4vaGEgY8OzIHBow6lwIHTDrW5oLiBN4buZdCBwaOG6p246IMSRw7puZyBjw6FjaCBtw6Agc2FpIHPhu5EuCkPDonUgMyAoNCDDtCwgxJHhu4F1IHRoZW4gY2jhu5F0KTogKGEpIGNoaWEga2jhu5FpIHRoZW8ga2hv4bqjbmcgY8OhY2ggdOG7m2kga8OqbmggKyBi4buRYyB0aMSDbSB0cm9uZyBraOG7kWkgKGLhu5FjIHRoxINtIGhvw6BuIHRvw6BuIG3DoCBraMO0bmcgY2hpYSBraOG7kWkg4oaSIG3hu5l0IHBo4bqnbiDDtCBuw6B5KTsgKGIpIG3hu5l0IMSRaeG7gXUga2nhu4duIHRow60gbmdoaeG7h20gZ2nhu68gZ2nhu5FuZyBuaGF1OyAoYykgdGjGsOG7m2MgxJFvIGPhu6UgdGjhu4M7IChkKSBuZ8aw4buhbmcgxJHhu4tuaCB0csaw4bubYyBjw7Mgc+G7kSAobeG7jWkgbmfGsOG7oW5nIGjhu6NwIGzDvSDEkeG6t3QgdHLGsOG7m2MgxJHhu4F1IG5o4bqtbikuIMSQ4bqhdDog4omlIDMvNCBn4buTbSAoYSkuIE3hu5l0IHBo4bqnbjogdGhp4bq/dSAoYSkgaG/hurdjIGNo4buJIDIvNC4KQ8OidSA0IMSR4bqhdDogbsOqdSBi4buRYyB0aMSDbSBsw6BtIHnhur91IHThu5Ega2jDtG5nIMSRbyDEkcaw4bujYyBjaGlhIMSR4buBdSB24buBIHRydW5nIGLDrG5oIC8ga2jDtG5nIGfhuq9uIHbhu5tpIHZp4buHYyBiw7NuOyBuw6p1IHRow6ptICJjaOG7iSBjw6JuIGLhurFuZyB0aGVvIGvhu7MgduG7jW5nLCBwaOG6p24gbOG7h2NoIGPDsm4gbOG6oWkgZ2nhuqNtIGtoaSBuaGnhu4F1IHRo4butYSBob+G6t2MgbOG6t3AgduG7pSIgbMOgIMSRaeG7g20gY+G7mW5nLiBN4buZdCBwaOG6p246IGNo4buJIG7Ds2kgIm5n4bqrdSBuaGnDqm4gbsOqbiBjw7RuZyBi4bqxbmciIGtow7RuZyBjw7MgY8ahIGNo4bq/LgpC4bqreSBjaMOtbmg6IHRpbiBjb24gc+G7kSAxLDM7IG5naMSpIGLhu5FjIHRoxINtIGhvw6BuIHRvw6BuIGzDoCDEkeG7pyB24bubaSA0MCB0aOG7rWEuCkfhu5lwOiBjb3JyZWN0ID0gbeG7jWkgY8OidSDEkeG6oXQsIGhv4bq3YyAzIMSR4bqhdCArIDEgbeG7mXQgcGjhuqduOyBwYXJ0aWFsID0gMeKAkzMgY8OidSDEkeG6oXQ7IGluY29ycmVjdCA9IGtow7RuZyBjw6J1IG7DoG8gxJHhuqF0LiBM4buXaSBkw6J5IGNodXnhu4FuOiBjaOG6pW0gY8OidSBzYXUgdGhlbyBwaMawxqFuZyBwaMOhcC4="
+}

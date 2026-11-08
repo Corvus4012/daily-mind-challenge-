@@ -1,21 +1,20 @@
-Reflect đến ngày 2026-11-01
+Reflect đến ngày 2026-11-08
 
-## Chấm lại (khác session chính, chưa sửa lịch sử; chờ /discuss)
-- 31/10: reflect giữ partial (câu 2 nhắc lại kết quả 452>400 thay vì nêu tỉ trọng; câu 4 vẫn thiếu hành vi cụ thể dù bỏ qua chuyện chọn đầu vào). Session chính đã nâng lên correct sau appeal → level nền lên 4; theo reflect, level nền sẽ là 3.
-- 30/10 câu 2 và 01/11 câu 3: reflect chấm một phần (session chính đạt); kết quả gộp không đổi.
-- 28/10: đồng ý giữ một phần sau appeal; ý chẩn đoán qua dòng (b) nên được ghi nhận như điểm cộng.
+## Chấm lại
+- 05/11, 06/11 (Gemini chấm): kết quả từng câu và kết quả gộp khớp. Lỗi ở phần nhận xét: 05/11 câu 2 bản tường minh sai đại số; 05/11 câu 3 nói người học "nhầm" khi họ đúng; 06/11 câu 3 bịa một vi phạm ràng buộc; 06/11 câu 4 hạ điểm vì câu trước (trái quy tắc lỗi dây chuyền); 06/11 thiếu mọi bản tường minh. Đã siết lời nhắc chấm trong docs/app.js.
+- 31/10 vẫn đang chờ người dùng quyết (xem state/inbox.md).
 
 ## Mẫu
-1. Dừng một bước trước khi nối cơ chế với kết luận bằng số (26/10, 28/10, 31/10).
-2. Thiết kế phép thử: đã có chia ngẫu nhiên (01/11), còn thiếu "giữ giống nhau" và "ngưỡng định trước" (26/10, 01/11).
-3. Dựng phản ví dụ / tình huống giả định cần nhiều gợi ý (29/10, 30/10); bài L2 dạng này khó hơn nhãn.
-4. Thay mô hình của đề bằng mô hình riêng (01/11).
-5. Xác nhận qua kênh độc lập: lỗi thật, lặp 20/10, 28/10.
-Mạnh: tính toán chính xác, nhất quán; tự khai báo quy ước; tự đưa ngẫu nhiên.
+1. Thiết kế phép thử: gán theo biến có sẵn (loại ngày) thay vì bốc thăm (06/11; lùi so với 01/11).
+2. Không dùng kết luận của chính mình để tự kiểm: nêu biến nhiễu ở câu 2 rồi dựng phép thử trùng với nó (06/11).
+3. Câu tính toán đạt; câu thiết kế cơ chế / phép thử rơi (05/11 câu 4, 06/11 câu 3).
+4. Kết luận bằng nhãn chung hoặc chiều mơ hồ, thiếu con số (05/11 câu 3, 06/11 câu 2).
+5. Dừng lại khi phải tự dựng giải pháp mở (05/11 câu 4, 29–30/10).
 
 ## Kiến nghị cho người ra đề
-1. Đề thiết kế phép thử: khung 4 mục (chia thế nào; một điều kiện giữ giống nhau, ví dụ loại nhiệm vụ/thời gian/thiết bị; thước đo; ngưỡng định trước) + một câu về nhiễu không đo được.
-2. Câu "vì sao": đòi ít nhất hai con số của đề; "nhắc lại kết quả" chỉ là một phần.
-3. Dạng dựng phản ví dụ: "đổi đúng một điều kiện đề đã khoá để kết luận sai"; gợi ý 2 là một ví dụ ở bài tương tự.
-4. Đề mô hình L4–5: câu 1 mở bằng "ghi lại định nghĩa biến, số tầng/số mục"; rubric có điều khoản lỗi dây chuyền.
-5. Câu hành vi/động cơ: nêu trong đề các đòn bẩy bên được thưởng kiểm soát.
+1. Đề phép thử L2–3, domain mới: có một biến sẵn dễ bị dùng làm biến gán; bắt buộc 3 dòng: đơn vị; ai/cái gì quyết định vào nhóm (bốc thăm trong từng tầng); yếu tố không đo được nào được chia đều.
+2. Thêm câu tự kiểm: "Yếu tố nhiễu bạn nêu ở câu trước có trùng với cách chia nhóm của bạn không?"
+3. Câu thiết kế cơ chế: bậc thang hai bước ở L3 (chọn trong 2–3 quy tắc ứng viên trước, tự đề xuất sau).
+4. Trong đề thiết kế, để phần tính ở L2 để đo riêng kỹ năng thiết kế.
+5. Câu diễn giải tách thành ô nhỏ, mỗi ô một con số và hỏi rõ chiều ("cao hơn hay thấp hơn sự thật?").
+6. Gợi ý cho đề thiết kế: 1 gọi tên yếu tố nhiễu, 2 hỏi "điều gì quyết định ai vào nhóm nào", 3 mới nhắc ngẫu nhiên.

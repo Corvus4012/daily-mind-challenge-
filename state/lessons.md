@@ -52,6 +52,8 @@ Thêm dòng mới khi người dùng chỉ ra lỗi của đề, hoặc khi mộ
   - Tự nghĩ ra tình huống giả định / phản ví dụ còn yếu (29/10 tiền thuê, 30/10 lý do miễn thi khác phải tra Google): hiểu cấu trúc lỗi nhưng tìm phản ví dụ trong thực tế thay vì dựng một trường hợp "có thể xảy ra".
   - Thay mô hình của đề bằng mô hình "thực tế hơn" của mình (01/11: A tính n = 8 dù đề ghi một tầng 16 mục). Mẫu mới; cần thói quen đọc lại định nghĩa biến trước khi tính.
   - Tiến bộ (01/11): thiết kế phép thử đã tự đưa chia ngẫu nhiên; còn thiếu điều kiện giữ giống nhau và ngưỡng định trước.
+  - (06/11) Gán nhóm theo một biến có sẵn (ngày thường/cuối tuần) thay vì bốc thăm, dù 01/11 đã tự đưa ngẫu nhiên: kỹ năng chưa vững. Và nêu biến nhiễu ở câu trước rồi dựng phép thử trùng với nó (self_check).
+  - (05/11) Câu thiết kế cơ chế mở: nhận ra đúng nguyên tắc ("không dựa vào lòng tốt") nhưng chưa biến thành quy tắc cụ thể.
 - Cách phản hồi hợp: thẳng, chỉ ra cơ chế; thích được giải nghĩa nền tảng khi gặp domain lạ (đã xin bổ túc kinh tế ngày 19/10).
 
 ## Ghi chú hệ thống (chờ trao đổi qua /discuss)

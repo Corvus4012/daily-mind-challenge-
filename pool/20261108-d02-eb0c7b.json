@@ -1,0 +1,45 @@
+{
+  "id": "20261108-d02-eb0c7b",
+  "created": "2026-11-08",
+  "domain_id": 2,
+  "level": 3,
+  "tag": "reason",
+  "format": "model",
+  "skills": [
+    "conditional_prob",
+    "base_rate",
+    "interpret_result"
+  ],
+  "est_minutes": 14,
+  "challenge_md": "Một thành phố có **100.000 người** cần sàng lọc một bệnh có tỉ lệ mắc **1%**. Có hai xét nghiệm (giả định của đề; kết quả hai xét nghiệm độc lập với nhau khi đã biết người đó có bệnh hay không):\n- **A** (rẻ): phát hiện đúng 90% người có bệnh; báo dương tính nhầm ở 5% người không bệnh.\n- **B** (đắt): phát hiện đúng 80% người có bệnh; báo dương tính nhầm ở 2% người không bệnh.\n\nQuy trình: mọi người làm A; ai dương tính với A thì làm thêm B.\n\n**Câu hỏi**\n1. Trong 100.000 người, có bao nhiêu người dương tính với A? Trong số đó, bao nhiêu phần thật sự có bệnh? (Ghi số người ở từng nhóm.)\n2. Trong số người dương tính với **cả A và B**, bao nhiêu phần thật sự có bệnh?\n3. Có bao nhiêu người có bệnh bị bỏ sót (không được kết luận dương tính cả hai), chia theo bị sót ở bước A và ở bước B?\n4. So hai chính sách: (P1) điều trị mọi người dương tính với A; (P2) chỉ điều trị người dương tính với cả A và B. Với mỗi chính sách, có bao nhiêu người không bệnh bị điều trị và bao nhiêu người có bệnh không được điều trị? Nếu điều trị nhầm gây hại nhẹ còn bỏ sót gây hại nặng, chính sách nào hợp hơn? Dùng số để trả lời.",
+  "hints": [
+    "Bắt đầu bằng bảng đếm: 1.000 người bệnh và 99.000 người không bệnh; rồi tách mỗi nhóm theo kết quả A.",
+    "Bước B chỉ áp cho nhóm dương tính với A; tách tiếp hai nhóm con theo kết quả B.",
+    "Câu 4: đặt hai cột P1 và P2, mỗi cột hai con số: người không bệnh bị điều trị, người có bệnh bị bỏ sót."
+  ],
+  "claims": [],
+  "review": {
+    "solver_model": "opus",
+    "first_solve_match": true,
+    "revised": false,
+    "issues": [
+      {
+        "type": "ambiguity",
+        "severity": 1,
+        "detail": "câu 2 tỉ lệ hay số người; rubric nhận cả hai"
+      },
+      {
+        "type": "answer_error",
+        "severity": 1,
+        "detail": "rubric nhắc 95% không có trong đề — đã sửa"
+      },
+      {
+        "type": "level_mismatch",
+        "severity": 1,
+        "detail": "phản biện chấm L3"
+      }
+    ]
+  },
+  "answer_b64": "MS4gQ8OzIGLhu4duaCAxLjAwMDogQSsgbMOgIDkwMCwgQeKIkiBsw6AgMTAwLiBLaMO0bmcgYuG7h25oIDk5LjAwMDogQSsgbMOgIDQuOTUwLiBU4buVbmcgQSsgPSA1Ljg1MDsgdOG7iSBs4buHIGPDsyBi4buHbmggPSA5MDAvNS44NTAg4omIIDE1LDQlLgoyLiBUcm9uZyA1Ljg1MCBuZ8aw4budaSBBKzogbmfGsOG7nWkgYuG7h25oIEIrID0gOTAwIMOXIDAsOCA9IDcyMDsgbmfGsOG7nWkga2jDtG5nIGLhu4duaCBCKyA9IDQuOTUwIMOXIDAsMDIgPSA5OS4gQStCKyA9IDgxOTsgY8OzIGLhu4duaCA3MjAvODE5IOKJiCA4Nyw5JS4KMy4gQuG7iyBzw7N0IOG7nyBixrDhu5tjIEE6IDEwMC4gQuG7iyBzw7N0IOG7nyBixrDhu5tjIEI6IDkwMCDiiJIgNzIwID0gMTgwLiBU4buVbmcgMjgwIG5nxrDhu51pIGPDsyBi4buHbmggYuG7iyBi4buPIHPDs3QgKDI4JSkuCjQuIFAxOiDEkWnhu4F1IHRy4buLIG5o4bqnbSA0Ljk1MCBuZ8aw4budaSBraMO0bmcgYuG7h25oOyBi4buPIHPDs3QgMTAwIG5nxrDhu51pIGPDsyBi4buHbmguIFAyOiDEkWnhu4F1IHRy4buLIG5o4bqnbSA5OTsgYuG7jyBzw7N0IDI4MC4gUDIgxJHhu5VpIDE4MCBjYSBi4buPIHPDs3QgdGjDqm0gbOG6pXkgdmnhu4djIHRyw6FuaCA0Ljg1MSBjYSDEkWnhu4F1IHRy4buLIG5o4bqnbS4gTuG6v3UgYuG7jyBzw7N0IG7hurduZyBoxqFuIG5oaeG7gXUgc28gduG7m2kgxJFp4buBdSB0cuG7iyBuaOG6p20gKHbDrSBk4bulIG7hurduZyBoxqFuIGtob+G6o25nIDI3IGzhuqduIHRy4bufIGzDqm4sIHbDrCA0Ljg1MS8xODAg4omIIDI3KSwgUDEgaOG7o3AgaMahbjsgbuG6v3UgxJFp4buBdSB0cuG7iyBuaOG6p20gY8WpbmcgxJHDoW5nIGvhu4MgdGjDrCBQMiBo4bujcCBoxqFuLiBDw6J1IHRy4bqjIGzhu51pIMSR4bqhdCBraGkgbsOqdSDEkcO6bmcgcGjDqXAgxJHhu5VpIG7DoHkgYuG6sW5nIHPhu5EgdsOgIGvhur90IGx14bqtbiB0aGVvIGdp4bqjIMSR4buLbmggduG7gSBt4bupYyBo4bqhaSBuZ8aw4budaSBo4buNYyBuw6p1IHJhLg==",
+  "rubric_b64": "Q8OidSAxOiDDtCB0aGVuIGNo4buRdCBsw6AgNS44NTAgbmfGsOG7nWkgQSsgdsOgIOKJiCAxNSw0JTsgw7QgdGjGsOG7nW5nIGzDoCA5MDAgLyA0Ljk1MC4gw4FwIGNodeG6qW4gY2jhuqVtIGLhuqNuZy4KQ8OidSAyIMSR4bqhdDog4omIIDg3LDklIChnaGkgc+G7kSBuZ8aw4budaSA3MjAgdsOgIDk5IGzDoCDEkWnhu4NtIGPhu5luZywgY2jhu4kgZ2hpIHThu4kgbOG7hyBjw7MgcGjDqXAgdMOtbmggY8WpbmcgxJHhuqF0KS4gTOG7l2kgZMOieSBjaHV54buBbiB04burIGPDonUgMTogY2jhuqVtIHRoZW8gcGjGsMahbmcgcGjDoXAuCkPDonUgMyDEkeG6oXQ6IDEwMCDhu58gQSwgMTgwIOG7nyBCLCB04buVbmcgMjgwLgpDw6J1IDQ6IMO0IHRoZW4gY2jhu5F0IGzDoCAoaSkgNCBjb24gc+G7kSBQMSAoNC45NTA7IDEwMCksIFAyICg5OTsgMjgwKSwgKGlpKSBzbyBzw6FuaCBi4bqxbmcgc+G7kSAoxJHDoW5oIMSR4buVaSAxODAgYuG7jyBzw7N0IGzhuqV5IDQuODUxIMSRaeG7gXUgdHLhu4sgbmjhuqdtLCBob+G6t2MgdMawxqFuZyDEkcawxqFuZykgdsOgIGvhur90IGx14bqtbiBuaOG6pXQgcXXDoW4gduG7m2kgZ2nhuqMgxJHhu4tuaCBt4bupYyBo4bqhaS4gxJDhuqF0OiBj4bqjIGhhaS4gTeG7mXQgcGjhuqduOiDEkcO6bmcgc+G7kSBtw6Aga+G6v3QgbHXhuq1uIGtow7RuZyBk4buxYSB0csOqbiBz4buRLiBDaOG6pXAgbmjhuq1uIGNo4buNbiBQMSBob+G6t2MgUDIgbuG6v3UgbOG6rXAgbHXhuq1uIG5o4bqldCBxdcOhbi4KQuG6q3kgY2jDrW5oOiBjb2kgOTAlICjEkeG7mSBuaOG6oXkpIGzDoCB4w6FjIHN14bqldCBjw7MgYuG7h25oIGtoaSBkxrDGoW5nIHTDrW5oOyBxdcOqbiBuZ8aw4budaSBi4buLIHPDs3Qg4bufIGLGsOG7m2MgQi4KR+G7mXA6IGNvcnJlY3QgPSBt4buNaSBjw6J1IMSR4bqhdCwgaG/hurdjIDMgxJHhuqF0ICsgMSBt4buZdCBwaOG6p247IHBhcnRpYWwgPSAx4oCTMyBjw6J1IMSR4bqhdDsgaW5jb3JyZWN0ID0ga2jDtG5nIGPDonUgbsOgbyDEkeG6oXQu"
+}
