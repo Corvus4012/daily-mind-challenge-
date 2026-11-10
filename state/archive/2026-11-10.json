@@ -90,5 +90,6 @@
     "consistency_check",
     "evidence_strength"
   ],
-  "notes": "Điểm mạnh: Tính toán câu 1 và phân tích cộng dồn ở câu 2 rất rõ ràng. Mẫu lỗi: Thiết kế biện pháp kiểm tra ở câu 3 và 4 dừng ở mức nguyên lý định tính, thiếu cơ chế kỹ thuật cụ thể."
+  "notes": "Điểm mạnh: Tính toán câu 1 và phân tích cộng dồn ở câu 2 rất rõ ràng. Mẫu lỗi: Thiết kế biện pháp kiểm tra ở câu 3 và 4 dừng ở mức nguyên lý định tính, thiếu cơ chế kỹ thuật cụ thể.",
+  "appeal": "(2026-11-10) Cách câu 4 của bạn nhìn chung vẫn là từ calibrate của tôi. Nếu có sai thì chỉ đạt một phần, không thể nói chưa đạt."
 }
