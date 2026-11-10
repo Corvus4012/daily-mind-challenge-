@@ -1,0 +1,94 @@
+{
+  "date": "2026-11-10",
+  "pool_id": "20261101-d09-9e542b",
+  "domain_id": 9,
+  "tag": "reason",
+  "level": 3,
+  "base_level": 4,
+  "rolled_level": 4,
+  "level_mode": "core",
+  "est_minutes": 14,
+  "format": "model",
+  "skills": [
+    "convention_mismatch",
+    "consistency_check",
+    "evidence_strength"
+  ],
+  "challenge_md": "Ngày 23/9/1999, tàu thăm dò Mars Climate Orbiter của NASA bị mất khi tiến vào quỹ đạo Sao Hỏa. Điều tra sau đó kết luận: phần mềm mặt đất của nhà thầu xuất dữ liệu xung lực (lực nhân thời gian) của các lần phun động cơ nhỏ theo đơn vị **pound-lực·giây (lbf·s)**, trong khi tài liệu giao tiếp giữa hai bên quy định đơn vị SI là **newton·giây (N·s)**, và phần mềm điều hướng đọc các con số đó như N·s. Biết 1 lbf·s ≈ 4,45 N·s.\n\nMô hình đơn giản hoá (mọi con số dưới đây là giả định của đề, không phải số liệu lịch sử): trong 9 tháng bay có 120 lần phun nhỏ; mỗi lần phun thực tế làm quỹ đạo lệch 0,3 km. Độ lệch tỉ lệ thuận với xung lực, và các lần lệch cùng hướng nên cộng dồn được. Hệ thống điều hướng tính độ lệch của từng lần theo con số xung lực nó đọc được.\n\n**Câu hỏi**\n1. Với mỗi lần phun, hệ thống điều hướng tính lệch bao nhiêu km? Sau 120 lần, tổng phần lệch thật mà hệ thống bỏ sót (lệch thật trừ lệch tính được) là bao nhiêu km?\n2. Vì sao một lỗi nhân với hệ số 4,45 lại rất khó phát hiện khi nhìn vào từng lần phun riêng lẻ, nhưng lại đủ lớn ở tổng? Dùng số của câu 1 để trả lời.\n3. Đội điều hướng có thể nhận ra quỹ đạo thật không khớp dự đoán qua đo đạc vô tuyến (khoảng cách và vận tốc đo từ Trái Đất). Thiết kế **một phép kiểm tra qua kênh độc lập** để bắt được lỗi đơn vị trước khi tàu tới nơi (kể cả kiểm tra trước khi phóng): so cái gì với cái gì, và kết quả nào thì báo động. Phép kiểm tra không được dựa vào chính con số xung lực do phần mềm nhà thầu xuất ra.\n4. Một kỹ sư đề xuất: \"Từ nay, mỗi file dữ liệu ghi thêm một dòng ghi chú đơn vị.\" Vì sao biện pháp này một mình chưa đủ? Nêu thêm một biện pháp có thể kiểm chứng được.",
+  "hints": [
+    "Hệ thống đọc con số lbf·s như N·s, tức là nó thấy một lực nhỏ hơn thật bao nhiêu lần?",
+    "Phần lệch mỗi lần nhỏ so với sai số đo thường gặp, nhưng các lần cùng chiều thì cộng dồn.",
+    "Câu 3: vị trí và vận tốc tàu đo bằng vô tuyến từ Trái Đất không đi qua file xung lực. Câu 4: ghi chú do người viết, ai kiểm tra nó?"
+  ],
+  "hints_revealed": 3,
+  "answer_key_b64": "MS4gSOG7hyB0aOG7kW5nIMSR4buNYyBjb24gc+G7kSBuaOG7jyBoxqFuIHRo4bqtdCA0LDQ1IGzhuqduLCBuw6puIHTDrW5oIG3hu5dpIGzhuqduIGzhu4djaCAwLDMgLyA0LDQ1IOKJiCAwLDA2NyBrbS4gUGjhuqduIGtow7RuZyB0aOG6pXkgbeG7l2kgbOG6p246IDAsMyDiiJIgMCwwNjcg4omIIDAsMjMzIGttLiBTYXUgMTIwIGzhuqduOiAxMjAgw5cgMCwyMzMg4omIIDI4IGttIChjaOG6pXAgbmjhuq1uIDI34oCTMjgga20pLgoyLiBN4buXaSBs4bqnbiBjaOG7iSBs4buHY2gga2hv4bqjbmcgMCwyMyBrbSwgbmjhu48gdsOgIGdp4buRbmcgbmjGsCBuaGnhu4V1IMSRbywgbsOqbiBuaMOsbiB04burbmcgbOG6p24ga2jDtG5nIHRo4bqleSBi4bqldCB0aMaw4budbmcuIE5oxrBuZyBjw6FjIGzhu5dpIGPDuW5nIGNoaeG7gXUgKGx1w7RuIMSRw6FuaCBnacOhIHRo4bqlcCkga2jDtG5nIHRyaeG7h3QgdGnDqnUgbmhhdSwgbcOgIGPhu5luZyBk4buTbiB0dXnhur9uIHTDrW5oOiAxMjAgbOG6p24gdGjDoG5oIGtob+G6o25nIDI4IGttLCDEkeG7pyBs4bubbiDEkeG7gyBsw6BtIHNhaSDEkWnhu4NtIHRp4bq/cCBj4bqtbiBTYW8gSOG7j2EgKDI4IGttIGzDoCBr4bq/dCBxdeG6oyBj4bunYSBtw7QgaMOsbmgsIGtow7RuZyBwaOG6o2kgxJHhu5kgbOG7h2NoIHRo4bqtdCBj4bunYSBNQ08pLiBM4buXaSBo4buHIHRo4buRbmcgKGx1w7RuIGzhu4djaCBt4buZdCBwaMOtYSkgbmd1eSBoaeG7g20gaMahbiBs4buXaSBuZ+G6q3Ugbmhpw6puIGPDuW5nIMSR4buZIGzhu5tuLgozLiBWw60gZOG7pSDEkeG6oXQ6IHNhdSBt4buXaSBs4bqnbiBwaHVuIChob+G6t2MgbeG7l2kgdHXhuqduKSwgc28gcXXhu7kgxJHhuqFvIGThu7EgxJFvw6FuICh0w61uaCB04burIGThu68gbGnhu4d1IHh1bmcgbOG7sWMpIHbhu5tpIHF14bu5IMSR4bqhbyB4w6FjIMSR4buLbmggxJHhu5ljIGzhuq1wIHThu6sgxJFvIMSR4bqhYyB2w7QgdHV54bq/biAoa2hv4bqjbmcgY8OhY2gsIERvcHBsZXIpLiBO4bq/dSBwaOG6p24gY2jDqm5oIGzhu4djaCB0xINuZyBk4bqnbiB0aGVvIGPDuW5nIG3hu5l0IGNoaeG7gXUgdsOgIHThu4kgbOG7hyB24bubaSBz4buRIGzhuqduIHBodW4gKGNo4bupIGtow7RuZyBkYW8gxJHhu5luZyBxdWFuaCAwKSwgaG/hurdjIHbGsOG7o3QgbeG7mXQgbmfGsOG7oW5nIMSR4bq3dCB0csaw4bubYyAodsOtIGThu6UgcXXDoSAyIGzhuqduIHNhaSBz4buRIMSRbyB0aMaw4budbmcgZ+G6t3AgbGnDqm4gdGnhur9wIG5oaeG7gXUgbOG6p24pLCB0aMOsIGLDoW8gxJHhu5luZyB2w6Aga2nhu4NtIHRyYSDEkcahbiB24buLLiBDxaluZyBjaOG6pXAgbmjhuq1uOiB0aOG7rSDEkeG6p3XigJNjdeG7kWkgdHLGsOG7m2Mga2hpIHBow7NuZywgY2hvIG3hu5l0IHh1bmcgbOG7sWMgxJHDoyBiaeG6v3QgKHbDrSBk4bulIMSRbyB0csOqbiBnacOhIHRo4butKSBjaOG6oXkgcXVhIGPhuqMgaGFpIHBo4bqnbiBt4buBbSB2w6Agc28ga+G6v3QgcXXhuqMgduG7m2kgZ2nDoSB0cuG7iyDEkW8gduG6rXQgbMO9Lgo0LiBHaGkgY2jDuiB24bqrbiBkbyBjaMOtbmggYsOqbiB4deG6pXQgZOG7ryBsaeG7h3Ugdmnhur90LCB2w6AgYsOqbiDEkeG7jWMgY8OzIHRo4buDIGtow7RuZyBraeG7g20gdHJhOyBuw7MgduG6q24gbMOgIGPDuW5nIG3hu5l0IGvDqm5oIGPDsyB0aOG7gyBzYWkuIEJp4buHbiBwaMOhcCBraeG7g20gY2jhu6luZyDEkcaw4bujYzogcGjhuqduIG3hu4FtIMSR4buNYyB04buxIGtp4buDbSB0cmEgdHLGsOG7nW5nIMSRxqFuIHbhu4sgdsOgIHThu6sgY2jhu5FpIGZpbGUgc2FpIMSRxqFuIHbhu4sgKGtp4buDbSB0cmEgYuG6sW5nIG3DoXkpOyBob+G6t2MgdGjhu60gxJHhuqd14oCTY3Xhu5FpIHbhu5tpIGdpw6EgdHLhu4sgxJHDoyBiaeG6v3QgbmjGsCBjw6J1IDM7IGhv4bq3YyBraeG7g20gdHJhIGNow6lvIGLhurFuZyDEkW8gxJHhuqFjIMSR4buZYyBs4bqtcCDEkeG7i25oIGvhu7Mu",
+  "rubric_b64": "Q8OidSAxOiDDtCB0aGVuIGNo4buRdCBsw6AgMCwwNjcga20vbOG6p24gKGhv4bq3YyBwaOG6p24ga2jDtG5nIHRo4bqleSAwLDIzMyBrbS9s4bqnbikgdsOgIHThu5VuZyDiiYggMjgga20uIMSQ4bqhdDogY+G6oyBoYWkuIE3hu5l0IHBo4bqnbjogbeG7mXQuIE5o4bqnbSBjaGnhu4F1IChuaMOibiA0LDQ1IHRoYXkgdsOsIGNoaWEpIOKGkiBjaMawYSDEkeG6oXQgY8OidSBuw6B5OyBjw6J1IDIgY2jhuqVtIHRoZW8gcGjGsMahbmcgcGjDoXAuCkPDonUgMiDEkeG6oXQ6IG7DqnUgYuG6sW5nIHPhu5EgcGjhuqduIGzhu4djaCBt4buXaSBs4bqnbiBuaOG7jyAo4omIMCwyMyBrbSkgdsOgIGPhu5luZyBk4buTbiBjw7luZyBjaGnhu4F1IHRow6BuaCDiiYgyOCBrbTsgw70gImzhu5dpIGjhu4cgdGjhu5FuZyBraMO0bmcgdHJp4buHdCB0acOqdSIgbMOgIMSRaeG7g20gY+G7mW5nLiBOaMOjbiBjaHVuZyBraMO0bmcgc+G7kSDihpIgbeG7mXQgcGjhuqduLgpDw6J1IDM6IMO0IHRoZW4gY2jhu5F0IGzDoCAoaSkga8OqbmggxJHhu5ljIGzhuq1wIGtow7RuZyBkw7luZyBjb24gc+G7kSB4dW5nIGzhu7FjIGPhu6dhIG5ow6AgdGjhuqd1ICjEkW8gdsO0IHR1eeG6v24gaG/hurdjIHRo4butIMSR4bqndeKAk2N14buRaSB24bubaSBnacOhIHRy4buLIHbhuq10IGzDvSDEkcOjIGJp4bq/dCksIChpaSkgc28gY8OhaSBnw6wgduG7m2kgY8OhaSBnw6wsIChpaWkpIHRpw6p1IGNow60gYsOhbyDEkeG7mW5nICh4dSBoxrDhu5tuZyBjw7luZyBjaGnhu4F1IGhv4bq3YyBuZ8aw4buhbmcpLiDEkOG6oXQ6IGPhuqMgYmEuIE3hu5l0IHBo4bqnbjogMi8zLiBEw7luZyBs4bqhaSBmaWxlIHh1bmcgbOG7sWMgaG/hurdjIGjhu49pIGzhuqFpIG5ow6AgdGjhuqd1IOKGkiBraMO0bmcgxJHhuqF0IChpKS4KQ8OidSA0IMSR4bqhdDogY2jhu4kgcmEgZ2hpIGNow7ogduG6q24gbMOgIGPDuW5nIGvDqm5oIC8ga2jDtG5nIGFpIGtp4buDbSArIG3hu5l0IGJp4buHbiBwaMOhcCBraeG7g20gY2jhu6luZyDEkcaw4bujYy4gTeG7mXQgcGjhuqduOiBt4buZdCB0cm9uZyBoYWkuCkLhuqt5IGNow61uaDogY8OidSAzIMSR4buBIHh14bqldCAiaOG7j2kgbOG6oWkgxJHGoW4gduG7iyIgaG/hurdjIGThu7FhIHbDoG8gY2jDrW5oIGZpbGUgZOG7ryBsaeG7h3UuCkfhu5lwOiBjb3JyZWN0ID0gbeG7jWkgY8OidSDEkeG6oXQsIGhv4bq3YyAzIMSR4bqhdCArIDEgbeG7mXQgcGjhuqduOyBwYXJ0aWFsID0gMeKAkzMgY8OidSDEkeG6oXQ7IGluY29ycmVjdCA9IGtow7RuZyBjw6J1IG7DoG8gxJHhuqF0Lg==",
+  "review": {
+    "solver_model": "opus",
+    "first_solve_match": true,
+    "revised": true,
+    "issues": [
+      {
+        "type": "ambiguity",
+        "severity": 2,
+        "detail": "'theo số liệu thật' đọc như số liệu lịch sử"
+      },
+      {
+        "type": "missing_premise",
+        "severity": 2,
+        "detail": "chưa nêu độ lệch tỉ lệ với xung lực và cùng hướng"
+      },
+      {
+        "type": "level_mismatch",
+        "severity": 1,
+        "detail": "phản biện chấm L3"
+      }
+    ]
+  },
+  "status": "submitted",
+  "extra": false,
+  "user_answer": "1. Mỗi lần phun, phần mềm xuất dữ liệu xung lực bằng 1/4.45 thực tế, khoảng 0.225, nên tính chỉ lệch 0.0675km. Sau 120 lần, tổng lệch thật = 0.3 * 120 = 36km; tổng lệch tính = 0.0675 * 120 = 8.1; phần lệch = 27.9km.\n2. Đối với tôi thì nó không khó phát hiện, nhưng mỗi lần phun riêng lẻ chỉ lệch 0.3 - 0.0675 = 0.2325km, trong khi tổng lệch tới tận 27.9km. Phần lệch cùng chiều có thể cộng dồn, và nó dồn tận 120 lần.\n3. Đề bài không nói gì tới việc lần phun nhỏ ảnh hưởng vận tốc, nên ta thiết kế như sau: Đảm bảo rằng vận tốc của tàu không phải nhiễu loạn gây sai số, tức độ lệch chỉ tới từ chênh lệch vị trí. Trong cùng một vận tốc, ta đo vị trí thực tế để tính ra độ lệch. So nó với độ lệch ước tính theo số của phần mềm nhà thầu để bắt được lỗi đơn vị.\n4. Biện pháp nhìn chung vẫn phải xử lý qua lại giữa hai kiểu đơn vị, vốn không thể biết được trực tiếp liệu có sai sót khi chuyển đổi hay không, chỉ cho đến khi đo đạc kênh độc lập. Biện pháp bổ sung không cần phải có một phương pháp kiểm chứng, chỉ cần tuân thủ nguyên tắc trao đổi trung, tức đưa cài đặt (calibrate) mọi phần mềm đo đạc hoặc chuyển đổi đại lượng về Newton-giây.",
+  "grading": "1: đạt — Người học tính đúng mỗi lần lệch khoảng 0,0675 km và tổng phần bỏ sót khoảng 27,9 km, khớp với đáp án.\n2: đạt — Nêu rõ mỗi lần lệch nhỏ (khoảng 0,2325 km) giống nhiễu, nhưng cộng dồn cùng chiều qua 120 lần thành 27,9 km.\n3: một phần — Người học đề xuất so sánh vị trí thực tế đo được với độ lệch ước tính từ phần mềm, nhưng chưa chỉ rõ tiêu chí báo động định lượng hoặc ngưỡng chênh lệch để phân biệt lỗi đơn vị với nhiễu thông thường.\n4: chưa đạt — Người học nhận xét ghi chú chưa đủ, nhưng biện pháp bổ sung 'tuân thủ nguyên tắc trao đổi chung' không tạo ra được cơ chế kiểm chứng tự động hay kênh độc lập, mà vẫn phụ thuộc vào ý chủ quan.",
+  "feedback": {
+    "questions": [
+      {
+        "label": "1",
+        "verdict": "đạt",
+        "comment": "Người học tính đúng mỗi lần lệch khoảng 0,0675 km và tổng phần bỏ sót khoảng 27,9 km, khớp với đáp án."
+      },
+      {
+        "label": "2",
+        "verdict": "đạt",
+        "comment": "Nêu rõ mỗi lần lệch nhỏ (khoảng 0,2325 km) giống nhiễu, nhưng cộng dồn cùng chiều qua 120 lần thành 27,9 km."
+      },
+      {
+        "label": "3",
+        "verdict": "một phần",
+        "comment": "Người học đề xuất so sánh vị trí thực tế đo được với độ lệch ước tính từ phần mềm, nhưng chưa chỉ rõ tiêu chí báo động định lượng hoặc ngưỡng chênh lệch để phân biệt lỗi đơn vị với nhiễu thông thường.",
+        "explicit_version": "Phép kiểm tra: So sánh vị trí thực tế của tàu thu được từ đo đạc vô tuyến Trái Đất với quỹ đạo dự đoán từ dữ liệu xung lực. Tiêu chí báo động: Nếu phần chênh lệch tăng dần liên tục và lệch cùng một phía sau mỗi lần phun, vượt quá sai số đo lường cho phép, hệ thống sẽ phát còi báo động để rà soát đơn vị."
+      },
+      {
+        "label": "4",
+        "verdict": "chưa đạt",
+        "comment": "Người học nhận xét ghi chú chưa đủ, nhưng biện pháp bổ sung 'tuân thủ nguyên tắc trao đổi chung' không tạo ra được cơ chế kiểm chứng tự động hay kênh độc lập, mà vẫn phụ thuộc vào ý chủ quan.",
+        "explicit_version": "Biện pháp kiểm chứng được: Lập trình phần mềm tự động kiểm tra định dạng và trường đơn vị của file dữ liệu đầu vào (từ chối nhận file ghi sai đơn vị lbf·s), hoặc chạy thử nghiệm đầu-cuối (end-to-end test) với một xung lực có giá trị vật lý đã biết trước khi đưa vào hệ thống điều hướng chính thức."
+      }
+    ],
+    "result": "partial",
+    "headline": "Hiểu rõ tích lũy sai số tuyến tính nhưng chưa thiết kế được kênh kiểm tra độc lập và cơ chế kiểm chứng phần mềm tự động",
+    "takeaway": "Lỗi hệ thống cùng chiều không tự triệt tiêu mà cộng dồn qua nhiều quan sát; do đó, việc kiểm tra tính nhất quán đòi hỏi các mốc đối chiếu từ kênh độc lập có tiêu chí báo động định trước thay vì chỉ dựa vào quy ước thủ công.",
+    "skills_missed": [
+      "consistency_check",
+      "evidence_strength"
+    ],
+    "notes": "Điểm mạnh: Tính toán câu 1 và phân tích cộng dồn ở câu 2 rất rõ ràng. Mẫu lỗi: Thiết kế biện pháp kiểm tra ở câu 3 và 4 dừng ở mức nguyên lý định tính, thiếu cơ chế kỹ thuật cụ thể.",
+    "model": "gemini-flash-lite-latest"
+  },
+  "grader": "gemini:gemini-flash-lite-latest",
+  "result": "partial",
+  "skills_missed": [
+    "consistency_check",
+    "evidence_strength"
+  ],
+  "notes": "Điểm mạnh: Tính toán câu 1 và phân tích cộng dồn ở câu 2 rất rõ ràng. Mẫu lỗi: Thiết kế biện pháp kiểm tra ở câu 3 và 4 dừng ở mức nguyên lý định tính, thiếu cơ chế kỹ thuật cụ thể."
+}
