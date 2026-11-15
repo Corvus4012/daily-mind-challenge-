@@ -30,6 +30,8 @@ Thêm dòng mới khi người dùng chỉ ra lỗi của đề, hoặc khi mộ
 - (31/10) Câu "giải thích vì sao" làm cầu nối sang công cụ ở câu sau (tỉ trọng) phải gợi khung ("so tỉ trọng mỗi nhóm trong từng trường") hoặc rubric nhận lời giải thích đúng cơ chế không kèm số. Đừng bắt người học đoán công cụ của câu sau.
 - (31/10) Câu hỏi về động cơ / hành vi lách luật phải nêu trong đề các đòn bẩy mà bên được thưởng có (vd "trường được tự xét tuyển và được khuyên học sinh chuyển trường"). Không có tiền đề đó thì đừng kỳ vọng hành vi đó. Câu trả lời /ask cũng không được nói ngược với đáp án.
 
+- (15/11) Đề mô hình nhiều dữ kiện (MCO 10/11): người học không thấy liên kết giữa các đại lượng. Viết chuỗi quan hệ thành một dòng công thức trong đề.
+
 ## Hồ sơ người học
 - Mạnh: thao tác đại số, lập phương trình; thiết kế phép đo trực tiếp; tự chuẩn hoá ký hiệu trước khi làm (20/10); phân biệt "sai sự thật" và "đúng nhưng chọn lọc".
 - Cần luyện:
@@ -54,6 +56,7 @@ Thêm dòng mới khi người dùng chỉ ra lỗi của đề, hoặc khi mộ
   - Tiến bộ (01/11): thiết kế phép thử đã tự đưa chia ngẫu nhiên; còn thiếu điều kiện giữ giống nhau và ngưỡng định trước.
   - (06/11) Gán nhóm theo một biến có sẵn (ngày thường/cuối tuần) thay vì bốc thăm, dù 01/11 đã tự đưa ngẫu nhiên: kỹ năng chưa vững. Và nêu biến nhiễu ở câu trước rồi dựng phép thử trùng với nó (self_check).
   - (05/11) Câu thiết kế cơ chế mở: nhận ra đúng nguyên tắc ("không dựa vào lòng tốt") nhưng chưa biến thành quy tắc cụ thể.
+  - (10/11) Thiết kế kiểm tra: đúng kênh độc lập và đối tượng so sánh, thiếu tiêu chí báo động; biện pháp chuẩn hoá (calibrate) thay cho biện pháp kiểm chứng được.
 - Cách phản hồi hợp: thẳng, chỉ ra cơ chế; thích được giải nghĩa nền tảng khi gặp domain lạ (đã xin bổ túc kinh tế ngày 19/10).
 
 ## Ghi chú hệ thống (chờ trao đổi qua /discuss)

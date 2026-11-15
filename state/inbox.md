@@ -16,3 +16,9 @@ Tôi đã siết lời nhắc chấm của Gemini: phải trích nguyên văn c�
 **[Câu chữ mơ hồ — đề 2026-11-10]** Tôi chẳng hiểu đề bài câu 1 đang nói gì hết, dữ kiện nói rất nhiều, nhưng chẳng có cái gì để nhìn thấy sự liên kết lẫn nhau. Giả dụ đề bài cho lực nhân thời gian, thì tôi có số tháng, nhưng liên quan gì tới số lần phun và số km lệch?
 
 > Câu hỏi số 1 yêu cầu tính độ lệch quỹ đạo do hệ thống điều hướng tính toán cho mỗi lần phun, và tổng phần lệch thật mà hệ thống bỏ sót sau 120 lần. Đề bài đã cho các mối liên hệ: tỉ lệ thuận giữa độ lệch và xung lực (lbf·s so với N·s qua hệ số 4,45), số lần phun (120 lần), và độ lệch thực tế cho mỗi lần phun (0,3 km). Bạn hãy đọc lại phần dữ kiện về quy đổi đơn vị và tỉ lệ thuận để kết nối các đại lượng này.
+
+**Trả lời (Claude, 2026-11-15):** Bạn đúng ở cả hai mục ngày 10/11.
+- *Phản đối câu 4:* nhận. Bạn đã nêu được vì sao dòng ghi chú chưa đủ (chỉ biết sai khi đo bằng kênh độc lập), chỉ thiếu một biện pháp kiểm chứng được: "calibrate mọi phần mềm về N·s" là chuẩn hoá, không phải kiểm tra. Câu 4 sửa thành **một phần**. Kết quả cả bài vẫn là đúng một phần (2 đạt + 2 một phần).
+- *Đề khó đọc:* nhận lỗi ra đề. Đề đưa nhiều dữ kiện mà không viết ra chuỗi nối chúng. Đủ ý thì đề phải có một dòng: "độ lệch hệ thống tính được = 0,3 km × (con số nó đọc ÷ con số thật) = 0,3 ÷ 4,45". Đã thêm vào bài học cho người ra đề: đề mô hình phải viết chuỗi quan hệ thành công thức, để độ khó nằm ở suy luận chứ không ở giải mã đề.
+- *Bài 31/10:* bạn chưa trả lời, nên tôi giữ nguyên "đạt" (level nền 4). Muốn đổi thì viết một dòng ở đây.
+

@@ -1,20 +1,17 @@
-Reflect đến ngày 2026-11-08
+Reflect đến ngày 2026-11-15
 
 ## Chấm lại
-- 05/11, 06/11 (Gemini chấm): kết quả từng câu và kết quả gộp khớp. Lỗi ở phần nhận xét: 05/11 câu 2 bản tường minh sai đại số; 05/11 câu 3 nói người học "nhầm" khi họ đúng; 06/11 câu 3 bịa một vi phạm ràng buộc; 06/11 câu 4 hạ điểm vì câu trước (trái quy tắc lỗi dây chuyền); 06/11 thiếu mọi bản tường minh. Đã siết lời nhắc chấm trong docs/app.js.
-- 31/10 vẫn đang chờ người dùng quyết (xem state/inbox.md).
+- 10/11 (Gemini chấm, partial): đồng ý câu 1–3. Câu 4 Gemini chấm "chưa đạt", đúng ra là "một phần" (người học nêu được vì sao ghi chú chưa đủ, chỉ thiếu biện pháp kiểm chứng được). Kết quả gộp không đổi. Người học đã phản đối đúng chỗ này.
+- Gemini tuần này có đủ bản tường minh và không bịa lỗi; vẫn chấm chặt tay ở câu thiết kế.
+- 31/10: người dùng chưa trả lời; giữ nguyên "đạt" (level nền 4).
 
 ## Mẫu
-1. Thiết kế phép thử: gán theo biến có sẵn (loại ngày) thay vì bốc thăm (06/11; lùi so với 01/11).
-2. Không dùng kết luận của chính mình để tự kiểm: nêu biến nhiễu ở câu 2 rồi dựng phép thử trùng với nó (06/11).
-3. Câu tính toán đạt; câu thiết kế cơ chế / phép thử rơi (05/11 câu 4, 06/11 câu 3).
-4. Kết luận bằng nhãn chung hoặc chiều mơ hồ, thiếu con số (05/11 câu 3, 06/11 câu 2).
-5. Dừng lại khi phải tự dựng giải pháp mở (05/11 câu 4, 29–30/10).
+1. Câu thiết kế kiểm tra/phép thử: nêu đúng kênh độc lập và đối tượng so sánh, thiếu tiêu chí báo động / ngưỡng (10/11 câu 3, 06/11, 01/11).
+2. Đề mô hình nhiều dữ kiện: người học khó thấy chuỗi liên kết giữa các đại lượng (10/11, /ask: "dữ kiện nhiều nhưng không thấy liên kết").
+3. Tính toán vẫn chắc (10/11 câu 1–2).
+4. Tần suất làm bài giảm: 3 bài trong 14 ngày qua.
 
 ## Kiến nghị cho người ra đề
-1. Đề phép thử L2–3, domain mới: có một biến sẵn dễ bị dùng làm biến gán; bắt buộc 3 dòng: đơn vị; ai/cái gì quyết định vào nhóm (bốc thăm trong từng tầng); yếu tố không đo được nào được chia đều.
-2. Thêm câu tự kiểm: "Yếu tố nhiễu bạn nêu ở câu trước có trùng với cách chia nhóm của bạn không?"
-3. Câu thiết kế cơ chế: bậc thang hai bước ở L3 (chọn trong 2–3 quy tắc ứng viên trước, tự đề xuất sau).
-4. Trong đề thiết kế, để phần tính ở L2 để đo riêng kỹ năng thiết kế.
-5. Câu diễn giải tách thành ô nhỏ, mỗi ô một con số và hỏi rõ chiều ("cao hơn hay thấp hơn sự thật?").
-6. Gợi ý cho đề thiết kế: 1 gọi tên yếu tố nhiễu, 2 hỏi "điều gì quyết định ai vào nhóm nào", 3 mới nhắc ngẫu nhiên.
+1. Đề mô hình: viết rõ chuỗi quan hệ thành một dòng công thức hoặc sơ đồ ("độ lệch hệ thống tính = độ lệch thật × số đọc được ÷ số thật"), để độ khó nằm ở suy luận chứ không ở việc giải mã đề.
+2. Câu thiết kế kiểm tra: tách ô "tiêu chí báo động / ngưỡng" thành một câu hỏi con riêng.
+3. Giữ đề 10–12 phút ở L3–4; tránh đề 15 phút liên tiếp khi tần suất làm bài đang giảm.

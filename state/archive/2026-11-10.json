@@ -69,7 +69,7 @@
       },
       {
         "label": "4",
-        "verdict": "chưa đạt",
+        "verdict": "một phần",
         "comment": "Người học nhận xét ghi chú chưa đủ, nhưng biện pháp bổ sung 'tuân thủ nguyên tắc trao đổi chung' không tạo ra được cơ chế kiểm chứng tự động hay kênh độc lập, mà vẫn phụ thuộc vào ý chủ quan.",
         "explicit_version": "Biện pháp kiểm chứng được: Lập trình phần mềm tự động kiểm tra định dạng và trường đơn vị của file dữ liệu đầu vào (từ chối nhận file ghi sai đơn vị lbf·s), hoặc chạy thử nghiệm đầu-cuối (end-to-end test) với một xung lực có giá trị vật lý đã biết trước khi đưa vào hệ thống điều hướng chính thức."
       }
@@ -91,5 +91,5 @@
     "evidence_strength"
   ],
   "notes": "Điểm mạnh: Tính toán câu 1 và phân tích cộng dồn ở câu 2 rất rõ ràng. Mẫu lỗi: Thiết kế biện pháp kiểm tra ở câu 3 và 4 dừng ở mức nguyên lý định tính, thiếu cơ chế kỹ thuật cụ thể.",
-  "appeal": "(2026-11-10) Cách câu 4 của bạn nhìn chung vẫn là từ calibrate của tôi. Nếu có sai thì chỉ đạt một phần, không thể nói chưa đạt."
+  "appeal": "(2026-11-10) Cách câu 4 của bạn nhìn chung vẫn là từ calibrate của tôi. Nếu có sai thì chỉ đạt một phần, không thể nói chưa đạt.\n(2026-11-15, Claude) Nhận: câu 4 có ý 'chỉ biết sai khi đo bằng kênh độc lập' (vế 1 của rubric) nhưng biện pháp calibrate về N·s không kiểm chứng được (thiếu vế 2) → một phần, không phải chưa đạt. Kết quả gộp vẫn partial (2 đạt + 2 một phần)."
 }
