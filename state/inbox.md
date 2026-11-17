@@ -22,3 +22,5 @@ Tôi đã siết lời nhắc chấm của Gemini: phải trích nguyên văn c�
 - *Đề khó đọc:* nhận lỗi ra đề. Đề đưa nhiều dữ kiện mà không viết ra chuỗi nối chúng. Đủ ý thì đề phải có một dòng: "độ lệch hệ thống tính được = 0,3 km × (con số nó đọc ÷ con số thật) = 0,3 ÷ 4,45". Đã thêm vào bài học cho người ra đề: đề mô hình phải viết chuỗi quan hệ thành công thức, để độ khó nằm ở suy luận chứ không ở giải mã đề.
 - *Bài 31/10:* bạn chưa trả lời, nên tôi giữ nguyên "đạt" (level nền 4). Muốn đổi thì viết một dòng ở đây.
 
+## 2026-11-17
+Đề bài dùng từ "đề xuất" thay vì có một dòng khẳng định rằng phân bón chỉ được bón ở 20 trên tổng số 40 thửa (đây là tôi suy luận sau khi đọc hết đề bài). Đề không sai về mặt ngụ ý, nhưng dữ kiện không minh bạch.
