@@ -1,0 +1,85 @@
+{
+  "date": "2026-11-24",
+  "pool_id": "20261108-d03-8bd181",
+  "domain_id": 3,
+  "tag": "reason",
+  "level": 5,
+  "base_level": 4,
+  "rolled_level": 4,
+  "level_mode": "core",
+  "est_minutes": 15,
+  "format": "model",
+  "skills": [
+    "equilibrium",
+    "incentives",
+    "marginal_thinking"
+  ],
+  "challenge_md": "Mỗi sáng có **3.000 xe** đi từ khu dân cư vào trung tâm, chọn một trong hai đường (mô hình và số liệu là giả định của đề):\n- **Đường A** (cầu lớn): luôn mất **20 phút**, dù bao nhiêu xe đi.\n- **Đường B** (đường nhỏ): mất **10 + x/100 phút**, với x là số xe đi B (đông thì chậm).\n\nMỗi tài xế tự chọn đường nhanh hơn cho mình; thành phố có thể đặt phí qua đường B (quy đổi thành \"phút\", ví dụ phí bằng giá trị 3 phút).\n\n**Câu hỏi**\n1. Trước khi tính, ghi lại: x là gì, thời gian mỗi đường phụ thuộc vào gì. Khi mọi tài xế tự chọn, bao nhiêu xe đi B, mỗi người mất bao lâu, và tổng thời gian của cả 3.000 xe là bao nhiêu phút?\n2. Nếu thành phố được tự phân xe để **tổng** thời gian nhỏ nhất, nên cho bao nhiêu xe đi B? Tổng thời gian khi đó? Dùng số để giải thích vì sao tài xế tự chọn không tự đạt mức này (gợi ý: một xe thêm vào B làm chậm những ai?).\n3. Phí qua B (tính bằng phút) phải là bao nhiêu để khi tài xế tự chọn, số xe đi B đúng bằng mức ở câu 2?\n4. Biến thể: không thu phí, thành phố mở rộng B để thời gian còn **10 + x/200 phút**. Khi tài xế tự chọn, bao nhiêu xe đi B và mỗi người mất bao lâu? So với câu 1, mở rộng đường có giúp ai đi nhanh hơn không? Giải thích bằng cơ chế.",
+  "hints": [
+    "Cân bằng: nếu B nhanh hơn A thì sẽ có người chuyển sang B, cho tới khi hai đường mất thời gian như nhau.",
+    "Tổng thời gian = 20 × (số xe đi A) + x × (10 + x/100). Một xe thêm vào B làm x xe đang đi B mỗi xe chậm thêm 1/100 phút.",
+    "Câu 3: tài xế so (thời gian B + phí) với 20 phút. Câu 4: chừng nào còn người đi A, thời gian của mọi người do đường nào quyết định?"
+  ],
+  "hints_revealed": 1,
+  "answer_key_b64": "MS4geCA9IHPhu5EgeGUgxJFpIEI7IEEgY+G7kSDEkeG7i25oIDIwIHBow7p0OyBCIHTEg25nIHRoZW8geC4gQ8OibiBi4bqxbmc6IDEwICsgeC8xMDAgPSAyMCDih5IgeCA9IDEuMDAwIHhlIMSRaSBCLCAyLjAwMCDEkWkgQSwgbeG7jWkgbmfGsOG7nWkgbeG6pXQgMjAgcGjDunQuIFThu5VuZyA9IDMuMDAwIMOXIDIwID0gNjAuMDAwIHBow7p0LgoyLiBU4buVbmcgVCh4KSA9IDIwKDMuMDAwIOKIkiB4KSArIHgoMTAgKyB4LzEwMCkuIFQnKHgpID0g4oiSMjAgKyAxMCArIDJ4LzEwMCA9IDAg4oeSIHggPSA1MDAuIEIgbeG6pXQgMTAgKyA1ID0gMTUgcGjDunQuIFThu5VuZyA9IDIuNTAwIMOXIDIwICsgNTAwIMOXIDE1ID0gNTAuMDAwICsgNy41MDAgPSA1Ny41MDAgcGjDunQgKMOtdCBoxqFuIDIuNTAwIHBow7p0KS4gTMO9IGRvOiB4ZSB0aOG7qSB4IHbDoG8gQiB04buxIGNo4buLdSAxMCArIHgvMTAwIHBow7p0IG5oxrBuZyBsw6BtIHggeGUgxJFhbmcgxJFpIEIgbeG7l2kgeGUgY2jhuq1tIHRow6ptIDEvMTAwIHBow7p0LCB04bupYyB0aMOqbSB4LzEwMCBwaMO6dCBjaG8gbmfGsOG7nWkga2jDoWMuIOG7niB4ID0gNTAwLCBuZ8aw4budaSDEkcOzIHRo4bqleSBCIGNo4buJIG3huqV0IDE1IHBow7p0IChy4bq7IGjGoW4gQSA1IHBow7p0KSBuw6puIHbhuqtuIHbDoG8sIG5oxrBuZyBi4bqvdCBuZ8aw4budaSBraMOhYyBjaOG7i3UgdGjDqm0gNSBwaMO6dDsgdOG7lW5nIGNoaSBwaMOtIHjDoyBo4buZaSA9IDIwLCBi4bqxbmcgQS4gVMOgaSB44bq/IGtow7RuZyB0w61uaCBwaOG6p24gY2hpIHBow60gxJHhu5UgbMOqbiBuZ8aw4budaSBraMOhYy4KMy4gQ+G6p24gMTAgKyA1MDAvMTAwICsgcGjDrSA9IDIwIOKHkiBwaMOtID0gNSBwaMO6dCAoxJHDum5nIGLhurFuZyBwaOG6p24gY2hpIHBow60gxJHhu5UgbMOqbiBuZ8aw4budaSBraMOhYyDhu58geCA9IDUwMCkuCjQuIDEwICsgeC8yMDAgPSAyMCDih5IgeCA9IDIuMDAwIHhlIMSRaSBCLCAxLjAwMCDEkWkgQTsgbeG7jWkgbmfGsOG7nWkgduG6q24gbeG6pXQgMjAgcGjDunQ7IHThu5VuZyB24bqrbiA2MC4wMDAgcGjDunQuIE3hu58gcuG7mW5nIGtow7RuZyBnacO6cCBhaSBuaGFuaCBoxqFuOiBjaOG7q25nIG7DoG8gY8OybiBuZ8aw4budaSDEkWkgQSwgdGjhu51pIGdpYW4gY+G7p2EgbeG7jWkgbmfGsOG7nWkgYuG7iyAibmVvIiDhu58gMjAgcGjDunQgY+G7p2EgQTsgcGjhuqduIG7Eg25nIGzhu7FjIHRow6ptIGPhu6dhIEIgYuG7iyBs4bqlcCBi4bufaSBuZ8aw4budaSBjaHV54buDbiB04burIEEgc2FuZy4gKE7hur91IHBow6JuIHThu5FpIMawdSBzYXUga2hpIG3hu58gcuG7mW5nOiB4ID0gMS4wMDAsIEIgbeG6pXQgMTUgcGjDunQsIHThu5VuZyA1NS4wMDA7IGzhu6NpIMOtY2ggY2jhu4kgxJHhur9uIGtoaSBjw7MgcGjDrSBob+G6t2MgxJFp4buBdSBwaOG7kWkuKQ==",
+  "rubric_b64": "Q8OidSAxOiDDtCB0aGVuIGNo4buRdCBsw6AgeCA9IDEuMDAwLCAyMCBwaMO6dCBjaG8gbeG7jWkgbmfGsOG7nWksIHThu5VuZyA2MC4wMDAuIMSQ4bqhdDogY+G6oyBiYSAocGjhuqduIGdoaSBiaeG6v24gbMOgIMSRaeG7g20gY+G7mW5nLCBraMO0bmcgYuG6r3QgYnXhu5ljKS4KQ8OidSAyOiDDtCB0aGVuIGNo4buRdCBsw6AgKGkpIHggPSA1MDAsIChpaSkgdOG7lW5nIDU3LjUwMCwgKGlpaSkgZ2nhuqNpIHRow61jaCBjw7Mgc+G7kSB24buBIG5nb+G6oWkgdMOhYzogeGUgdGjDqm0gdsOgbyBCIGzDoG0geCB4ZSDEkWFuZyDEkWkgQiBt4buXaSB4ZSBjaOG6rW0gdGjDqm0gMS8xMDAgcGjDunQgKHThu5VuZyB4LzEwMCBwaMO6dCkgbcOgIG5nxrDhu51pIMSRw7Mga2jDtG5nIGNo4buLdTsgdMOtbmgg4bufIGLhuqV0IGvhu7MgeCBuw6BvIMSR4buBdSDEkeG6oXQgKHbDrSBk4bulIHggPSA1MDAgbMOgIDUgcGjDunQsIHggPSAxLjAwMCBsw6AgMTAgcGjDunQpLiDEkOG6oXQ6IGPhuqMgYmEuIE3hu5l0IHBo4bqnbjogaGFpLiBOaMOjbiBjaHVuZyAoInbDrCDDrWNoIGvhu7ciKSBraMO0bmcgY8OzIHPhu5Eg4oaSIGtow7RuZyDEkeG6oXQgKGlpaSkuCkPDonUgMyDEkeG6oXQgKHBow60gbMOgIGtob+G6o24gY2h1eeG7g24gY2hvIHRow6BuaCBwaOG7kSwga2jDtG5nIHTDrW5oIHbDoG8gdOG7lW5nIHRo4budaSBnaWFuKTogcGjDrSA9IDUgcGjDunQgKyBsw70gZG8gKGPDom4gYuG6sW5nIG3hu5tpIHThuqFpIHggPSA1MDApLiBM4buXaSBkw6J5IGNodXnhu4FuIHThu6sgY8OidSAyOiBjaOG6pW0gdGhlbyBwaMawxqFuZyBwaMOhcC4KQ8OidSA0OiDDtCB0aGVuIGNo4buRdCBsw6AgeCA9IDIuMDAwLCB24bqrbiAyMCBwaMO6dCwgdsOgIGPGoSBjaOG6vyAidGjhu51pIGdpYW4gYuG7iyBuZW8g4bufIMSRxrDhu51uZyBBLCBuZ8aw4budaSBt4bubaSBs4bqlcCBjaOG7lyIuIMSQ4bqhdDogY+G6oyBiYS4gTeG7mXQgcGjhuqduOiDEkcO6bmcgc+G7kSBuaMawbmcgdGhp4bq/dSBjxqEgY2jhur8uCkLhuqt5IGNow61uaDogbmdoxKkgbeG7nyBy4buZbmcgxJHGsOG7nW5nIGzDoG0gbeG7jWkgbmfGsOG7nWkgxJFpIG5oYW5oIGjGoW47IG5naMSpIGPDom4gYuG6sW5nIHThu7EgZG8gbMOgIHThu5FpIMawdS4KR+G7mXA6IGNvcnJlY3QgPSBt4buNaSBjw6J1IMSR4bqhdCwgaG/hurdjIDMgxJHhuqF0ICsgMSBt4buZdCBwaOG6p247IHBhcnRpYWwgPSAx4oCTMyBjw6J1IMSR4bqhdDsgaW5jb3JyZWN0ID0ga2jDtG5nIGPDonUgbsOgbyDEkeG6oXQu",
+  "review": {
+    "solver_model": "opus",
+    "first_solve_match": true,
+    "revised": false,
+    "issues": [
+      {
+        "type": "answer_error",
+        "severity": 2,
+        "detail": "rubric câu 2 (iii) chỉ nhận x = 500 — đã nới"
+      },
+      {
+        "type": "ambiguity",
+        "severity": 1,
+        "detail": "phí có tính vào tổng thời gian không"
+      }
+    ]
+  },
+  "status": "submitted",
+  "extra": false,
+  "user_answer": "1. Theo tôi hiểu đề bài rằng \"Khi mọi tài xế tự chọn\", tức quyết định của 3000 xe là cùng lúc, không ảnh hưởng lẫn nhau.\nx là số xe đi qua đường B;\nThời gian đường A là bất biến 20 phút, không phụ thuộc;\nThời gian đường B là một hàm phụ thuộc x theo tỉ lệ thuận;\nKhi mỗi tài xế tự chọn, mỗi người chọn con đường nhanh nhất. Như vậy, 3000 tài xế sẽ chọn cung đường tối ưu tốc độ. Lập phương trình cân bằng thời gian giữa A và B: 20 = 10 + x/100, cho ra x là 1000 xe đi B. Giải thích: Nếu số người đi qua B hơn 1000, thời gian đi qua A sẽ sớm hơn, và tài xế sẽ đổ qua đường A và ngược lại. Tổng thời gian khi đó là 20 phút. \n\n2. Tôi không biết tại sao bro lại bắt tôi tính đạo hàm, nhưng mà lấy trọng số tổng thời gian tài xế đi A là [(3000-x)/3000]*20, trọng số tổng thời gian tài xế đi B là (x/3000)*[10+(x/100)], cộng hai cái lại và cho đạo hàm bằng 0, ra được 500 xe đi B, thời gian lúc này khoảng 19.17p. Tài xế tự chọn không đạt được mức này vì nó mâu thuẫn giữa thời gian nhỏ nhất đối với mỗi tài xế và tổng thời gian nhỏ nhất cho 3000 tài xế. Con số 500 thấp hơn 1000, tức những tài xế đi B lúc này chỉ tốn 15p, trong khi tài xế đi A tốn 20p, họ sẽ đổ qua B vì thời gian ngắn hơn, nhưng mỗi xe tăng thêm trên đường B lại khiến thời gian đi trên nó tăng thêm cho mọi người và tiến dần về trạng thái cân bằng.\n\n3. Với 500 người ở câu 2, thời gian đi B lúc này là 15p. Để số tài xế không tăng, nó phải bằng đúng 20p đường A, tức phí bằng 5p.\n\n4. Lập phương trình cân bằng như câu 1 với quan hệ theo x mới, x lúc này tăng lên 2000 xe đi B, và mỗi người vẫn mất 20 phút. Như vậy, so với câu 1, mở rộng đường không giúp ai đi nhanh hơn. Bởi vì, đường đi phụ thuộc vào số xe đi trên nó, và xe chọn đường nhanh hơn. Mở rộng đường chỉ giúp nhanh hơn nếu nó vượt qua được quan hệ cân bằng.",
+  "grading": "Câu 1: đạt — Người học xác định đúng x là số xe đi đường B, thời gian đường A độc lập và đường B phụ thuộc vào x. Lập phương trình cân bằng 20 = 10 + x/100, ra x = 1.000, 2.000 xe đi A, thời gian mỗi người là 20 phút. Tổng thời gian không được ghi tường minh bằng số phút nhưng suy ra từ dữ liệu là 60.000 phút.\nCâu 2: một phần — Người học tìm được x = 500 nhưng tính sai tổng thời gian thành 19.17 phút do chia nhầm trọng số. Về mặt cơ chế, người học nhận ra mâu thuẫn giữa tối ưu cá nhân và tối ưu tổng thể, đồng thời mô tả được việc xe thêm vào làm tăng thời gian cho người khác trên đường B.\nCâu 3: đạt — Dựa theo kết quả x = 500 từ câu 2, người học xác định đúng mức phí là 5 phút để bù đắp khoảng cách thời gian giữa hai đường, đảm bảo tài xế không tự dồn sang B.\nCâu 4: đạt — Người học thiết lập đúng phương trình 10 + x/200 = 20, ra x = 2.000 xe đi B và thời gian vẫn là 20 phút. Giải thích đúng cơ chế thời gian bị neo ở đường A và năng lực mở rộng bị lấp đầy.",
+  "feedback": {
+    "questions": [
+      {
+        "label": "Câu 1",
+        "verdict": "đạt",
+        "comment": "Người học xác định đúng x là số xe đi đường B, thời gian đường A độc lập và đường B phụ thuộc vào x. Lập phương trình cân bằng 20 = 10 + x/100, ra x = 1.000, 2.000 xe đi A, thời gian mỗi người là 20 phút. Tổng thời gian không được ghi tường minh bằng số phút nhưng suy ra từ dữ liệu là 60.000 phút."
+      },
+      {
+        "label": "Câu 2",
+        "verdict": "một phần",
+        "comment": "Người học tìm được x = 500 nhưng tính sai tổng thời gian thành 19.17 phút do chia nhầm trọng số. Về mặt cơ chế, người học nhận ra mâu thuẫn giữa tối ưu cá nhân và tối ưu tổng thể, đồng thời mô tả được việc xe thêm vào làm tăng thời gian cho người khác trên đường B."
+      },
+      {
+        "label": "Câu 3",
+        "verdict": "đạt",
+        "comment": "Dựa theo kết quả x = 500 từ câu 2, người học xác định đúng mức phí là 5 phút để bù đắp khoảng cách thời gian giữa hai đường, đảm bảo tài xế không tự dồn sang B."
+      },
+      {
+        "label": "Câu 4",
+        "verdict": "đạt",
+        "comment": "Người học thiết lập đúng phương trình 10 + x/200 = 20, ra x = 2.000 xe đi B và thời gian vẫn là 20 phút. Giải thích đúng cơ chế thời gian bị neo ở đường A và năng lực mở rộng bị lấp đầy."
+      }
+    ],
+    "result": "partial",
+    "headline": "Hiểu tốt cân bằng Nash và ngoại tác, nhầm lẫn nhỏ ở bước tính tổng thời gian tối ưu",
+    "takeaway": "Khi tối ưu hoá tổng thể, chi phí xã hội cận biên khác biệt với chi phí cá nhân vì sự xuất hiện của một cá nhân áp đặt ngoại tác lên toàn bộ nhóm.",
+    "skills_missed": [
+      "marginal_thinking"
+    ],
+    "notes": "Điểm mạnh: Lập phương trình cân bằng rất nhanh và chính xác. Mẫu lỗi: Nhầm lẫn phép chia trọng số khi tính tổng chi phí ở câu 2.",
+    "model": "gemini-flash-lite-latest"
+  },
+  "grader": "gemini:gemini-flash-lite-latest",
+  "result": "partial",
+  "skills_missed": [
+    "marginal_thinking"
+  ],
+  "notes": "Điểm mạnh: Lập phương trình cân bằng rất nhanh và chính xác. Mẫu lỗi: Nhầm lẫn phép chia trọng số khi tính tổng chi phí ở câu 2."
+}
