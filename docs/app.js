@@ -280,7 +280,9 @@ Kỷ luật chấm (bắt buộc, kiểm trước khi trả kết quả):
 1. Dẫn chứng nguyên văn: mỗi khi nói người học "nhầm", "vi phạm", "bỏ trống", phải trích đúng câu của họ trong "comment" và đối chiếu với đề/rubric. Không trích được thì không được nêu. Trước khi nói vi phạm ràng buộc của đề, đọc lại ràng buộc đó. Người học viết được ý đúng nào thì ghi nhận ý đó.
 2. Chấm từng câu độc lập, đi qua từng ô then chốt của rubric (ví dụ (a)–(d), (i)–(iii)) và nói ô nào có, ô nào thiếu. Không được hạ một câu vì "câu trước sai".
 3. Câu nào không phải "đạt" trọn vẹn, hoặc đạt nhờ lý do để ngầm, BẮT BUỘC có "explicit_version".
-4. Mọi phép tính trong "explicit_version" phải khai triển từng bước và tự kiểm khớp kết quả cuối; không viết "hoặc ... tương ứng". Không khẳng định mạnh hơn điều mô hình của đề cho phép.`;
+4. Mọi phép tính trong "explicit_version" phải khai triển từng bước và tự kiểm khớp kết quả cuối; không viết "hoặc ... tương ứng". Không khẳng định mạnh hơn điều mô hình của đề cho phép.
+5. Gộp: đếm số câu "đạt" / "một phần" rồi áp đúng dòng "Gộp" của rubric (thường: mọi câu đạt hoặc 3 đạt + 1 một phần = correct). Không tự hạ result vì đã dùng gợi ý; gợi ý đã được tính riêng.
+6. Đáp số tương đương (vd trung bình mỗi xe thay cho tổng, khi phương pháp đúng) không được gọi là "tính sai"; ghi nhận và chỉ ra đại lượng đề hỏi.`;
 
 const GRADE_SCHEMA = {type: "object", properties: {
   questions: {type: "array", items: {type: "object", properties: {

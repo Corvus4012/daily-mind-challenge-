@@ -31,6 +31,10 @@ Thêm dòng mới khi người dùng chỉ ra lỗi của đề, hoặc khi mộ
 - (31/10) Câu hỏi về động cơ / hành vi lách luật phải nêu trong đề các đòn bẩy mà bên được thưởng có (vd "trường được tự xét tuyển và được khuyên học sinh chuyển trường"). Không có tiền đề đó thì đừng kỳ vọng hành vi đó. Câu trả lời /ask cũng không được nói ngược với đáp án.
 
 - (15/11) Đề mô hình nhiều dữ kiện (MCO 10/11): người học không thấy liên kết giữa các đại lượng. Viết chuỗi quan hệ thành một dòng công thức trong đề.
+- (26/11) Đề thiết kế phép thử: viết phương án và nhóm đối chứng thành câu khẳng định ("Phương án: bón X, không bón Y"), không để trong lời "đề xuất".
+- (26/11) Đề từ 05/11 dài 275–370 từ, 4 câu, L3–5: người dùng mất thời gian giải mã đề và nản. L3 ≤ 220 từ, ≤ 3 câu; có dòng "Dữ kiện chốt".
+- (26/11) "Tổng" phải in đậm kèm đơn vị kỳ vọng; không ngầm đòi đạo hàm khi lập luận biên đủ.
+- (26/11) Đề có "chỉ… mới…": đáp án và feedback kèm một ví dụ đời thường cùng cấu trúc ("chỉ người có vé mới được vào").
 
 ## Hồ sơ người học
 - Mạnh: thao tác đại số, lập phương trình; thiết kế phép đo trực tiếp; tự chuẩn hoá ký hiệu trước khi làm (20/10); phân biệt "sai sự thật" và "đúng nhưng chọn lọc".
@@ -57,9 +61,14 @@ Thêm dòng mới khi người dùng chỉ ra lỗi của đề, hoặc khi mộ
   - (06/11) Gán nhóm theo một biến có sẵn (ngày thường/cuối tuần) thay vì bốc thăm, dù 01/11 đã tự đưa ngẫu nhiên: kỹ năng chưa vững. Và nêu biến nhiễu ở câu trước rồi dựng phép thử trùng với nó (self_check).
   - (05/11) Câu thiết kế cơ chế mở: nhận ra đúng nguyên tắc ("không dựa vào lòng tốt") nhưng chưa biến thành quy tắc cụ thể.
   - (10/11) Thiết kế kiểm tra: đúng kênh độc lập và đối tượng so sánh, thiếu tiêu chí báo động; biện pháp chuẩn hoá (calibrate) thay cho biện pháp kiểm chứng được.
+  - (17/11) Tiến bộ: tự phân khối theo khoảng cách rồi bốc thăm trong khối, và nói được bốc thăm chia đều yếu tố không đo được. Còn thiếu: thước đo cụ thể, ngưỡng tính đến nhiễu/chi phí ("> 0" chưa đủ).
+  - (24/11) Ngoại tác: hiểu cơ chế bằng lời nhưng không lượng hoá (1 xe thêm làm x xe chậm 1/100 phút). Đọc "tổng" thành trung bình mỗi người.
+  - (25/11) Trộn điều kiện cần với đủ ("chỉ A mới B" ⇒ "A thì B"). Có chuỗi suy luận đúng ở câu 4 nhưng không dùng lại cho (e) ở câu 1 (self_check lặp). Phản ví dụ vẫn trả lời bằng nhận xét chung (lần 3).
+  - (26/11) Khi nghi đề sai, người học chuyển sang tranh luận đề thay vì làm theo cách đọc chặt nhất; nên khuyến khích "ghi chú nghi ngờ + vẫn làm theo nghĩa chữ".
 - Cách phản hồi hợp: thẳng, chỉ ra cơ chế; thích được giải nghĩa nền tảng khi gặp domain lạ (đã xin bổ túc kinh tế ngày 19/10).
 
 ## Ghi chú hệ thống (chờ trao đổi qua /discuss)
 - (25/10) Tác vụ tự động chạy trong phiên chính lần đầu: chạy được, push thành công (+4 đề).
 - (01/11) Reflect chấm bài 31/10 là partial, không đồng ý nâng lên correct sau appeal. Nếu theo reflect thì level nền là 3, không phải 4. Lịch sử chưa sửa.
+- (26/11) Đề xuất hạ level nền 4 → 3 và nâng 17/11 lên "đạt": chờ người dùng trả lời trong hộp thư.
 - (01/11) Base level 4 nhưng 4 đề còn trong pool đều L2 (lệch 2 bậc, pick không dùng được) → ngày nào cũng phải sinh đề tại chỗ cho tới khi pool có đề L3–5.
