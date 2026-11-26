@@ -34,6 +34,7 @@ Thêm dòng mới khi người dùng chỉ ra lỗi của đề, hoặc khi mộ
 - (26/11) Đề thiết kế phép thử: viết phương án và nhóm đối chứng thành câu khẳng định ("Phương án: bón X, không bón Y"), không để trong lời "đề xuất".
 - (26/11) Đề từ 05/11 dài 275–370 từ, 4 câu, L3–5: người dùng mất thời gian giải mã đề và nản. L3 ≤ 220 từ, ≤ 3 câu; có dòng "Dữ kiện chốt".
 - (26/11) "Tổng" phải in đậm kèm đơn vị kỳ vọng; không ngầm đòi đạo hàm khi lập luận biên đủ.
+- (26/11) Đề logic: viết mọi tiền đề cùng một kiểu, câu mô tả sự thật ("Ai làm thêm quá 20 giờ đều đã được duyệt"), không trộn câu quy định ("phải", "được phép") với câu mô tả. "Phải" đọc được là "cần phải" hoặc "chắc chắn là".
 - (26/11) Đề có "chỉ… mới…": đáp án và feedback kèm một ví dụ đời thường cùng cấu trúc ("chỉ người có vé mới được vào").
 
 ## Hồ sơ người học
