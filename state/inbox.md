@@ -27,3 +27,7 @@ Tôi đã siết lời nhắc chấm của Gemini: phải trích nguyên văn c�
 
 ## 2026-11-17
 Đề càng ngày càng khó hiểu dù là level nào đi chăng nữa. Đây có phải do vấn đề chúng ta chuyển địa chỉ challenge lên page riêng và giao tiếp thông qua kênh ngoài? Những thông tin trong đề không hề minh bạch, quá đỗi mơ hồ. Chúng ta đã trải qua những đề trước và mọi thứ đều ổn, từ khi bắt đầu những bộ đề khi chuyển lên page này, thời gian giải bị kéo dài chỉ để tôi ngồi dịch cái đề đang nói gì, và vô cùng nản, chỉ giải được cùng lắm 1 bài 1 tuần. Hãy giành một buổi phân tích lại toàn bộ những đề tính từ lúc chuyển page đã làm để xem tương quan ý thật của đề và những gì trình bày trong đề + câu hỏi, cùng ngồi vạch ra rốt cuộc đề bài đang đánh giá quá cao khả năng hiểu ngụ ý người đọc hay không.
+
+## 2026-11-26
+Đề có thể có mâu thuẫn trong chữ nghĩa, đề nghị check lại chữ nghĩa cho câu hỏi 3 và đề. Như câu 1 tôi đã trả lời:"Với kết luận (a), nó chắc chắn đúng. Vì Hà làm ca đêm thì làm thêm quá 20 giờ/tháng theo R3, mà làm thêm quá 20 giờ/tháng thì phải được trưởng phòng duyệt theo R1.
+Với kết luận (b), nó chắc chắn đúng. Vì từ kết luận (a) đúng, Hà sẽ nhận được phụ cấp đêm do trưởng phòng duyệt theo R2.", (b) vốn là chắc chắn đúng theo (a) (mâu thuẫn trong việc viết chữ 'phải' trong đề)
