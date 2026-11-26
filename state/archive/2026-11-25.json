@@ -1,0 +1,93 @@
+{
+  "date": "2026-11-25",
+  "pool_id": "20261108-d01-a46810",
+  "domain_id": 1,
+  "tag": "reason",
+  "level": 3,
+  "base_level": 4,
+  "rolled_level": 4,
+  "level_mode": "core",
+  "est_minutes": 14,
+  "format": "spot-flaw",
+  "skills": [
+    "consistency_check",
+    "hidden_premise"
+  ],
+  "challenge_md": "Một công ty có 4 quy định về làm thêm giờ (giả định của đề; mọi người đều tuân thủ):\n- **R1:** Ai làm thêm quá 20 giờ/tháng thì phải được trưởng phòng duyệt.\n- **R2:** Chỉ người được trưởng phòng duyệt mới được nhận phụ cấp đêm.\n- **R3:** Ai làm ca đêm thì làm thêm quá 20 giờ/tháng.\n- **R4:** Người đang thử việc không được trưởng phòng duyệt làm thêm.\n\nDữ kiện tháng này: **Hà** làm ca đêm. **Nam** nhận phụ cấp đêm. **Vy** đang thử việc.\n\nNăm kết luận:\n- (a) Hà được trưởng phòng duyệt.\n- (b) Hà nhận phụ cấp đêm.\n- (c) Nam được trưởng phòng duyệt.\n- (d) Nam làm ca đêm.\n- (e) Vy không làm ca đêm.\n\n**Câu hỏi**\n1. Với mỗi kết luận, cho biết nó **chắc chắn đúng** hay **chưa chắc**. Với kết luận chắc chắn đúng, ghi chuỗi quy định dẫn tới nó.\n2. Với mỗi kết luận chưa chắc, dựng một tình huống **có thể xảy ra** (không cần có thật), trong đó cả 4 quy định và 3 dữ kiện vẫn đúng mà kết luận đó sai. Cách dựng: giữ nguyên mọi thứ đề đã khoá, chỉ chọn một điều đề chưa nói.\n3. Công ty muốn (b) trở thành chắc chắn đúng. Viết thêm **đúng một** quy định (một câu) để làm được điều đó, và kiểm lại rằng quy định mới không làm (e) sai.\n4. Giả sử thực tế tháng sau Vy bị xếp ca đêm. Khi đó ít nhất một quy định đã không được tuân thủ. Liệt kê **mọi** quy định có thể là quy định bị vi phạm, mỗi cái kèm một câu giải thích.",
+  "hints": [
+    "\"Chỉ người được duyệt mới nhận phụ cấp\" nghĩa là: nhận phụ cấp ⇒ đã được duyệt. Chiều ngược lại không có.",
+    "Câu 2: ví dụ với (b), đề có nói gì về việc người được duyệt có chắc nhận phụ cấp không? Chọn câu trả lời \"không\" cho điều đề chưa nói đó.",
+    "Câu 4: nếu Vy làm ca đêm, đi theo R3 rồi R1, và đặt cạnh R4. Mỗi quy định trong chuỗi đó đều có thể là mắt xích bị gãy."
+  ],
+  "hints_revealed": 0,
+  "answer_key_b64": "MS4gKGEpIENo4bqvYyBjaOG6r246IEjDoCBjYSDEkcOqbSDihpIgKFIzKSBsw6BtIHRow6ptID4gMjAgZ2nhu50g4oaSIChSMSkgxJHGsOG7o2MgZHV54buHdC4gKGIpIENoxrBhIGNo4bqvYy4gKGMpIENo4bqvYyBjaOG6r246IE5hbSBuaOG6rW4gcGjhu6UgY+G6pXAg4oaSIChSMikgxJHGsOG7o2MgZHV54buHdC4gKGQpIENoxrBhIGNo4bqvYy4gKGUpIENo4bqvYyBjaOG6r246IG7hur91IFZ5IGzDoG0gY2EgxJHDqm0g4oaSIChSMykgPiAyMCBnaeG7nSDihpIgKFIxKSBwaOG6o2kgxJHGsOG7o2MgZHV54buHdCwgbmjGsG5nIChSNCkgVnkgdGjhu60gdmnhu4djIG7Dqm4ga2jDtG5nIMSRxrDhu6NjIGR1eeG7h3Q7IG3DonUgdGh14bqrbiwgbsOqbiBWeSBraMO0bmcgbMOgbSBjYSDEkcOqbS4KMi4gKGIpOiBIw6AgxJHGsOG7o2MgZHV54buHdCBuaMawbmcgdGjDoW5nIG7DoHkgY8O0bmcgdHkga2jDtG5nIHRy4bqjIHBo4bulIGPhuqVwIMSRw6ptIGNobyBIw6AgKFIyIGNo4buJIG7Ds2kgcGjhu6UgY+G6pXAgY+G6p24gZHV54buHdCwga2jDtG5nIG7Ds2kgZHV54buHdCB0aMOsIGPDsyBwaOG7pSBj4bqlcCkg4oCUIGtow7RuZyBxdXkgxJHhu4tuaCBuw6BvIGLhu4sgdmkgcGjhuqFtLiAoZCk6IE5hbSBjaOG7iSBsw6BtIGNhIG5nw6B5LCBsw6BtIHRow6ptIDI1IGdp4budLCDEkcaw4bujYyBkdXnhu4d0IHbDoCDEkcaw4bujYyB0cuG6oyBwaOG7pSBj4bqlcCDEkcOqbSwgbsOqbiBraMO0bmcgbMOgbSBjYSDEkcOqbSAoUjIga2jDtG5nIG7Ds2kgcGjhu6UgY+G6pXAgxJHDqm0gY2jhu4kgZMOgbmggY2hvIGNhIMSRw6ptOyBob+G6t2MgTmFtIGzDoG0gdGjDqm0gdGhlbyBk4buxIMOhbiDEkcaw4bujYyB0cuG6oyBwaOG7pSBj4bqlcCDEkcOqbSkuIENo4bqlcCBuaOG6rW4gbeG7jWkgdMOsbmggaHXhu5FuZyBnaeG7ryDEkcO6bmcgUjHigJNSNCB2w6AgMyBk4buvIGtp4buHbi4KMy4gVsOtIGThu6U6ICJBaSBsw6BtIGNhIMSRw6ptIHRow6wgxJHGsOG7o2Mgbmjhuq1uIHBo4bulIGPhuqVwIMSRw6ptLiIgS2nhu4NtIChlKTogVnkga2jDtG5nIGzDoG0gY2EgxJHDqm0gbsOqbiBxdXkgxJHhu4tuaCBt4bubaSBraMO0bmcgw6FwIHbDoG8gVnk7IGNodeG7l2kgc3V5IHJhIChlKSBraMO0bmcgxJHhu5VpLiAoQ8WpbmcgY2jhuqVwIG5o4bqtbiAiQWkgxJHGsOG7o2MgZHV54buHdCBsw6BtIHRow6ptIHF1w6EgMjAgZ2nhu50gdGjDrCBuaOG6rW4gcGjhu6UgY+G6pXAgxJHDqm0iOyBraeG7g20gKGUpIHTGsMahbmcgdOG7sS4pCjQuIFIxIChWeSBsw6BtIHRow6ptID4gMjAgZ2nhu50gbcOgIGtow7RuZyDEkcaw4bujYyBkdXnhu4d0KSwgUjQgKHRyxrDhu59uZyBwaMOybmcgduG6q24gZHV54buHdCBjaG8gVnkgZMO5IMSRYW5nIHRo4butIHZp4buHYyksIFIzIChWeSBsw6BtIGNhIMSRw6ptIG5oxrBuZyB04buVbmcgbMOgbSB0aMOqbSBraMO0bmcgcXXDoSAyMCBnaeG7nSwgbsOqbiAiY2EgxJHDqm0gdGjDrCA+IDIwIGdp4budIiBraMO0bmcgY8OybiDEkcO6bmcpLiBSMiBraMO0bmcgbGnDqm4gcXVhbiAoa2jDtG5nIGPDsyBk4buvIGtp4buHbiB24buBIHBo4bulIGPhuqVwIGPhu6dhIFZ5KS4=",
+  "rubric_b64": "Q8OidSAxICg1IMO0KTogw7QgdGhlbiBjaOG7kXQgbMOgIChiKSBjaMawYSBjaOG6r2MsIChkKSBjaMawYSBjaOG6r2MsIChlKSBjaOG6r2MgY2jhuq9uIGvDqG0gY2h14buXaSBSM+KGklIxIG3DonUgdGh14bqrbiBSNDsgw7QgdGjGsOG7nW5nIGzDoCAoYSksIChjKSBrw6htIGNodeG7l2kuIMOBcCBjaHXhuqluIGNo4bqlbSBi4bqjbmcuCkPDonUgMjogaGFpIMO0IChiKSB2w6AgKGQpLCBt4buXaSDDtCDEkeG6oXQga2hpIHTDrG5oIGh14buRbmcgZ2nhu68gxJHDum5nIG3hu41pIHF1eSDEkeG7i25oIHbDoCBk4buvIGtp4buHbiB2w6AgbMOgbSBr4bq/dCBsdeG6rW4gc2FpLiDEkOG6oXQ6IGPhuqMgaGFpLiBN4buZdCBwaOG6p246IG3hu5l0LiBUw6xuaCBodeG7kW5nIGzDoG0gdmkgcGjhuqFtIG3hu5l0IHF1eSDEkeG7i25oIOKGkiBraMO0bmcgxJHhuqF0IMO0IMSRw7MuIEtow7RuZyBi4bqvdCB0w6xuaCBodeG7kW5nIGPDsyB0aOG6rXQuCkPDonUgMyDEkeG6oXQ6IG3hu5l0IGPDonUgbMOgbSAoYikgY2jhuq9jIGNo4bqvbiArIGPDsyBraeG7g20gbOG6oWkgKGUpLiBN4buZdCBwaOG6p246IGPDonUgxJHDum5nIG5oxrBuZyBraMO0bmcga2nhu4NtIChlKS4KQ8OidSA0IMSR4bqhdDogbGnhu4d0IGvDqiBSMSwgUjMsIFI0ICjEkeG7pyBiYSkgbeG7l2kgY8OhaSBjw7MgZ2nhuqNpIHRow61jaDsgbsOqdSBSMiBraMO0bmcgbGnDqm4gcXVhbiBsw6AgxJFp4buDbSBj4buZbmcuIE3hu5l0IHBo4bqnbjogaGFpIHRyb25nIGJhLgpC4bqreSBjaMOtbmg6IGNvaSAiY2jhu4kgbmfGsOG7nWkgxJHGsOG7o2MgZHV54buHdCBt4bubaSBuaOG6rW4gcGjhu6UgY+G6pXAiIGzDoCAixJHGsOG7o2MgZHV54buHdCB0aMOsIG5o4bqtbiBwaOG7pSBj4bqlcCI7IOG7nyBjw6J1IDQgcXXDqm4gUjMgY8WpbmcgY8OzIHRo4buDIGfDo3kuCkfhu5lwOiBjb3JyZWN0ID0gbeG7jWkgY8OidSDEkeG6oXQsIGhv4bq3YyAzIMSR4bqhdCArIDEgbeG7mXQgcGjhuqduOyBwYXJ0aWFsID0gMeKAkzMgY8OidSDEkeG6oXQ7IGluY29ycmVjdCA9IGtow7RuZyBjw6J1IG7DoG8gxJHhuqF0Lg==",
+  "review": {
+    "solver_model": "opus",
+    "first_solve_match": true,
+    "revised": false,
+    "issues": [
+      {
+        "type": "ambiguity",
+        "severity": 1,
+        "detail": "R4 đọc như mô tả hoặc lệnh cấm"
+      },
+      {
+        "type": "missing_premise",
+        "severity": 1,
+        "detail": "câu 4 chưa nói Vy còn thử việc"
+      },
+      {
+        "type": "level_mismatch",
+        "severity": 1,
+        "detail": "phản biện chấm L3"
+      }
+    ]
+  },
+  "status": "submitted",
+  "extra": false,
+  "user_answer": "1. \nVới kết luận (a), nó chắc chắn đúng. Vì Hà làm ca đêm thì làm thêm quá 20 giờ/tháng theo R3, mà làm thêm quá 20 giờ/tháng thì phải được trưởng phòng duyệt theo R1.\nVới kết luận (b), nó chắc chắn đúng. Vì từ kết luận (a) đúng, Hà sẽ nhận được phụ cấp đêm do trưởng phòng duyệt theo R2.\nVới kết luận (c), nó chắc chắn đúng. Vì thỏa hoàn toàn theo R2.\nVới kết luận (d) và (e), chưa chắc chắn.\n2. Trong 4 quy định, không có quy định trực tiếp chỉ ra mối quan hệ nhân quả giữa 2 tiêu đề phụ cấp đêm và làm ca đêm, cũng như làm thêm và làm ca đêm. Vy không được trưởng phòng duyệt làm thêm, không đồng nghĩa Vy không được làm ca đêm. Nam nhận phụ cấp đêm do được trưởng phòng duyệt giờ làm thêm, không đồng nghĩa trực tiếp là do Nam làm ca đêm theo R4.\n3. Đề có thể có mâu thuẫn trong chữ nghĩa, đề nghị check lại chữ nghĩa. Như câu 1 tôi đã trả lời, (b) vốn là chắc chắn đúng theo (a). Giả định nếu (b) có chưa chắc chắn, đó có thể xuất phát từ R1, khi trưởng phòng không duyệt giờ làm thêm (mâu thuẫn trong việc viết chữ 'phải'). Lúc này, R5: Người không thử việc làm ca đêm sẽ được trưởng phòng duyệt. Nó đã tách người thử việc và không thử việc ra.\n4. Ba quy định R1, R3 và R4 bị vi phạm, theo chuỗi dây chuyền:\nR3: Vy làm ca đêm thì được tính là làm thêm, nhưng...\nR1: Làm thêm thì phải được trưởng phòng duyệt, nhưng...\nR4: Trưởng phòng không duyệt người thử việc làm thêm.",
+  "grading": "Câu 1: một phần — Người học nhận định (b) là chắc chắn đúng và đưa ra chuỗi suy diễn R1→R2, vi phạm cấu trúc logic của R2 ('Chỉ người được trưởng phòng duyệt mới được nhận phụ cấp đêm' không đồng nghĩa với 'Được duyệt thì chắc chắn nhận'). Về (a) và (c): đúng chuỗi. Về (e): bỏ sót không kết luận và không đưa ra chuỗi chứng minh mâu thuẫn với R4.\nCâu 2: chưa đạt — Người học trả lời bằng cách giải thích lý thuyết chung 'không có quy định trực tiếp chỉ ra mối quan hệ nhân quả...' thay vì dựng một tình huống phản ví dụ cụ thể có thể xảy ra như yêu cầu của đề ('giữ nguyên mọi thứ đề đã khoá, chỉ chọn một điều đề chưa nói').\nCâu 3: chưa đạt — Người học từ chối giải quyết bài toán theo dữ liệu đề, cho rằng đề mâu thuẫn ('(b) vốn là chắc chắn đúng theo (a)') và đưa ra một quy định mới không giải quyết đúng yêu cầu, đồng thời hoàn toàn bỏ qua bước kiểm tra lại kết quả đối với (e).\nCâu 4: một phần — Người học liệt kê đúng ba quy định R1, R3, R4 nhưng không đưa ra câu giải thích cụ thể cho từng quy định bị vi phạm như yêu cầu ('mỗi cái kèm một câu giải thích'), thay vào đó chỉ viết cụt lủn với dấu ba chấm ('nhưng...').",
+  "feedback": {
+    "questions": [
+      {
+        "label": "Câu 1",
+        "verdict": "một phần",
+        "comment": "Người học nhận định (b) là chắc chắn đúng và đưa ra chuỗi suy diễn R1→R2, vi phạm cấu trúc logic của R2 ('Chỉ người được trưởng phòng duyệt mới được nhận phụ cấp đêm' không đồng nghĩa với 'Được duyệt thì chắc chắn nhận'). Về (a) và (c): đúng chuỗi. Về (e): bỏ sót không kết luận và không đưa ra chuỗi chứng minh mâu thuẫn với R4.",
+        "explicit_version": "(a) Chắc chắn: Hà làm ca đêm → (R3) làm thêm > 20 giờ/tháng → (R1) được trưởng phòng duyệt. (b) Chưa chắc: R2 chỉ nêu điều kiện cần (được duyệt) cho việc nhận phụ cấp đêm, không nêu điều kiện đủ. (c) Chắc chắn: Nam nhận phụ cấp đêm → (R2) được trưởng phòng duyệt. (d) Chưa chắc: R2 không giới hạn phụ cấp đêm chỉ dành cho ca đêm. (e) Chắc chắn: Giả sử Vy làm ca đêm → (R3) làm thêm > 20 giờ → (R1) phải được trưởng phòng duyệt, nhưng theo (R4) Vy đang thử việc nên không được trưởng phòng duyệt; mâu thuẫn xảy ra, do đó Vy không làm ca đêm."
+      },
+      {
+        "label": "Câu 2",
+        "verdict": "chưa đạt",
+        "comment": "Người học trả lời bằng cách giải thích lý thuyết chung 'không có quy định trực tiếp chỉ ra mối quan hệ nhân quả...' thay vì dựng một tình huống phản ví dụ cụ thể có thể xảy ra như yêu cầu của đề ('giữ nguyên mọi thứ đề đã khoá, chỉ chọn một điều đề chưa nói').",
+        "explicit_version": "Tình huống cho (b): Hà được trưởng phòng duyệt làm thêm nhưng công ty không chi trả phụ cấp đêm cho Hà do chính sách khác, duy trì toàn bộ R1–R4 và dữ kiện. Tình huống cho (d): Nam không làm ca đêm mà làm ca ngày, làm thêm 25 giờ, được duyệt và nhận phụ cấp đêm, duy trì toàn bộ R1–R4 và dữ kiện."
+      },
+      {
+        "label": "Câu 3",
+        "verdict": "chưa đạt",
+        "comment": "Người học từ chối giải quyết bài toán theo dữ liệu đề, cho rằng đề mâu thuẫn ('(b) vốn là chắc chắn đúng theo (a)') và đưa ra một quy định mới không giải quyết đúng yêu cầu, đồng thời hoàn toàn bỏ qua bước kiểm tra lại kết quả đối với (e)."
+      },
+      {
+        "label": "Câu 4",
+        "verdict": "một phần",
+        "comment": "Người học liệt kê đúng ba quy định R1, R3, R4 nhưng không đưa ra câu giải thích cụ thể cho từng quy định bị vi phạm như yêu cầu ('mỗi cái kèm một câu giải thích'), thay vào đó chỉ viết cụt lủn với dấu ba chấm ('nhưng...')."
+      }
+    ],
+    "result": "incorrect",
+    "headline": "Nhầm lẫn chiều điều kiện cần và đủ trong mệnh đề lô-gic, đồng thời bỏ trống các bước dựng tình huống và kiểm tra hệ quả.",
+    "takeaway": "Mệnh đề 'Chỉ A mới có B' (A là điều kiện cần của B, B → A) không thể đảo thành 'Có A thì chắc chắn có B' (A → B). Lỗi này lặp lại cấu trúc suy luận sai chiều điều kiện.",
+    "skills_missed": [
+      "consistency_check",
+      "hidden_premise"
+    ],
+    "notes": "Điểm mạnh: Nhận diện nhanh chuỗi suy luận của các câu chắc chắn (a, c). Mẫu lỗi: Suy luận xuôi chiều (b) thành chắc chắn do nhầm lẫn logic điều kiện cần và đủ; né tránh bài tập dựng tình huống phản ví dụ bằng cách giải thích lý thuyết chung.",
+    "model": "gemini-flash-lite-latest"
+  },
+  "grader": "gemini:gemini-flash-lite-latest",
+  "result": "incorrect",
+  "skills_missed": [
+    "consistency_check",
+    "hidden_premise"
+  ],
+  "notes": "Điểm mạnh: Nhận diện nhanh chuỗi suy luận của các câu chắc chắn (a, c). Mẫu lỗi: Suy luận xuôi chiều (b) thành chắc chắn do nhầm lẫn logic điều kiện cần và đủ; né tránh bài tập dựng tình huống phản ví dụ bằng cách giải thích lý thuyết chung."
+}
